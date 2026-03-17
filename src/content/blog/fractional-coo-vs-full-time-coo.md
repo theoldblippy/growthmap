@@ -1,7 +1,7 @@
 ---
 title: "Fractional COO vs. Full-Time COO: Which Is Right for Your Business?"
 description: "Comparing fractional and full-time COO options for growing businesses. Here's how to decide which one fits your stage and budget."
-date: 2026-03-14
+date: 2026-01-06
 draft: false
 ---
 
@@ -55,4 +55,4 @@ Ask yourself three questions:
 
 Most founders I talk to land on fractional. Not because it's cheaper (though it is), but because they need someone who can move fast and has done this before.
 
-Ready to figure out what your business actually needs? [Book a free Growth Map Diagnostic](/contact) and we'll map it out together.
+If you're weighing the options, [the Growth Audit](/growth-audit.pdf) can help you figure out what level of operational support makes sense right now.

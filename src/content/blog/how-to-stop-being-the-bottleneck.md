@@ -1,7 +1,7 @@
 ---
 title: "How to Stop Being the Bottleneck in Your Own Business"
 description: "If nothing moves without your approval, your business has a founder dependency problem. Here's how to fix it without losing control."
-date: 2026-03-13
+date: 2025-12-02
 draft: false
 ---
 
@@ -71,4 +71,4 @@ The best founders I work with spend their time on three things: setting directio
 
 If your business can't run for a week without you, that's not a badge of honor. It's a structural problem. And it's one you can fix.
 
-[Take the Growth Audit](/growth-audit.pdf) to see where your business stands, or [book a free diagnostic call](/contact) to talk through what's keeping you stuck.
+[The Growth Audit](/growth-audit.pdf) is a quick way to see where your business stands across the areas that matter most.

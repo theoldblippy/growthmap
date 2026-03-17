@@ -1,7 +1,7 @@
 ---
 title: "How to Build a Weekly Operating Cadence That Actually Works"
 description: "A weekly operating cadence replaces chaos with structure. Here's how to build one that keeps your team aligned and your business moving."
-date: 2026-03-12
+date: 2025-11-04
 draft: false
 ---
 
@@ -92,4 +92,4 @@ After 4-6 weeks of running a tight cadence, you'll notice:
 
 It's not magic. It's structure. And for most growing businesses, it's the highest-leverage system you can install.
 
-Want help building yours? [Book a free Growth Map Diagnostic](/contact) and we'll design a cadence that fits your business.
+If you're not sure where to start, [the Growth Audit](/growth-audit.pdf) will help you figure out which systems your business needs first.

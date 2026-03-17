@@ -1,7 +1,7 @@
 ---
 title: "Why Your Business Feels Stuck (And What to Do About It)"
 description: "Most founders don't have a growth problem — they have a clarity problem. Here's how to tell the difference and what to do next."
-date: 2026-03-17
+date: 2026-03-10
 draft: false
 ---
 
@@ -46,4 +46,4 @@ This is exactly what the Growth Map Diagnostic is designed to uncover in 30-60 m
 
 If your business feels stuck, it's probably not a growth problem. It's a clarity problem. And clarity problems are very solvable.
 
-[Book a free Growth Map Diagnostic](https://calendar.notion.so/meet/cameronearloliver/qc3y04oud) and let's figure out what's actually holding your business back.
+[The Growth Audit](/growth-audit.pdf) is a good starting point if you want to see where the gaps are.

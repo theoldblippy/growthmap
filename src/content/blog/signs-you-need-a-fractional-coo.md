@@ -1,7 +1,7 @@
 ---
 title: "7 Signs You Need a Fractional COO"
 description: "Not sure if you need operational help? Here are 7 clear signs your business has outgrown your ability to run it alone."
-date: 2026-03-15
+date: 2026-01-27
 draft: false
 ---
 
@@ -53,4 +53,4 @@ If three or more of these resonate, you don't necessarily need to hire a full-ti
 
 The goal isn't to add another person to manage. It's to build the operating system that makes management unnecessary for most decisions.
 
-[Take the free Growth Audit](/growth-audit.pdf) to score your business across 6 key areas, or [book a free diagnostic call](/contact) to talk through what's going on.
+If you want to see where you stand, [the Growth Audit](/growth-audit.pdf) scores your business across the 6 areas that matter most.

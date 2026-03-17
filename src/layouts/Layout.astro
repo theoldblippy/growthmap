@@ -41,6 +41,27 @@ const canonicalURL = `https://growthmap.consulting${canonicalPath}`;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Growth Map",
+      "description": "Fractional COO and business operations consulting for founders. We help businesses replace chaos with clarity through operating systems, growth strategy, and hands-on execution support.",
+      "url": "https://growthmap.consulting",
+      "logo": "https://growthmap.consulting/images/logo.png",
+      "image": "https://growthmap.consulting/images/og-image.png",
+      "founder": {
+        "@type": "Person",
+        "name": "Cameron Oliver",
+        "jobTitle": "Fractional COO",
+        "url": "https://growthmap.consulting/about",
+        "sameAs": ["https://www.linkedin.com/in/cameronearloliver/"]
+      },
+      "serviceType": ["Fractional COO", "Business Operations Consulting", "Growth Strategy", "Business Diagnostics"],
+      "areaServed": "US",
+      "sameAs": ["https://www.linkedin.com/in/cameronearloliver/"]
+    })} />
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FCS68414CY"></script>
     <script>

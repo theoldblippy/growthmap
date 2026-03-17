@@ -7,7 +7,7 @@
   </url>
   <url>
     <loc>https://growthmap.consulting/about</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -21,8 +21,33 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://growthmap.consulting/contact</loc>
+    <loc>https://growthmap.consulting/blog/what-does-a-fractional-coo-do</loc>
     <lastmod>2026-03-16</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://growthmap.consulting/blog/signs-you-need-a-fractional-coo</loc>
+    <lastmod>2026-03-15</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://growthmap.consulting/blog/fractional-coo-vs-full-time-coo</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://growthmap.consulting/blog/how-to-stop-being-the-bottleneck</loc>
+    <lastmod>2026-03-13</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://growthmap.consulting/blog/how-to-build-a-weekly-operating-cadence</loc>
+    <lastmod>2026-03-12</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://growthmap.consulting/contact</loc>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>

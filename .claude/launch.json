@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "dev",
+      "runtimeExecutable": "/Users/cameronearloliver/.nvm/versions/node/v24.14.0/bin/npx",
+      "runtimeArgs": ["astro", "dev"],
+      "port": 4321,
+      "autoPort": true
+    }
+  ]
+}

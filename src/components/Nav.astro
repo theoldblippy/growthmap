@@ -1,0 +1,114 @@
+---
+const currentPath = Astro.url.pathname;
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
+];
+---
+
+<header
+  id="site-nav"
+  class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-shadow duration-300"
+>
+  <nav class="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-4">
+    <a href="/" class="flex-shrink-0">
+      <img src="/images/logo.png" alt="Growth Map" class="h-10" />
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="hidden items-center gap-8 md:flex">
+      {links.map(({ href, label }) => (
+        <li>
+          <a
+            href={href}
+            class:list={[
+              'text-sm font-semibold tracking-wide transition-colors hover:text-bright-blue',
+              currentPath === href || (href !== '/' && currentPath.startsWith(href))
+                ? 'text-bright-blue'
+                : 'text-navy',
+            ]}
+          >
+            {label}
+          </a>
+        </li>
+      ))}
+      <li>
+        <a
+          href="https://calendar.notion.so/meet/cameronearloliver/qc3y04oud"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block rounded-lg bg-bright-blue px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#0088c2]"
+        >
+          Book a Free Consult
+        </a>
+      </li>
+    </ul>
+
+    <!-- Mobile hamburger -->
+    <button
+      id="mobile-menu-btn"
+      class="flex flex-col gap-1.5 md:hidden"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+    >
+      <span class="block h-0.5 w-6 bg-navy transition-all duration-300" id="bar1"></span>
+      <span class="block h-0.5 w-6 bg-navy transition-all duration-300" id="bar2"></span>
+      <span class="block h-0.5 w-6 bg-navy transition-all duration-300" id="bar3"></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden border-t border-light-gray md:hidden">
+    <ul class="flex flex-col gap-4 px-6 py-6">
+      {links.map(({ href, label }) => (
+        <li>
+          <a
+            href={href}
+            class:list={[
+              'block text-base font-semibold transition-colors hover:text-bright-blue',
+              currentPath === href || (href !== '/' && currentPath.startsWith(href))
+                ? 'text-bright-blue'
+                : 'text-navy',
+            ]}
+          >
+            {label}
+          </a>
+        </li>
+      ))}
+      <li>
+        <a
+          href="https://calendar.notion.so/meet/cameronearloliver/qc3y04oud"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block rounded-lg bg-bright-blue px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#0088c2]"
+        >
+          Book a Free Consult
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<!-- Spacer for fixed nav -->
+<div class="h-[72px]"></div>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const nav = document.getElementById('site-nav');
+
+  btn?.addEventListener('click', () => {
+    const isOpen = menu?.classList.toggle('hidden');
+    btn.setAttribute('aria-expanded', String(!isOpen));
+  });
+
+  // Sticky shadow on scroll
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      nav?.classList.add('shadow-md');
+    } else {
+      nav?.classList.remove('shadow-md');
+    }
+  });
+</script>

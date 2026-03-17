@@ -1,0 +1,210 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Growth Map | Business Clarity System for Founders"
+  description="I help founders replace chaos with clarity. Get unstuck, focus your business, and grow without burning out."
+  canonicalPath="/"
+>
+  <!-- HERO -->
+  <section class="bg-white px-6 py-20 md:py-28">
+    <div class="mx-auto flex max-w-[1200px] flex-col items-center gap-12 md:flex-row md:gap-16">
+      <div class="flex-1 text-center md:text-left">
+        <p class="mb-4 text-sm font-semibold uppercase tracking-widest text-bright-blue">
+          Grow Revenue without the chaos
+        </p>
+        <h1 class="text-3xl font-bold leading-tight text-navy sm:text-4xl md:text-[56px] md:leading-[1.1]">
+          Running Your Business Shouldn't Feel This Hard
+        </h1>
+        <p class="mt-6 text-lg leading-relaxed text-mid-gray md:text-xl">
+          I help founders get unstuck, focus their business, and grow without burning out.
+        </p>
+        <a
+          href="https://calendar.notion.so/meet/cameronearloliver/qc3y04oud"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-8 inline-block rounded-lg bg-bright-blue px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
+        >
+          Book a Free Consult
+        </a>
+      </div>
+      <div class="flex-shrink-0">
+        <img
+          src="/images/headshot.jpeg"
+          alt="Cameron Oliver, founder of Growth Map"
+          class="w-72 rounded-2xl shadow-lg md:w-80"
+          loading="eager"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIN POINTS -->
+  <section class="bg-light-gray px-6 py-20 md:py-24">
+    <div class="mx-auto max-w-[800px] text-center">
+      <h2 class="text-3xl font-bold text-navy md:text-[40px] md:leading-tight">
+        Does This Feel Familiar?
+      </h2>
+      <ul class="mt-10 space-y-5 text-left">
+        {[
+          "You've hit a ceiling you can't push through by working harder.",
+          "You're tired of guessing what's actually going to move revenue.",
+          "You're the default problem-solver for everything, and it's unsustainable.",
+          "Your team is busy, but the results don't match the effort.",
+          "You're carrying the weight of the business, and it's starting to bleed into the rest of your life.",
+        ].map((item) => (
+          <li class="flex items-start gap-3 text-lg text-dark-text">
+            <span class="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-bright-blue" />
+            {item}
+          </li>
+        ))}
+      </ul>
+      <a
+        href="https://calendar.notion.so/meet/cameronearloliver/qc3y04oud"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-10 inline-block rounded-lg bg-bright-blue px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
+      >
+        Book a Free Consult
+      </a>
+    </div>
+  </section>
+
+  <!-- DESIRED STATE -->
+  <section class="bg-white px-6 py-20 md:py-24">
+    <div class="mx-auto max-w-[800px] text-center">
+      <h2 class="text-3xl font-bold text-navy md:text-[40px] md:leading-tight">
+        What You Want Instead
+      </h2>
+      <ul class="mt-10 space-y-5 text-left">
+        {[
+          "To know exactly why the business is growing and how to keep it moving.",
+          "To make decisions with clarity instead of instinct.",
+          "A team that owns outcomes instead of handing you problems.",
+          "Weeks that feel calm, predictable, and aligned.",
+          "Growth that compounds without burning you out.",
+        ].map((item) => (
+          <li class="flex items-start gap-3 text-lg text-dark-text">
+            <span class="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-bright-blue" />
+            {item}
+          </li>
+        ))}
+      </ul>
+      <a
+        href="https://calendar.notion.so/meet/cameronearloliver/qc3y04oud"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-10 inline-block rounded-lg bg-bright-blue px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
+      >
+        Book a Free Consult
+      </a>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="bg-light-gray px-6 py-20 md:py-24">
+    <div class="mx-auto max-w-[800px]">
+      <p class="mb-4 text-center text-sm font-semibold uppercase tracking-widest text-bright-blue">
+        a better way to grow
+      </p>
+      <h2 class="text-center text-3xl font-bold text-navy md:text-[40px] md:leading-tight">
+        The Story Behind Growth Map
+      </h2>
+      <div class="mt-8 space-y-5 text-lg leading-relaxed text-dark-text">
+        <p>
+          Running a business is always hard — but there's a difference between productive hard and chaotic hard. I built Growth Map after watching founders struggle with wasted effort, misaligned hires, and unclear plans to win.
+        </p>
+        <p>
+          When you understand how your business creates value, who delivers it, how to measure it, and what growth levers to pull, you can systematically scale your business.
+        </p>
+      </div>
+      <div class="mt-8 text-center">
+        <a
+          href="/about"
+          class="text-base font-semibold text-bright-blue transition-colors hover:text-navy"
+        >
+          Read More &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="bg-white px-6 py-20 md:py-24">
+    <div class="mx-auto max-w-[1200px]">
+      <p class="mb-4 text-center text-sm font-semibold uppercase tracking-widest text-bright-blue">
+        What We Offer
+      </p>
+      <h2 class="text-center text-3xl font-bold text-navy md:text-[40px] md:leading-tight">
+        How We Can Work Together
+      </h2>
+      <div class="mt-12 grid gap-8 md:grid-cols-3">
+        <!-- Card 1 -->
+        <div class="rounded-xl border border-gray-100 bg-light-gray p-8">
+          <h3 class="text-xl font-bold text-navy">Growth Map Diagnostic</h3>
+          <p class="mt-4 leading-relaxed text-dark-text">
+            A fast, 30–60 minute clarity session that reveals how your business creates value, where growth is stuck, and the top levers that will move the business forward.
+          </p>
+          <p class="mt-4 leading-relaxed text-mid-gray">
+            Most founders don't have a growth problem — they have a clarity problem that makes growth impossible. The diagnostic exposes the levers that will move your revenue forward.
+          </p>
+        </div>
+        <!-- Card 2 -->
+        <div class="rounded-xl border border-gray-100 bg-light-gray p-8">
+          <h3 class="text-xl font-bold text-navy">The Growth Map Build</h3>
+          <p class="mt-4 leading-relaxed text-dark-text">
+            A 90-day engagement where we map value engines, assign ownership, create your scorecard, and install a weekly cadence that replaces chaos with clarity.
+          </p>
+          <p class="mt-4 leading-relaxed text-mid-gray">
+            By the end of 90 days, your business will grow faster because your execution is cleaner, your decisions are sharper, and your team is aligned around what actually moves revenue.
+          </p>
+        </div>
+        <!-- Card 3 -->
+        <div class="rounded-xl border border-gray-100 bg-light-gray p-8">
+          <h3 class="text-xl font-bold text-navy">Fractional COO</h3>
+          <p class="mt-4 leading-relaxed text-dark-text">
+            Hands-on execution support to run the operating model, drive improvements, and ensure your team stays aligned every week.
+          </p>
+          <p class="mt-4 leading-relaxed text-mid-gray">
+            My job isn't to keep the system running or to be a new manager; it's to continuously improve it so your business keeps growing without burning you out.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS: Uncomment when ready -->
+  <!--
+  <section class="bg-light-gray px-6 py-20 md:py-24">
+    <div class="mx-auto max-w-[1200px]">
+      <h2 class="text-center text-3xl font-bold text-navy md:text-[40px] md:leading-tight">
+        What Founders Say
+      </h2>
+      <div class="mt-12 grid gap-8 md:grid-cols-3">
+        <div class="rounded-xl bg-white p-8 shadow-sm">
+          <p class="text-lg italic leading-relaxed text-dark-text">
+            "[Quote from client about the diagnostic]"
+          </p>
+          <p class="mt-6 font-semibold text-navy">Name</p>
+          <p class="text-sm text-mid-gray">Title, Company</p>
+        </div>
+        <div class="rounded-xl bg-white p-8 shadow-sm">
+          <p class="text-lg italic leading-relaxed text-dark-text">
+            "[Quote from client about the 90-day build]"
+          </p>
+          <p class="mt-6 font-semibold text-navy">Name</p>
+          <p class="text-sm text-mid-gray">Title, Company</p>
+        </div>
+        <div class="rounded-xl bg-white p-8 shadow-sm">
+          <p class="text-lg italic leading-relaxed text-dark-text">
+            "[Quote from client about fractional COO work]"
+          </p>
+          <p class="mt-6 font-semibold text-navy">Name</p>
+          <p class="text-sm text-mid-gray">Title, Company</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+</Layout>

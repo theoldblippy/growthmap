@@ -1,0 +1,141 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Contact | Growth Map"
+  description="Want to talk through your business? Book a free Growth Map Diagnostic or send me a message."
+  canonicalPath="/contact"
+>
+  <!-- HEADER -->
+  <section class="bg-white px-6 py-20 md:py-28">
+    <div class="mx-auto max-w-[800px] text-center">
+      <p class="mb-4 text-sm font-semibold uppercase tracking-widest text-bright-blue">
+        Get in Touch
+      </p>
+      <h1 class="text-3xl font-bold leading-tight text-navy sm:text-4xl md:text-[48px] md:leading-[1.1]">
+        Want to Talk Through Your Business?
+      </h1>
+    </div>
+  </section>
+
+  <!-- BOOKING CTA -->
+  <section class="bg-light-gray px-6 py-16">
+    <div class="mx-auto max-w-[600px] text-center">
+      <h2 class="text-2xl font-bold text-navy">Book a Free Consult</h2>
+      <p class="mt-4 text-lg leading-relaxed text-mid-gray">
+        The fastest way to get started. Pick a time that works for you and we'll talk through where your business is today and what's possible.
+      </p>
+      <a
+        href="https://calendar.notion.so/meet/cameronearloliver/qc3y04oud"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-6 inline-block rounded-lg bg-bright-blue px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
+      >
+        Book a Free Consult
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="bg-white px-6 py-20 md:py-24">
+    <div class="mx-auto max-w-[600px]">
+      <h2 class="text-2xl font-bold text-navy">Send Me a Message</h2>
+      <p class="mt-2 text-lg text-mid-gray">
+        If you're unsure what your next step should be, send me a note. I read every message personally.
+      </p>
+
+      <form
+        id="contact-form"
+        action="https://formspree.io/f/xkoqqldw"
+        method="POST"
+        class="mt-8 space-y-5"
+      >
+        <!-- Honeypot for spam -->
+        <input type="text" name="_gotcha" style="display:none" />
+
+        <div>
+          <label for="name" class="block text-sm font-semibold text-navy">Full Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            required
+            class="mt-1.5 w-full rounded-lg border border-gray-200 px-4 py-3 text-dark-text transition-colors focus:border-bright-blue focus:outline-none focus:ring-1 focus:ring-bright-blue"
+            placeholder="Your name"
+          />
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-semibold text-navy">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            class="mt-1.5 w-full rounded-lg border border-gray-200 px-4 py-3 text-dark-text transition-colors focus:border-bright-blue focus:outline-none focus:ring-1 focus:ring-bright-blue"
+            placeholder="you@example.com"
+          />
+        </div>
+
+        <div>
+          <label for="message" class="block text-sm font-semibold text-navy">Message</label>
+          <textarea
+            name="message"
+            id="message"
+            required
+            rows="5"
+            class="mt-1.5 w-full rounded-lg border border-gray-200 px-4 py-3 text-dark-text transition-colors focus:border-bright-blue focus:outline-none focus:ring-1 focus:ring-bright-blue"
+            placeholder="Tell me about your business and what you're working on..."
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full rounded-lg bg-bright-blue px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
+        >
+          Send Message
+        </button>
+      </form>
+
+      <!-- Success message -->
+      <div id="form-success" class="mt-6 hidden rounded-lg bg-green-50 p-4 text-green-800">
+        Thanks! I'll be in touch soon.
+      </div>
+
+      <!-- Error message -->
+      <div id="form-error" class="mt-6 hidden rounded-lg bg-red-50 p-4 text-red-800">
+        Something went wrong. Try again or email me directly.
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const successEl = document.getElementById('form-success');
+  const errorEl = document.getElementById('form-error');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    successEl?.classList.add('hidden');
+    errorEl?.classList.add('hidden');
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      });
+
+      if (res.ok) {
+        form.reset();
+        successEl?.classList.remove('hidden');
+      } else {
+        errorEl?.classList.remove('hidden');
+      }
+    } catch {
+      errorEl?.classList.remove('hidden');
+    }
+  });
+</script>

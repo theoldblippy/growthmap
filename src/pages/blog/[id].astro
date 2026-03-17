@@ -1,0 +1,70 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Layout
+  title={`${post.data.title} | Growth Map`}
+  description={post.data.description}
+  canonicalPath={`/blog/${post.id}`}
+>
+  <article class="bg-white px-6 py-20 md:py-28">
+    <div class="mx-auto max-w-[700px]">
+      <a
+        href="/blog"
+        class="text-sm font-semibold text-bright-blue transition-colors hover:text-navy"
+      >
+        &larr; Back to Blog
+      </a>
+
+      <time class="mt-8 block text-sm text-mid-gray">
+        {post.data.date.toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        })}
+      </time>
+
+      <h1 class="mt-4 text-3xl font-bold leading-tight text-navy sm:text-4xl md:text-[44px] md:leading-[1.15]">
+        {post.data.title}
+      </h1>
+
+      <div class="prose mt-10 max-w-none text-lg leading-relaxed text-dark-text
+        prose-headings:font-bold prose-headings:text-navy
+        prose-h2:mt-10 prose-h2:text-2xl
+        prose-p:my-5
+        prose-a:text-bright-blue prose-a:no-underline hover:prose-a:underline
+        prose-strong:text-navy
+        prose-li:my-1
+        prose-ol:my-5 prose-ul:my-5
+        prose-em:text-mid-gray
+      ">
+        <Content />
+      </div>
+
+      <div class="mt-16 rounded-xl bg-light-gray p-8 text-center">
+        <h2 class="text-xl font-bold text-navy">Want to talk through your business?</h2>
+        <p class="mt-2 text-mid-gray">Book a free Growth Map Diagnostic and get clarity on what's holding you back.</p>
+        <a
+          href="https://calendar.notion.so/meet/cameronearloliver/qc3y04oud"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-4 inline-block rounded-lg bg-bright-blue px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
+        >
+          Book a Free Consult
+        </a>
+      </div>
+    </div>
+  </article>
+</Layout>

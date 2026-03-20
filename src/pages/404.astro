@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Page Not Found | Growth Map"
+  description="The page you're looking for doesn't exist. Head back to the Growth Map homepage."
+  canonicalPath="/404"
+>
+  <section class="flex min-h-[60vh] flex-col items-center justify-center px-6 py-28 text-center">
+    <p class="text-6xl font-bold text-bright-blue">404</p>
+    <h1 class="mt-4 text-3xl font-bold text-navy sm:text-4xl">Page not found</h1>
+    <p class="mt-4 max-w-md text-lg text-mid-gray">
+      This page doesn't exist or may have moved. Here are a few places to go instead:
+    </p>
+    <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+      <a
+        href="/"
+        class="rounded-lg bg-bright-blue px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
+      >
+        Go to Homepage
+      </a>
+      <a
+        href="/blog"
+        class="rounded-lg border-2 border-navy px-8 py-3.5 text-base font-semibold text-navy transition-colors hover:bg-navy hover:text-white"
+      >
+        Read the Blog
+      </a>
+    </div>
+  </section>
+</Layout>

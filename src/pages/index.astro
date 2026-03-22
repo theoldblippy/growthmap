@@ -20,14 +20,22 @@ import Layout from '../layouts/Layout.astro';
         <p class="mt-6 text-lg leading-relaxed text-mid-gray md:text-xl">
           I help founders get unstuck, focus their business, and grow without burning out.
         </p>
-        <a
-          href="https://calendar.notion.so/meet/cameronearloliver/qc3y04oud"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="mt-8 inline-block rounded-lg bg-bright-blue px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
-        >
-          Book a Free Consult
-        </a>
+        <div class="mt-8 flex flex-wrap gap-4 justify-center md:justify-start">
+          <a
+            href="https://calendar.notion.so/meet/cameronearloliver/qc3y04oud"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block rounded-lg bg-bright-blue px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
+          >
+            Book a Free Consult
+          </a>
+          <a
+            href="/scale-readiness-score"
+            class="inline-block rounded-lg border-2 border-navy px-8 py-3.5 text-base font-semibold text-navy transition-colors hover:bg-navy hover:text-white"
+          >
+            Take the Free Assessment
+          </a>
+        </div>
       </div>
       <div class="flex-shrink-0">
         <img
@@ -171,6 +179,26 @@ import Layout from '../layouts/Layout.astro';
           </p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- SCALE READINESS SCORE CTA -->
+  <section class="bg-navy px-6 py-20 md:py-24">
+    <div class="mx-auto max-w-[800px] text-center">
+      <p class="mb-4 text-sm font-semibold uppercase tracking-widest text-bright-blue">Free Assessment</p>
+      <h2 class="text-3xl font-bold leading-tight text-white md:text-[40px] md:leading-tight">
+        Find Out Where Your Business Is Actually Stuck
+      </h2>
+      <p class="mt-6 text-lg leading-relaxed text-white/70">
+        22 questions. 6 dimensions. 3 minutes. You'll get a score across Decision-Making, Team & Delegation, Systems, Revenue, Financial Clarity, and Growth Readiness — and see exactly what's holding you back.
+      </p>
+      <a
+        href="/scale-readiness-score"
+        class="mt-10 inline-block rounded-lg bg-bright-blue px-10 py-4 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
+      >
+        Take the Scale Readiness Score →
+      </a>
+      <p class="mt-4 text-sm text-white/50">No email required. See your results instantly.</p>
     </div>
   </section>
 

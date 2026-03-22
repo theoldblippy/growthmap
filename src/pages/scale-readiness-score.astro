@@ -1,0 +1,406 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="The Scale Readiness Score | Growth Map"
+  description="Answer 22 questions across 6 dimensions. See exactly where your business is ready to scale — and what's holding you back. Free, 3-minute assessment."
+  canonicalPath="/scale-readiness-score"
+>
+  <div id="quiz-app" class="min-h-screen bg-white">
+
+    <!-- INTRO -->
+    <section id="screen-intro" class="px-6 py-20 md:py-28">
+      <div class="mx-auto max-w-[680px] text-center">
+        <p class="mb-4 text-sm font-semibold uppercase tracking-widest text-bright-blue">Free Assessment</p>
+        <h1 class="text-3xl font-bold leading-tight text-navy sm:text-4xl md:text-[52px] md:leading-[1.1]">
+          The Scale Readiness Score
+        </h1>
+        <p class="mt-6 text-lg leading-relaxed text-mid-gray">
+          22 questions. 6 dimensions. 3 minutes. You'll walk away knowing exactly where your business is built to scale — and what's quietly holding you back.
+        </p>
+        <div class="mt-10 flex flex-wrap justify-center gap-6 text-sm text-mid-gray">
+          <span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-bright-blue"></span>Decision-Making</span>
+          <span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-bright-blue"></span>Team & Delegation</span>
+          <span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-bright-blue"></span>Systems</span>
+          <span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-bright-blue"></span>Revenue Engine</span>
+          <span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-bright-blue"></span>Financial Clarity</span>
+          <span class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-bright-blue"></span>Growth Readiness</span>
+        </div>
+        <button
+          id="btn-start"
+          class="mt-10 inline-block rounded-lg bg-bright-blue px-10 py-4 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
+        >
+          Start the Assessment →
+        </button>
+        <p class="mt-4 text-sm text-mid-gray">No email required to see your results.</p>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="screen-quiz" class="hidden px-6 py-16 md:py-24">
+      <div class="mx-auto max-w-[680px]">
+
+        <!-- Progress bar -->
+        <div class="mb-10">
+          <div class="mb-2 flex items-center justify-between text-sm text-mid-gray">
+            <span id="progress-label">Section 1 of 6</span>
+            <span id="progress-pct">0%</span>
+          </div>
+          <div class="h-2 w-full rounded-full bg-light-gray">
+            <div id="progress-bar" class="h-2 rounded-full bg-bright-blue transition-all duration-300" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <!-- Section header -->
+        <p id="section-tag" class="mb-2 text-sm font-semibold uppercase tracking-widest text-bright-blue"></p>
+        <h2 id="section-title" class="text-2xl font-bold text-navy md:text-3xl"></h2>
+        <p id="section-desc" class="mt-3 text-mid-gray"></p>
+
+        <!-- Questions -->
+        <div id="questions-container" class="mt-10 space-y-10"></div>
+
+        <!-- Navigation -->
+        <div class="mt-12 flex items-center justify-between">
+          <button id="btn-back" class="hidden text-sm font-semibold text-mid-gray hover:text-navy">← Back</button>
+          <div></div>
+          <button
+            id="btn-next"
+            disabled
+            class="rounded-lg bg-bright-blue px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#0088c2] disabled:cursor-not-allowed disabled:opacity-40"
+          >
+            Next →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section id="screen-results" class="hidden px-6 py-16 md:py-24">
+      <div class="mx-auto max-w-[680px]">
+
+        <!-- Score -->
+        <div class="text-center">
+          <p class="text-sm font-semibold uppercase tracking-widest text-bright-blue">Your Scale Readiness Score</p>
+          <div class="mt-4 flex items-end justify-center gap-2">
+            <span id="result-score" class="text-8xl font-bold text-navy"></span>
+            <span class="mb-4 text-2xl font-bold text-mid-gray">/100</span>
+          </div>
+          <h2 id="result-stage" class="mt-1 text-2xl font-bold text-navy md:text-3xl"></h2>
+          <p id="result-stage-desc" class="mt-4 text-lg leading-relaxed text-mid-gray"></p>
+        </div>
+
+        <!-- Dimension breakdown -->
+        <div class="mt-14">
+          <h3 class="font-bold text-navy text-lg">Your Breakdown</h3>
+          <div id="dimension-bars" class="mt-6 space-y-6"></div>
+        </div>
+
+        <!-- Biggest gap -->
+        <div class="mt-12 rounded-xl bg-light-gray p-8">
+          <p class="text-sm font-semibold uppercase tracking-widest text-bright-blue">Your Biggest Gap</p>
+          <h3 id="gap-title" class="mt-2 text-xl font-bold text-navy"></h3>
+          <p id="gap-desc" class="mt-3 leading-relaxed text-mid-gray"></p>
+          <a
+            href="https://calendar.notion.so/meet/cameronearloliver/qc3y04oud"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-6 inline-block rounded-lg bg-bright-blue px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
+          >
+            Book a Free Call to Work on This
+          </a>
+        </div>
+
+        <!-- Retake -->
+        <div class="mt-8 text-center">
+          <button id="btn-retake" class="text-sm font-semibold text-mid-gray underline hover:text-navy">
+            Retake the assessment
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const dimensions = [
+      {
+        id: 'decision',
+        title: 'Decision-Making',
+        tag: 'Section 1 · Decision-Making',
+        description: 'Can your organization make decisions without everything running through you?',
+        questions: [
+          'Decisions get made in my organization without needing my approval on everything.',
+          'My team knows how to handle unexpected problems without coming to me first.',
+          'I could step away for a full week and things would keep running smoothly.',
+          'We have a clear, shared process for making major decisions.',
+        ],
+        gapDesc: 'Decision bottlenecks are the #1 thing that caps growth in leader-led businesses. When everything runs through you, you become the constraint — and you can\'t scale a constraint. Book a free call and we\'ll map out exactly what needs to change.',
+      },
+      {
+        id: 'team',
+        title: 'Team & Delegation',
+        tag: 'Section 2 · Team & Delegation',
+        description: 'Do you have the right people owning the right things?',
+        questions: [
+          'I have leaders I trust to own outcomes, not just complete tasks.',
+          'Roles and responsibilities across my team are clearly defined.',
+          'I spend most of my time on high-leverage, strategic work.',
+          'We could handle a key person leaving without it becoming a crisis.',
+        ],
+        gapDesc: 'Without people who truly own outcomes, you\'re always the safety net. Your team is executing, but you\'re still carrying the weight. Book a free call to talk through who you need, what they own, and how to build real leverage.',
+      },
+      {
+        id: 'systems',
+        title: 'Systems',
+        tag: 'Section 3 · Systems',
+        description: 'Are your operations documented, consistent, and scalable?',
+        questions: [
+          'Our core processes are documented and followed consistently.',
+          'New team members get up to speed without constant hand-holding.',
+          'We track the right metrics to know if things are on or off track.',
+          'Our tools and workflows help us move faster, not create more work.',
+        ],
+        gapDesc: 'Without documented systems, growth creates chaos — not momentum. Every new hire, every new client, every new initiative becomes a fire drill. Book a free call to build the operating foundation your business needs to scale.',
+      },
+      {
+        id: 'revenue',
+        title: 'Revenue Engine',
+        tag: 'Section 4 · Revenue Engine',
+        description: 'Is your revenue predictable and not dependent on any one person?',
+        questions: [
+          'We have a repeatable, predictable way to generate new business.',
+          'I know where next quarter\'s revenue is coming from.',
+          'Our sales and business development process doesn\'t depend on me or any single person.',
+          'We have a clear ideal client profile and consistently go after them.',
+        ],
+        gapDesc: 'Unpredictable revenue makes every other decision harder — hiring, investing, planning. You can\'t build confidently on a shaky foundation. Book a free call to build a reliable, system-driven growth engine.',
+      },
+      {
+        id: 'financial',
+        title: 'Financial Clarity',
+        tag: 'Section 5 · Financial Clarity',
+        description: 'Do you have the visibility to make confident, data-driven decisions?',
+        questions: [
+          'I review accurate financial reports at least monthly.',
+          'I know what it costs to acquire and serve a client or customer.',
+          'We make investment and hiring decisions based on data, not gut feel.',
+        ],
+        gapDesc: 'You can\'t make confident decisions without clear numbers. Most leaders are flying blind on unit economics, margin, and cash position — and they don\'t know it until it\'s a problem. Book a free call to fix your financial visibility.',
+      },
+      {
+        id: 'growth',
+        title: 'Growth Readiness',
+        tag: 'Section 6 · Growth Readiness',
+        description: 'Could your business absorb significant growth right now without breaking?',
+        questions: [
+          'Our operations could handle 2x our current volume without breaking down.',
+          'Our leadership team is ready to take on significantly more responsibility.',
+          'We have access to the capital or resources needed to fund our next stage of growth.',
+        ],
+        gapDesc: 'Pushing growth on a business that isn\'t ready for it doesn\'t accelerate you — it breaks things. More clients, more revenue, more pressure on a fragile foundation is a recipe for chaos. Book a free call to close the gaps before you push the accelerator.',
+      },
+    ];
+
+    const stages = [
+      {
+        min: 80,
+        name: 'Scale Ready',
+        desc: 'You have the foundation most businesses never build. Your systems, team, and decision-making are strong enough to support aggressive growth. The question now is where to accelerate — and how fast.',
+      },
+      {
+        min: 60,
+        name: 'Nearly There',
+        desc: 'You\'re strong in several areas, but a few key gaps are creating drag. The good news: you\'re close. Closing these specific gaps won\'t take years — it takes focused effort in the right places.',
+      },
+      {
+        min: 40,
+        name: 'Building Mode',
+        desc: 'The pieces are coming together, but gaps in your foundation are limiting what\'s possible. Growth right now would be bumpy. The priority is building the systems and structure that make scale sustainable.',
+      },
+      {
+        min: 0,
+        name: 'Foundation First',
+        desc: 'Your business is more dependent on you and a few key people than it needs to be. The good news: every business starts here. The leaders who move fastest are the ones who address this deliberately rather than hoping it fixes itself.',
+      },
+    ];
+
+    const ratingLabels = ['Never', 'Rarely', 'Sometimes', 'Usually', 'Always'];
+
+    // State
+    let currentStep = 0;
+    let answers = {};
+
+    // Elements
+    const screenIntro = document.getElementById('screen-intro');
+    const screenQuiz = document.getElementById('screen-quiz');
+    const screenResults = document.getElementById('screen-results');
+    const btnStart = document.getElementById('btn-start');
+    const btnNext = document.getElementById('btn-next');
+    const btnBack = document.getElementById('btn-back');
+    const btnRetake = document.getElementById('btn-retake');
+
+    function showScreen(name) {
+      [screenIntro, screenQuiz, screenResults].forEach(s => s.classList.add('hidden'));
+      document.getElementById('screen-' + name).classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function renderStep() {
+      const dim = dimensions[currentStep];
+      const total = dimensions.length;
+      const pct = Math.round((currentStep / total) * 100);
+
+      document.getElementById('progress-label').textContent = `Section ${currentStep + 1} of ${total}`;
+      document.getElementById('progress-pct').textContent = pct + '%';
+      document.getElementById('progress-bar').style.width = pct + '%';
+      document.getElementById('section-tag').textContent = dim.tag;
+      document.getElementById('section-title').textContent = dim.title;
+      document.getElementById('section-desc').textContent = dim.description;
+
+      btnBack.classList.toggle('hidden', currentStep === 0);
+      btnNext.textContent = currentStep === total - 1 ? 'See My Score →' : 'Next →';
+
+      const container = document.getElementById('questions-container');
+      container.innerHTML = '';
+
+      dim.questions.forEach((q, qi) => {
+        const key = `${dim.id}-${qi}`;
+        const saved = answers[key];
+
+        const wrap = document.createElement('div');
+
+        const label = document.createElement('p');
+        label.className = 'font-semibold text-dark-text leading-snug mb-4';
+        label.textContent = q;
+        wrap.appendChild(label);
+
+        const btnRow = document.createElement('div');
+        btnRow.className = 'grid grid-cols-5 gap-2';
+
+        ratingLabels.forEach((lbl, i) => {
+          const val = i + 1;
+          const btn = document.createElement('button');
+          btn.dataset.key = key;
+          btn.dataset.val = val;
+          btn.className = [
+            'rating-btn rounded-lg border-2 py-3 px-1 text-xs font-semibold transition-all text-center',
+            saved === val
+              ? 'border-bright-blue bg-bright-blue text-white'
+              : 'border-light-gray bg-light-gray text-mid-gray hover:border-bright-blue hover:text-bright-blue',
+          ].join(' ');
+          btn.textContent = lbl;
+
+          btn.addEventListener('click', () => {
+            answers[key] = val;
+            // Update all buttons in this question
+            btnRow.querySelectorAll('.rating-btn').forEach(b => {
+              const isActive = parseInt(b.dataset.val) === val;
+              b.className = [
+                'rating-btn rounded-lg border-2 py-3 px-1 text-xs font-semibold transition-all text-center',
+                isActive
+                  ? 'border-bright-blue bg-bright-blue text-white'
+                  : 'border-light-gray bg-light-gray text-mid-gray hover:border-bright-blue hover:text-bright-blue',
+              ].join(' ');
+            });
+            checkComplete();
+          });
+
+          btnRow.appendChild(btn);
+        });
+
+        wrap.appendChild(btnRow);
+        container.appendChild(wrap);
+      });
+
+      checkComplete();
+    }
+
+    function checkComplete() {
+      const dim = dimensions[currentStep];
+      const done = dim.questions.every((_, qi) => answers[`${dim.id}-${qi}`] !== undefined);
+      btnNext.disabled = !done;
+    }
+
+    function calcScores() {
+      return dimensions.map(dim => {
+        const vals = dim.questions.map((_, qi) => answers[`${dim.id}-${qi}`] || 0);
+        const sum = vals.reduce((a, b) => a + b, 0);
+        return Math.round((sum / (dim.questions.length * 5)) * 100);
+      });
+    }
+
+    function scoreColor(score) {
+      if (score >= 80) return '#22c55e';
+      if (score >= 60) return '#009CDE';
+      if (score >= 40) return '#f59e0b';
+      return '#ef4444';
+    }
+
+    function showResults() {
+      const scores = calcScores();
+      const overall = Math.round(scores.reduce((a, b) => a + b, 0) / scores.length);
+      const stage = stages.find(s => overall >= s.min);
+
+      document.getElementById('result-score').textContent = overall;
+      document.getElementById('result-stage').textContent = stage.name;
+      document.getElementById('result-stage-desc').textContent = stage.desc;
+
+      const barsEl = document.getElementById('dimension-bars');
+      barsEl.innerHTML = '';
+      scores.forEach((score, i) => {
+        const color = scoreColor(score);
+        const div = document.createElement('div');
+        div.innerHTML = `
+          <div class="flex justify-between mb-2">
+            <span class="text-sm font-semibold text-dark-text">${dimensions[i].title}</span>
+            <span class="text-sm font-bold" style="color:${color}">${score}/100</span>
+          </div>
+          <div class="h-2.5 w-full rounded-full bg-light-gray">
+            <div class="h-2.5 rounded-full" style="width:${score}%;background:${color}"></div>
+          </div>
+        `;
+        barsEl.appendChild(div);
+      });
+
+      const minScore = Math.min(...scores);
+      const gapIdx = scores.indexOf(minScore);
+      document.getElementById('gap-title').textContent = `${dimensions[gapIdx].title} — ${minScore}/100`;
+      document.getElementById('gap-desc').textContent = dimensions[gapIdx].gapDesc;
+
+      showScreen('results');
+    }
+
+    // Events
+    btnStart.addEventListener('click', () => {
+      currentStep = 0;
+      showScreen('quiz');
+      renderStep();
+    });
+
+    btnNext.addEventListener('click', () => {
+      if (currentStep < dimensions.length - 1) {
+        currentStep++;
+        renderStep();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        showResults();
+      }
+    });
+
+    btnBack.addEventListener('click', () => {
+      if (currentStep > 0) {
+        currentStep--;
+        renderStep();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+
+    btnRetake.addEventListener('click', () => {
+      answers = {};
+      currentStep = 0;
+      showScreen('intro');
+    });
+  </script>
+</Layout>

@@ -52,4 +52,26 @@ const posts = (await getCollection('blog'))
       ))}
     </div>
   </section>
+
+  <!-- CTA -->
+  <section class="bg-white px-6 py-16">
+    <div class="mx-auto max-w-[600px] text-center">
+      <h2 class="text-xl font-bold text-navy">Want to See Where Your Business Stands?</h2>
+      <p class="mt-3 text-mid-gray">Our free tools give you a clear picture in under 3 minutes.</p>
+      <div class="mt-6 flex flex-wrap justify-center gap-4">
+        <a
+          href="/time-audit"
+          class="inline-block rounded-lg bg-bright-blue px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#0088c2]"
+        >
+          Take the CEO Time Audit
+        </a>
+        <a
+          href="/scale-readiness-score"
+          class="inline-block rounded-lg border-2 border-navy px-6 py-3 text-sm font-semibold text-navy transition-colors hover:bg-navy hover:text-white"
+        >
+          Scale Readiness Score
+        </a>
+      </div>
+    </div>
+  </section>
 </Layout>

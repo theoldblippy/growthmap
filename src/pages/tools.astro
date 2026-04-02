@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Free Tools | Growth Map"
+  description="Free tools for founders: CEO Time Audit, Scale Readiness Score, and Growth Audit. Find out where your time goes, how ready you are to scale, and what to fix first."
+  canonicalPath="/tools"
+>
+  <section class="px-6 py-20 md:py-28">
+    <div class="mx-auto max-w-[900px]">
+      <div class="text-center">
+        <p class="mb-4 text-sm font-semibold uppercase tracking-widest text-bright-blue">Free Resources</p>
+        <h1 class="text-3xl font-bold leading-tight text-navy sm:text-4xl md:text-[52px] md:leading-[1.1]">
+          Free Tools for Founders
+        </h1>
+        <p class="mt-6 text-lg leading-relaxed text-mid-gray">
+          Quick, actionable assessments to help you figure out where you stand and what to work on next.
+        </p>
+      </div>
+
+      <div class="mt-14 grid gap-8 md:grid-cols-3">
+
+        <!-- CEO Time Audit (featured) -->
+        <a href="/time-audit" class="group relative rounded-xl border-2 border-bright-blue bg-white p-8 shadow-sm transition-all hover:shadow-lg md:col-span-3 md:flex md:items-center md:gap-10">
+          <div class="absolute -top-3 left-6 rounded-full bg-bright-blue px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">Featured</div>
+          <div class="flex-1">
+            <h2 class="text-2xl font-bold text-navy group-hover:text-bright-blue transition-colors">CEO Time Audit</h2>
+            <p class="mt-3 leading-relaxed text-mid-gray">
+              Find out where your time actually goes. Categorize your week into $10, $100, $1,000, and $10,000-per-hour work — and see the biggest opportunity to reclaim your calendar.
+            </p>
+            <p class="mt-4 text-sm font-semibold text-bright-blue">Start the Audit →</p>
+          </div>
+          <div class="mt-6 md:mt-0 md:flex-shrink-0">
+            <div class="flex gap-2">
+              <div class="h-16 w-6 rounded" style="background:#ef4444"></div>
+              <div class="h-16 w-10 rounded" style="background:#f59e0b"></div>
+              <div class="h-16 w-8 rounded" style="background:#009CDE"></div>
+              <div class="h-16 w-4 rounded" style="background:#22c55e"></div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Scale Readiness Score -->
+        <a href="/scale-readiness-score" class="group rounded-xl border border-gray-100 bg-white p-8 shadow-sm transition-all hover:shadow-lg hover:border-bright-blue">
+          <h2 class="text-xl font-bold text-navy group-hover:text-bright-blue transition-colors">Scale Readiness Score</h2>
+          <p class="mt-3 text-sm leading-relaxed text-mid-gray">
+            22 questions across 6 dimensions. See how ready your business is to scale — and what's quietly holding you back.
+          </p>
+          <p class="mt-4 text-sm font-semibold text-bright-blue">Take the Assessment →</p>
+        </a>
+
+        <!-- Growth Audit PDF -->
+        <a href="/growth-audit.pdf" target="_blank" class="group rounded-xl border border-gray-100 bg-white p-8 shadow-sm transition-all hover:shadow-lg hover:border-bright-blue">
+          <h2 class="text-xl font-bold text-navy group-hover:text-bright-blue transition-colors">Growth Audit Scorecard</h2>
+          <p class="mt-3 text-sm leading-relaxed text-mid-gray">
+            A printable one-page scorecard. Rate yourself across 6 growth dimensions and see where the gaps are.
+          </p>
+          <p class="mt-4 text-sm font-semibold text-bright-blue">Download PDF →</p>
+        </a>
+
+        <!-- Blog -->
+        <a href="/blog" class="group rounded-xl border border-gray-100 bg-white p-8 shadow-sm transition-all hover:shadow-lg hover:border-bright-blue">
+          <h2 class="text-xl font-bold text-navy group-hover:text-bright-blue transition-colors">Blog & Guides</h2>
+          <p class="mt-3 text-sm leading-relaxed text-mid-gray">
+            Practical articles on delegation, scaling, operating systems, and everything it takes to grow without burning out.
+          </p>
+          <p class="mt-4 text-sm font-semibold text-bright-blue">Read the Blog →</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+</Layout>

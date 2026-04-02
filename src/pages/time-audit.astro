@@ -1,0 +1,567 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="CEO Time Audit | Growth Map"
+  description="Find out where your time actually goes. Categorize your weekly tasks into $10, $100, $1K, and $10K/hour work — and see the biggest opportunity to get your hours back."
+  canonicalPath="/time-audit"
+>
+  <div id="audit-app" class="min-h-screen bg-white">
+
+    <!-- INTRO -->
+    <section id="screen-intro" class="px-6 py-20 md:py-28">
+      <div class="mx-auto max-w-[680px] text-center">
+        <p class="mb-4 text-sm font-semibold uppercase tracking-widest text-bright-blue">Free Tool</p>
+        <h1 class="text-3xl font-bold leading-tight text-navy sm:text-4xl md:text-[52px] md:leading-[1.1]">
+          Where Is Your Time Actually Going?
+        </h1>
+        <p class="mt-6 text-lg leading-relaxed text-mid-gray">
+          Most founders spend over half their week on work that someone else could do. This audit breaks your week into $10, $100, $1,000, and $10,000-per-hour tasks — so you can see exactly where your time is going and where the biggest opportunity is.
+        </p>
+        <div class="mt-8 flex flex-wrap justify-center gap-6 text-sm text-mid-gray">
+          <span class="flex items-center gap-2"><span class="inline-block h-3 w-3 rounded" style="background:#ef4444"></span>$10/hr Tasks</span>
+          <span class="flex items-center gap-2"><span class="inline-block h-3 w-3 rounded" style="background:#f59e0b"></span>$100/hr Tasks</span>
+          <span class="flex items-center gap-2"><span class="inline-block h-3 w-3 rounded" style="background:#009CDE"></span>$1,000/hr Tasks</span>
+          <span class="flex items-center gap-2"><span class="inline-block h-3 w-3 rounded" style="background:#22c55e"></span>$10,000/hr Tasks</span>
+        </div>
+        <button
+          id="btn-start"
+          class="mt-10 inline-block rounded-lg bg-bright-blue px-10 py-4 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
+        >
+          Start the Audit
+        </button>
+        <p class="mt-4 text-sm text-mid-gray">Takes about 3 minutes. No email required.</p>
+      </div>
+    </section>
+
+    <!-- INPUT -->
+    <section id="screen-input" class="hidden px-6 py-16 md:py-24">
+      <div class="mx-auto max-w-[900px]">
+        <div class="mb-8 text-center">
+          <h2 class="text-2xl font-bold text-navy md:text-3xl">Check the tasks you do, estimate your hours</h2>
+          <p class="mt-3 text-mid-gray">Check each task you do in a typical week. Adjust the hours and category if needed.</p>
+        </div>
+
+        <!-- Task table -->
+        <div class="overflow-x-auto">
+          <table class="w-full" id="task-table">
+            <thead>
+              <tr class="border-b-2 border-light-gray text-left text-sm font-semibold text-mid-gray">
+                <th class="pb-3 pr-2 w-8"></th>
+                <th class="pb-3 pr-4">Task</th>
+                <th class="pb-3 pr-4 w-24 text-center">Hrs/Week</th>
+                <th class="pb-3 w-40 text-center">Category</th>
+              </tr>
+            </thead>
+            <tbody id="task-body" class="divide-y divide-gray-100">
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Add custom row -->
+        <button
+          id="btn-add-row"
+          class="mt-4 text-sm font-semibold text-bright-blue hover:text-navy transition-colors"
+        >
+          + Add a custom task
+        </button>
+
+        <!-- Total & submit -->
+        <div class="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+          <p class="text-mid-gray text-sm">Total hours selected: <span id="total-hours" class="font-bold text-navy">0</span></p>
+          <div class="flex gap-4">
+            <button
+              id="btn-back-to-intro"
+              class="text-sm font-semibold text-mid-gray hover:text-navy"
+            >
+              ← Back
+            </button>
+            <button
+              id="btn-see-results"
+              disabled
+              class="rounded-lg bg-bright-blue px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#0088c2] disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              See My Results →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section id="screen-results" class="hidden px-6 py-16 md:py-24">
+      <div class="mx-auto max-w-[680px]">
+
+        <!-- Score header -->
+        <div class="text-center">
+          <p class="text-sm font-semibold uppercase tracking-widest text-bright-blue">Your Time Audit Results</p>
+          <h2 class="mt-4 text-2xl font-bold text-navy md:text-3xl">Here's Where Your Week Goes</h2>
+        </div>
+
+        <!-- Stacked bar -->
+        <div class="mt-10">
+          <div id="stacked-bar" class="flex h-12 w-full overflow-hidden rounded-lg"></div>
+          <div id="bar-legend" class="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm"></div>
+        </div>
+
+        <!-- Breakdown cards -->
+        <div id="breakdown-cards" class="mt-10 grid gap-4 sm:grid-cols-2"></div>
+
+        <!-- Biggest opportunity -->
+        <div class="mt-10 rounded-xl bg-light-gray p-8">
+          <p class="text-sm font-semibold uppercase tracking-widest text-bright-blue">Your Biggest Opportunity</p>
+          <h3 id="opportunity-title" class="mt-2 text-xl font-bold text-navy"></h3>
+          <p id="opportunity-desc" class="mt-3 leading-relaxed text-mid-gray"></p>
+        </div>
+
+        <!-- Dollar impact toggle -->
+        <div class="mt-8 rounded-xl border border-gray-100 p-6">
+          <div class="flex items-center justify-between">
+            <span class="font-semibold text-navy">See the dollar impact</span>
+            <button id="btn-toggle-dollars" class="text-sm font-semibold text-bright-blue hover:text-navy transition-colors">Show →</button>
+          </div>
+          <div id="dollar-section" class="mt-4 hidden">
+            <label class="block text-sm text-mid-gray mb-2">What's your effective hourly rate? (or annual salary ÷ 2,000)</label>
+            <div class="flex gap-3 items-center">
+              <span class="text-navy font-semibold">$</span>
+              <input
+                id="hourly-rate"
+                type="number"
+                min="1"
+                placeholder="150"
+                class="w-32 rounded-lg border border-gray-200 px-4 py-2.5 text-base text-dark-text placeholder:text-mid-gray focus:border-bright-blue focus:outline-none focus:ring-2 focus:ring-bright-blue/20"
+              />
+              <span class="text-sm text-mid-gray">/hr</span>
+              <button
+                id="btn-calc-dollars"
+                class="rounded-lg bg-bright-blue px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#0088c2]"
+              >
+                Calculate
+              </button>
+            </div>
+            <div id="dollar-results" class="mt-4 hidden space-y-3"></div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-10 rounded-xl bg-navy p-8 text-center">
+          <h3 class="text-xl font-bold text-white">Want help getting those hours back?</h3>
+          <p class="mt-3 text-white/70">A 30-minute call to talk through what's eating your time and what to do about it.</p>
+          <a
+            href="https://calendar.notion.so/meet/cameronearloliver/qc3y04oud"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-6 inline-block rounded-lg bg-bright-blue px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
+          >
+            Book a Free Consult
+          </a>
+        </div>
+
+        <!-- Email results -->
+        <div class="mt-8 rounded-xl border border-gray-100 p-6 text-center">
+          <p class="font-semibold text-navy">Want a copy of your results?</p>
+          <form
+            id="email-results-form"
+            action="https://formspree.io/f/xkoqqldw"
+            method="POST"
+            class="mx-auto mt-4 flex max-w-[420px] flex-col gap-3 sm:flex-row"
+          >
+            <input type="text" name="_gotcha" class="hidden" />
+            <input type="hidden" name="_subject" value="CEO Time Audit Results" />
+            <input type="hidden" name="results_summary" id="results-hidden" value="" />
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="Enter your email"
+              class="flex-1 rounded-lg border border-gray-200 px-4 py-3 text-base text-dark-text placeholder:text-mid-gray focus:border-bright-blue focus:outline-none focus:ring-2 focus:ring-bright-blue/20"
+            />
+            <button
+              type="submit"
+              class="rounded-lg bg-bright-blue px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
+            >
+              Email My Results
+            </button>
+          </form>
+          <p id="email-success" class="mt-3 hidden text-sm font-medium text-bright-blue">Sent! Check your inbox.</p>
+          <p class="mt-2 text-xs text-mid-gray">No spam. Just your results.</p>
+        </div>
+
+        <!-- Retake -->
+        <div class="mt-6 text-center">
+          <button id="btn-retake" class="text-sm font-semibold text-mid-gray underline hover:text-navy">
+            Retake the audit
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const categories = [
+      { value: 10, label: '$10/hr', color: '#ef4444' },
+      { value: 100, label: '$100/hr', color: '#f59e0b' },
+      { value: 1000, label: '$1,000/hr', color: '#009CDE' },
+      { value: 10000, label: '$10,000/hr', color: '#22c55e' },
+    ];
+
+    const defaultTasks = [
+      { name: 'Email and inbox management', category: 10, hours: 5 },
+      { name: 'Scheduling and calendar management', category: 10, hours: 3 },
+      { name: 'Data entry and admin', category: 10, hours: 2 },
+      { name: 'Social media posting', category: 10, hours: 2 },
+      { name: 'Client calls and check-ins', category: 100, hours: 6 },
+      { name: 'Project management and follow-ups', category: 100, hours: 4 },
+      { name: 'Reviewing team work', category: 100, hours: 3 },
+      { name: 'Reporting and dashboards', category: 100, hours: 2 },
+      { name: 'Hiring and interviewing', category: 1000, hours: 3 },
+      { name: 'Building processes and SOPs', category: 1000, hours: 2 },
+      { name: 'Team structure and org design', category: 1000, hours: 1 },
+      { name: 'Financial planning and budgeting', category: 1000, hours: 2 },
+      { name: 'Vision and long-term strategy', category: 10000, hours: 2 },
+      { name: 'Key partnerships and relationships', category: 10000, hours: 3 },
+      { name: 'Culture and leadership development', category: 10000, hours: 1 },
+      { name: 'New market or product decisions', category: 10000, hours: 1 },
+    ];
+
+    const opportunityMessages = {
+      10: {
+        title: "You're spending too much time on $10/hr work",
+        desc: "These are tasks that should be delegated, automated, or eliminated. Every hour you spend on admin, email, and scheduling is an hour you're not spending on work that actually grows the business. This is the fastest win — and usually the easiest to fix.",
+      },
+      100: {
+        title: "Your $100/hr work is eating your week",
+        desc: "Client calls, project management, and reviewing work are important — but they shouldn't dominate your calendar. You need systems, processes, and people who can own these outcomes so you can focus on higher-leverage work.",
+      },
+      1000: {
+        title: "You're heavy on $1,000/hr work with less time for $10K/hr",
+        desc: "Building processes, hiring, and org design are high-value — but if they're crowding out vision, strategy, and key relationships, your business is being built well but not being led well. Balance is key.",
+      },
+      10000: {
+        title: "You're already spending time where it matters most",
+        desc: "That's rare. Most founders are buried in low-leverage work. Your opportunity is to protect this time ruthlessly and push even more of the $10-$100/hr work off your plate so you can go deeper on strategy and growth.",
+      },
+    };
+
+    let customRowCount = 0;
+
+    function buildTaskRow(task, index, isCustom = false) {
+      const tr = document.createElement('tr');
+      tr.className = 'task-row';
+      tr.dataset.index = index;
+
+      // Checkbox
+      const tdCheck = document.createElement('td');
+      tdCheck.className = 'py-3 pr-2';
+      const checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkbox.checked = !isCustom;
+      checkbox.className = 'task-check h-4 w-4 rounded border-gray-300 text-bright-blue focus:ring-bright-blue accent-[#009CDE]';
+      tdCheck.appendChild(checkbox);
+      tr.appendChild(tdCheck);
+
+      // Task name
+      const tdName = document.createElement('td');
+      tdName.className = 'py-3 pr-4';
+      if (isCustom) {
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.placeholder = 'Enter task name';
+        input.className = 'task-name w-full rounded border border-gray-200 px-3 py-2 text-sm text-dark-text placeholder:text-mid-gray focus:border-bright-blue focus:outline-none';
+        tdName.appendChild(input);
+      } else {
+        const span = document.createElement('span');
+        span.className = 'text-sm text-dark-text';
+        span.textContent = task.name;
+        tdName.appendChild(span);
+      }
+      tr.appendChild(tdName);
+
+      // Hours
+      const tdHours = document.createElement('td');
+      tdHours.className = 'py-3 pr-4 text-center';
+      const hoursInput = document.createElement('input');
+      hoursInput.type = 'number';
+      hoursInput.min = '0';
+      hoursInput.max = '80';
+      hoursInput.value = isCustom ? '' : task.hours;
+      hoursInput.className = 'task-hours w-20 rounded border border-gray-200 px-3 py-2 text-sm text-center text-dark-text focus:border-bright-blue focus:outline-none';
+      tdHours.appendChild(hoursInput);
+      tr.appendChild(tdHours);
+
+      // Category
+      const tdCat = document.createElement('td');
+      tdCat.className = 'py-3 text-center';
+      const select = document.createElement('select');
+      select.className = 'task-category rounded border border-gray-200 px-2 py-2 text-sm text-dark-text focus:border-bright-blue focus:outline-none';
+      categories.forEach(cat => {
+        const opt = document.createElement('option');
+        opt.value = cat.value;
+        opt.textContent = cat.label;
+        if (cat.value === task.category) opt.selected = true;
+        select.appendChild(opt);
+      });
+      tdCat.appendChild(select);
+      tr.appendChild(tdCat);
+
+      // Update totals on change
+      checkbox.addEventListener('change', updateTotals);
+      hoursInput.addEventListener('input', updateTotals);
+
+      return tr;
+    }
+
+    function updateTotals() {
+      const rows = document.querySelectorAll('.task-row');
+      let total = 0;
+      let hasChecked = false;
+      rows.forEach(row => {
+        const checked = row.querySelector('.task-check').checked;
+        const hours = parseFloat(row.querySelector('.task-hours').value) || 0;
+        if (checked && hours > 0) {
+          total += hours;
+          hasChecked = true;
+        }
+      });
+      document.getElementById('total-hours').textContent = total;
+      document.getElementById('btn-see-results').disabled = !hasChecked;
+    }
+
+    function getResults() {
+      const rows = document.querySelectorAll('.task-row');
+      const buckets = { 10: 0, 100: 0, 1000: 0, 10000: 0 };
+      const tasks = { 10: [], 100: [], 1000: [], 10000: [] };
+      let totalHours = 0;
+
+      rows.forEach(row => {
+        const checked = row.querySelector('.task-check').checked;
+        const hours = parseFloat(row.querySelector('.task-hours').value) || 0;
+        const category = parseInt(row.querySelector('.task-category').value);
+        const nameEl = row.querySelector('.task-name') || row.querySelector('span');
+        const name = nameEl ? (nameEl.value || nameEl.textContent) : '';
+
+        if (checked && hours > 0) {
+          buckets[category] += hours;
+          tasks[category].push({ name, hours });
+          totalHours += hours;
+        }
+      });
+
+      return { buckets, tasks, totalHours };
+    }
+
+    function showResults() {
+      const { buckets, tasks, totalHours } = getResults();
+
+      // Stacked bar
+      const barEl = document.getElementById('stacked-bar');
+      const legendEl = document.getElementById('bar-legend');
+      barEl.innerHTML = '';
+      legendEl.innerHTML = '';
+
+      categories.forEach(cat => {
+        const hours = buckets[cat.value];
+        const pct = totalHours > 0 ? (hours / totalHours * 100) : 0;
+        if (pct > 0) {
+          const seg = document.createElement('div');
+          seg.style.width = pct + '%';
+          seg.style.background = cat.color;
+          seg.className = 'flex items-center justify-center text-xs font-bold text-white transition-all';
+          if (pct > 8) seg.textContent = Math.round(pct) + '%';
+          barEl.appendChild(seg);
+        }
+
+        const legend = document.createElement('span');
+        legend.className = 'flex items-center gap-2';
+        legend.innerHTML = `<span class="inline-block h-3 w-3 rounded" style="background:${cat.color}"></span><span class="text-dark-text">${cat.label}</span><span class="font-bold text-navy">${hours}h</span><span class="text-mid-gray">(${totalHours > 0 ? Math.round(hours / totalHours * 100) : 0}%)</span>`;
+        legendEl.appendChild(legend);
+      });
+
+      // Breakdown cards
+      const cardsEl = document.getElementById('breakdown-cards');
+      cardsEl.innerHTML = '';
+      categories.forEach(cat => {
+        const hours = buckets[cat.value];
+        const pct = totalHours > 0 ? Math.round(hours / totalHours * 100) : 0;
+        const card = document.createElement('div');
+        card.className = 'rounded-xl border-2 p-5';
+        card.style.borderColor = cat.color;
+
+        let taskList = '';
+        if (tasks[cat.value].length > 0) {
+          taskList = tasks[cat.value].map(t => `<li class="text-sm text-mid-gray">${t.name} — ${t.hours}h</li>`).join('');
+        }
+
+        card.innerHTML = `
+          <div class="flex items-center justify-between mb-3">
+            <span class="font-bold text-navy">${cat.label} Work</span>
+            <span class="text-2xl font-bold" style="color:${cat.color}">${hours}h</span>
+          </div>
+          <div class="h-2 w-full rounded-full bg-light-gray mb-3">
+            <div class="h-2 rounded-full" style="width:${pct}%;background:${cat.color}"></div>
+          </div>
+          <p class="text-sm text-mid-gray mb-2">${pct}% of your week</p>
+          ${taskList ? `<ul class="space-y-1 mt-3 border-t border-gray-100 pt-3">${taskList}</ul>` : ''}
+        `;
+        cardsEl.appendChild(card);
+      });
+
+      // Biggest opportunity
+      let maxCat = 10;
+      let maxHours = 0;
+      // Find which low-value category eats the most time
+      [10, 100].forEach(val => {
+        if (buckets[val] > maxHours) {
+          maxHours = buckets[val];
+          maxCat = val;
+        }
+      });
+      // If they spend very little on $10/$100, highlight that they're doing well
+      if (buckets[10] + buckets[100] <= buckets[1000] + buckets[10000]) {
+        maxCat = 10000;
+      }
+
+      const opp = opportunityMessages[maxCat];
+      document.getElementById('opportunity-title').textContent = opp.title;
+      document.getElementById('opportunity-desc').textContent = opp.desc;
+
+      // Hidden results for email
+      let summary = `Total: ${totalHours}h/week. `;
+      categories.forEach(cat => {
+        summary += `${cat.label}: ${buckets[cat.value]}h (${totalHours > 0 ? Math.round(buckets[cat.value] / totalHours * 100) : 0}%). `;
+      });
+      document.getElementById('results-hidden').value = summary;
+
+      showScreen('results');
+    }
+
+    // Dollar impact
+    function calcDollars() {
+      const rate = parseFloat(document.getElementById('hourly-rate').value);
+      if (!rate || rate <= 0) return;
+
+      const { buckets, totalHours } = getResults();
+      const dollarEl = document.getElementById('dollar-results');
+      dollarEl.innerHTML = '';
+      dollarEl.classList.remove('hidden');
+
+      const weeklyTotal = totalHours * rate;
+      const annualTotal = weeklyTotal * 50;
+
+      let html = `<p class="text-sm text-mid-gray">At <strong class="text-navy">$${rate}/hr</strong>, here's what your time allocation looks like:</p>`;
+      html += '<div class="mt-3 space-y-2">';
+
+      categories.forEach(cat => {
+        const hours = buckets[cat.value];
+        const weekly = hours * rate;
+        const annual = weekly * 50;
+        html += `
+          <div class="flex items-center justify-between rounded-lg bg-light-gray px-4 py-3">
+            <span class="flex items-center gap-2 text-sm">
+              <span class="inline-block h-3 w-3 rounded" style="background:${cat.color}"></span>
+              ${cat.label} work
+            </span>
+            <span class="text-sm font-bold text-navy">$${weekly.toLocaleString()}/wk · $${annual.toLocaleString()}/yr</span>
+          </div>
+        `;
+      });
+
+      const lowValueHours = buckets[10] + buckets[100];
+      const lowValueAnnual = lowValueHours * rate * 50;
+
+      html += '</div>';
+      html += `
+        <div class="mt-4 rounded-lg bg-navy p-4">
+          <p class="text-sm text-white/70">You're spending <strong class="text-white">${lowValueHours} hours/week</strong> on $10-$100/hr tasks.</p>
+          <p class="mt-1 text-sm text-white/70">That's <strong class="text-white">$${lowValueAnnual.toLocaleString()}/year</strong> of your time on work that could be delegated.</p>
+        </div>
+      `;
+
+      dollarEl.innerHTML = html;
+    }
+
+    // Screen management
+    function showScreen(name) {
+      ['screen-intro', 'screen-input', 'screen-results'].forEach(id => {
+        document.getElementById(id).classList.add('hidden');
+      });
+      document.getElementById('screen-' + name).classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Init
+    function init() {
+      const tbody = document.getElementById('task-body');
+      defaultTasks.forEach((task, i) => {
+        tbody.appendChild(buildTaskRow(task, i));
+      });
+      updateTotals();
+    }
+
+    // Events
+    document.getElementById('btn-start').addEventListener('click', () => {
+      showScreen('input');
+    });
+
+    document.getElementById('btn-back-to-intro').addEventListener('click', () => {
+      showScreen('intro');
+    });
+
+    document.getElementById('btn-see-results').addEventListener('click', () => {
+      showResults();
+    });
+
+    document.getElementById('btn-add-row').addEventListener('click', () => {
+      customRowCount++;
+      const tbody = document.getElementById('task-body');
+      const index = defaultTasks.length + customRowCount;
+      tbody.appendChild(buildTaskRow({ name: '', category: 100, hours: 0 }, index, true));
+    });
+
+    document.getElementById('btn-toggle-dollars').addEventListener('click', () => {
+      const section = document.getElementById('dollar-section');
+      const btn = document.getElementById('btn-toggle-dollars');
+      if (section.classList.contains('hidden')) {
+        section.classList.remove('hidden');
+        btn.textContent = 'Hide';
+      } else {
+        section.classList.add('hidden');
+        btn.textContent = 'Show →';
+      }
+    });
+
+    document.getElementById('btn-calc-dollars').addEventListener('click', calcDollars);
+
+    document.getElementById('btn-retake').addEventListener('click', () => {
+      const tbody = document.getElementById('task-body');
+      tbody.innerHTML = '';
+      customRowCount = 0;
+      init();
+      showScreen('intro');
+    });
+
+    // Email form
+    const emailForm = document.getElementById('email-results-form');
+    const emailSuccess = document.getElementById('email-success');
+    emailForm?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      try {
+        await fetch(emailForm.action, {
+          method: 'POST',
+          body: new FormData(emailForm),
+          headers: { Accept: 'application/json' },
+        });
+        emailForm.style.display = 'none';
+        emailSuccess.classList.remove('hidden');
+      } catch {
+        emailForm.style.display = 'none';
+        emailSuccess.classList.remove('hidden');
+      }
+    });
+
+    init();
+  </script>
+</Layout>

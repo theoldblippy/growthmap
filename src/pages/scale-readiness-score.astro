@@ -137,6 +137,9 @@ import Layout from '../layouts/Layout.astro';
           'We have a clear, shared process for making major decisions.',
         ],
         gapDesc: 'Decision bottlenecks are the #1 thing that caps growth in leader-led businesses. When everything runs through you, you become the constraint — and you can\'t scale a constraint. Book a free call and we\'ll map out exactly what needs to change.',
+        recommendation: 'Start by identifying the 3 decisions your team asks you about most often, then build simple frameworks so they can handle those without you.',
+        blogLink: '/blog/how-to-stop-being-the-bottleneck',
+        blogTitle: 'How to Stop Being the Bottleneck',
       },
       {
         id: 'team',
@@ -150,6 +153,9 @@ import Layout from '../layouts/Layout.astro';
           'We could handle a key person leaving without it becoming a crisis.',
         ],
         gapDesc: 'Without people who truly own outcomes, you\'re always the safety net. Your team is executing, but you\'re still carrying the weight. Book a free call to talk through who you need, what they own, and how to build real leverage.',
+        recommendation: 'Pick one responsibility you\'re holding onto and transfer full ownership to someone on your team this week. Define the outcome, not the steps.',
+        blogLink: '/blog/how-to-delegate-when-youre-used-to-doing-everything',
+        blogTitle: 'How to Delegate When You\'re Used to Doing Everything',
       },
       {
         id: 'systems',
@@ -163,6 +169,9 @@ import Layout from '../layouts/Layout.astro';
           'Our tools and workflows help us move faster, not create more work.',
         ],
         gapDesc: 'Without documented systems, growth creates chaos — not momentum. Every new hire, every new client, every new initiative becomes a fire drill. Book a free call to build the operating foundation your business needs to scale.',
+        recommendation: 'Install a weekly operating cadence with your leadership team. Same meeting, same time, same agenda. It replaces chaos with rhythm.',
+        blogLink: '/blog/how-to-build-a-weekly-operating-cadence',
+        blogTitle: 'How to Build a Weekly Operating Cadence',
       },
       {
         id: 'revenue',
@@ -176,6 +185,9 @@ import Layout from '../layouts/Layout.astro';
           'We have a clear ideal client profile and consistently go after them.',
         ],
         gapDesc: 'Unpredictable revenue makes every other decision harder — hiring, investing, planning. You can\'t build confidently on a shaky foundation. Book a free call to build a reliable, system-driven growth engine.',
+        recommendation: 'Document your sales process end-to-end and identify where revenue depends on a single person. That dependency is your biggest risk.',
+        blogLink: '/blog/why-revenue-is-growing-but-nothing-feels-easier',
+        blogTitle: 'Why Revenue Is Growing But Nothing Feels Easier',
       },
       {
         id: 'financial',
@@ -188,6 +200,9 @@ import Layout from '../layouts/Layout.astro';
           'We make investment and hiring decisions based on data, not gut feel.',
         ],
         gapDesc: 'You can\'t make confident decisions without clear numbers. Most leaders are flying blind on unit economics, margin, and cash position — and they don\'t know it until it\'s a problem. Book a free call to fix your financial visibility.',
+        recommendation: 'Set up a monthly financial review with 5 key numbers: revenue, margin, cash, client acquisition cost, and pipeline value.',
+        blogLink: '/blog/what-is-a-business-operating-system',
+        blogTitle: 'What Is a Business Operating System?',
       },
       {
         id: 'growth',
@@ -200,6 +215,9 @@ import Layout from '../layouts/Layout.astro';
           'We have access to the capital or resources needed to fund our next stage of growth.',
         ],
         gapDesc: 'Pushing growth on a business that isn\'t ready for it doesn\'t accelerate you — it breaks things. More clients, more revenue, more pressure on a fragile foundation is a recipe for chaos. Book a free call to close the gaps before you push the accelerator.',
+        recommendation: 'Before pushing for more growth, stress-test your operations: what would break if you doubled your clients in 90 days?',
+        blogLink: '/blog/how-to-scale-without-burning-out',
+        blogTitle: 'How to Scale Without Burning Out',
       },
     ];
 
@@ -351,15 +369,24 @@ import Layout from '../layouts/Layout.astro';
       barsEl.innerHTML = '';
       scores.forEach((score, i) => {
         const color = scoreColor(score);
+        const dim = dimensions[i];
         const div = document.createElement('div');
+        let recHtml = '';
+        if (score < 80 && dim.recommendation) {
+          recHtml = `
+            <p class="mt-2 text-sm text-mid-gray">${dim.recommendation}</p>
+            <a href="${dim.blogLink}" class="mt-1 inline-block text-sm font-semibold text-bright-blue hover:text-navy">Read: ${dim.blogTitle} &rarr;</a>
+          `;
+        }
         div.innerHTML = `
           <div class="flex justify-between mb-2">
-            <span class="text-sm font-semibold text-dark-text">${dimensions[i].title}</span>
+            <span class="text-sm font-semibold text-dark-text">${dim.title}</span>
             <span class="text-sm font-bold" style="color:${color}">${score}/100</span>
           </div>
           <div class="h-2.5 w-full rounded-full bg-light-gray">
             <div class="h-2.5 rounded-full" style="width:${score}%;background:${color}"></div>
           </div>
+          ${recHtml}
         `;
         barsEl.appendChild(div);
       });

@@ -39,8 +39,8 @@ import Layout from '../layouts/Layout.astro';
     <section id="screen-input" class="hidden px-6 py-16 md:py-24">
       <div class="mx-auto max-w-[900px]">
         <div class="mb-8 text-center">
-          <h2 class="text-2xl font-bold text-navy md:text-3xl">Check the tasks you do, estimate your hours</h2>
-          <p class="mt-3 text-mid-gray">Check each task you do in a typical week. Adjust the hours and category if needed.</p>
+          <h2 class="text-2xl font-bold text-navy md:text-3xl">Check the tasks you do each week</h2>
+          <p class="mt-3 text-mid-gray">Only check the ones that apply to you. Adjust hours and categories if needed.</p>
         </div>
 
         <!-- Task table -->
@@ -144,22 +144,8 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
 
-        <!-- CTA -->
-        <div class="mt-10 rounded-xl bg-navy p-8 text-center">
-          <h3 class="text-xl font-bold text-white">Want help getting those hours back?</h3>
-          <p class="mt-3 text-white/70">A 30-minute call to talk through what's eating your time and what to do about it.</p>
-          <a
-            href="https://calendar.notion.so/meet/cameronearloliver/qc3y04oud"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="mt-6 inline-block rounded-lg bg-bright-blue px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
-          >
-            Book a Free Consult
-          </a>
-        </div>
-
         <!-- Email results -->
-        <div class="mt-8 rounded-xl border border-gray-100 p-6 text-center">
+        <div class="mt-10 rounded-xl border border-gray-100 p-6 text-center">
           <p class="font-semibold text-navy">Want a copy of your results?</p>
           <form
             id="email-results-form"
@@ -186,6 +172,20 @@ import Layout from '../layouts/Layout.astro';
           </form>
           <p id="email-success" class="mt-3 hidden text-sm font-medium text-bright-blue">Sent! Check your inbox.</p>
           <p class="mt-2 text-xs text-mid-gray">No spam. Just your results.</p>
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-8 rounded-xl bg-navy p-8 text-center">
+          <h3 class="text-xl font-bold text-white">Want help getting those hours back?</h3>
+          <p class="mt-3 text-white/70">A 30-minute call to talk through what's eating your time and what to do about it.</p>
+          <a
+            href="https://calendar.notion.so/meet/cameronearloliver/qc3y04oud"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-6 inline-block rounded-lg bg-bright-blue px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
+          >
+            Book a Free Consult
+          </a>
         </div>
 
         <!-- Retake -->
@@ -258,7 +258,7 @@ import Layout from '../layouts/Layout.astro';
       tdCheck.className = 'py-3 pr-2';
       const checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
-      checkbox.checked = !isCustom;
+      checkbox.checked = false;
       checkbox.className = 'task-check h-4 w-4 rounded border-gray-300 text-bright-blue focus:ring-bright-blue accent-[#009CDE]';
       tdCheck.appendChild(checkbox);
       tr.appendChild(tdCheck);
@@ -492,10 +492,37 @@ import Layout from '../layouts/Layout.astro';
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
+    const categoryGroups = [
+      { value: 10, label: '$10/hr Tasks', color: '#ef4444', subtitle: 'Admin, scheduling, data entry — delegate or automate these' },
+      { value: 100, label: '$100/hr Tasks', color: '#f59e0b', subtitle: 'Client work, project management — valuable but not your highest use' },
+      { value: 1000, label: '$1,000/hr Tasks', color: '#009CDE', subtitle: 'Hiring, process building, org design — building the machine' },
+      { value: 10000, label: '$10,000/hr Tasks', color: '#22c55e', subtitle: 'Vision, key relationships, strategy — where founders create the most value' },
+    ];
+
+    function buildGroupHeader(group) {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td colspan="4" class="pt-8 pb-3">
+          <div class="flex items-center gap-3">
+            <span class="inline-block h-3 w-3 rounded" style="background:${group.color}"></span>
+            <span class="font-bold text-navy">${group.label}</span>
+          </div>
+          <p class="mt-1 text-xs text-mid-gray ml-6">${group.subtitle}</p>
+        </td>
+      `;
+      return tr;
+    }
+
     // Init
     function init() {
       const tbody = document.getElementById('task-body');
+      let currentCategory = null;
       defaultTasks.forEach((task, i) => {
+        if (task.category !== currentCategory) {
+          currentCategory = task.category;
+          const group = categoryGroups.find(g => g.value === currentCategory);
+          if (group) tbody.appendChild(buildGroupHeader(group));
+        }
         tbody.appendChild(buildTaskRow(task, i));
       });
       updateTotals();

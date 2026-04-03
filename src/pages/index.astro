@@ -48,19 +48,20 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- PAIN POINTS -->
+  <!-- CURRENT SITUATION (Stark: "Current Situation") -->
   <section class="bg-light-gray px-6 py-20 md:py-24">
     <div class="mx-auto max-w-[800px] text-center">
       <h2 class="text-3xl font-bold text-navy md:text-[40px] md:leading-tight">
-        Does This Feel Familiar?
+        This Is Where You Are Right Now
       </h2>
+      <p class="mt-4 text-lg text-mid-gray">Sound familiar?</p>
       <ul class="mt-10 space-y-5 text-left">
         {[
-          "You've hit a ceiling you can't push through by working harder.",
-          "You're tired of guessing what's actually going to move revenue.",
-          "You're the default problem-solver for everything, and it's unsustainable.",
-          "Your team is busy, but the results don't match the effort.",
-          "You're carrying the weight of the business, and it's starting to bleed into the rest of your life.",
+          "You're the only person who can make decisions, and it's crushing your calendar.",
+          "You've hired good people, but they still come to you for everything.",
+          "Revenue is flat or unpredictable, and you're not sure why.",
+          "You're working harder than ever, but the business isn't growing faster.",
+          "You're carrying the weight of the entire company — and it's bleeding into nights, weekends, and your health.",
         ].map((item) => (
           <li class="flex items-start gap-3 text-lg text-dark-text">
             <span class="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-bright-blue" />
@@ -68,110 +69,96 @@ import Layout from '../layouts/Layout.astro';
           </li>
         ))}
       </ul>
+    </div>
+  </section>
+
+  <!-- DESIRED FUTURE STATE (Stark: "Desired Future State") -->
+  <section class="bg-white px-6 py-20 md:py-24">
+    <div class="mx-auto max-w-[800px] text-center">
+      <h2 class="text-3xl font-bold text-navy md:text-[40px] md:leading-tight">
+        What You Actually Want
+      </h2>
+      <ul class="mt-10 space-y-5 text-left">
+        {[
+          "A team that owns outcomes — not one that hands you problems to solve.",
+          "Clarity on exactly what's driving revenue and how to grow it.",
+          "Weeks that feel calm, focused, and intentional — not reactive.",
+          "Decisions based on real data instead of gut instinct and guesswork.",
+          "A business that grows without depending on you to hold everything together.",
+        ].map((item) => (
+          <li class="flex items-start gap-3 text-lg text-dark-text">
+            <span class="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-bright-blue" />
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- BRIDGE: YOUR CONTRIBUTION (Stark: "Perceived Contribution") -->
+  <section class="bg-light-gray px-6 py-20 md:py-24">
+    <div class="mx-auto max-w-[800px] text-center">
+      <p class="mb-4 text-sm font-semibold uppercase tracking-widest text-bright-blue">
+        How Growth Map Helps
+      </p>
+      <h2 class="text-3xl font-bold text-navy md:text-[40px] md:leading-tight">
+        I Help You Build the System That Makes This Possible
+      </h2>
+      <p class="mt-6 text-lg leading-relaxed text-dark-text">
+        Growth Map is a fractional COO practice. I work with founders to figure out what's actually driving their business, who should own what, and how to build a rhythm that replaces chaos with clarity. Most clients go from overwhelmed to in-control within 90 days.
+      </p>
       <a
         href="/time-audit"
         class="mt-10 inline-block rounded-lg bg-bright-blue px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
       >
-        See Where You're Stuck
+        Find Out Where You're Stuck →
       </a>
     </div>
   </section>
 
-  <!-- DESIRED STATE -->
-  <section class="bg-white px-6 py-20 md:py-24">
-    <div class="mx-auto max-w-[800px] text-center">
-      <h2 class="text-3xl font-bold text-navy md:text-[40px] md:leading-tight">
-        What You Want Instead
-      </h2>
-      <ul class="mt-10 space-y-5 text-left">
-        {[
-          "To know exactly why the business is growing and how to keep it moving.",
-          "To make decisions with clarity instead of instinct.",
-          "A team that owns outcomes instead of handing you problems.",
-          "Weeks that feel calm, predictable, and aligned.",
-          "Growth that compounds without burning you out.",
-        ].map((item) => (
-          <li class="flex items-start gap-3 text-lg text-dark-text">
-            <span class="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-bright-blue" />
-            {item}
-          </li>
-        ))}
-      </ul>
-      <a
-        href="/tools"
-        class="mt-10 inline-block rounded-lg bg-bright-blue px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
-      >
-        Find Out Where You Stand
-      </a>
-    </div>
-  </section>
-
-  <!-- STORY -->
-  <section class="bg-light-gray px-6 py-20 md:py-24">
-    <div class="mx-auto max-w-[800px]">
-      <p class="mb-4 text-center text-sm font-semibold uppercase tracking-widest text-bright-blue">
-        a better way to grow
-      </p>
-      <h2 class="text-center text-3xl font-bold text-navy md:text-[40px] md:leading-tight">
-        Why Growth Map Exists
-      </h2>
-      <div class="mt-8 space-y-5 text-lg leading-relaxed text-dark-text">
-        <p>
-          Running a business is always hard — but there's a difference between productive hard and chaotic hard. I built Growth Map after watching founders struggle with wasted effort, misaligned hires, and unclear plans to win.
-        </p>
-        <p>
-          When you understand how your business creates value, who delivers it, how to measure it, and what growth levers to pull, you can systematically scale your business.
-        </p>
-      </div>
-      <div class="mt-8 text-center">
-        <a
-          href="/about"
-          class="text-base font-semibold text-bright-blue transition-colors hover:text-navy"
-        >
-          Read More &rarr;
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
+  <!-- SERVICES (Outcome-focused, incremental ladder) -->
   <section class="bg-white px-6 py-20 md:py-24">
     <div class="mx-auto max-w-[1200px]">
       <p class="mb-4 text-center text-sm font-semibold uppercase tracking-widest text-bright-blue">
-        What We Offer
+        How We Work Together
       </p>
       <h2 class="text-center text-3xl font-bold text-navy md:text-[40px] md:leading-tight">
-        How We Can Work Together
+        Three Ways to Start
       </h2>
+      <p class="mt-4 text-center text-lg text-mid-gray">Most clients start with a Diagnostic and move into a Build.</p>
       <div class="mt-12 grid gap-8 md:grid-cols-3">
-        <!-- Card 1 -->
+        <!-- Card 1 — Entry -->
         <div class="rounded-xl border border-gray-100 bg-light-gray p-8">
-          <h3 class="text-xl font-bold text-navy">Growth Map Diagnostic</h3>
-          <p class="mt-4 leading-relaxed text-dark-text">
-            A fast, 30–60 minute clarity session that reveals how your business creates value, where growth is stuck, and the top levers that will move the business forward.
+          <p class="text-xs font-semibold uppercase tracking-widest text-mid-gray">Step 1</p>
+          <h3 class="mt-2 text-xl font-bold text-navy">Growth Map Diagnostic</h3>
+          <p class="mt-4 text-lg font-semibold text-dark-text">
+            Walk away knowing exactly what's stalling your growth and the 2-3 moves that will move revenue.
           </p>
           <p class="mt-4 leading-relaxed text-mid-gray">
-            Most founders don't have a growth problem — they have a clarity problem that makes growth impossible. The diagnostic exposes the levers that will move your revenue forward.
+            A 30-60 minute deep-dive where we map how your business actually creates value, identify what's broken, and give you a clear action plan — not a 50-page report.
           </p>
         </div>
-        <!-- Card 2 -->
-        <div class="rounded-xl border border-gray-100 bg-light-gray p-8">
-          <h3 class="text-xl font-bold text-navy">The Growth Map Build</h3>
-          <p class="mt-4 leading-relaxed text-dark-text">
-            A 90-day engagement where we map value engines, assign ownership, create your scorecard, and install a weekly cadence that replaces chaos with clarity.
+        <!-- Card 2 — Core -->
+        <div class="rounded-xl border-2 border-bright-blue bg-light-gray p-8 relative">
+          <div class="absolute -top-3 left-6 rounded-full bg-bright-blue px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">Most Popular</div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-mid-gray">Step 2</p>
+          <h3 class="mt-2 text-xl font-bold text-navy">The Growth Map Build</h3>
+          <p class="mt-4 text-lg font-semibold text-dark-text">
+            In 90 days, your team runs the business without you being the bottleneck on every decision.
           </p>
           <p class="mt-4 leading-relaxed text-mid-gray">
-            By the end of 90 days, your business will grow faster because your execution is cleaner, your decisions are sharper, and your team is aligned around what actually moves revenue.
+            Everything from the Diagnostic, plus: we build your operating system together — roles, ownership, scorecard, weekly rhythm. You stop managing by inbox and start leading with clarity.
           </p>
         </div>
-        <!-- Card 3 -->
+        <!-- Card 3 — Ongoing -->
         <div class="rounded-xl border border-gray-100 bg-light-gray p-8">
-          <h3 class="text-xl font-bold text-navy">Fractional COO</h3>
-          <p class="mt-4 leading-relaxed text-dark-text">
-            Hands-on execution support to run the operating model, drive improvements, and ensure your team stays aligned every week.
+          <p class="text-xs font-semibold uppercase tracking-widest text-mid-gray">Step 3</p>
+          <h3 class="mt-2 text-xl font-bold text-navy">Fractional COO</h3>
+          <p class="mt-4 text-lg font-semibold text-dark-text">
+            Your business grows quarter over quarter because someone owns the operating system — not you.
           </p>
           <p class="mt-4 leading-relaxed text-mid-gray">
-            My job isn't to keep the system running or to be a new manager; it's to continuously improve it so your business keeps growing without burning you out.
+            Everything from the Build, plus: I stay on as your operating partner. I run the system, drive improvements, and keep the team aligned — so you can focus on the work only you can do.
           </p>
         </div>
       </div>
@@ -189,23 +176,34 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- SCALE READINESS SCORE CTA -->
+  <!-- WHY NOW (Stark: Urgency / cost of inaction) -->
   <section class="bg-navy px-6 py-20 md:py-24">
     <div class="mx-auto max-w-[800px] text-center">
-      <p class="mb-4 text-sm font-semibold uppercase tracking-widest text-bright-blue">Free Assessment</p>
+      <p class="mb-4 text-sm font-semibold uppercase tracking-widest text-bright-blue">The Cost of Waiting</p>
       <h2 class="text-3xl font-bold leading-tight text-white md:text-[40px] md:leading-tight">
-        Find Out Where Your Business Is Actually Stuck
+        Every Month You Stay the Bottleneck Costs You More Than You Think
       </h2>
-      <p class="mt-6 text-lg leading-relaxed text-white/70">
-        22 questions. 6 dimensions. 3 minutes. You'll get a score across Decision-Making, Team & Delegation, Systems, Revenue, Financial Clarity, and Growth Readiness — and see exactly what's holding you back.
-      </p>
+      <div class="mt-10 grid gap-6 text-left sm:grid-cols-3">
+        <div class="rounded-xl bg-white/10 p-6">
+          <p class="text-2xl font-bold text-bright-blue">10-20 hrs</p>
+          <p class="mt-2 text-sm text-white/70">per week that founders spend on work someone else could do — time that never goes to growth</p>
+        </div>
+        <div class="rounded-xl bg-white/10 p-6">
+          <p class="text-2xl font-bold text-bright-blue">6-12 months</p>
+          <p class="mt-2 text-sm text-white/70">is how long most founders wait before getting help — after the damage is already done</p>
+        </div>
+        <div class="rounded-xl bg-white/10 p-6">
+          <p class="text-2xl font-bold text-bright-blue">$100K+</p>
+          <p class="mt-2 text-sm text-white/70">in lost revenue from bad hires, unclear priorities, and decisions made on instinct instead of insight</p>
+        </div>
+      </div>
       <a
-        href="/scale-readiness-score"
+        href="/time-audit"
         class="mt-10 inline-block rounded-lg bg-bright-blue px-10 py-4 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
       >
-        Take the Scale Readiness Score →
+        See Where Your Time Goes →
       </a>
-      <p class="mt-4 text-sm text-white/50">No email required. See your results instantly.</p>
+      <p class="mt-4 text-sm text-white/50">Free. No email required. Results in 3 minutes.</p>
     </div>
   </section>
 
@@ -213,10 +211,10 @@ import Layout from '../layouts/Layout.astro';
   <section class="bg-light-gray px-6 py-20 md:py-24">
     <div class="mx-auto max-w-[700px] text-center">
       <p class="mb-4 text-sm font-semibold uppercase tracking-widest text-bright-blue">
-        Free Tool
+        Start Here
       </p>
       <h2 class="text-3xl font-bold text-navy md:text-[40px] md:leading-tight">
-        Where Is Your Time Actually Going?
+        Find Out Where Your Time Actually Goes
       </h2>
       <p class="mt-4 text-lg leading-relaxed text-dark-text">
         Most founders spend over half their week on $10/hr work. The CEO Time Audit breaks your week into $10, $100, $1,000, and $10,000-per-hour tasks — so you can see where to focus and what to hand off.

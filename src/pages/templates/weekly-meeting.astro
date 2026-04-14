@@ -1,0 +1,544 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Weekly Leadership Meeting Agenda Template | Growth Map"
+  description="Free weekly leadership meeting agenda template. A 90-minute structured format to keep your team aligned, solve problems, and drive accountability."
+  canonicalPath="/templates/weekly-meeting"
+>
+
+  <style>
+    @media print {
+      nav, footer, .no-print, button:not(.print-keep) {
+        display: none !important;
+      }
+      body {
+        background: white !important;
+        font-size: 11pt;
+      }
+      main {
+        padding: 0 !important;
+      }
+      section {
+        page-break-inside: avoid;
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+      }
+      .agenda-section {
+        break-inside: avoid;
+        border: 1px solid #ccc !important;
+        margin-bottom: 0.75rem !important;
+      }
+      .agenda-section[open] summary {
+        border-bottom: 1px solid #ccc;
+      }
+      textarea, input[type="text"] {
+        border: 1px solid #ccc !important;
+        min-height: 2.5rem;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .print-show {
+        display: block !important;
+      }
+    }
+  </style>
+
+  <div class="min-h-screen bg-white">
+
+    <!-- INTRO / SEO SECTION -->
+    <section class="px-6 py-20 md:py-28">
+      <div class="mx-auto max-w-[680px] text-center">
+        <p class="mb-4 text-sm font-semibold uppercase tracking-widest text-bright-blue">Free Template</p>
+        <h1 class="text-3xl font-bold leading-tight text-navy sm:text-4xl md:text-[52px] md:leading-[1.1]">
+          Weekly Leadership Meeting Agenda
+        </h1>
+        <p class="mt-6 text-lg leading-relaxed text-mid-gray">
+          Most leadership teams either skip weekly meetings entirely or run them so poorly they become a waste of everyone's time. A structured weekly meeting template fixes that. It gives your team a predictable rhythm to surface issues, track accountability, and make decisions -- in 90 minutes or less.
+        </p>
+        <p class="mt-4 text-lg leading-relaxed text-mid-gray">
+          This is the format I install with every client I work with. No proprietary jargon. No gated download. Just a ready-to-use weekly meeting template you can start running today.
+        </p>
+        <p class="mt-4 text-lg leading-relaxed text-mid-gray">
+          Every section has a time box, a clear purpose, and space for your team to fill in the details. Use it digitally or print it out for your next meeting.
+        </p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <button
+            onclick="window.print()"
+            class="no-print inline-flex items-center gap-2 rounded-lg bg-navy px-8 py-4 text-base font-semibold text-white transition-colors hover:bg-navy/90"
+          >
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+            Print This Agenda
+          </button>
+          <a
+            href="#agenda"
+            class="no-print inline-block rounded-lg border-2 border-bright-blue px-8 py-4 text-base font-semibold text-bright-blue transition-colors hover:bg-bright-blue hover:text-white"
+          >
+            Jump to Template
+          </a>
+        </div>
+        <p class="mt-4 text-sm text-mid-gray no-print">No email required. Completely free.</p>
+      </div>
+    </section>
+
+    <!-- THE AGENDA TEMPLATE -->
+    <section id="agenda" class="px-6 py-16 md:py-24 bg-light-gray">
+      <div class="mx-auto max-w-[800px]">
+
+        <!-- Meeting header fields -->
+        <div class="mb-10 rounded-xl bg-white p-6 shadow-sm md:p-8">
+          <h2 class="text-2xl font-bold text-navy md:text-3xl">Meeting Agenda</h2>
+          <p class="mt-2 text-sm text-mid-gray">90-minute weekly leadership meeting</p>
+          <div class="mt-6 grid gap-4 sm:grid-cols-3">
+            <div>
+              <label class="block text-sm font-semibold text-navy mb-1">Date</label>
+              <input type="text" placeholder="e.g. April 2, 2026" class="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none focus:ring-2 focus:ring-bright-blue/20" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-navy mb-1">Facilitator</label>
+              <input type="text" placeholder="Who's running it?" class="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none focus:ring-2 focus:ring-bright-blue/20" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-navy mb-1">Attendees</label>
+              <input type="text" placeholder="Team members present" class="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none focus:ring-2 focus:ring-bright-blue/20" />
+            </div>
+          </div>
+        </div>
+
+        <!-- 1. Check-in -->
+        <details class="agenda-section mb-4 rounded-xl bg-white shadow-sm" open>
+          <summary class="flex cursor-pointer items-center justify-between px-6 py-5 md:px-8">
+            <div class="flex items-center gap-3">
+              <span class="flex h-8 w-8 items-center justify-center rounded-full bg-bright-blue text-sm font-bold text-white">1</span>
+              <div>
+                <h3 class="text-lg font-bold text-navy">Check-in</h3>
+                <p class="text-sm text-mid-gray">Each person shares one personal and one professional win</p>
+              </div>
+            </div>
+            <span class="no-print rounded-full bg-light-gray px-3 py-1 text-xs font-semibold text-mid-gray">5 min</span>
+          </summary>
+          <div class="border-t border-gray-100 px-6 pb-6 pt-4 md:px-8">
+            <div id="checkin-rows">
+              <div class="checkin-row mb-3 grid gap-3 sm:grid-cols-[1fr_1fr_1fr] items-start">
+                <input type="text" placeholder="Name" class="rounded-lg border border-gray-200 px-3 py-2 text-sm text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none" />
+                <input type="text" placeholder="Personal win" class="rounded-lg border border-gray-200 px-3 py-2 text-sm text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none" />
+                <input type="text" placeholder="Professional win" class="rounded-lg border border-gray-200 px-3 py-2 text-sm text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none" />
+              </div>
+            </div>
+            <button onclick="addCheckinRow()" class="no-print mt-2 text-sm font-semibold text-bright-blue hover:text-navy transition-colors">+ Add person</button>
+          </div>
+        </details>
+
+        <!-- 2. Scorecard Review -->
+        <details class="agenda-section mb-4 rounded-xl bg-white shadow-sm" open>
+          <summary class="flex cursor-pointer items-center justify-between px-6 py-5 md:px-8">
+            <div class="flex items-center gap-3">
+              <span class="flex h-8 w-8 items-center justify-center rounded-full bg-bright-blue text-sm font-bold text-white">2</span>
+              <div>
+                <h3 class="text-lg font-bold text-navy">Scorecard Review</h3>
+                <p class="text-sm text-mid-gray">Review 5-15 weekly KPIs -- on track or off track?</p>
+              </div>
+            </div>
+            <span class="no-print rounded-full bg-light-gray px-3 py-1 text-xs font-semibold text-mid-gray">5 min</span>
+          </summary>
+          <div class="border-t border-gray-100 px-6 pb-6 pt-4 md:px-8">
+            <div class="mb-3 hidden sm:grid sm:grid-cols-[1fr_100px_80px_80px] gap-3 text-xs font-semibold text-mid-gray uppercase tracking-wide">
+              <span>Metric</span>
+              <span class="text-center">Target</span>
+              <span class="text-center">Actual</span>
+              <span class="text-center">Status</span>
+            </div>
+            <div id="scorecard-rows">
+              <div class="scorecard-row mb-2 grid gap-2 sm:grid-cols-[1fr_100px_80px_80px] items-center">
+                <input type="text" placeholder="e.g. Revenue" class="rounded-lg border border-gray-200 px-3 py-2 text-sm text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none" />
+                <input type="text" placeholder="Target" class="rounded-lg border border-gray-200 px-3 py-2 text-sm text-center text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none" />
+                <input type="text" placeholder="Actual" class="rounded-lg border border-gray-200 px-3 py-2 text-sm text-center text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none" />
+                <select class="rounded-lg border border-gray-200 px-2 py-2 text-sm text-dark-text focus:border-bright-blue focus:outline-none">
+                  <option value="">--</option>
+                  <option value="on">On Track</option>
+                  <option value="off">Off Track</option>
+                </select>
+              </div>
+            </div>
+            <button onclick="addScorecardRow()" class="no-print mt-2 text-sm font-semibold text-bright-blue hover:text-navy transition-colors">+ Add metric</button>
+          </div>
+        </details>
+
+        <!-- 3. Priority Review -->
+        <details class="agenda-section mb-4 rounded-xl bg-white shadow-sm" open>
+          <summary class="flex cursor-pointer items-center justify-between px-6 py-5 md:px-8">
+            <div class="flex items-center gap-3">
+              <span class="flex h-8 w-8 items-center justify-center rounded-full bg-bright-blue text-sm font-bold text-white">3</span>
+              <div>
+                <h3 class="text-lg font-bold text-navy">Priority Review</h3>
+                <p class="text-sm text-mid-gray">Review quarterly priorities -- on track or off track?</p>
+              </div>
+            </div>
+            <span class="no-print rounded-full bg-light-gray px-3 py-1 text-xs font-semibold text-mid-gray">5 min</span>
+          </summary>
+          <div class="border-t border-gray-100 px-6 pb-6 pt-4 md:px-8">
+            <div class="mb-3 hidden sm:grid sm:grid-cols-[1fr_120px_80px] gap-3 text-xs font-semibold text-mid-gray uppercase tracking-wide">
+              <span>Quarterly Priority</span>
+              <span class="text-center">Owner</span>
+              <span class="text-center">Status</span>
+            </div>
+            <div id="priority-rows">
+              <div class="priority-row mb-2 grid gap-2 sm:grid-cols-[1fr_120px_80px] items-center">
+                <input type="text" placeholder="e.g. Launch new product line" class="rounded-lg border border-gray-200 px-3 py-2 text-sm text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none" />
+                <input type="text" placeholder="Owner" class="rounded-lg border border-gray-200 px-3 py-2 text-sm text-center text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none" />
+                <select class="rounded-lg border border-gray-200 px-2 py-2 text-sm text-dark-text focus:border-bright-blue focus:outline-none">
+                  <option value="">--</option>
+                  <option value="on">On Track</option>
+                  <option value="off">Off Track</option>
+                </select>
+              </div>
+            </div>
+            <button onclick="addPriorityRow()" class="no-print mt-2 text-sm font-semibold text-bright-blue hover:text-navy transition-colors">+ Add priority</button>
+          </div>
+        </details>
+
+        <!-- 4. Headlines -->
+        <details class="agenda-section mb-4 rounded-xl bg-white shadow-sm" open>
+          <summary class="flex cursor-pointer items-center justify-between px-6 py-5 md:px-8">
+            <div class="flex items-center gap-3">
+              <span class="flex h-8 w-8 items-center justify-center rounded-full bg-bright-blue text-sm font-bold text-white">4</span>
+              <div>
+                <h3 class="text-lg font-bold text-navy">Headlines</h3>
+                <p class="text-sm text-mid-gray">Share any customer, employee, or company news</p>
+              </div>
+            </div>
+            <span class="no-print rounded-full bg-light-gray px-3 py-1 text-xs font-semibold text-mid-gray">5 min</span>
+          </summary>
+          <div class="border-t border-gray-100 px-6 pb-6 pt-4 md:px-8">
+            <textarea rows="4" placeholder="Drop headlines here. Good news, bad news, FYIs -- anything the team needs to know. Keep it brief; if it needs discussion, move it to Issues." class="w-full rounded-lg border border-gray-200 px-4 py-3 text-sm text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none focus:ring-2 focus:ring-bright-blue/20 resize-y"></textarea>
+          </div>
+        </details>
+
+        <!-- 5. To-Do Review -->
+        <details class="agenda-section mb-4 rounded-xl bg-white shadow-sm" open>
+          <summary class="flex cursor-pointer items-center justify-between px-6 py-5 md:px-8">
+            <div class="flex items-center gap-3">
+              <span class="flex h-8 w-8 items-center justify-center rounded-full bg-bright-blue text-sm font-bold text-white">5</span>
+              <div>
+                <h3 class="text-lg font-bold text-navy">To-Do Review</h3>
+                <p class="text-sm text-mid-gray">Check off last week's to-dos -- done or not done?</p>
+              </div>
+            </div>
+            <span class="no-print rounded-full bg-light-gray px-3 py-1 text-xs font-semibold text-mid-gray">5 min</span>
+          </summary>
+          <div class="border-t border-gray-100 px-6 pb-6 pt-4 md:px-8">
+            <div class="mb-3 hidden sm:grid sm:grid-cols-[auto_1fr_120px_80px] gap-3 text-xs font-semibold text-mid-gray uppercase tracking-wide">
+              <span class="w-6"></span>
+              <span>To-Do</span>
+              <span class="text-center">Owner</span>
+              <span class="text-center">Status</span>
+            </div>
+            <div id="todo-rows">
+              <div class="todo-row mb-2 grid gap-2 sm:grid-cols-[auto_1fr_120px_80px] items-center">
+                <input type="checkbox" class="h-4 w-4 rounded border-gray-300 accent-[#009CDE]" />
+                <input type="text" placeholder="To-do from last week" class="rounded-lg border border-gray-200 px-3 py-2 text-sm text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none" />
+                <input type="text" placeholder="Owner" class="rounded-lg border border-gray-200 px-3 py-2 text-sm text-center text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none" />
+                <select class="rounded-lg border border-gray-200 px-2 py-2 text-sm text-dark-text focus:border-bright-blue focus:outline-none">
+                  <option value="">--</option>
+                  <option value="done">Done</option>
+                  <option value="not">Not Done</option>
+                </select>
+              </div>
+            </div>
+            <button onclick="addTodoRow()" class="no-print mt-2 text-sm font-semibold text-bright-blue hover:text-navy transition-colors">+ Add to-do</button>
+          </div>
+        </details>
+
+        <!-- 6. Issues -->
+        <details class="agenda-section mb-4 rounded-xl bg-white shadow-sm border-2 border-bright-blue" open>
+          <summary class="flex cursor-pointer items-center justify-between px-6 py-5 md:px-8">
+            <div class="flex items-center gap-3">
+              <span class="flex h-8 w-8 items-center justify-center rounded-full bg-bright-blue text-sm font-bold text-white">6</span>
+              <div>
+                <h3 class="text-lg font-bold text-navy">Issues</h3>
+                <p class="text-sm text-mid-gray">Identify, discuss, and solve the top 3 issues</p>
+              </div>
+            </div>
+            <span class="no-print rounded-full bg-bright-blue/10 px-3 py-1 text-xs font-semibold text-bright-blue">60 min</span>
+          </summary>
+          <div class="border-t border-gray-100 px-6 pb-6 pt-4 md:px-8">
+            <p class="mb-4 text-sm text-mid-gray">Start by listing all issues, then prioritize the top 3. For each: name the real problem, discuss options, and decide on one clear next step with an owner. Don't move on until it's resolved.</p>
+            <div id="issue-blocks">
+              <div class="issue-block mb-6 rounded-lg border border-gray-200 p-4">
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="flex h-6 w-6 items-center justify-center rounded-full bg-navy text-xs font-bold text-white">1</span>
+                  <input type="text" placeholder="Issue title" class="flex-1 rounded-lg border border-gray-200 px-3 py-2 text-sm font-semibold text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none" />
+                </div>
+                <div class="grid gap-3 sm:grid-cols-3">
+                  <div>
+                    <label class="block text-xs font-semibold text-mid-gray uppercase tracking-wide mb-1">Identify (Root Cause)</label>
+                    <textarea rows="2" placeholder="What's the real problem?" class="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none resize-y"></textarea>
+                  </div>
+                  <div>
+                    <label class="block text-xs font-semibold text-mid-gray uppercase tracking-wide mb-1">Discuss (Options)</label>
+                    <textarea rows="2" placeholder="What are the options?" class="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none resize-y"></textarea>
+                  </div>
+                  <div>
+                    <label class="block text-xs font-semibold text-mid-gray uppercase tracking-wide mb-1">Solve (Decision / To-Do)</label>
+                    <textarea rows="2" placeholder="What's the decision and who owns it?" class="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none resize-y"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button onclick="addIssueBlock()" class="no-print mt-2 text-sm font-semibold text-bright-blue hover:text-navy transition-colors">+ Add issue</button>
+          </div>
+        </details>
+
+        <!-- 7. Wrap-Up -->
+        <details class="agenda-section mb-4 rounded-xl bg-white shadow-sm" open>
+          <summary class="flex cursor-pointer items-center justify-between px-6 py-5 md:px-8">
+            <div class="flex items-center gap-3">
+              <span class="flex h-8 w-8 items-center justify-center rounded-full bg-bright-blue text-sm font-bold text-white">7</span>
+              <div>
+                <h3 class="text-lg font-bold text-navy">Wrap-Up</h3>
+                <p class="text-sm text-mid-gray">Recap to-dos, rate the meeting, cascading messages</p>
+              </div>
+            </div>
+            <span class="no-print rounded-full bg-light-gray px-3 py-1 text-xs font-semibold text-mid-gray">5 min</span>
+          </summary>
+          <div class="border-t border-gray-100 px-6 pb-6 pt-4 md:px-8 space-y-4">
+            <div>
+              <label class="block text-sm font-semibold text-navy mb-1">New To-Dos from This Meeting</label>
+              <textarea rows="3" placeholder="List each to-do with an owner and a due date (default: next week's meeting)" class="w-full rounded-lg border border-gray-200 px-4 py-3 text-sm text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none focus:ring-2 focus:ring-bright-blue/20 resize-y"></textarea>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-navy mb-1">Cascading Messages</label>
+              <textarea rows="2" placeholder="What does the team need to communicate to their direct reports this week?" class="w-full rounded-lg border border-gray-200 px-4 py-3 text-sm text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none focus:ring-2 focus:ring-bright-blue/20 resize-y"></textarea>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-navy mb-2">Rate This Meeting (1-10)</label>
+              <div class="flex gap-2" id="rating-bar">
+                <button onclick="setRating(1)" class="rating-btn h-10 w-10 rounded-lg border-2 border-gray-200 text-sm font-bold text-mid-gray transition-colors hover:border-bright-blue hover:text-bright-blue">1</button>
+                <button onclick="setRating(2)" class="rating-btn h-10 w-10 rounded-lg border-2 border-gray-200 text-sm font-bold text-mid-gray transition-colors hover:border-bright-blue hover:text-bright-blue">2</button>
+                <button onclick="setRating(3)" class="rating-btn h-10 w-10 rounded-lg border-2 border-gray-200 text-sm font-bold text-mid-gray transition-colors hover:border-bright-blue hover:text-bright-blue">3</button>
+                <button onclick="setRating(4)" class="rating-btn h-10 w-10 rounded-lg border-2 border-gray-200 text-sm font-bold text-mid-gray transition-colors hover:border-bright-blue hover:text-bright-blue">4</button>
+                <button onclick="setRating(5)" class="rating-btn h-10 w-10 rounded-lg border-2 border-gray-200 text-sm font-bold text-mid-gray transition-colors hover:border-bright-blue hover:text-bright-blue">5</button>
+                <button onclick="setRating(6)" class="rating-btn h-10 w-10 rounded-lg border-2 border-gray-200 text-sm font-bold text-mid-gray transition-colors hover:border-bright-blue hover:text-bright-blue">6</button>
+                <button onclick="setRating(7)" class="rating-btn h-10 w-10 rounded-lg border-2 border-gray-200 text-sm font-bold text-mid-gray transition-colors hover:border-bright-blue hover:text-bright-blue">7</button>
+                <button onclick="setRating(8)" class="rating-btn h-10 w-10 rounded-lg border-2 border-gray-200 text-sm font-bold text-mid-gray transition-colors hover:border-bright-blue hover:text-bright-blue">8</button>
+                <button onclick="setRating(9)" class="rating-btn h-10 w-10 rounded-lg border-2 border-gray-200 text-sm font-bold text-mid-gray transition-colors hover:border-bright-blue hover:text-bright-blue">9</button>
+                <button onclick="setRating(10)" class="rating-btn h-10 w-10 rounded-lg border-2 border-gray-200 text-sm font-bold text-mid-gray transition-colors hover:border-bright-blue hover:text-bright-blue">10</button>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- Print button bottom -->
+        <div class="mt-8 text-center no-print">
+          <button
+            onclick="window.print()"
+            class="inline-flex items-center gap-2 rounded-lg bg-navy px-8 py-4 text-base font-semibold text-white transition-colors hover:bg-navy/90"
+          >
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+            Print This Agenda
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HOW TO RUN THIS MEETING -->
+    <section class="px-6 py-16 md:py-24">
+      <div class="mx-auto max-w-[680px]">
+        <p class="text-sm font-semibold uppercase tracking-widest text-bright-blue">Facilitator Guide</p>
+        <h2 class="mt-4 text-2xl font-bold text-navy md:text-3xl">How to Run This Meeting</h2>
+        <p class="mt-4 text-lg leading-relaxed text-mid-gray">
+          The weekly leadership meeting agenda above only works if you run it with discipline. Here are the ground rules that separate effective meetings from time-wasters.
+        </p>
+        <div class="mt-10 space-y-6">
+          <div class="flex gap-4">
+            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-light-gray text-sm font-bold text-navy">1</span>
+            <div>
+              <h3 class="font-bold text-navy">Same day, same time, every week</h3>
+              <p class="mt-1 text-mid-gray">No rescheduling. No skipping. The consistency is the point. Your team needs to know this meeting is sacred. Most teams run it Monday or Tuesday morning.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-light-gray text-sm font-bold text-navy">2</span>
+            <div>
+              <h3 class="font-bold text-navy">Start on time, end on time</h3>
+              <p class="mt-1 text-mid-gray">Start at the scheduled time even if someone is missing. End at 90 minutes no matter what. This trains your team to respect the format and come prepared.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-light-gray text-sm font-bold text-navy">3</span>
+            <div>
+              <h3 class="font-bold text-navy">No phones, no laptops (unless for notes)</h3>
+              <p class="mt-1 text-mid-gray">This is the one meeting where your leadership team gives each other full attention. If people are multitasking, you are wasting everyone's time.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-light-gray text-sm font-bold text-navy">4</span>
+            <div>
+              <h3 class="font-bold text-navy">Spend 70% of the time on Issues</h3>
+              <p class="mt-1 text-mid-gray">The first 30 minutes are reporting. The last 60 are problem-solving. If your meetings feel like status updates, you are spending too long on sections 1-5. Move faster.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-light-gray text-sm font-bold text-navy">5</span>
+            <div>
+              <h3 class="font-bold text-navy">Assign a facilitator (not always the CEO)</h3>
+              <p class="mt-1 text-mid-gray">The facilitator keeps time, moves through the agenda, and makes sure one issue does not eat the whole meeting. Rotate this role or give it to your COO/integrator.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-light-gray text-sm font-bold text-navy">6</span>
+            <div>
+              <h3 class="font-bold text-navy">Every to-do gets an owner and a 7-day deadline</h3>
+              <p class="mt-1 text-mid-gray">No vague action items. Every to-do is owned by one person and due by next week's meeting. If it is bigger than a week, break it down or make it a quarterly priority.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="px-6 py-16 md:py-24 bg-light-gray no-print">
+      <div class="mx-auto max-w-[680px]">
+        <div class="rounded-xl bg-navy p-8 text-center md:p-12">
+          <h2 class="text-2xl font-bold text-white md:text-3xl">Want help installing a meeting rhythm that actually works?</h2>
+          <p class="mt-4 text-white/70 text-lg leading-relaxed">
+            A template is a great start. But making it stick takes coaching, accountability, and someone who's done it before. Let's talk about what a weekly operating rhythm looks like for your team.
+          </p>
+          <a
+            href="https://calendar.notion.so/meet/cameronearloliver/qc3y04oud"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-8 inline-block rounded-lg bg-bright-blue px-10 py-4 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
+          >
+            Book a Free Consult
+          </a>
+          <div class="mt-4">
+            <a href="/time-audit" class="text-sm font-semibold text-white/60 underline hover:text-white transition-colors">
+              Or take the CEO Time Audit first
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    // --- Add-row helpers ---
+
+    function addCheckinRow() {
+      const container = document.getElementById('checkin-rows');
+      const row = document.createElement('div');
+      row.className = 'checkin-row mb-3 grid gap-3 sm:grid-cols-[1fr_1fr_1fr] items-start';
+      row.innerHTML = `
+        <input type="text" placeholder="Name" class="rounded-lg border border-gray-200 px-3 py-2 text-sm text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none" />
+        <input type="text" placeholder="Personal win" class="rounded-lg border border-gray-200 px-3 py-2 text-sm text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none" />
+        <input type="text" placeholder="Professional win" class="rounded-lg border border-gray-200 px-3 py-2 text-sm text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none" />
+      `;
+      container.appendChild(row);
+    }
+
+    function addScorecardRow() {
+      const container = document.getElementById('scorecard-rows');
+      const row = document.createElement('div');
+      row.className = 'scorecard-row mb-2 grid gap-2 sm:grid-cols-[1fr_100px_80px_80px] items-center';
+      row.innerHTML = `
+        <input type="text" placeholder="Metric" class="rounded-lg border border-gray-200 px-3 py-2 text-sm text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none" />
+        <input type="text" placeholder="Target" class="rounded-lg border border-gray-200 px-3 py-2 text-sm text-center text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none" />
+        <input type="text" placeholder="Actual" class="rounded-lg border border-gray-200 px-3 py-2 text-sm text-center text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none" />
+        <select class="rounded-lg border border-gray-200 px-2 py-2 text-sm text-dark-text focus:border-bright-blue focus:outline-none">
+          <option value="">--</option>
+          <option value="on">On Track</option>
+          <option value="off">Off Track</option>
+        </select>
+      `;
+      container.appendChild(row);
+    }
+
+    function addPriorityRow() {
+      const container = document.getElementById('priority-rows');
+      const row = document.createElement('div');
+      row.className = 'priority-row mb-2 grid gap-2 sm:grid-cols-[1fr_120px_80px] items-center';
+      row.innerHTML = `
+        <input type="text" placeholder="Quarterly priority" class="rounded-lg border border-gray-200 px-3 py-2 text-sm text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none" />
+        <input type="text" placeholder="Owner" class="rounded-lg border border-gray-200 px-3 py-2 text-sm text-center text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none" />
+        <select class="rounded-lg border border-gray-200 px-2 py-2 text-sm text-dark-text focus:border-bright-blue focus:outline-none">
+          <option value="">--</option>
+          <option value="on">On Track</option>
+          <option value="off">Off Track</option>
+        </select>
+      `;
+      container.appendChild(row);
+    }
+
+    function addTodoRow() {
+      const container = document.getElementById('todo-rows');
+      const row = document.createElement('div');
+      row.className = 'todo-row mb-2 grid gap-2 sm:grid-cols-[auto_1fr_120px_80px] items-center';
+      row.innerHTML = `
+        <input type="checkbox" class="h-4 w-4 rounded border-gray-300 accent-[#009CDE]" />
+        <input type="text" placeholder="To-do from last week" class="rounded-lg border border-gray-200 px-3 py-2 text-sm text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none" />
+        <input type="text" placeholder="Owner" class="rounded-lg border border-gray-200 px-3 py-2 text-sm text-center text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none" />
+        <select class="rounded-lg border border-gray-200 px-2 py-2 text-sm text-dark-text focus:border-bright-blue focus:outline-none">
+          <option value="">--</option>
+          <option value="done">Done</option>
+          <option value="not">Not Done</option>
+        </select>
+      `;
+      container.appendChild(row);
+    }
+
+    let issueCount = 1;
+    function addIssueBlock() {
+      issueCount++;
+      const container = document.getElementById('issue-blocks');
+      const block = document.createElement('div');
+      block.className = 'issue-block mb-6 rounded-lg border border-gray-200 p-4';
+      block.innerHTML = `
+        <div class="flex items-center gap-3 mb-3">
+          <span class="flex h-6 w-6 items-center justify-center rounded-full bg-navy text-xs font-bold text-white">${issueCount}</span>
+          <input type="text" placeholder="Issue title" class="flex-1 rounded-lg border border-gray-200 px-3 py-2 text-sm font-semibold text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none" />
+        </div>
+        <div class="grid gap-3 sm:grid-cols-3">
+          <div>
+            <label class="block text-xs font-semibold text-mid-gray uppercase tracking-wide mb-1">Identify (Root Cause)</label>
+            <textarea rows="2" placeholder="What's the real problem?" class="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none resize-y"></textarea>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-mid-gray uppercase tracking-wide mb-1">Discuss (Options)</label>
+            <textarea rows="2" placeholder="What are the options?" class="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none resize-y"></textarea>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-mid-gray uppercase tracking-wide mb-1">Solve (Decision / To-Do)</label>
+            <textarea rows="2" placeholder="What's the decision and who owns it?" class="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm text-dark-text placeholder:text-mid-gray/50 focus:border-bright-blue focus:outline-none resize-y"></textarea>
+          </div>
+        </div>
+      `;
+      container.appendChild(block);
+    }
+
+    // --- Meeting rating ---
+    function setRating(n) {
+      document.querySelectorAll('.rating-btn').forEach((btn, i) => {
+        if (i < n) {
+          btn.classList.remove('border-gray-200', 'text-mid-gray');
+          btn.classList.add('border-bright-blue', 'bg-bright-blue', 'text-white');
+        } else {
+          btn.classList.remove('border-bright-blue', 'bg-bright-blue', 'text-white');
+          btn.classList.add('border-gray-200', 'text-mid-gray');
+        }
+      });
+    }
+
+    // Make functions available globally (Astro script modules)
+    window.addCheckinRow = addCheckinRow;
+    window.addScorecardRow = addScorecardRow;
+    window.addPriorityRow = addPriorityRow;
+    window.addTodoRow = addTodoRow;
+    window.addIssueBlock = addIssueBlock;
+    window.setRating = setRating;
+  </script>
+
+</Layout>

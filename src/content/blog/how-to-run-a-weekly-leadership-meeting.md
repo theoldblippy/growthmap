@@ -82,6 +82,4 @@ After about four weeks of running this format consistently, three things happen:
 
 You don't need software. You don't need a consultant. You don't need to read a book first. Pick a day, block 90 minutes, send the agenda to your team, and run the meeting.
 
-If you want a ready-made template you can fill in and print, we built one: [Weekly Leadership Meeting Agenda Template](/templates/weekly-meeting). It's free, no email required.
-
-And if you want help installing a meeting rhythm that fits your team — along with the scorecard, priorities, and accountability structure that makes it stick — [book a free 30-minute call](https://calendar.notion.so/meet/cameronearloliver/qc3y04oud). We'll talk through what makes sense for where you are.
+If you want help installing a meeting rhythm that fits your team — along with the scorecard, priorities, and accountability structure that makes it stick — [book a free 30-minute call](https://calendar.notion.so/meet/cameronearloliver/qc3y04oud). We'll talk through what makes sense for where you are.

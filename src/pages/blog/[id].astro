@@ -19,16 +19,16 @@ const { Content } = await render(post);
   description={post.data.description}
   canonicalPath={`/blog/${post.id}`}
 >
-  <article class="bg-white px-6 py-20 md:py-28">
+  <article class="px-6 py-16 md:py-24">
     <div class="mx-auto max-w-[700px]">
       <a
         href="/blog"
-        class="text-sm font-semibold text-bright-blue transition-colors hover:text-navy"
+        class="font-mono text-xs font-medium uppercase tracking-[0.18em] text-moss transition-colors hover:text-ink"
       >
-        &larr; Back to Blog
+        &larr; Field Notes
       </a>
 
-      <time class="mt-8 block text-sm text-mid-gray">
+      <time class="mt-8 block font-mono text-xs font-medium uppercase tracking-[0.14em] text-fern">
         {post.data.date.toLocaleDateString('en-US', {
           year: 'numeric',
           month: 'long',
@@ -36,31 +36,34 @@ const { Content } = await render(post);
         })}
       </time>
 
-      <h1 class="mt-4 text-3xl font-bold leading-tight text-navy sm:text-4xl md:text-[44px] md:leading-[1.15]">
+      <h1 class="font-display mt-4 text-3xl leading-[1.15] text-ink sm:text-4xl md:text-[44px]">
         {post.data.title}
       </h1>
 
-      <div class="prose mt-10 max-w-none text-lg leading-relaxed text-dark-text
-        prose-headings:font-bold prose-headings:text-navy
-        prose-h2:mt-10 prose-h2:text-2xl
+      <div class="prose mt-10 max-w-none text-lg leading-relaxed text-ink
+        prose-headings:font-serif prose-headings:font-normal prose-headings:text-ink
+        prose-h2:mt-10 prose-h2:text-[28px]
         prose-p:my-5
-        prose-a:text-bright-blue prose-a:no-underline hover:prose-a:underline
-        prose-strong:text-navy
+        prose-a:text-moss prose-a:no-underline hover:prose-a:underline
+        prose-strong:text-ink
         prose-li:my-1
         prose-ol:my-5 prose-ul:my-5
-        prose-em:text-mid-gray
+        prose-em:text-fern
+        prose-blockquote:border-l-moss prose-blockquote:font-serif prose-blockquote:not-italic
       ">
         <Content />
       </div>
 
-      <div class="mt-16 rounded-xl bg-light-gray p-8 text-center">
-        <h2 class="text-xl font-bold text-navy">Want to talk through your business?</h2>
-        <p class="mt-2 text-mid-gray">Book a free Growth Map Diagnostic and get clarity on what's holding you back.</p>
+      <div class="mt-16 rounded-[14px] border border-hairline bg-white/50 p-8 text-center">
+        <h2 class="font-display text-2xl text-ink">Want to talk through your business?</h2>
+        <p class="mt-2 leading-relaxed text-fern">
+          Book a free Growth Map Diagnostic and get clarity on what's holding you back.
+        </p>
         <a
           href="https://calendar.notion.so/meet/cameronearloliver/qc3y04oud"
           target="_blank"
           rel="noopener noreferrer"
-          class="mt-4 inline-block rounded-lg bg-bright-blue px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
+          class="mt-5 inline-block rounded-full border border-ink bg-ink px-8 py-3.5 text-base font-semibold text-parchment transition-opacity hover:opacity-90"
         >
           Book a Free Consult
         </a>

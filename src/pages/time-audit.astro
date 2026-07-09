@@ -7,31 +7,31 @@ import Layout from '../layouts/Layout.astro';
   description="Find out where your time actually goes. Categorize your weekly tasks into $10, $100, $1K, and $10K/hour work — and see the biggest opportunity to get your hours back."
   canonicalPath="/time-audit"
 >
-  <div id="audit-app" class="min-h-screen bg-white">
+  <div id="audit-app" class="min-h-screen bg-parchment">
 
     <!-- INTRO -->
     <section id="screen-intro" class="px-6 py-20 md:py-28">
       <div class="mx-auto max-w-[680px] text-center">
-        <p class="mb-4 text-sm font-semibold uppercase tracking-widest text-bright-blue">Free Tool</p>
-        <h1 class="text-3xl font-bold leading-tight text-navy sm:text-4xl md:text-[52px] md:leading-[1.1]">
+        <p class="mb-4 font-mono text-[11.5px] font-medium uppercase tracking-[0.18em] text-moss">Free Tool</p>
+        <h1 class="font-display text-3xl leading-tight text-ink sm:text-4xl md:text-[52px] md:leading-[1.1]">
           Where Is Your Time Actually Going?
         </h1>
-        <p class="mt-6 text-lg leading-relaxed text-mid-gray">
+        <p class="mt-6 text-lg leading-relaxed text-fern">
           Most founders spend over half their week on work that someone else could do. This audit breaks your week into $10, $100, $1,000, and $10,000-per-hour tasks — so you can see exactly where your time is going and where the biggest opportunity is.
         </p>
-        <div class="mt-8 flex flex-wrap justify-center gap-6 text-sm text-mid-gray">
-          <span class="flex items-center gap-2"><span class="inline-block h-3 w-3 rounded" style="background:#ef4444"></span>$10/hr Tasks</span>
-          <span class="flex items-center gap-2"><span class="inline-block h-3 w-3 rounded" style="background:#f59e0b"></span>$100/hr Tasks</span>
-          <span class="flex items-center gap-2"><span class="inline-block h-3 w-3 rounded" style="background:#009CDE"></span>$1,000/hr Tasks</span>
-          <span class="flex items-center gap-2"><span class="inline-block h-3 w-3 rounded" style="background:#22c55e"></span>$10,000/hr Tasks</span>
+        <div class="mt-8 flex flex-wrap justify-center gap-6 text-sm text-fern">
+          <span class="flex items-center gap-2"><span class="inline-block h-3 w-3 rounded" style="background:#B0402F"></span>$10/hr Tasks</span>
+          <span class="flex items-center gap-2"><span class="inline-block h-3 w-3 rounded" style="background:#C08A2D"></span>$100/hr Tasks</span>
+          <span class="flex items-center gap-2"><span class="inline-block h-3 w-3 rounded" style="background:#8CA65E"></span>$1,000/hr Tasks</span>
+          <span class="flex items-center gap-2"><span class="inline-block h-3 w-3 rounded" style="background:#5C7A3B"></span>$10,000/hr Tasks</span>
         </div>
         <button
           id="btn-start"
-          class="mt-10 inline-block rounded-lg bg-bright-blue px-10 py-4 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
+          class="mt-10 inline-block rounded-full border border-ink bg-ink px-7 py-3.5 text-[15px] font-semibold text-parchment transition-opacity hover:opacity-90"
         >
           Start the Audit
         </button>
-        <p class="mt-4 text-sm text-mid-gray">Takes about 3 minutes. No email required.</p>
+        <p class="mt-6"><span class="stamp">TAKES ABOUT 3 MINUTES · NO EMAIL REQUIRED</span></p>
       </div>
     </section>
 
@@ -39,22 +39,22 @@ import Layout from '../layouts/Layout.astro';
     <section id="screen-input" class="hidden px-6 py-16 md:py-24">
       <div class="mx-auto max-w-[900px]">
         <div class="mb-8 text-center">
-          <h2 class="text-2xl font-bold text-navy md:text-3xl">Check the tasks you do each week</h2>
-          <p class="mt-3 text-mid-gray">Only check the ones that apply to you. Adjust hours and categories if needed.</p>
+          <h2 class="font-display text-2xl text-ink md:text-3xl">Check the tasks you do each week</h2>
+          <p class="mt-3 text-fern">Only check the ones that apply to you. Adjust hours and categories if needed.</p>
         </div>
 
         <!-- Task table -->
         <div class="overflow-x-auto">
           <table class="w-full" id="task-table">
             <thead>
-              <tr class="border-b-2 border-light-gray text-left text-sm font-semibold text-mid-gray">
+              <tr class="border-b-2 border-hairline text-left font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-fern">
                 <th class="pb-3 pr-2 w-8"></th>
                 <th class="pb-3 pr-4">Task</th>
                 <th class="pb-3 pr-4 w-24 text-center">Hrs/Week</th>
                 <th class="pb-3 w-40 text-center">Category</th>
               </tr>
             </thead>
-            <tbody id="task-body" class="divide-y divide-gray-100">
+            <tbody id="task-body" class="divide-y divide-hairline">
             </tbody>
           </table>
         </div>
@@ -62,25 +62,25 @@ import Layout from '../layouts/Layout.astro';
         <!-- Add custom row -->
         <button
           id="btn-add-row"
-          class="mt-4 text-sm font-semibold text-bright-blue hover:text-navy transition-colors"
+          class="mt-4 text-sm font-semibold text-moss hover:text-ink transition-colors"
         >
           + Add a custom task
         </button>
 
         <!-- Total & submit -->
         <div class="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
-          <p class="text-mid-gray text-sm">Total hours selected: <span id="total-hours" class="font-bold text-navy">0</span></p>
+          <p class="text-fern text-sm">Total hours selected: <span id="total-hours" class="font-bold text-ink">0</span></p>
           <div class="flex gap-4">
             <button
               id="btn-back-to-intro"
-              class="text-sm font-semibold text-mid-gray hover:text-navy"
+              class="text-sm font-semibold text-fern hover:text-ink"
             >
               ← Back
             </button>
             <button
               id="btn-see-results"
               disabled
-              class="rounded-lg bg-bright-blue px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#0088c2] disabled:cursor-not-allowed disabled:opacity-40"
+              class="rounded-full border border-ink bg-ink px-7 py-3.5 text-[15px] font-semibold text-parchment transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
             >
               See My Results →
             </button>
@@ -95,8 +95,8 @@ import Layout from '../layouts/Layout.astro';
 
         <!-- Score header -->
         <div class="text-center">
-          <p class="text-sm font-semibold uppercase tracking-widest text-bright-blue">Your Time Audit Results</p>
-          <h2 class="mt-4 text-2xl font-bold text-navy md:text-3xl">Here's Where Your Week Goes</h2>
+          <p class="font-mono text-[11.5px] font-medium uppercase tracking-[0.18em] text-moss">Your Time Audit Results</p>
+          <h2 class="font-display mt-4 text-2xl text-ink md:text-3xl">Here's Where Your Week Goes</h2>
         </div>
 
         <!-- Stacked bar -->
@@ -109,33 +109,33 @@ import Layout from '../layouts/Layout.astro';
         <div id="breakdown-cards" class="mt-10 grid gap-4 sm:grid-cols-2"></div>
 
         <!-- Biggest opportunity -->
-        <div class="mt-10 rounded-xl bg-light-gray p-8">
-          <p class="text-sm font-semibold uppercase tracking-widest text-bright-blue">Your Biggest Opportunity</p>
-          <h3 id="opportunity-title" class="mt-2 text-xl font-bold text-navy"></h3>
-          <p id="opportunity-desc" class="mt-3 leading-relaxed text-mid-gray"></p>
+        <div class="mt-10 rounded-[14px] border border-hairline bg-parchment-deep p-8">
+          <p class="font-mono text-[11.5px] font-medium uppercase tracking-[0.18em] text-moss">Your Biggest Opportunity</p>
+          <h3 id="opportunity-title" class="font-display mt-2 text-xl text-ink"></h3>
+          <p id="opportunity-desc" class="mt-3 leading-relaxed text-fern"></p>
         </div>
 
         <!-- Dollar impact toggle -->
-        <div class="mt-8 rounded-xl border border-gray-100 p-6">
+        <div class="mt-8 rounded-[14px] border border-hairline bg-white/50 p-6">
           <div class="flex items-center justify-between">
-            <span class="font-semibold text-navy">See the dollar impact</span>
-            <button id="btn-toggle-dollars" class="text-sm font-semibold text-bright-blue hover:text-navy transition-colors">Show →</button>
+            <span class="font-semibold text-ink">See the dollar impact</span>
+            <button id="btn-toggle-dollars" class="text-sm font-semibold text-moss hover:text-ink transition-colors">Show →</button>
           </div>
           <div id="dollar-section" class="mt-4 hidden">
-            <label class="block text-sm text-mid-gray mb-2">What's your effective hourly rate? (or annual salary ÷ 2,000)</label>
+            <label class="block text-sm text-fern mb-2">What's your effective hourly rate? (or annual salary ÷ 2,000)</label>
             <div class="flex gap-3 items-center">
-              <span class="text-navy font-semibold">$</span>
+              <span class="text-ink font-semibold">$</span>
               <input
                 id="hourly-rate"
                 type="number"
                 min="1"
                 placeholder="150"
-                class="w-32 rounded-lg border border-gray-200 px-4 py-2.5 text-base text-dark-text placeholder:text-mid-gray focus:border-bright-blue focus:outline-none focus:ring-2 focus:ring-bright-blue/20"
+                class="w-32 rounded-lg border border-hairline bg-white/60 px-4 py-2.5 text-base text-ink placeholder:text-fern focus:border-moss focus:outline-none focus:ring-2 focus:ring-moss/20"
               />
-              <span class="text-sm text-mid-gray">/hr</span>
+              <span class="text-sm text-fern">/hr</span>
               <button
                 id="btn-calc-dollars"
-                class="rounded-lg bg-bright-blue px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#0088c2]"
+                class="rounded-full border border-ink bg-ink px-5 py-2.5 text-sm font-semibold text-parchment transition-opacity hover:opacity-90"
               >
                 Calculate
               </button>
@@ -145,8 +145,8 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <!-- Email results -->
-        <div class="mt-10 rounded-xl border border-gray-100 p-6 text-center">
-          <p class="font-semibold text-navy">Want a copy of your results?</p>
+        <div class="mt-10 rounded-[14px] border border-hairline bg-white/50 p-6 text-center">
+          <p class="font-semibold text-ink">Want a copy of your results?</p>
           <form
             id="email-results-form"
             action="https://formspree.io/f/xkoqqldw"
@@ -161,28 +161,28 @@ import Layout from '../layouts/Layout.astro';
               name="email"
               required
               placeholder="Enter your email"
-              class="flex-1 rounded-lg border border-gray-200 px-4 py-3 text-base text-dark-text placeholder:text-mid-gray focus:border-bright-blue focus:outline-none focus:ring-2 focus:ring-bright-blue/20"
+              class="flex-1 rounded-lg border border-hairline bg-white/60 px-4 py-3 text-base text-ink placeholder:text-fern focus:border-moss focus:outline-none focus:ring-2 focus:ring-moss/20"
             />
             <button
               type="submit"
-              class="rounded-lg bg-bright-blue px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
+              class="rounded-full border border-ink bg-ink px-6 py-3 text-[15px] font-semibold text-parchment transition-opacity hover:opacity-90"
             >
               Email My Results
             </button>
           </form>
-          <p id="email-success" class="mt-3 hidden text-sm font-medium text-bright-blue">Sent! Check your inbox.</p>
-          <p class="mt-2 text-xs text-mid-gray">No spam. Just your results.</p>
+          <p id="email-success" class="mt-3 hidden text-sm font-medium text-moss">Sent! Check your inbox.</p>
+          <p class="mt-2 text-xs text-fern">No spam. Just your results.</p>
         </div>
 
         <!-- CTA -->
-        <div class="mt-8 rounded-xl bg-navy p-8 text-center">
-          <h3 class="text-xl font-bold text-white">Want help getting those hours back?</h3>
-          <p class="mt-3 text-white/70">A 30-minute call to talk through what's eating your time and what to do about it.</p>
+        <div class="mt-8 rounded-[14px] bg-ink p-8 text-center">
+          <h3 class="font-display text-xl text-cream">Want help getting those hours back?</h3>
+          <p class="mt-3 text-cream/70">A 30-minute call to talk through what's eating your time and what to do about it.</p>
           <a
             href="https://calendar.notion.so/meet/cameronearloliver/qc3y04oud"
             target="_blank"
             rel="noopener noreferrer"
-            class="mt-6 inline-block rounded-lg bg-bright-blue px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
+            class="mt-6 inline-block rounded-full bg-moss px-7 py-3.5 text-[15px] font-semibold text-parchment transition-opacity hover:opacity-90"
           >
             Book a Free Consult
           </a>
@@ -190,7 +190,7 @@ import Layout from '../layouts/Layout.astro';
 
         <!-- Retake -->
         <div class="mt-6 text-center">
-          <button id="btn-retake" class="text-sm font-semibold text-mid-gray underline hover:text-navy">
+          <button id="btn-retake" class="text-sm font-semibold text-fern underline hover:text-ink">
             Retake the audit
           </button>
         </div>
@@ -202,10 +202,10 @@ import Layout from '../layouts/Layout.astro';
 
   <script>
     const categories = [
-      { value: 10, label: '$10/hr', color: '#ef4444' },
-      { value: 100, label: '$100/hr', color: '#f59e0b' },
-      { value: 1000, label: '$1,000/hr', color: '#009CDE' },
-      { value: 10000, label: '$10,000/hr', color: '#22c55e' },
+      { value: 10, label: '$10/hr', color: '#B0402F' },
+      { value: 100, label: '$100/hr', color: '#C08A2D' },
+      { value: 1000, label: '$1,000/hr', color: '#8CA65E' },
+      { value: 10000, label: '$10,000/hr', color: '#5C7A3B' },
     ];
 
     const defaultTasks = [
@@ -259,7 +259,7 @@ import Layout from '../layouts/Layout.astro';
       const checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
       checkbox.checked = false;
-      checkbox.className = 'task-check h-4 w-4 rounded border-gray-300 text-bright-blue focus:ring-bright-blue accent-[#009CDE]';
+      checkbox.className = 'task-check h-4 w-4 rounded border-hairline text-moss focus:ring-moss accent-[#5C7A3B]';
       tdCheck.appendChild(checkbox);
       tr.appendChild(tdCheck);
 
@@ -270,11 +270,11 @@ import Layout from '../layouts/Layout.astro';
         const input = document.createElement('input');
         input.type = 'text';
         input.placeholder = 'Enter task name';
-        input.className = 'task-name w-full rounded border border-gray-200 px-3 py-2 text-sm text-dark-text placeholder:text-mid-gray focus:border-bright-blue focus:outline-none';
+        input.className = 'task-name w-full rounded border border-hairline bg-white/60 px-3 py-2 text-sm text-ink placeholder:text-fern focus:border-moss focus:outline-none';
         tdName.appendChild(input);
       } else {
         const span = document.createElement('span');
-        span.className = 'text-sm text-dark-text';
+        span.className = 'text-sm text-ink';
         span.textContent = task.name;
         tdName.appendChild(span);
       }
@@ -288,7 +288,7 @@ import Layout from '../layouts/Layout.astro';
       hoursInput.min = '0';
       hoursInput.max = '80';
       hoursInput.value = isCustom ? '' : task.hours;
-      hoursInput.className = 'task-hours w-20 rounded border border-gray-200 px-3 py-2 text-sm text-center text-dark-text focus:border-bright-blue focus:outline-none';
+      hoursInput.className = 'task-hours w-20 rounded border border-hairline bg-white/60 px-3 py-2 text-sm text-center text-ink focus:border-moss focus:outline-none';
       tdHours.appendChild(hoursInput);
       tr.appendChild(tdHours);
 
@@ -296,7 +296,7 @@ import Layout from '../layouts/Layout.astro';
       const tdCat = document.createElement('td');
       tdCat.className = 'py-3 text-center';
       const select = document.createElement('select');
-      select.className = 'task-category rounded border border-gray-200 px-2 py-2 text-sm text-dark-text focus:border-bright-blue focus:outline-none';
+      select.className = 'task-category rounded border border-hairline bg-white/60 px-2 py-2 text-sm text-ink focus:border-moss focus:outline-none';
       categories.forEach(cat => {
         const opt = document.createElement('option');
         opt.value = cat.value;
@@ -376,7 +376,7 @@ import Layout from '../layouts/Layout.astro';
 
         const legend = document.createElement('span');
         legend.className = 'flex items-center gap-2';
-        legend.innerHTML = `<span class="inline-block h-3 w-3 rounded" style="background:${cat.color}"></span><span class="text-dark-text">${cat.label}</span><span class="font-bold text-navy">${hours}h</span><span class="text-mid-gray">(${totalHours > 0 ? Math.round(hours / totalHours * 100) : 0}%)</span>`;
+        legend.innerHTML = `<span class="inline-block h-3 w-3 rounded" style="background:${cat.color}"></span><span class="text-ink">${cat.label}</span><span class="font-bold text-ink">${hours}h</span><span class="text-fern">(${totalHours > 0 ? Math.round(hours / totalHours * 100) : 0}%)</span>`;
         legendEl.appendChild(legend);
       });
 
@@ -387,24 +387,24 @@ import Layout from '../layouts/Layout.astro';
         const hours = buckets[cat.value];
         const pct = totalHours > 0 ? Math.round(hours / totalHours * 100) : 0;
         const card = document.createElement('div');
-        card.className = 'rounded-xl border-2 p-5';
+        card.className = 'rounded-[14px] border-2 bg-white/50 p-5';
         card.style.borderColor = cat.color;
 
         let taskList = '';
         if (tasks[cat.value].length > 0) {
-          taskList = tasks[cat.value].map(t => `<li class="text-sm text-mid-gray">${t.name} — ${t.hours}h</li>`).join('');
+          taskList = tasks[cat.value].map(t => `<li class="text-sm text-fern">${t.name} — ${t.hours}h</li>`).join('');
         }
 
         card.innerHTML = `
           <div class="flex items-center justify-between mb-3">
-            <span class="font-bold text-navy">${cat.label} Work</span>
+            <span class="font-bold text-ink">${cat.label} Work</span>
             <span class="text-2xl font-bold" style="color:${cat.color}">${hours}h</span>
           </div>
-          <div class="h-2 w-full rounded-full bg-light-gray mb-3">
+          <div class="h-2 w-full rounded-full bg-parchment-deep mb-3">
             <div class="h-2 rounded-full" style="width:${pct}%;background:${cat.color}"></div>
           </div>
-          <p class="text-sm text-mid-gray mb-2">${pct}% of your week</p>
-          ${taskList ? `<ul class="space-y-1 mt-3 border-t border-gray-100 pt-3">${taskList}</ul>` : ''}
+          <p class="text-sm text-fern mb-2">${pct}% of your week</p>
+          ${taskList ? `<ul class="space-y-1 mt-3 border-t border-hairline pt-3">${taskList}</ul>` : ''}
         `;
         cardsEl.appendChild(card);
       });
@@ -451,7 +451,7 @@ import Layout from '../layouts/Layout.astro';
       const weeklyTotal = totalHours * rate;
       const annualTotal = weeklyTotal * 50;
 
-      let html = `<p class="text-sm text-mid-gray">At <strong class="text-navy">$${rate}/hr</strong>, here's what your time allocation looks like:</p>`;
+      let html = `<p class="text-sm text-fern">At <strong class="text-ink">$${rate}/hr</strong>, here's what your time allocation looks like:</p>`;
       html += '<div class="mt-3 space-y-2">';
 
       categories.forEach(cat => {
@@ -459,12 +459,12 @@ import Layout from '../layouts/Layout.astro';
         const weekly = hours * rate;
         const annual = weekly * 50;
         html += `
-          <div class="flex items-center justify-between rounded-lg bg-light-gray px-4 py-3">
+          <div class="flex items-center justify-between rounded-lg bg-parchment-deep px-4 py-3">
             <span class="flex items-center gap-2 text-sm">
               <span class="inline-block h-3 w-3 rounded" style="background:${cat.color}"></span>
               ${cat.label} work
             </span>
-            <span class="text-sm font-bold text-navy">$${weekly.toLocaleString()}/wk · $${annual.toLocaleString()}/yr</span>
+            <span class="text-sm font-bold text-ink">$${weekly.toLocaleString()}/wk · $${annual.toLocaleString()}/yr</span>
           </div>
         `;
       });
@@ -474,9 +474,9 @@ import Layout from '../layouts/Layout.astro';
 
       html += '</div>';
       html += `
-        <div class="mt-4 rounded-lg bg-navy p-4">
-          <p class="text-sm text-white/70">You're spending <strong class="text-white">${lowValueHours} hours/week</strong> on $10-$100/hr tasks.</p>
-          <p class="mt-1 text-sm text-white/70">That's <strong class="text-white">$${lowValueAnnual.toLocaleString()}/year</strong> of your time on work that could be delegated.</p>
+        <div class="mt-4 rounded-[14px] bg-ink p-4">
+          <p class="text-sm text-cream/70">You're spending <strong class="text-cream">${lowValueHours} hours/week</strong> on $10-$100/hr tasks.</p>
+          <p class="mt-1 text-sm text-cream/70">That's <strong class="text-cream">$${lowValueAnnual.toLocaleString()}/year</strong> of your time on work that could be delegated.</p>
         </div>
       `;
 
@@ -493,10 +493,10 @@ import Layout from '../layouts/Layout.astro';
     }
 
     const categoryGroups = [
-      { value: 10, label: '$10/hr Tasks', color: '#ef4444', subtitle: 'Admin, scheduling, data entry — delegate or automate these' },
-      { value: 100, label: '$100/hr Tasks', color: '#f59e0b', subtitle: 'Client work, project management — valuable but not your highest use' },
-      { value: 1000, label: '$1,000/hr Tasks', color: '#009CDE', subtitle: 'Hiring, process building, org design — building the machine' },
-      { value: 10000, label: '$10,000/hr Tasks', color: '#22c55e', subtitle: 'Vision, key relationships, strategy — where founders create the most value' },
+      { value: 10, label: '$10/hr Tasks', color: '#B0402F', subtitle: 'Admin, scheduling, data entry — delegate or automate these' },
+      { value: 100, label: '$100/hr Tasks', color: '#C08A2D', subtitle: 'Client work, project management — valuable but not your highest use' },
+      { value: 1000, label: '$1,000/hr Tasks', color: '#8CA65E', subtitle: 'Hiring, process building, org design — building the machine' },
+      { value: 10000, label: '$10,000/hr Tasks', color: '#5C7A3B', subtitle: 'Vision, key relationships, strategy — where founders create the most value' },
     ];
 
     function buildGroupHeader(group) {
@@ -505,9 +505,9 @@ import Layout from '../layouts/Layout.astro';
         <td colspan="4" class="pt-8 pb-3">
           <div class="flex items-center gap-3">
             <span class="inline-block h-3 w-3 rounded" style="background:${group.color}"></span>
-            <span class="font-bold text-navy">${group.label}</span>
+            <span class="font-bold text-ink">${group.label}</span>
           </div>
-          <p class="mt-1 text-xs text-mid-gray ml-6">${group.subtitle}</p>
+          <p class="mt-1 text-xs text-fern ml-6">${group.subtitle}</p>
         </td>
       `;
       return tr;

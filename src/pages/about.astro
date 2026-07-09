@@ -8,16 +8,16 @@ import Layout from '../layouts/Layout.astro';
   canonicalPath="/about"
 >
   <!-- HERO / INTRO -->
-  <section class="bg-white px-6 py-20 md:py-28">
+  <section class="border-b border-hairline px-6 py-16 md:py-24">
     <div class="mx-auto flex max-w-[1200px] flex-col items-center gap-12 md:flex-row md:gap-16">
       <div class="flex-1">
-        <p class="mb-4 text-sm font-semibold uppercase tracking-widest text-bright-blue">
-          About me
+        <p class="mb-5 font-mono text-[11.5px] font-medium uppercase tracking-[0.18em] text-moss">
+          The Operator
         </p>
-        <h1 class="text-3xl font-bold leading-tight text-navy sm:text-4xl md:text-[48px] md:leading-[1.1]">
-          I'm an Operator, Not a Theorist
+        <h1 class="font-display text-4xl leading-[1.1] text-ink sm:text-5xl md:text-[48px]">
+          I'm an operator, <em>not a theorist.</em>
         </h1>
-        <p class="mt-6 text-lg leading-relaxed text-mid-gray">
+        <p class="mt-6 max-w-[54ch] text-lg leading-relaxed text-fern">
           I've spent a decade inside fast-growing startups, from employee #3 to 100+, usually as the person leaders call when things start breaking.
         </p>
       </div>
@@ -25,7 +25,7 @@ import Layout from '../layouts/Layout.astro';
         <img
           src="/images/about-photo.jpeg"
           alt="Cameron Oliver"
-          class="w-72 rounded-2xl shadow-lg md:w-96"
+          class="w-72 rounded-[14px] border border-hairline md:w-96"
           loading="eager"
         />
       </div>
@@ -33,108 +33,84 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- STORY -->
-  <section class="bg-light-gray px-6 py-20 md:py-24">
-    <div class="mx-auto max-w-[800px] space-y-6 text-lg leading-relaxed text-dark-text">
-      <p>
-        My work has always sat at the intersection of operations, go-to-market, delivery, and product. Translating vision into the systems, roles, and rhythms that make a company work.
-      </p>
-      <p>
-        After enough years in the trenches, the same pattern became impossible to ignore:
-      </p>
-
-      <ul class="space-y-4 pl-1">
-        <li class="flex items-start gap-3">
-          <span class="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-bright-blue"></span>
-          Founders making every decision themselves because nobody else had the context.
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-bright-blue"></span>
-          Teams working hard but not on the same thing.
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-bright-blue"></span>
-          Revenue unpredictable because nobody understood how the business actually created value.
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-bright-blue"></span>
-          Bad hires, unclear priorities, and founders carrying the anxiety of the entire company on their shoulders.
-        </li>
-      </ul>
-
-      <p>
-        Growth Map is my way of giving founders what I always wished every company I operated had:
-      </p>
-
-      <ul class="space-y-4 pl-1">
-        <li class="flex items-start gap-3">
-          <span class="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-bright-blue"></span>
-          A clear picture of how the business actually makes money
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-bright-blue"></span>
-          Clarity on what drives outcomes vs. what just keeps people busy
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-bright-blue"></span>
-          A practical way to make decisions week to week without guessing
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-bright-blue"></span>
-          A path to grow without chaos or burnout
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- WHY ME -->
-  <section class="bg-white px-6 py-20 md:py-24">
+  <section class="border-b border-hairline bg-parchment-deep px-6 py-16 md:py-20">
     <div class="mx-auto max-w-[800px]">
-      <h2 class="text-center text-2xl font-bold text-navy md:text-3xl">Why Work With Me Instead Of...</h2>
-      <div class="mt-10 space-y-8">
-        <div class="rounded-xl border border-gray-100 p-6">
-          <h3 class="font-bold text-navy">"Why not hire a full-time COO?"</h3>
-          <p class="mt-2 leading-relaxed text-dark-text">
-            A good full-time COO costs $200K-$400K+ and takes months to ramp up. Most founders at $1M-$10M don't need a full-time executive. They need someone who's done this before, can build the system fast, and transfer ownership to their existing team.
-          </p>
+      <p class="doc-label text-ink"><b>1.0</b>The Pattern</p>
+      <div class="mt-8 space-y-6 text-lg leading-relaxed text-ink">
+        <p>
+          My work has always sat at the intersection of operations, go-to-market, delivery, and product. Translating vision into the systems, roles, and rhythms that make a company work.
+        </p>
+        <p>
+          After enough years in the trenches, the same pattern became impossible to ignore:
+        </p>
+
+        <div>
+          {[
+            'Founders making every decision themselves because nobody else had the context.',
+            'Teams working hard but not on the same thing.',
+            'Revenue unpredictable because nobody understood how the business actually created value.',
+            'Bad hires, unclear priorities, and founders carrying the anxiety of the entire company on their shoulders.',
+          ].map((item) => (
+            <div class="flex items-baseline gap-3.5 border-b border-dashed border-hairline py-3 text-[16px] font-medium text-ink">
+              <span class="cbx">X</span>
+              {item}
+            </div>
+          ))}
         </div>
-        <div class="rounded-xl border border-gray-100 p-6">
-          <h3 class="font-bold text-navy">"Why not just read a business book or take a course?"</h3>
-          <p class="mt-2 leading-relaxed text-dark-text">
-            Books give you frameworks. I give you implementation. The gap between knowing what to do and actually doing it inside a messy, real business is where I live. I've built operating systems inside fast-growing companies, not in a classroom.
-          </p>
-        </div>
-        <div class="rounded-xl border border-gray-100 p-6">
-          <h3 class="font-bold text-navy">"Why not use a big consulting firm?"</h3>
-          <p class="mt-2 leading-relaxed text-dark-text">
-            Big firms send you junior analysts who produce slide decks. I do the work myself, in the trenches with your team. You get a senior operator, not a presentation.
-          </p>
-        </div>
+
+        <p>
+          Growth Map is my way of giving founders what I always wished every company I operated had:
+        </p>
+
+        <ul class="space-y-4 pl-1">
+          <li class="flex items-start gap-3">
+            <span class="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-moss"></span>
+            A clear picture of how the business actually makes money
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-moss"></span>
+            Clarity on what drives outcomes vs. what just keeps people busy
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-moss"></span>
+            A practical way to make decisions week to week without guessing
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-moss"></span>
+            A path to grow without chaos or burnout
+          </li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="bg-light-gray px-6 py-20 md:py-24">
-    <div class="mx-auto max-w-[600px] text-center">
-      <h2 class="text-2xl font-bold text-navy md:text-3xl">If This Resonates, Let's Talk</h2>
-      <p class="mt-4 text-lg leading-relaxed text-mid-gray">
-        Book a free 30-minute call. We'll talk through where your business is and what might help.
-      </p>
-      <a
-        href="https://calendar.notion.so/meet/cameronearloliver/qc3y04oud"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="mt-6 inline-block rounded-lg bg-bright-blue px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
-      >
-        Book a Free Consult
-      </a>
-      <p class="mt-6 text-mid-gray">Not ready to talk yet?</p>
-      <a
-        href="/tools"
-        class="mt-2 inline-block text-base font-semibold text-bright-blue transition-colors hover:text-navy"
-      >
-        Try one of our free tools instead →
-      </a>
+  <!-- WHY ME -->
+  <section class="px-6 py-16 md:py-20">
+    <div class="mx-auto max-w-[800px]">
+      <p class="doc-label text-ink"><b>2.0</b>Objections, Handled</p>
+      <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
+        Why work with me instead of&hellip;
+      </h2>
+      <div class="mt-9 space-y-6">
+        <div class="rounded-[14px] border border-hairline bg-white/50 p-7">
+          <h3 class="font-display text-xl text-ink">"&hellip;hiring a full-time COO?"</h3>
+          <p class="mt-2.5 leading-relaxed text-fern">
+            A good full-time COO costs $200K–$400K+ and takes months to ramp up. Most founders at $1M–$10M don't need a full-time executive. They need someone who's done this before, can build the system fast, and transfer ownership to their existing team.
+          </p>
+        </div>
+        <div class="rounded-[14px] border border-hairline bg-white/50 p-7">
+          <h3 class="font-display text-xl text-ink">"&hellip;reading a business book or taking a course?"</h3>
+          <p class="mt-2.5 leading-relaxed text-fern">
+            Books give you frameworks. I give you implementation. The gap between knowing what to do and actually doing it inside a messy, real business is where I live. I've built operating systems inside fast-growing companies, not in a classroom.
+          </p>
+        </div>
+        <div class="rounded-[14px] border border-hairline bg-white/50 p-7">
+          <h3 class="font-display text-xl text-ink">"&hellip;using a big consulting firm?"</h3>
+          <p class="mt-2.5 leading-relaxed text-fern">
+            Big firms send you junior analysts who produce slide decks. I do the work myself, in the trenches with your team. You get a senior operator, not a presentation.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 </Layout>

@@ -7,24 +7,24 @@ import Layout from '../layouts/Layout.astro';
   description="The page you're looking for doesn't exist. Head back to the Growth Map homepage."
   canonicalPath="/404"
 >
-  <section class="flex min-h-[60vh] flex-col items-center justify-center px-6 py-28 text-center">
-    <p class="text-6xl font-bold text-bright-blue">404</p>
-    <h1 class="mt-4 text-3xl font-bold text-navy sm:text-4xl">Page not found</h1>
-    <p class="mt-4 max-w-md text-lg text-mid-gray">
-      This page doesn't exist or may have moved. Here are a few places to go instead:
+  <section class="flex min-h-[60vh] flex-col items-center justify-center px-6 py-24 text-center">
+    <p class="font-mono text-xs font-medium uppercase tracking-[0.18em] text-moss">ERR 404 · OFF THE MAP</p>
+    <h1 class="font-display mt-5 text-4xl text-ink sm:text-5xl">You're off the map.</h1>
+    <p class="mt-4 max-w-md text-lg leading-relaxed text-fern">
+      This page doesn't exist or may have moved. Here are a few routes back:
     </p>
-    <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+    <div class="mt-9 flex flex-col gap-4 sm:flex-row">
       <a
         href="/"
-        class="rounded-lg bg-bright-blue px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
+        class="rounded-full border border-ink bg-ink px-8 py-3.5 text-base font-semibold text-parchment transition-opacity hover:opacity-90"
       >
         Go to Homepage
       </a>
       <a
         href="/blog"
-        class="rounded-lg border-2 border-navy px-8 py-3.5 text-base font-semibold text-navy transition-colors hover:bg-navy hover:text-white"
+        class="rounded-full border border-hairline bg-white/35 px-8 py-3.5 text-base font-semibold text-ink transition-colors hover:border-ink"
       >
-        Read the Blog
+        Read the Field Notes
       </a>
     </div>
   </section>

@@ -3,6 +3,7 @@ title: "How to Scale a Business Without Burning Out"
 description: "Scaling doesn't have to mean working more hours. Here's how to grow your business by building systems instead of just grinding harder."
 date: 2026-03-15
 draft: false
+guide: true
 ---
 
 There's a version of scaling that nobody talks about. Revenue goes up. Headcount goes up. Hours go up. Stress goes up. And at some point, the founder hits a wall. Not because the business failed. Because the business succeeded in a way that became unsustainable.

@@ -3,6 +3,7 @@ title: "Do I Need a Business Coach, a Fractional COO, or an Operating System?"
 description: "Business coaches, fractional COOs, and operating system frameworks all promise to help you scale. Here's how to figure out which one you actually need right now."
 date: 2026-04-07
 draft: false
+guide: true
 ---
 
 You know something needs to change. The business is growing, but it feels harder every quarter. You're the bottleneck on too many decisions. Your team is busy but not always aligned. Revenue is unpredictable.

@@ -3,6 +3,7 @@ title: "How to Stop Being the Bottleneck in Your Own Business"
 description: "If nothing moves without your approval, your business has a founder dependency problem. Here's how to fix it without losing control."
 date: 2025-12-02
 draft: false
+guide: true
 ---
 
 There's a version of success that nobody warns founders about. The business is growing, the team is getting bigger, but somehow you're working more hours than ever. Every decision routes through you. Every problem lands on your desk. You've become the bottleneck in the thing you built.

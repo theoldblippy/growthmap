@@ -3,6 +3,7 @@ title: "How to Delegate When You're Used to Doing Everything"
 description: "Delegation isn't just handing off tasks. Here's how to actually let go and build a team that owns outcomes without you hovering."
 date: 2026-03-25
 draft: false
+guide: true
 ---
 
 If you built your business from the ground up, delegation probably doesn't come naturally. You've been the salesperson, the operations manager, the customer support team, and the accountant. You know how everything works because you built it all yourself.

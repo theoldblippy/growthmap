@@ -3,6 +3,7 @@ title: "How to Run a Weekly Leadership Meeting That Actually Works"
 description: "Most leadership meetings waste everyone's time. Here's a simple 90-minute format that keeps your team aligned, surfaces problems early, and drives accountability."
 date: 2026-04-14
 draft: false
+guide: true
 ---
 
 Most leadership meetings fall into one of two categories: they either don't happen at all, or they're a loose hour of status updates that everyone leaves feeling like they wasted their time.

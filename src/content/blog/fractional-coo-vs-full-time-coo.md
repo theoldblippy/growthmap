@@ -3,6 +3,7 @@ title: "Fractional COO vs. Full-Time COO: Which Is Right for Your Business?"
 description: "Comparing fractional and full-time COO options for growing businesses. Here's how to decide which one fits your stage and budget."
 date: 2026-01-06
 draft: false
+guide: true
 ---
 
 You know your business needs operational leadership. The question is whether you need someone full-time or whether a fractional COO gets the job done.

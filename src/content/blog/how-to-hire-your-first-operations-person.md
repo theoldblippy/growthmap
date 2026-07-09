@@ -3,6 +3,7 @@ title: "How to Hire Your First Operations Person"
 description: "Thinking about hiring someone to run operations? Here's how to know when you're ready, what to look for, and how to set them up to succeed."
 date: 2026-04-02
 draft: false
+guide: true
 ---
 
 At some point, every growing business needs someone focused on operations. The founder can't keep doing everything, and the team needs someone who wakes up every day thinking about how the business actually runs.

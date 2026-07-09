@@ -3,6 +3,7 @@ title: "What Does a Fractional COO Do?"
 description: "A fractional COO gives your business executive-level operations leadership without the full-time salary. Here's what they actually do day to day."
 date: 2026-02-17
 draft: false
+guide: true
 ---
 
 If you've been running your business and handling operations yourself, you've probably wondered whether there's someone who can take that weight off your shoulders without costing $250K+ a year.

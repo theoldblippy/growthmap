@@ -3,6 +3,7 @@ title: "7 Signs You Need a Fractional COO"
 description: "Not sure if you need operational help? Here are 7 clear signs your business has outgrown your ability to run it alone."
 date: 2026-01-27
 draft: false
+guide: true
 ---
 
 Most founders don't wake up one day and think "I need a COO." What happens instead is a slow buildup. The business gets more complex. The team gets bigger. The founder starts running faster just to stay in the same place.

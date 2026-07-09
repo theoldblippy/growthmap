@@ -3,6 +3,7 @@ title: "What Is a Business Operating System (And Do You Need One)?"
 description: "A business operating system gives your company a repeatable structure for making decisions, tracking progress, and staying aligned. Here's what that actually means."
 date: 2026-03-20
 draft: false
+guide: true
 ---
 
 You've probably heard the term "operating system" applied to business. Maybe you've heard of EOS, or Scaling Up, or some other framework that promises to bring order to the chaos. But what does it actually mean to have an operating system for your business? And do you actually need one?

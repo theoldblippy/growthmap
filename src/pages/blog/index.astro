@@ -2,9 +2,11 @@
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
-const posts = (await getCollection('blog'))
+const published = (await getCollection('blog'))
   .filter((post) => !post.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const essays = published.filter((post) => !post.data.guide);
+const guides = published.filter((post) => post.data.guide);
 ---
 
 <Layout
@@ -19,17 +21,18 @@ const posts = (await getCollection('blog'))
         I write about this work.
       </h1>
       <p class="mt-4 max-w-[54ch] text-lg leading-relaxed text-fern">
-        Practical essays on growth, operations, and building a business that runs without you — from inside the work, not above it.
+        Essays on growth, operations, and building a business that runs without you — from inside the work, not above it. Plus a shelf of evergreen guides.
       </p>
     </div>
   </section>
 
   <section class="px-6 py-12 md:py-16">
     <div class="mx-auto max-w-[800px]">
-      {posts.length === 0 && (
-        <p class="text-center text-fern">No notes yet. Check back soon.</p>
+      <p class="doc-label text-ink"><b>A</b>Essays</p>
+      {essays.length === 0 && (
+        <p class="py-6 text-fern">No essays yet. Check back soon.</p>
       )}
-      {posts.map((post) => (
+      {essays.map((post) => (
         <a
           href={`/blog/${post.id}`}
           class="group block border-b border-hairline py-7 no-underline"
@@ -50,6 +53,24 @@ const posts = (await getCollection('blog'))
           </span>
         </a>
       ))}
+
+      <p class="doc-label mt-16 text-ink"><b>B</b>Guides</p>
+      <p class="mt-4 text-[15px] leading-relaxed text-fern">
+        Evergreen how-tos and explainers. Useful, searchable, less personal than the essays above.
+      </p>
+      <div class="mt-2">
+        {guides.map((post) => (
+          <a
+            href={`/blog/${post.id}`}
+            class="group flex items-baseline justify-between gap-6 border-b border-dashed border-hairline py-4 no-underline"
+          >
+            <span class="font-display text-[19px] leading-snug text-ink transition-colors group-hover:text-moss">
+              {post.data.title}
+            </span>
+            <span class="flex-shrink-0 font-mono text-xs font-medium text-moss">&rarr;</span>
+          </a>
+        ))}
+      </div>
     </div>
   </section>
 

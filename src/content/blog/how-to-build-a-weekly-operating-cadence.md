@@ -3,6 +3,7 @@ title: "How to Build a Weekly Operating Cadence That Actually Works"
 description: "A weekly operating cadence replaces chaos with structure. Here's how to build one that keeps your team aligned and your business moving."
 date: 2025-11-04
 draft: false
+guide: true
 ---
 
 Most businesses don't have a rhythm. Every week feels different. Priorities shift based on whoever is loudest. Problems pile up until they become emergencies. And the team spends more time reacting than executing.

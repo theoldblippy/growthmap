@@ -27,7 +27,7 @@ const { Content } = await render(post);
         href="/blog"
         class="font-mono text-xs font-medium uppercase tracking-[0.18em] text-moss transition-colors hover:text-ink"
       >
-        &larr; Field Notes
+        &larr; {post.data.guide ? 'Guides' : 'Field Notes'}
       </a>
 
       <time class="mt-8 block font-mono text-xs font-medium uppercase tracking-[0.14em] text-fern">

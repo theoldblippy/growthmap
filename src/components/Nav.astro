@@ -11,24 +11,29 @@ const links = [
 
 <header
   id="site-nav"
-  class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-shadow duration-300"
+  class="fixed top-0 left-0 right-0 z-50 bg-parchment/95 backdrop-blur-sm transition-shadow duration-300"
 >
   <nav class="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-4">
-    <a href="/" class="flex-shrink-0">
-      <img src="/images/logo.png" alt="Growth Map" class="h-10" />
+    <a href="/" class="flex-shrink-0 flex items-center gap-2.5 font-display text-[21px] text-ink no-underline">
+      <svg class="h-[22px] w-[22px] text-moss" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="4" cy="20" r="2.2" fill="currentColor" />
+        <path d="M4,20 C11,17 8,9 15,6.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-dasharray="0.5 3.2" stroke-linecap="round" />
+        <path d="M17.5,1.5 c-2.7,0 -4.9,2.2 -4.9,4.9 c0,3.7 4.9,8.3 4.9,8.3 s4.9,-4.6 4.9,-8.3 C22.4,3.7 20.2,1.5 17.5,1.5 z M17.5,8.3 a1.9,1.9 0 1,1 0,-3.8 a1.9,1.9 0 0,1 0,3.8 z" fill="currentColor" />
+      </svg>
+      <span>Growth <em class="italic text-moss">Map</em></span>
     </a>
 
     <!-- Desktop links -->
-    <ul class="hidden items-center gap-8 md:flex">
+    <ul class="hidden items-center gap-7 md:flex">
       {links.map(({ href, label }) => (
         <li>
           <a
             href={href}
             class:list={[
-              'text-sm font-semibold tracking-wide transition-colors hover:text-bright-blue',
+              'text-sm font-medium transition-colors hover:text-ink',
               currentPath === href || (href !== '/' && currentPath.startsWith(href))
-                ? 'text-bright-blue'
-                : 'text-navy',
+                ? 'text-moss'
+                : 'text-fern',
             ]}
           >
             {label}
@@ -40,9 +45,9 @@ const links = [
           href="https://calendar.notion.so/meet/cameronearloliver/qc3y04oud"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-block rounded-lg bg-bright-blue px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#0088c2]"
+          class="inline-block rounded-full border border-ink px-5 py-2 text-sm font-semibold text-ink transition-colors hover:bg-ink hover:text-parchment"
         >
-          Book a Free Consult
+          Book a Consult
         </a>
       </li>
     </ul>
@@ -54,24 +59,24 @@ const links = [
       aria-label="Toggle menu"
       aria-expanded="false"
     >
-      <span class="block h-0.5 w-6 bg-navy transition-all duration-300" id="bar1"></span>
-      <span class="block h-0.5 w-6 bg-navy transition-all duration-300" id="bar2"></span>
-      <span class="block h-0.5 w-6 bg-navy transition-all duration-300" id="bar3"></span>
+      <span class="block h-0.5 w-6 bg-ink transition-all duration-300" id="bar1"></span>
+      <span class="block h-0.5 w-6 bg-ink transition-all duration-300" id="bar2"></span>
+      <span class="block h-0.5 w-6 bg-ink transition-all duration-300" id="bar3"></span>
     </button>
   </nav>
 
   <!-- Mobile menu -->
-  <div id="mobile-menu" class="hidden border-t border-light-gray md:hidden">
+  <div id="mobile-menu" class="hidden border-t border-hairline md:hidden">
     <ul class="flex flex-col gap-4 px-6 py-6">
       {links.map(({ href, label }) => (
         <li>
           <a
             href={href}
             class:list={[
-              'block text-base font-semibold transition-colors hover:text-bright-blue',
+              'block text-base font-semibold transition-colors hover:text-moss',
               currentPath === href || (href !== '/' && currentPath.startsWith(href))
-                ? 'text-bright-blue'
-                : 'text-navy',
+                ? 'text-moss'
+                : 'text-ink',
             ]}
           >
             {label}
@@ -83,9 +88,9 @@ const links = [
           href="https://calendar.notion.so/meet/cameronearloliver/qc3y04oud"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-block rounded-lg bg-bright-blue px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#0088c2]"
+          class="inline-block rounded-full border border-ink px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-ink hover:text-parchment"
         >
-          Book a Free Consult
+          Book a Consult
         </a>
       </li>
     </ul>

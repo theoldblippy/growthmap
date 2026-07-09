@@ -1,232 +1,285 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
 ---
 
 <Layout
-  title="Growth Map | Fractional COO & Business Operations Consulting"
-  description="Growth Map helps founders replace chaos with clarity. Fractional COO services, operating systems, and growth strategy for businesses doing $1M-$10M in revenue."
+  title="Growth Map | Fractional COO for Founders at $1M–$10M"
+  description="If the business depends on you remembering things, the business is you. Growth Map builds the operating system — ownership, scorecard, weekly rhythm — that lets $1M–$10M companies grow without the founder holding everything together."
   canonicalPath="/"
 >
   <!-- HERO -->
-  <section class="bg-white px-6 py-20 md:py-28">
-    <div class="mx-auto flex max-w-[1200px] flex-col items-center gap-12 md:flex-row md:gap-16">
-      <div class="flex-1 text-center md:text-left">
-        <p class="mb-4 text-sm font-semibold uppercase tracking-widest text-bright-blue">
-          Grow Revenue without the chaos
+  <section class="relative overflow-hidden border-b border-hairline px-6 py-16 md:py-24">
+    <svg
+      class="pointer-events-none absolute -right-36 -top-16 h-[640px] w-[640px] text-moss opacity-45"
+      viewBox="0 0 600 600"
+      aria-hidden="true"
+    >
+      <g fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.75">
+        <path d="M300,80 C420,70 520,160 530,280 C540,400 460,520 330,530 C200,540 80,460 75,320 C70,180 180,90 300,80 Z" />
+        <path d="M300,130 C390,122 470,190 478,285 C486,380 420,470 320,478 C220,486 128,420 124,310 C120,200 210,138 300,130 Z" />
+        <path d="M300,180 C365,174 420,222 426,290 C432,358 385,420 312,426 C239,432 176,384 173,305 C170,226 235,186 300,180 Z" />
+        <path d="M300,230 C340,226 368,254 372,295 C376,336 348,372 305,375 C262,378 226,350 224,302 C222,254 260,234 300,230 Z" />
+        <circle cx="299" cy="301" r="5" fill="currentColor" stroke="none" />
+      </g>
+    </svg>
+
+    <div class="relative z-10 mx-auto grid max-w-[1200px] items-center gap-12 md:grid-cols-[1.25fr_0.75fr] md:gap-14">
+      <div>
+        <p class="mb-5 flex flex-wrap gap-4 font-mono text-[11.5px] font-medium uppercase tracking-[0.18em] text-moss">
+          <span>Fractional COO · $1M–$10M</span>
+          <span class="text-fern/80">BRIEF NO. 001</span>
         </p>
-        <h1 class="text-3xl font-bold leading-tight text-navy sm:text-4xl md:text-[56px] md:leading-[1.1]">
-          Running Your Business Shouldn't Feel This Hard
+        <h1 class="font-display text-4xl leading-[1.12] text-ink sm:text-5xl md:text-[56px]">
+          If the business depends on you remembering things, the business <em>is you.</em>
         </h1>
-        <p class="mt-6 text-lg leading-relaxed text-mid-gray md:text-xl">
-          I help founders get unstuck, focus their business, and grow without burning out.
+        <p class="mt-6 max-w-[54ch] text-lg leading-relaxed text-fern">
+          I build the operating system that fixes that — clear ownership, one scorecard, and a weekly rhythm your team runs without you in the middle of every decision.
         </p>
-        <div class="mt-8 flex flex-wrap gap-4 justify-center md:justify-start">
+        <div class="mt-8 flex flex-wrap items-center gap-4">
           <a
             href="https://calendar.notion.so/meet/cameronearloliver/qc3y04oud"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-block rounded-lg bg-bright-blue px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
+            class="inline-block rounded-full border border-ink bg-ink px-7 py-3.5 text-[15px] font-semibold text-parchment transition-opacity hover:opacity-90"
           >
             Book a Free Consult
           </a>
           <a
             href="/time-audit"
-            class="inline-block rounded-lg border-2 border-navy px-8 py-3.5 text-base font-semibold text-navy transition-colors hover:bg-navy hover:text-white"
+            class="inline-block rounded-full border border-hairline bg-white/35 px-7 py-3.5 text-[15px] font-semibold text-ink transition-colors hover:border-ink"
           >
-            Take the Free Time Audit
+            Take the 3-minute Time Audit
           </a>
+          <span class="stamp">FREE · NO EMAIL REQUIRED</span>
         </div>
       </div>
-      <div class="flex-shrink-0">
-        <img
-          src="/images/headshot.jpeg"
-          alt="Cameron Oliver, founder of Growth Map"
-          class="w-72 rounded-2xl shadow-lg md:w-80"
-          loading="eager"
-        />
+
+      <!-- Operating scorecard (illustrative) -->
+      <div class="rounded-[14px] border border-hairline bg-white/55 p-6 backdrop-blur-sm">
+        <p class="mb-3 font-mono text-[11px] font-medium tracking-[0.14em] text-fern">
+          OPERATING SCORECARD · ILLUSTRATIVE
+        </p>
+        <div class="flex items-baseline justify-between gap-4 py-2.5 text-[13.5px] font-medium text-fern">
+          <span>Pipeline coverage</span>
+          <span class="whitespace-nowrap font-mono text-sm text-ink">3.2x<i class="ml-1.5 text-[11px] not-italic text-moss">&#9650;</i></span>
+        </div>
+        <div class="flex items-baseline justify-between gap-4 border-t border-dashed border-hairline py-2.5 text-[13.5px] font-medium text-fern">
+          <span>On-time delivery</span>
+          <span class="whitespace-nowrap font-mono text-sm text-ink">94%<i class="ml-1.5 text-[11px] not-italic text-moss">&#9650;</i></span>
+        </div>
+        <div class="flex items-baseline justify-between gap-4 border-t border-dashed border-hairline py-2.5 text-[13.5px] font-medium text-fern">
+          <span>Founder hours in the weeds</span>
+          <span class="whitespace-nowrap font-mono text-sm text-ink">6.0<i class="ml-1.5 text-[11px] not-italic text-moss">&#9660;</i></span>
+        </div>
+        <div class="flex items-baseline justify-between gap-4 border-t border-dashed border-hairline py-2.5 text-[13.5px] font-medium text-fern">
+          <span>Decisions closed in weekly</span>
+          <span class="whitespace-nowrap font-mono text-sm text-ink">11</span>
+        </div>
+        <div class="flex items-baseline justify-between gap-4 border-t border-dashed border-hairline py-2.5 text-[13.5px] font-medium text-fern">
+          <span>Owner check-ins skipped</span>
+          <span class="whitespace-nowrap font-mono text-sm text-ink">2<i class="ml-1.5 text-[11px] not-italic text-rust">&#9650;</i></span>
+        </div>
+        <p class="font-display mt-3 text-sm italic text-fern">
+          What a client scorecard looks like — built in the first 30 days.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- CURRENT SITUATION (Stark: "Current Situation") -->
-  <section class="bg-light-gray px-6 py-20 md:py-24">
-    <div class="mx-auto max-w-[800px] text-center">
-      <h2 class="text-3xl font-bold text-navy md:text-[40px] md:leading-tight">
-        This Is Where You Are Right Now
-      </h2>
-      <p class="mt-4 text-lg text-mid-gray">Sound familiar?</p>
-      <ul class="mt-10 space-y-5 text-left">
-        {[
-          "You're the only person who can make decisions, and it's crushing your calendar.",
-          "You've hired good people, but they still come to you for everything.",
-          "Revenue is flat or unpredictable, and you're not sure why.",
-          "You're working harder than ever, but the business isn't growing faster.",
-          "You're carrying the weight of the entire company — and it's bleeding into nights, weekends, and your health.",
-        ].map((item) => (
-          <li class="flex items-start gap-3 text-lg text-dark-text">
-            <span class="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-bright-blue" />
-            {item}
-          </li>
-        ))}
-      </ul>
-    </div>
-  </section>
-
-  <!-- DESIRED FUTURE STATE (Stark: "Desired Future State") -->
-  <section class="bg-white px-6 py-20 md:py-24">
-    <div class="mx-auto max-w-[800px] text-center">
-      <h2 class="text-3xl font-bold text-navy md:text-[40px] md:leading-tight">
-        What You Actually Want
-      </h2>
-      <ul class="mt-10 space-y-5 text-left">
-        {[
-          "A team that owns outcomes — not one that hands you problems to solve.",
-          "Clarity on exactly what's driving revenue and how to grow it.",
-          "Weeks that feel calm, focused, and intentional — not reactive.",
-          "Decisions based on real data instead of gut instinct and guesswork.",
-          "A business that grows without depending on you to hold everything together.",
-        ].map((item) => (
-          <li class="flex items-start gap-3 text-lg text-dark-text">
-            <span class="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-bright-blue" />
-            {item}
-          </li>
-        ))}
-      </ul>
-    </div>
-  </section>
-
-  <!-- BRIDGE: YOUR CONTRIBUTION (Stark: "Perceived Contribution") -->
-  <section class="bg-light-gray px-6 py-20 md:py-24">
-    <div class="mx-auto max-w-[800px] text-center">
-      <p class="mb-4 text-sm font-semibold uppercase tracking-widest text-bright-blue">
-        How Growth Map Helps
-      </p>
-      <h2 class="text-3xl font-bold text-navy md:text-[40px] md:leading-tight">
-        I Help You Build the System That Makes This Possible
-      </h2>
-      <p class="mt-6 text-lg leading-relaxed text-dark-text">
-        Growth Map is a fractional COO practice. I work with founders to figure out what's actually driving their business, who should own what, and how to build a rhythm that replaces chaos with clarity. Most clients go from overwhelmed to in-control within 90 days.
-      </p>
-      <a
-        href="/time-audit"
-        class="mt-10 inline-block rounded-lg bg-bright-blue px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
-      >
-        Find Out Where You're Stuck →
-      </a>
-    </div>
-  </section>
-
-  <!-- SERVICES (Outcome-focused, incremental ladder) -->
-  <section class="bg-white px-6 py-20 md:py-24">
+  <!-- 1.0 THE SITUATION -->
+  <section class="border-b border-hairline px-6 py-16 md:py-20">
     <div class="mx-auto max-w-[1200px]">
-      <p class="mb-4 text-center text-sm font-semibold uppercase tracking-widest text-bright-blue">
-        How We Work Together
-      </p>
-      <h2 class="text-center text-3xl font-bold text-navy md:text-[40px] md:leading-tight">
-        Three Ways to Start
+      <p class="doc-label text-ink"><b>1.0</b>The Situation</p>
+      <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
+        You already know the signals.
       </h2>
-      <p class="mt-4 text-center text-lg text-mid-gray">Most clients start with a Diagnostic and move into a Build.</p>
-      <div class="mt-12 grid gap-8 md:grid-cols-3">
-        <!-- Card 1 — Entry -->
-        <div class="rounded-xl border border-gray-100 bg-light-gray p-8">
-          <p class="text-xs font-semibold uppercase tracking-widest text-mid-gray">Step 1</p>
-          <h3 class="mt-2 text-xl font-bold text-navy">Growth Map Diagnostic</h3>
-          <p class="mt-4 text-lg font-semibold text-dark-text">
-            Walk away knowing exactly what's stalling your growth and the 2-3 moves that will move revenue.
-          </p>
-          <p class="mt-4 leading-relaxed text-mid-gray">
-            A 30-60 minute deep-dive where we map how your business actually creates value, identify what's broken, and give you a clear action plan — not a 50-page report.
-          </p>
-        </div>
-        <!-- Card 2 — Core -->
-        <div class="rounded-xl border-2 border-bright-blue bg-light-gray p-8 relative">
-          <div class="absolute -top-3 left-6 rounded-full bg-bright-blue px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">Most Popular</div>
-          <p class="text-xs font-semibold uppercase tracking-widest text-mid-gray">Step 2</p>
-          <h3 class="mt-2 text-xl font-bold text-navy">The Growth Map Build</h3>
-          <p class="mt-4 text-lg font-semibold text-dark-text">
-            In 90 days, your team runs the business without you being the bottleneck on every decision.
-          </p>
-          <p class="mt-4 leading-relaxed text-mid-gray">
-            Everything from the Diagnostic, plus: we build your operating system together — roles, ownership, scorecard, weekly rhythm. You stop managing by inbox and start leading with clarity.
-          </p>
-        </div>
-        <!-- Card 3 — Ongoing -->
-        <div class="rounded-xl border border-gray-100 bg-light-gray p-8">
-          <p class="text-xs font-semibold uppercase tracking-widest text-mid-gray">Step 3</p>
-          <h3 class="mt-2 text-xl font-bold text-navy">Fractional COO</h3>
-          <p class="mt-4 text-lg font-semibold text-dark-text">
-            Your business grows quarter over quarter because someone owns the operating system — not you.
-          </p>
-          <p class="mt-4 leading-relaxed text-mid-gray">
-            Everything from the Build, plus: I stay on as your operating partner. I run the system, drive improvements, and keep the team aligned — so you can focus on the work only you can do.
-          </p>
-        </div>
-      </div>
-      <div class="mt-12 text-center">
-        <p class="text-mid-gray">Not sure which is right for you?</p>
-        <a
-          href="https://calendar.notion.so/meet/cameronearloliver/qc3y04oud"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="mt-4 inline-block rounded-lg bg-bright-blue px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
-        >
-          Book a Free Consult
-        </a>
+      <div class="mt-7 grid gap-x-10 md:grid-cols-2">
+        {[
+          'Every decision routes through you.',
+          'Good hires still hand you their problems.',
+          "Revenue is flat — and nobody can say exactly why.",
+          "You're working harder than last year, and growing slower.",
+        ].map((item) => (
+          <div class="flex items-baseline gap-3.5 border-b border-dashed border-hairline py-3 text-[15.5px] font-semibold text-ink">
+            <span class="cbx">X</span>
+            {item}
+          </div>
+        ))}
       </div>
     </div>
   </section>
 
-  <!-- WHY NOW (Stark: Urgency / cost of inaction) -->
-  <section class="bg-navy px-6 py-20 md:py-24">
-    <div class="mx-auto max-w-[800px] text-center">
-      <p class="mb-4 text-sm font-semibold uppercase tracking-widest text-bright-blue">The Cost of Waiting</p>
-      <h2 class="text-3xl font-bold leading-tight text-white md:text-[40px] md:leading-tight">
-        Every Month You Stay the Bottleneck Costs You More Than You Think
+  <!-- 2.0 THE METHOD -->
+  <section class="border-b border-hairline bg-parchment-deep px-6 py-16 md:py-20">
+    <div class="mx-auto max-w-[820px]">
+      <p class="doc-label text-ink"><b>2.0</b>The Method</p>
+      <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
+        This is the Growth Map.
       </h2>
-      <div class="mt-10 grid gap-6 text-left sm:grid-cols-3">
-        <div class="rounded-xl bg-white/10 p-6">
-          <p class="text-2xl font-bold text-bright-blue">10-20 hrs</p>
-          <p class="mt-2 text-sm text-white/70">per week that founders spend on work someone else could do — time that never goes to growth</p>
+      <p class="mt-4 max-w-[54ch] text-lg leading-relaxed text-fern">
+        Every engagement follows the same route, because the failure pattern at $1M–$10M is remarkably consistent.
+      </p>
+      <div class="route relative mt-9">
+        {[
+          { n: '2.1', t: 'Map the business', d: "Sit down with how value actually gets created — and where it leaks. A working session, not a 50-page report." },
+          { n: '2.2', t: 'Find the constraint', d: 'Every stalled company has one system doing most of the damage. We name it and put it first.' },
+          { n: '2.3', t: 'Assign ownership', d: "Outcomes get owners who aren't you. Context moves out of your head and into the team." },
+          { n: '2.4', t: 'Install the rhythm', d: 'One scorecard, one weekly cadence. Decisions get made from data, on schedule — not from your inbox.' },
+          { n: '2.5', t: 'Step back', d: 'The system runs the week. You go back to the work only the founder can do.' },
+        ].map((stop, i, arr) => (
+          <div class="relative grid grid-cols-[40px_1fr] gap-5 py-5">
+            <div
+              class:list={[
+                'relative z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 border-moss font-mono text-xs font-medium',
+                i === arr.length - 1 ? 'bg-moss text-parchment' : 'bg-parchment-deep text-moss',
+              ]}
+            >
+              {stop.n}
+            </div>
+            <div>
+              <h3 class="font-display text-[21px] text-ink">{stop.t}</h3>
+              <p class="mt-1.5 max-w-[58ch] text-[15.5px] leading-relaxed text-fern">{stop.d}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 3.0 ENGAGEMENTS -->
+  <section class="border-b border-hairline px-6 py-16 md:py-20">
+    <div class="mx-auto max-w-[1200px]">
+      <p class="doc-label text-ink"><b>3.0</b>Engagements</p>
+      <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">Three ways in.</h2>
+      <div class="mt-9 grid gap-6 md:grid-cols-3">
+        <div class="flex flex-col gap-3 rounded-[14px] border border-hairline bg-white/50 p-7">
+          <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-fern">3.1 · Start Here</p>
+          <h3 class="font-display text-[23px] text-ink">The Diagnostic</h3>
+          <p class="text-[15.5px] font-semibold leading-relaxed text-ink">
+            Know exactly what's stalling growth — and the two or three moves that fix it.
+          </p>
+          <p class="text-[14.5px] leading-relaxed text-fern">
+            A 60-minute working deep-dive into how your business creates value, plus a written action plan you can run with or without me.
+          </p>
         </div>
-        <div class="rounded-xl bg-white/10 p-6">
-          <p class="text-2xl font-bold text-bright-blue">6-12 months</p>
-          <p class="mt-2 text-sm text-white/70">is how long most founders wait before getting help — after the damage is already done</p>
+        <div class="flex flex-col gap-3 rounded-[14px] border-[1.5px] border-moss bg-white/75 p-7">
+          <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-moss">3.2 · Core Engagement</p>
+          <h3 class="font-display text-[23px] text-ink">The Build</h3>
+          <p class="text-[15.5px] font-semibold leading-relaxed text-ink">
+            In 90 days, your team runs the business without you as the bottleneck.
+          </p>
+          <p class="text-[14.5px] leading-relaxed text-fern">
+            Everything in the Diagnostic, then we build the operating system together: roles, ownership, scorecard, weekly rhythm.
+          </p>
         </div>
-        <div class="rounded-xl bg-white/10 p-6">
-          <p class="text-2xl font-bold text-bright-blue">$100K+</p>
-          <p class="mt-2 text-sm text-white/70">in lost revenue from bad hires, unclear priorities, and decisions made on instinct instead of insight</p>
+        <div class="flex flex-col gap-3 rounded-[14px] border border-hairline bg-white/50 p-7">
+          <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-fern">3.3 · Ongoing</p>
+          <h3 class="font-display text-[23px] text-ink">Fractional COO</h3>
+          <p class="text-[15.5px] font-semibold leading-relaxed text-ink">
+            Growth compounds because someone owns the operating system. Not you.
+          </p>
+          <p class="text-[14.5px] leading-relaxed text-fern">
+            I stay on as your operating partner — running the system, driving improvements, keeping the team aligned.
+          </p>
         </div>
       </div>
-      <a
-        href="/time-audit"
-        class="mt-10 inline-block rounded-lg bg-bright-blue px-10 py-4 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
-      >
-        See Where Your Time Goes →
+    </div>
+  </section>
+
+  <!-- 4.0 THE OPERATOR -->
+  <section class="border-b border-hairline bg-parchment-deep px-6 py-16 md:py-20">
+    <div class="mx-auto max-w-[1200px]">
+      <p class="doc-label text-ink"><b>4.0</b>The Operator</p>
+      <div class="mt-7 grid items-start gap-10 md:grid-cols-2 md:gap-14">
+        <div>
+          <h2 class="font-display text-3xl leading-tight text-ink md:text-4xl">
+            An operator, <em>not a theorist.</em>
+          </h2>
+          <p class="mt-5 max-w-[54ch] text-lg leading-relaxed text-fern">
+            A decade inside fast-growing startups — usually as the person leaders call when things start breaking.
+          </p>
+          <div class="mt-6">
+            <div class="flex items-baseline gap-3 border-t border-dashed border-hairline py-3 text-[15px] text-ink">
+              <strong class="whitespace-nowrap font-mono text-sm font-medium text-moss">#3–100+</strong>
+              employee range across the startups I've helped scale
+            </div>
+            <div class="flex items-baseline gap-3 border-t border-dashed border-hairline py-3 text-[15px] text-ink">
+              <strong class="whitespace-nowrap font-mono text-sm font-medium text-moss">10 YRS</strong>
+              at the intersection of operations, go-to-market, and delivery
+            </div>
+            <div class="flex items-baseline gap-3 border-t border-dashed border-hairline py-3 text-[15px] text-ink">
+              <strong class="whitespace-nowrap font-mono text-sm font-medium text-moss">TODAY</strong>
+              running operations inside a venture-backed health-tech company
+            </div>
+          </div>
+        </div>
+        <div>
+          <!-- TODO: replace placeholder exhibits with real quotes before merging to main -->
+          <div class="mb-6 border-l-[3px] border-moss py-1 pl-5">
+            <p class="mb-2 font-mono text-[10.5px] font-medium uppercase tracking-[0.14em] text-moss">
+              Exhibit A · Placeholder — real quote goes here
+            </p>
+            <blockquote class="font-display text-[17px] italic leading-normal text-ink">
+              "Pull quote from a past client or colleague. Real names and real roles matter more than polish."
+            </blockquote>
+            <cite class="mt-2.5 block font-mono text-[11px] not-italic text-fern">NAME — ROLE, COMPANY</cite>
+          </div>
+          <div class="border-l-[3px] border-moss py-1 pl-5">
+            <p class="mb-2 font-mono text-[10.5px] font-medium uppercase tracking-[0.14em] text-moss">
+              Exhibit B · Placeholder — real quote goes here
+            </p>
+            <blockquote class="font-display text-[17px] italic leading-normal text-ink">
+              "Second quote. One from an operating role, one from a Growth Map engagement, so the range shows."
+            </blockquote>
+            <cite class="mt-2.5 block font-mono text-[11px] not-italic text-fern">NAME — ROLE, COMPANY</cite>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5.0 FIELD NOTES -->
+  <section class="px-6 py-16 md:py-20">
+    <div class="mx-auto max-w-[1200px]">
+      <p class="doc-label text-ink"><b>5.0</b>Field Notes</p>
+      <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
+        I write about this work.
+      </h2>
+      <div class="mt-8">
+        {posts.map((post) => (
+          <a
+            href={`/blog/${post.id}`}
+            class="group flex items-baseline justify-between gap-6 border-t border-hairline py-5 no-underline"
+          >
+            <span class="font-display text-[21px] text-ink transition-colors group-hover:text-moss">
+              {post.data.title}
+            </span>
+            <span class="flex-shrink-0 font-mono text-xs font-medium text-moss">READ →</span>
+          </a>
+        ))}
+      </div>
+      <a href="/blog" class="mt-6 inline-block text-[15px] font-semibold text-moss transition-colors hover:text-ink">
+        All field notes →
       </a>
-      <p class="mt-4 text-sm text-white/50">Free. No email required. Results in 3 minutes.</p>
     </div>
   </section>
-
-  <!-- CEO TIME AUDIT CTA -->
-  <section class="bg-light-gray px-6 py-20 md:py-24">
-    <div class="mx-auto max-w-[700px] text-center">
-      <p class="mb-4 text-sm font-semibold uppercase tracking-widest text-bright-blue">
-        Start Here
-      </p>
-      <h2 class="text-3xl font-bold text-navy md:text-[40px] md:leading-tight">
-        Find Out Where Your Time Actually Goes
-      </h2>
-      <p class="mt-4 text-lg leading-relaxed text-dark-text">
-        Most founders spend over half their week on $10/hr work. The CEO Time Audit breaks your week into $10, $100, $1,000, and $10,000-per-hour tasks — so you can see where to focus and what to hand off.
-      </p>
-      <a
-        href="/time-audit"
-        class="mt-8 inline-block rounded-lg bg-bright-blue px-10 py-4 text-base font-semibold text-white transition-colors hover:bg-[#0088c2]"
-      >
-        Take the CEO Time Audit →
-      </a>
-      <p class="mt-3 text-sm text-mid-gray">3 minutes. No email required.</p>
-    </div>
-  </section>
-
 </Layout>
+
+<style>
+  /* dotted route rail connecting method waypoints */
+  .route::before {
+    content: '';
+    position: absolute;
+    left: 19px;
+    top: 24px;
+    bottom: 24px;
+    border-left: 2px dashed var(--color-moss);
+    opacity: 0.45;
+  }
+</style>

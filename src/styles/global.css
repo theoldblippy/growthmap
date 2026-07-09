@@ -2,14 +2,27 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-navy: #003087;
-  --color-bright-blue: #009CDE;
-  --color-deep-accent: #012169;
-  --color-light-gray: #F4F7FA;
-  --color-dark-text: #1A1A2E;
-  --color-mid-gray: #6B7280;
+  /* Field Brief palette */
+  --color-parchment: #F5F0E1;      /* page ground */
+  --color-parchment-deep: #ECE6D0; /* alternating sections */
+  --color-ink: #2B331F;            /* olive-black — headings, dark sections */
+  --color-fern: #59614A;           /* body copy */
+  --color-moss: #5C7A3B;           /* the single accent */
+  --color-rust: #B0402F;           /* semantic only: watch-state deltas */
+  --color-cream: #F0EDDE;          /* text on dark sections */
+  --color-hairline: rgba(43, 51, 31, 0.15);
 
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  /* Legacy token names remapped so unported pages inherit the new world */
+  --color-navy: #2B331F;
+  --color-bright-blue: #5C7A3B;
+  --color-deep-accent: #2B331F;
+  --color-light-gray: #ECE6D0;
+  --color-dark-text: #2B331F;
+  --color-mid-gray: #59614A;
+
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Castoro", Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 }
 
 html {
@@ -18,5 +31,64 @@ html {
 
 body {
   font-family: var(--font-sans);
-  color: var(--color-dark-text);
+  color: var(--color-ink);
+  background: var(--color-parchment);
+}
+
+/* Serif display headings */
+.font-display {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+}
+.font-display em {
+  font-style: italic;
+  color: var(--color-moss);
+}
+
+/* Mono document labels — "1.0 THE SITUATION" */
+.doc-label {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 12.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--color-hairline);
+  padding-bottom: 10px;
+}
+.doc-label b {
+  color: var(--color-moss);
+  font-weight: 500;
+  margin-right: 12px;
+}
+
+/* Rotated stamp */
+.stamp {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--color-moss);
+  border: 2px solid var(--color-moss);
+  border-radius: 3px;
+  padding: 7px 12px;
+  transform: rotate(-3.5deg);
+  opacity: 0.9;
+}
+
+/* Checked box for signal lists */
+.cbx {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--color-moss);
+  border: 1.5px solid var(--color-ink);
+  width: 17px;
+  height: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transform: translateY(2px);
 }

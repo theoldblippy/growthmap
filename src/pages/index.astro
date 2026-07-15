@@ -10,7 +10,7 @@ const posts = (await getCollection('blog'))
 
 <Layout
   title="Growth Map | Fractional COO for Owner-Led Businesses, $1M–$50M"
-  description="The business runs on you. That's the problem. Growth Map finds what's stalling revenue in your actual data, then builds the operating system that fixes it, for owner-led companies from $1M to $50M."
+  description="Your growth stalled and the reason is in your numbers. Growth Map finds the one constraint capping revenue in your real data, then builds the operating system that clears it. For owner-led companies, $1M–$50M."
   canonicalPath="/"
 >
   <!-- HERO -->
@@ -32,10 +32,10 @@ const posts = (await getCollection('blog'))
     <div class="relative z-10 mx-auto grid max-w-[1200px] items-center gap-12 md:grid-cols-[1.25fr_0.75fr] md:gap-14">
       <div>
         <h1 class="font-display text-4xl leading-[1.12] text-ink sm:text-5xl md:text-[56px]">
-          The business runs on <em>you.</em> That's the problem.
+          Your growth stalled. The reason is in your <em>numbers.</em>
         </h1>
         <p class="mt-6 max-w-[46ch] text-lg leading-relaxed text-fern">
-          I find what's stalling revenue in your actual data, then build the operating system that fixes it.
+          I dig into your real data — CRM, pipeline, delivery — find the one constraint capping growth, and build the operating system that clears it.
         </p>
         <div class="mt-8 flex flex-wrap items-center gap-4">
           <a
@@ -59,15 +59,15 @@ const posts = (await getCollection('blog'))
       <!-- Operating scorecard (illustrative) -->
       <div class="rounded-[14px] border border-hairline bg-white/55 p-6 backdrop-blur-sm">
         <p class="mb-3 font-mono text-[11px] font-medium tracking-[0.14em] text-fern">
-          OPERATING SCORECARD · ILLUSTRATIVE
+          SAMPLE SCORECARD
         </p>
         <div class="flex items-baseline justify-between gap-4 py-2.5 text-[13.5px] font-medium text-fern">
           <span>Revenue vs. plan</span>
           <span class="whitespace-nowrap font-mono text-sm text-ink">104%<i class="ml-1.5 text-[11px] not-italic text-moss">&#9650;</i></span>
         </div>
         <div class="flex items-baseline justify-between gap-4 border-t border-dashed border-hairline py-2.5 text-[13.5px] font-medium text-fern">
-          <span>Jobs delivered on time</span>
-          <span class="whitespace-nowrap font-mono text-sm text-ink">94%<i class="ml-1.5 text-[11px] not-italic text-moss">&#9650;</i></span>
+          <span>Gross margin</span>
+          <span class="whitespace-nowrap font-mono text-sm text-ink">41%<i class="ml-1.5 text-[11px] not-italic text-moss">&#9650;</i></span>
         </div>
         <div class="flex items-baseline justify-between gap-4 border-t border-dashed border-hairline py-2.5 text-[13.5px] font-medium text-fern">
           <span>Owner hours in the weeds</span>
@@ -78,13 +78,25 @@ const posts = (await getCollection('blog'))
           <span class="whitespace-nowrap font-mono text-sm text-ink">2<i class="ml-1.5 text-[11px] not-italic text-moss">&#9660;</i></span>
         </div>
         <div class="flex items-baseline justify-between gap-4 border-t border-dashed border-hairline py-2.5 text-[13.5px] font-medium text-fern">
-          <span>Days since the last fire drill</span>
-          <span class="whitespace-nowrap font-mono text-sm text-ink">21<i class="ml-1.5 text-[11px] not-italic text-moss">&#9650;</i></span>
+          <span>Forecast accuracy</span>
+          <span class="whitespace-nowrap font-mono text-sm text-ink">92%<i class="ml-1.5 text-[11px] not-italic text-moss">&#9650;</i></span>
         </div>
         <p class="font-display mt-3 text-sm italic text-fern">
-          What a client scorecard looks like after 30 days.
+          The weekly scorecard we build together. Your metrics, not these.
         </p>
       </div>
+    </div>
+  </section>
+
+  <!-- PROOF STRIP -->
+  <section class="border-b border-hairline px-6 py-7">
+    <div class="mx-auto flex max-w-[1200px] flex-wrap items-center justify-center gap-x-5 gap-y-2 text-center">
+      <span class="font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-fern">Work spans</span>
+      <span class="font-display text-[17px] text-ink">Construction</span><span class="text-moss/60">·</span>
+      <span class="font-display text-[17px] text-ink">Telehealth</span><span class="text-moss/60">·</span>
+      <span class="font-display text-[17px] text-ink">Behavioral health</span><span class="text-moss/60">·</span>
+      <span class="font-display text-[17px] text-ink">SaaS</span><span class="text-moss/60">·</span>
+      <span class="font-display text-[17px] text-ink">PE portfolios</span>
     </div>
   </section>
 
@@ -160,6 +172,9 @@ const posts = (await getCollection('blog'))
           <p class="mt-5 max-w-[54ch] text-lg leading-relaxed text-fern">
             A decade inside fast-growing startups, usually as the person leaders call when things start breaking.
           </p>
+          <p class="mt-4 max-w-[54ch] text-lg leading-relaxed text-fern">
+            The failure pattern is the same whether you pour concrete or ship code. I find it fast because I've seen it in businesses that looked nothing alike.
+          </p>
           <div class="mt-6">
             <div class="flex items-baseline gap-3 border-t border-dashed border-hairline py-3 text-[15px] text-ink">
               <strong class="whitespace-nowrap font-mono text-sm font-medium text-moss">#3–100+</strong>
@@ -215,7 +230,8 @@ const posts = (await getCollection('blog'))
           <p class="text-[14.5px] leading-relaxed text-fern">
             Give me two weeks and read-only access to your systems. You get a written brief: where revenue is leaking, and the moves that fix it.
           </p>
-          <p class="mt-auto pt-2 font-mono text-xs font-medium tracking-[0.1em] text-ink">TWO WEEKS · ONE FIXED FEE · NO METER</p>
+          <p class="text-[14.5px] font-semibold leading-relaxed text-moss">If I don't find a constraint worth more than the fee, you don't pay.</p>
+          <p class="mt-auto pt-2 font-mono text-xs font-medium tracking-[0.1em] text-ink">TWO WEEKS · ONE FIXED FEE</p>
         </div>
         <div class="flex flex-col gap-3 rounded-[14px] border border-hairline bg-white/50 p-7">
           <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-fern">4.2 · The Fix</p>
@@ -226,11 +242,12 @@ const posts = (await getCollection('blog'))
           <p class="text-[14.5px] leading-relaxed text-fern">
             We install what the Diagnostic prescribed: an owner for every outcome, one scorecard, a weekly rhythm. I only run three Builds at a time.
           </p>
+          <p class="text-[14.5px] font-semibold leading-relaxed text-moss">Your team runs the weekly without you by day 90, or I keep going until they do.</p>
           <p class="mt-auto pt-2 font-mono text-xs font-medium tracking-[0.1em] text-fern">90 DAYS · SCOPED FROM YOUR DIAGNOSTIC</p>
         </div>
         <div class="flex flex-col gap-3 rounded-[14px] border border-hairline bg-white/50 p-7">
           <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-fern">4.3 · Ongoing</p>
-          <h3 class="font-display text-[23px] text-ink">Fractional COO</h3>
+          <h3 class="font-display text-[23px] text-ink">Operating Partner</h3>
           <p class="text-[15.5px] font-semibold leading-relaxed text-ink">
             Growth compounds because someone owns the operating system. Not you.
           </p>
@@ -243,6 +260,7 @@ const posts = (await getCollection('blog'))
       <p class="mx-auto mt-9 max-w-[62ch] text-center text-[15px] leading-relaxed text-fern">
         Every engagement is priced to the problem, not the hour. You get one number up front, and it doesn't change. You shouldn't have to make an investment decision every time you need to call me. Not sure which fits? <a href="https://calendar.notion.so/meet/cameronearloliver/qc3y04oud" target="_blank" rel="noopener noreferrer" class="font-semibold text-moss transition-colors hover:text-ink">Book the free 30-minute consult</a> — if a Diagnostic isn't the right move, I'll tell you.
       </p>
+      <p class="mx-auto mt-4 max-w-[62ch] text-center text-[14px] text-fern">Backed by a fund? I run this across a portfolio.</p>
     </div>
   </section>
 

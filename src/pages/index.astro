@@ -6,11 +6,13 @@ const posts = (await getCollection('blog'))
   .filter((post) => !post.data.draft && !post.data.guide)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 3);
+
+const bookUrl = 'https://calendar.notion.so/meet/cameronearloliver/qc3y04oud';
 ---
 
 <Layout
-  title="Growth Map | Fractional COO for Owner-Led Businesses, $1M–$50M"
-  description="Your business can't grow past you. Growth Map finds what's capping growth in your own numbers — not a workshop — then builds the system that runs without you. Fractional COO for owner-led companies, $1M–$50M."
+  title="Growth Map | Fractional COO for Owner-Led Businesses, $1M–$20M"
+  description="You're probably fixing the wrong thing. Growth Map finds the one constraint actually capping your growth — from your own numbers, in two weeks — and if it's not worth more than the fee, you don't pay."
   canonicalPath="/"
 >
   <!-- HERO -->
@@ -31,29 +33,23 @@ const posts = (await getCollection('blog'))
 
     <div class="relative z-10 mx-auto grid max-w-[1200px] items-center gap-12 md:grid-cols-[1.25fr_0.75fr] md:gap-14">
       <div>
-        <h1 class="font-display text-4xl leading-[1.12] text-ink sm:text-5xl md:text-[56px]">
-          Your business can't grow past <em>you.</em>
+        <h1 class="font-display text-4xl leading-[1.1] text-ink sm:text-5xl md:text-[58px]">
+          You're fixing the <em>wrong thing.</em>
         </h1>
         <p class="mt-6 max-w-[48ch] text-lg leading-relaxed text-fern">
-          Every decision still runs through you. I find what's holding growth back in your own numbers — not a workshop — then build the system that runs without you.
+          Growth stalls for a reason you usually can't see from the inside. I find it in two weeks — in your own numbers — and if it's not worth more than my fee, you don't pay.
         </p>
-        <div class="mt-8 flex flex-wrap items-center gap-4">
+        <div class="mt-8">
           <a
-            href="https://calendar.notion.so/meet/cameronearloliver/qc3y04oud"
+            href={bookUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-block rounded-full border border-ink bg-ink px-7 py-3.5 text-[15px] font-semibold text-parchment transition-opacity hover:opacity-90"
+            class="inline-block rounded-full border border-ink bg-ink px-8 py-4 text-[15px] font-semibold text-parchment transition-opacity hover:opacity-90"
           >
-            Book a Free Consult
+            Book a call
           </a>
-          <a
-            href="/time-audit"
-            class="inline-block rounded-full border border-hairline bg-white/35 px-7 py-3.5 text-[15px] font-semibold text-ink transition-colors hover:border-ink"
-          >
-            Take the Time Audit
-          </a>
+          <p class="mt-3.5 text-sm text-fern">A 30-minute call. If I can't help, I'll tell you.</p>
         </div>
-        <p class="mt-3.5 text-sm text-fern">The audit takes 3 minutes. No email required.</p>
       </div>
 
       <!-- Sample scorecard (placeholder until a real anonymized one) -->
@@ -88,18 +84,18 @@ const posts = (await getCollection('blog'))
     </div>
   </section>
 
-  <!-- THE PROBLEM -->
+  <!-- 2 · THE COST OF GUESSING (recognition + stakes) -->
   <section class="border-b border-hairline px-6 py-16 md:py-20">
     <div class="mx-auto max-w-[1200px]">
-      <p class="doc-label text-ink">The problem</p>
+      <p class="doc-label text-ink">Where most owners are</p>
       <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
         You already know the signals.
       </h2>
       <div class="mt-7 grid gap-x-10 md:grid-cols-2">
         {[
           'Every decision still routes through you.',
-          'Good hires bring you their problems instead of solving them.',
-          "Revenue is flat, and nobody can tell you exactly why.",
+          'Good hires bring you problems instead of solving them.',
+          "Revenue is flat, and no one can tell you exactly why.",
           "You're working harder than last year and growing slower.",
         ].map((item) => (
           <div class="flex items-baseline gap-3.5 border-b border-dashed border-hairline py-3 text-[15.5px] font-semibold text-ink">
@@ -108,90 +104,53 @@ const posts = (await getCollection('blog'))
           </div>
         ))}
       </div>
-      <p class="mt-8 max-w-[60ch] text-lg leading-relaxed text-fern">
-        None of that is a sales problem. It's an operating problem wearing a revenue costume — and you can't fix what you can't see clearly.
+      <p class="mt-8 max-w-[62ch] text-lg leading-relaxed text-fern">
+        So you do what most owners do — you push harder on what you can see. More sales pressure. Another hire. A new tool. A year later you're more tired and no less stuck, because the thing actually holding you back was never the thing you were working on.
       </p>
     </div>
   </section>
 
-  <!-- WHAT'S DIFFERENT -->
+  <!-- 3 · WHY YOUR DATA, NOT A WORKSHOP -->
   <section class="border-b border-hairline bg-parchment-deep px-6 py-16 md:py-20">
     <div class="mx-auto max-w-[820px]">
-      <p class="doc-label text-ink">What's different</p>
+      <p class="doc-label text-ink">Why this is different</p>
       <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
         Most people diagnose your business by talking to you. <em>I read your numbers.</em>
       </h2>
       <p class="mt-5 text-lg leading-relaxed text-fern">
-        The coach runs a workshop. The consultant interviews your team. They work from what people are willing to say in a room. I go into your actual data — your CRM, your pipeline, how work gets delivered, where the money moves — and find the one thing quietly capping growth that nobody can see or won't say out loud.
+        The coach runs a workshop. The consultant interviews your team. They work from what people are willing to say in a room — which is mostly what you already believe. I go into your actual data: your CRM, your books, how work gets delivered, where the money moves. That's where the real constraint is hiding, and it's almost never where you'd guess.
       </p>
       <p class="mt-4 text-lg leading-relaxed text-fern">
-        Then I don't hand you a slide deck. I build the way the business runs so it stops depending on you for everything.
+        Then I don't hand you a slide deck. I help you fix the thing, and build the way the business runs so it stops depending on you for everything.
       </p>
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
+  <!-- 4 · ONE STORY (proof) -->
   <section class="border-b border-hairline px-6 py-16 md:py-20">
-    <div class="mx-auto max-w-[820px]">
-      <p class="doc-label text-ink">How it works</p>
-      <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
-        Same five moves, every time.
-      </h2>
-      <p class="mt-4 max-w-[54ch] text-lg leading-relaxed text-fern">
-        The failure pattern in owner-led companies is remarkably consistent, whether you build houses, run a firm, or ship software.
-      </p>
-      <div class="route relative mt-9">
-        {[
-          { n: '1', t: 'Read the business', d: "I go through how the business actually makes money and where it leaks — from your real numbers, in a couple of weeks, not a two-day offsite." },
-          { n: '2', t: "Find what's holding growth back", d: 'Every stuck company has one thing doing most of the damage. I name it and put it first, so we fix the cause instead of chasing symptoms.' },
-          { n: '3', t: 'Put someone other than you in charge', d: "Every outcome gets an owner who isn't you. The context stuck in your head moves into the team." },
-          { n: '4', t: 'Set the weekly rhythm', d: 'One scoreboard, one weekly meeting that runs itself. Decisions get made on schedule, from real numbers.' },
-          { n: '5', t: 'Step out of the middle', d: 'The business runs the week without you. You go back to the work only you can do.' },
-        ].map((stop, i, arr) => (
-          <div class="relative grid grid-cols-[40px_1fr] gap-5 py-5">
-            <div
-              class:list={[
-                'relative z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 border-moss font-mono text-xs font-medium',
-                i === arr.length - 1 ? 'bg-moss text-parchment' : 'bg-parchment text-moss',
-              ]}
-            >
-              {stop.n}
-            </div>
-            <div>
-              <h3 class="font-display text-[21px] text-ink">{stop.t}</h3>
-              <p class="mt-1.5 max-w-[58ch] text-[15.5px] leading-relaxed text-fern">{stop.d}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- PROOF -->
-  <section class="border-b border-hairline bg-parchment-deep px-6 py-16 md:py-20">
     <div class="mx-auto max-w-[1200px]">
-      <p class="doc-label text-ink">Proof</p>
+      <p class="doc-label text-ink">What it looks like</p>
       <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
-        What it looks like in a real business.
+        One business. One constraint. One result.
       </h2>
 
       <!-- Case study — PLACEHOLDER -->
       <div class="mt-8 rounded-[14px] border-2 border-dashed border-moss/50 bg-white/40 p-8">
-        <p class="mb-4 font-mono text-[10.5px] font-medium uppercase tracking-[0.14em] text-rust">
-          Placeholder · real case study coming
+        <p class="mb-5 font-mono text-[10.5px] font-medium uppercase tracking-[0.14em] text-rust">
+          Placeholder · your real case study drops in here
         </p>
         <div class="grid gap-6 md:grid-cols-3">
           <div>
             <p class="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-moss">The business</p>
-            <p class="mt-2 leading-relaxed text-ink">$[X]M [vertical] company. Growing, but the owner was in every decision and margin was slipping.</p>
+            <p class="mt-2 leading-relaxed text-ink">$[X]M [vertical] company. Growing, but the owner was in every decision and margins were slipping.</p>
           </div>
           <div>
             <p class="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-moss">What I found</p>
-            <p class="mt-2 leading-relaxed text-ink">The constraint wasn't sales. It was [the real thing] — hiding in the [system] data, where no one was looking.</p>
+            <p class="mt-2 leading-relaxed text-ink">Everyone assumed it was a sales problem. The data said it was [the real thing] — sitting in plain sight where no one was looking.</p>
           </div>
           <div>
             <p class="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-moss">The result</p>
-            <p class="mt-2 leading-relaxed text-ink">[Metric] moved from [X] to [Y] in [timeframe]. The owner stopped being the bottleneck.</p>
+            <p class="mt-2 leading-relaxed text-ink">[Metric] went from [X] to [Y] in [timeframe] — and the owner stopped being the bottleneck.</p>
           </div>
         </div>
       </div>
@@ -201,20 +160,19 @@ const posts = (await getCollection('blog'))
         <div class="rounded-[14px] border border-hairline bg-white/50 p-7">
           <p class="mb-3 font-mono text-[10.5px] font-medium uppercase tracking-[0.14em] text-rust">Placeholder · real quote coming</p>
           <blockquote class="font-display text-[18px] italic leading-normal text-ink">
-            "A real sentence from a real client, with their real name and company under it. One honest line beats a page of polish."
+            "A real sentence from a real client, with their name and company under it. One honest line beats a page of polish."
           </blockquote>
           <cite class="mt-3 block font-mono text-[11px] not-italic text-fern">NAME — ROLE, COMPANY</cite>
         </div>
         <div class="rounded-[14px] border border-hairline bg-white/50 p-7">
           <p class="mb-3 font-mono text-[10.5px] font-medium uppercase tracking-[0.14em] text-rust">Placeholder · real quote coming</p>
           <blockquote class="font-display text-[18px] italic leading-normal text-ink">
-            "A second quote, ideally from a different kind of business, so a visitor sees the range holds up."
+            "A second quote, ideally from a different kind of business, so the range holds up."
           </blockquote>
           <cite class="mt-3 block font-mono text-[11px] not-italic text-fern">NAME — ROLE, COMPANY</cite>
         </div>
       </div>
 
-      <!-- Compact operator credibility (not a brag section) -->
       <p class="mt-8 max-w-[70ch] text-[15px] leading-relaxed text-fern">
         Behind Growth Map: <span class="font-semibold text-ink">Cameron Oliver</span> — a decade operating inside fast-growing companies, from employee #3 to 100+, usually the person leaders called when things started breaking.
         <a href="/about" class="font-semibold text-moss transition-colors hover:text-ink">More on that →</a>
@@ -222,15 +180,14 @@ const posts = (await getCollection('blog'))
     </div>
   </section>
 
-  <!-- WHERE TO START -->
-  <section class="border-b border-hairline px-6 py-16 md:py-20">
+  <!-- 5 · THE DIAGNOSTIC (offer) -->
+  <section class="border-b border-hairline bg-parchment-deep px-6 py-16 md:py-20">
     <div class="mx-auto max-w-[1200px]">
       <p class="doc-label text-ink">Where to start</p>
       <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
         Start with a Diagnostic.
       </h2>
 
-      <!-- Front-door offer -->
       <div class="mt-8 rounded-[14px] border-[1.5px] border-moss bg-white/70 p-8 md:p-10">
         <div class="grid gap-8 md:grid-cols-[1.4fr_1fr] md:gap-12">
           <div>
@@ -238,19 +195,21 @@ const posts = (await getCollection('blog'))
             <p class="mt-3 text-lg font-semibold leading-relaxed text-ink">
               In two weeks, you'll know exactly what's capping your growth — proven from your own numbers, not a hunch.
             </p>
-            <p class="mt-4 leading-relaxed text-fern">
-              Give me read-only access to your systems. I go in, find the one constraint doing the most damage, and hand you a short written brief: what it is, what it's costing you, and the moves that fix it. Yours to run with, with me or without me.
-            </p>
-            <p class="mt-4 text-[15.5px] font-semibold leading-relaxed text-moss">
+            <ol class="mt-5 space-y-2.5">
+              <li class="flex items-baseline gap-3 text-[15px] text-ink"><span class="font-mono text-xs font-medium text-moss">1</span>You give me read-only access to your systems.</li>
+              <li class="flex items-baseline gap-3 text-[15px] text-ink"><span class="font-mono text-xs font-medium text-moss">2</span>I find the one constraint doing the most damage.</li>
+              <li class="flex items-baseline gap-3 text-[15px] text-ink"><span class="font-mono text-xs font-medium text-moss">3</span>You get a short written brief: what it is, what it's costing you, and the moves that fix it.</li>
+            </ol>
+            <p class="mt-5 text-[15.5px] font-semibold leading-relaxed text-moss">
               If I don't find something worth more than the fee, you don't pay.
             </p>
             <a
-              href="https://calendar.notion.so/meet/cameronearloliver/qc3y04oud"
+              href={bookUrl}
               target="_blank"
               rel="noopener noreferrer"
-              class="mt-6 inline-block rounded-full border border-ink bg-ink px-7 py-3.5 text-[15px] font-semibold text-parchment transition-opacity hover:opacity-90"
+              class="mt-6 inline-block rounded-full border border-ink bg-ink px-8 py-4 text-[15px] font-semibold text-parchment transition-opacity hover:opacity-90"
             >
-              Book a Free Consult
+              Book a call
             </a>
             <p class="mt-3 font-mono text-xs font-medium tracking-[0.1em] text-fern">TWO WEEKS · ONE FIXED FEE</p>
           </div>
@@ -278,7 +237,49 @@ const posts = (await getCollection('blog'))
     </div>
   </section>
 
-  <!-- FIELD NOTES -->
+  <!-- 6 · WHO THIS IS (AND ISN'T) FOR -->
+  <section class="border-b border-hairline px-6 py-16 md:py-20">
+    <div class="mx-auto max-w-[1200px]">
+      <p class="doc-label text-ink">Is this you?</p>
+      <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
+        I'm not for everyone.
+      </h2>
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        <div class="rounded-[14px] border border-hairline bg-white/50 p-7">
+          <p class="font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-moss">This is for you if</p>
+          <ul class="mt-4 space-y-3">
+            {[
+              "You own a $1–20M business and you're still the bottleneck.",
+              "You'd rather hear the truth from your numbers than a pep talk.",
+              "You're ready to actually change how the business runs.",
+            ].map((item) => (
+              <li class="flex items-start gap-3 text-[15px] leading-relaxed text-ink">
+                <span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-moss"></span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="rounded-[14px] border border-hairline bg-white/30 p-7">
+          <p class="font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-fern">It's not for you if</p>
+          <ul class="mt-4 space-y-3">
+            {[
+              "You're pre-revenue and still hunting for product-market fit.",
+              "You want someone to agree with you, not tell you what's wrong.",
+              "You already know your constraint and just need an extra pair of hands.",
+            ].map((item) => (
+              <li class="flex items-start gap-3 text-[15px] leading-relaxed text-fern">
+                <span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-fern/50"></span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 · FIELD NOTES -->
   <section class="px-6 py-16 md:py-20">
     <div class="mx-auto max-w-[1200px]">
       <p class="doc-label text-ink">Field notes</p>
@@ -309,14 +310,5 @@ const posts = (await getCollection('blog'))
 </Layout>
 
 <style>
-  /* dotted route rail connecting the how-it-works steps */
-  .route::before {
-    content: '';
-    position: absolute;
-    left: 19px;
-    top: 24px;
-    bottom: 24px;
-    border-left: 2px dashed var(--color-moss);
-    opacity: 0.45;
-  }
+  /* reserved for homepage-specific tweaks */
 </style>

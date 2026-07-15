@@ -10,7 +10,7 @@ const posts = (await getCollection('blog'))
 
 <Layout
   title="Growth Map | Fractional COO for Owner-Led Businesses, $1M–$50M"
-  description="Your growth stalled and the reason is in your numbers. Growth Map finds the one constraint capping revenue in your real data, then builds the operating system that clears it. For owner-led companies, $1M–$50M."
+  description="Your business can't grow past you. Growth Map finds what's capping growth in your own numbers — not a workshop — then builds the system that runs without you. Fractional COO for owner-led companies, $1M–$50M."
   canonicalPath="/"
 >
   <!-- HERO -->
@@ -34,7 +34,7 @@ const posts = (await getCollection('blog'))
         <h1 class="font-display text-4xl leading-[1.12] text-ink sm:text-5xl md:text-[56px]">
           Your business can't grow past <em>you.</em>
         </h1>
-        <p class="mt-6 max-w-[46ch] text-lg leading-relaxed text-fern">
+        <p class="mt-6 max-w-[48ch] text-lg leading-relaxed text-fern">
           Every decision still runs through you. I find what's holding growth back in your own numbers — not a workshop — then build the system that runs without you.
         </p>
         <div class="mt-8 flex flex-wrap items-center gap-4">
@@ -56,7 +56,7 @@ const posts = (await getCollection('blog'))
         <p class="mt-3.5 text-sm text-fern">The audit takes 3 minutes. No email required.</p>
       </div>
 
-      <!-- Operating scorecard (illustrative) -->
+      <!-- Sample scorecard (placeholder until a real anonymized one) -->
       <div class="rounded-[14px] border border-hairline bg-white/55 p-6 backdrop-blur-sm">
         <p class="mb-3 font-mono text-[11px] font-medium tracking-[0.14em] text-fern">
           SAMPLE SCORECARD
@@ -88,19 +88,19 @@ const posts = (await getCollection('blog'))
     </div>
   </section>
 
-  <!-- 1.0 THE SITUATION -->
+  <!-- THE PROBLEM -->
   <section class="border-b border-hairline px-6 py-16 md:py-20">
     <div class="mx-auto max-w-[1200px]">
-      <p class="doc-label text-ink"><b>1.0</b>The Situation</p>
+      <p class="doc-label text-ink">The problem</p>
       <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
         You already know the signals.
       </h2>
       <div class="mt-7 grid gap-x-10 md:grid-cols-2">
         {[
-          'Every decision routes through you.',
-          'Good hires still hand you their problems.',
-          "Revenue is flat — and nobody can say exactly why.",
-          "You're working harder than last year, and growing slower.",
+          'Every decision still routes through you.',
+          'Good hires bring you their problems instead of solving them.',
+          "Revenue is flat, and nobody can tell you exactly why.",
+          "You're working harder than last year and growing slower.",
         ].map((item) => (
           <div class="flex items-baseline gap-3.5 border-b border-dashed border-hairline py-3 text-[15.5px] font-semibold text-ink">
             <span class="cbx">X</span>
@@ -108,32 +108,51 @@ const posts = (await getCollection('blog'))
           </div>
         ))}
       </div>
+      <p class="mt-8 max-w-[60ch] text-lg leading-relaxed text-fern">
+        None of that is a sales problem. It's an operating problem wearing a revenue costume — and you can't fix what you can't see clearly.
+      </p>
     </div>
   </section>
 
-  <!-- 2.0 THE METHOD -->
+  <!-- WHAT'S DIFFERENT -->
   <section class="border-b border-hairline bg-parchment-deep px-6 py-16 md:py-20">
     <div class="mx-auto max-w-[820px]">
-      <p class="doc-label text-ink"><b>2.0</b>The Method</p>
+      <p class="doc-label text-ink">What's different</p>
       <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
-        This is the Growth Map.
+        Most people diagnose your business by talking to you. <em>I read your numbers.</em>
+      </h2>
+      <p class="mt-5 text-lg leading-relaxed text-fern">
+        The coach runs a workshop. The consultant interviews your team. They work from what people are willing to say in a room. I go into your actual data — your CRM, your pipeline, how work gets delivered, where the money moves — and find the one thing quietly capping growth that nobody can see or won't say out loud.
+      </p>
+      <p class="mt-4 text-lg leading-relaxed text-fern">
+        Then I don't hand you a slide deck. I build the way the business runs so it stops depending on you for everything.
+      </p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="border-b border-hairline px-6 py-16 md:py-20">
+    <div class="mx-auto max-w-[820px]">
+      <p class="doc-label text-ink">How it works</p>
+      <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
+        Same five moves, every time.
       </h2>
       <p class="mt-4 max-w-[54ch] text-lg leading-relaxed text-fern">
-        Every engagement follows the same route, because the failure pattern in owner-led companies is remarkably consistent, whether you build houses, run a firm, or ship software.
+        The failure pattern in owner-led companies is remarkably consistent, whether you build houses, run a firm, or ship software.
       </p>
       <div class="route relative mt-9">
         {[
-          { n: '2.1', t: 'Map the business', d: "Sit down with how value actually gets created, and where it leaks. A working session, not a 50-page report." },
-          { n: '2.2', t: 'Find the constraint', d: 'Every stalled company has one system doing most of the damage. We name it and put it first.' },
-          { n: '2.3', t: 'Assign ownership', d: "Outcomes get owners who aren't you. Context moves out of your head and into the team." },
-          { n: '2.4', t: 'Install the rhythm', d: 'One scorecard, one weekly cadence. Decisions get made from data, on schedule.' },
-          { n: '2.5', t: 'Step back', d: 'The system runs the week. You go back to the work only you can do.' },
+          { n: '1', t: 'Read the business', d: "I go through how the business actually makes money and where it leaks — from your real numbers, in a couple of weeks, not a two-day offsite." },
+          { n: '2', t: "Find what's holding growth back", d: 'Every stuck company has one thing doing most of the damage. I name it and put it first, so we fix the cause instead of chasing symptoms.' },
+          { n: '3', t: 'Put someone other than you in charge', d: "Every outcome gets an owner who isn't you. The context stuck in your head moves into the team." },
+          { n: '4', t: 'Set the weekly rhythm', d: 'One scoreboard, one weekly meeting that runs itself. Decisions get made on schedule, from real numbers.' },
+          { n: '5', t: 'Step out of the middle', d: 'The business runs the week without you. You go back to the work only you can do.' },
         ].map((stop, i, arr) => (
           <div class="relative grid grid-cols-[40px_1fr] gap-5 py-5">
             <div
               class:list={[
                 'relative z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 border-moss font-mono text-xs font-medium',
-                i === arr.length - 1 ? 'bg-moss text-parchment' : 'bg-parchment-deep text-moss',
+                i === arr.length - 1 ? 'bg-moss text-parchment' : 'bg-parchment text-moss',
               ]}
             >
               {stop.n}
@@ -148,117 +167,127 @@ const posts = (await getCollection('blog'))
     </div>
   </section>
 
-  <!-- 3.0 THE OPERATOR -->
-  <section class="border-b border-hairline px-6 py-16 md:py-20">
-    <div class="mx-auto max-w-[1200px]">
-      <p class="doc-label text-ink"><b>3.0</b>The Operator</p>
-      <div class="mt-7 grid items-start gap-10 md:grid-cols-2 md:gap-14">
-        <div>
-          <h2 class="font-display text-3xl leading-tight text-ink md:text-4xl">
-            An operator, <em>not a theorist.</em>
-          </h2>
-          <p class="mt-5 max-w-[54ch] text-lg leading-relaxed text-fern">
-            A decade inside fast-growing startups, usually as the person leaders call when things start breaking.
-          </p>
-          <p class="mt-4 max-w-[54ch] text-lg leading-relaxed text-fern">
-            The failure pattern is the same whether you pour concrete or ship code. I find it fast because I've seen it in businesses that looked nothing alike.
-          </p>
-          <div class="mt-6">
-            <div class="flex items-baseline gap-3 border-t border-dashed border-hairline py-3 text-[15px] text-ink">
-              <strong class="whitespace-nowrap font-mono text-sm font-medium text-moss">#3–100+</strong>
-              employee range across the startups I've helped scale
-            </div>
-            <div class="flex items-baseline gap-3 border-t border-dashed border-hairline py-3 text-[15px] text-ink">
-              <strong class="whitespace-nowrap font-mono text-sm font-medium text-moss">10 YRS</strong>
-              at the intersection of operations, go-to-market, and delivery
-            </div>
-            <div class="flex items-baseline gap-3 border-t border-dashed border-hairline py-3 text-[15px] text-ink">
-              <strong class="whitespace-nowrap font-mono text-sm font-medium text-moss">TODAY</strong>
-              running operations inside a venture-backed health-tech company
-            </div>
-          </div>
-        </div>
-        <div>
-          <!-- TODO: replace placeholder exhibits with real quotes before merging to main -->
-          <div class="mb-6 border-l-[3px] border-moss py-1 pl-5">
-            <p class="mb-2 font-mono text-[10.5px] font-medium uppercase tracking-[0.14em] text-moss">
-              Exhibit A · Placeholder — real quote goes here
-            </p>
-            <blockquote class="font-display text-[17px] italic leading-normal text-ink">
-              "Pull quote from a past client or colleague. Real names and real roles matter more than polish."
-            </blockquote>
-            <cite class="mt-2.5 block font-mono text-[11px] not-italic text-fern">NAME — ROLE, COMPANY</cite>
-          </div>
-          <div class="border-l-[3px] border-moss py-1 pl-5">
-            <p class="mb-2 font-mono text-[10.5px] font-medium uppercase tracking-[0.14em] text-moss">
-              Exhibit B · Placeholder — real quote goes here
-            </p>
-            <blockquote class="font-display text-[17px] italic leading-normal text-ink">
-              "Second quote. One from an operating role, one from a Growth Map engagement, so the range shows."
-            </blockquote>
-            <cite class="mt-2.5 block font-mono text-[11px] not-italic text-fern">NAME — ROLE, COMPANY</cite>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4.0 ENGAGEMENTS -->
+  <!-- PROOF -->
   <section class="border-b border-hairline bg-parchment-deep px-6 py-16 md:py-20">
     <div class="mx-auto max-w-[1200px]">
-      <p class="doc-label text-ink"><b>4.0</b>Engagements</p>
-      <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">Three ways in.</h2>
-      <div class="mt-9 grid gap-6 md:grid-cols-3">
-        <div class="flex flex-col gap-3 rounded-[14px] border-[1.5px] border-moss bg-white/75 p-7">
-          <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-moss">4.1 · Start Here</p>
-          <h3 class="font-display text-[23px] text-ink">The Diagnostic</h3>
-          <p class="text-[15.5px] font-semibold leading-relaxed text-ink">
-            Know exactly what's stalling revenue, proven from your own numbers.
-          </p>
-          <p class="text-[14.5px] leading-relaxed text-fern">
-            Give me two weeks and read-only access to your systems. You get a written brief: where revenue is leaking, and the moves that fix it.
-          </p>
-          <p class="text-[14.5px] font-semibold leading-relaxed text-moss">If I don't find a constraint worth more than the fee, you don't pay.</p>
-          <p class="mt-auto pt-2 font-mono text-xs font-medium tracking-[0.1em] text-ink">TWO WEEKS · ONE FIXED FEE</p>
-        </div>
-        <div class="flex flex-col gap-3 rounded-[14px] border border-hairline bg-white/50 p-7">
-          <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-fern">4.2 · The Fix</p>
-          <h3 class="font-display text-[23px] text-ink">The Build</h3>
-          <p class="text-[15.5px] font-semibold leading-relaxed text-ink">
-            In 90 days, your team runs the business without you as the bottleneck.
-          </p>
-          <p class="text-[14.5px] leading-relaxed text-fern">
-            We install what the Diagnostic prescribed: an owner for every outcome, one scorecard, a weekly rhythm. I only run three Builds at a time.
-          </p>
-          <p class="text-[14.5px] font-semibold leading-relaxed text-moss">Your team runs the weekly without you by day 90, or I keep going until they do.</p>
-          <p class="mt-auto pt-2 font-mono text-xs font-medium tracking-[0.1em] text-fern">90 DAYS · SCOPED FROM YOUR DIAGNOSTIC</p>
-        </div>
-        <div class="flex flex-col gap-3 rounded-[14px] border border-hairline bg-white/50 p-7">
-          <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-fern">4.3 · Ongoing</p>
-          <h3 class="font-display text-[23px] text-ink">Operating Partner</h3>
-          <p class="text-[15.5px] font-semibold leading-relaxed text-ink">
-            Growth compounds because someone owns the operating system. Not you.
-          </p>
-          <p class="text-[14.5px] leading-relaxed text-fern">
-            After the Build, I stay on as your operating partner. I run the weekly, keep the scorecard honest, and push the next improvement.
-          </p>
-          <p class="mt-auto pt-2 font-mono text-xs font-medium tracking-[0.1em] text-fern">MONTHLY · AFTER A BUILD</p>
+      <p class="doc-label text-ink">Proof</p>
+      <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
+        What it looks like in a real business.
+      </h2>
+
+      <!-- Case study — PLACEHOLDER -->
+      <div class="mt-8 rounded-[14px] border-2 border-dashed border-moss/50 bg-white/40 p-8">
+        <p class="mb-4 font-mono text-[10.5px] font-medium uppercase tracking-[0.14em] text-rust">
+          Placeholder · real case study coming
+        </p>
+        <div class="grid gap-6 md:grid-cols-3">
+          <div>
+            <p class="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-moss">The business</p>
+            <p class="mt-2 leading-relaxed text-ink">$[X]M [vertical] company. Growing, but the owner was in every decision and margin was slipping.</p>
+          </div>
+          <div>
+            <p class="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-moss">What I found</p>
+            <p class="mt-2 leading-relaxed text-ink">The constraint wasn't sales. It was [the real thing] — hiding in the [system] data, where no one was looking.</p>
+          </div>
+          <div>
+            <p class="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-moss">The result</p>
+            <p class="mt-2 leading-relaxed text-ink">[Metric] moved from [X] to [Y] in [timeframe]. The owner stopped being the bottleneck.</p>
+          </div>
         </div>
       </div>
-      <p class="mx-auto mt-9 max-w-[62ch] text-center text-[15px] leading-relaxed text-fern">
-        Every engagement is priced to the problem, not the hour. You get one number up front, and it doesn't change. You shouldn't have to make an investment decision every time you need to call me. Not sure which fits? <a href="https://calendar.notion.so/meet/cameronearloliver/qc3y04oud" target="_blank" rel="noopener noreferrer" class="font-semibold text-moss transition-colors hover:text-ink">Book the free 30-minute consult</a> — if a Diagnostic isn't the right move, I'll tell you.
+
+      <!-- Quotes — PLACEHOLDER -->
+      <div class="mt-6 grid gap-6 md:grid-cols-2">
+        <div class="rounded-[14px] border border-hairline bg-white/50 p-7">
+          <p class="mb-3 font-mono text-[10.5px] font-medium uppercase tracking-[0.14em] text-rust">Placeholder · real quote coming</p>
+          <blockquote class="font-display text-[18px] italic leading-normal text-ink">
+            "A real sentence from a real client, with their real name and company under it. One honest line beats a page of polish."
+          </blockquote>
+          <cite class="mt-3 block font-mono text-[11px] not-italic text-fern">NAME — ROLE, COMPANY</cite>
+        </div>
+        <div class="rounded-[14px] border border-hairline bg-white/50 p-7">
+          <p class="mb-3 font-mono text-[10.5px] font-medium uppercase tracking-[0.14em] text-rust">Placeholder · real quote coming</p>
+          <blockquote class="font-display text-[18px] italic leading-normal text-ink">
+            "A second quote, ideally from a different kind of business, so a visitor sees the range holds up."
+          </blockquote>
+          <cite class="mt-3 block font-mono text-[11px] not-italic text-fern">NAME — ROLE, COMPANY</cite>
+        </div>
+      </div>
+
+      <!-- Compact operator credibility (not a brag section) -->
+      <p class="mt-8 max-w-[70ch] text-[15px] leading-relaxed text-fern">
+        Behind Growth Map: <span class="font-semibold text-ink">Cameron Oliver</span> — a decade operating inside fast-growing companies, from employee #3 to 100+, usually the person leaders called when things started breaking.
+        <a href="/about" class="font-semibold text-moss transition-colors hover:text-ink">More on that →</a>
       </p>
-      <p class="mx-auto mt-4 max-w-[62ch] text-center text-[14px] text-fern">Backed by a fund? I run this across a portfolio.</p>
     </div>
   </section>
 
-  <!-- 5.0 FIELD NOTES -->
+  <!-- WHERE TO START -->
+  <section class="border-b border-hairline px-6 py-16 md:py-20">
+    <div class="mx-auto max-w-[1200px]">
+      <p class="doc-label text-ink">Where to start</p>
+      <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
+        Start with a Diagnostic.
+      </h2>
+
+      <!-- Front-door offer -->
+      <div class="mt-8 rounded-[14px] border-[1.5px] border-moss bg-white/70 p-8 md:p-10">
+        <div class="grid gap-8 md:grid-cols-[1.4fr_1fr] md:gap-12">
+          <div>
+            <h3 class="font-display text-[26px] text-ink">The Diagnostic</h3>
+            <p class="mt-3 text-lg font-semibold leading-relaxed text-ink">
+              In two weeks, you'll know exactly what's capping your growth — proven from your own numbers, not a hunch.
+            </p>
+            <p class="mt-4 leading-relaxed text-fern">
+              Give me read-only access to your systems. I go in, find the one constraint doing the most damage, and hand you a short written brief: what it is, what it's costing you, and the moves that fix it. Yours to run with, with me or without me.
+            </p>
+            <p class="mt-4 text-[15.5px] font-semibold leading-relaxed text-moss">
+              If I don't find something worth more than the fee, you don't pay.
+            </p>
+            <a
+              href="https://calendar.notion.so/meet/cameronearloliver/qc3y04oud"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-6 inline-block rounded-full border border-ink bg-ink px-7 py-3.5 text-[15px] font-semibold text-parchment transition-opacity hover:opacity-90"
+            >
+              Book a Free Consult
+            </a>
+            <p class="mt-3 font-mono text-xs font-medium tracking-[0.1em] text-fern">TWO WEEKS · ONE FIXED FEE</p>
+          </div>
+          <div class="md:border-l md:border-hairline md:pl-10">
+            <p class="font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-fern">If you want me to keep going</p>
+            <div class="mt-4">
+              <h4 class="font-display text-[19px] text-ink">The Build</h4>
+              <p class="mt-1.5 text-[14.5px] leading-relaxed text-fern">
+                90 days to install the fix the Diagnostic found. Your team runs the weekly without you by day 90, or I keep going until they do. Three at a time.
+              </p>
+            </div>
+            <div class="mt-6 border-t border-dashed border-hairline pt-6">
+              <h4 class="font-display text-[19px] text-ink">Operating Partner</h4>
+              <p class="mt-1.5 text-[14.5px] leading-relaxed text-fern">
+                Monthly, after a Build. I stay on, run the weekly, and keep pushing the next improvement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="mt-7 max-w-[64ch] text-[15px] leading-relaxed text-fern">
+        Every engagement is one fixed fee, quoted to the problem — not an hourly meter. You shouldn't have to make a money decision every time you need to call me.
+      </p>
+    </div>
+  </section>
+
+  <!-- FIELD NOTES -->
   <section class="px-6 py-16 md:py-20">
     <div class="mx-auto max-w-[1200px]">
-      <p class="doc-label text-ink"><b>5.0</b>Field Notes</p>
+      <p class="doc-label text-ink">Field notes</p>
       <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
-        I write about this work.
+        How I think about this work.
       </h2>
+      <p class="mt-4 max-w-[56ch] text-lg leading-relaxed text-fern">
+        The clearest read on whether I'm the right person is how I think. I write about operations, growth, and getting out of your own way — from inside the work.
+      </p>
       <div class="mt-8">
         {posts.map((post) => (
           <a
@@ -280,7 +309,7 @@ const posts = (await getCollection('blog'))
 </Layout>
 
 <style>
-  /* dotted route rail connecting method waypoints */
+  /* dotted route rail connecting the how-it-works steps */
   .route::before {
     content: '';
     position: absolute;

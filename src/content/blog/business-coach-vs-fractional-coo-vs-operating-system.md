@@ -86,6 +86,6 @@ The worst thing you can do is pick the option that sounds most impressive and ho
 
 ## Where to Start
 
-If you're not sure what's broken, start with data. The [CEO Time Audit](/time-audit) takes three minutes and shows you exactly where your time is going. If you're spending 60% of your week on work someone else could do, that tells you something about what kind of help you need.
+If you're not sure what's broken, start with the data. [Book a call](/contact) and I'll read your numbers and tell you where your time — and your growth — is actually going.
 
 If you already know the problem and want to talk through your options, [book a free 30-minute call](https://calendar.notion.so/meet/cameronearloliver/qc3y04oud). No pitch, no pressure. We'll figure out what makes sense for where you are.

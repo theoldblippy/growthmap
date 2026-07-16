@@ -55,4 +55,4 @@ When the systems are in place, growth starts to feel like momentum instead of ch
 
 That's what scaling is supposed to feel like. And it's completely achievable. But it requires a deliberate decision to stop operating the way you've always operated and build something that can run without you in the middle of everything.
 
-[The Scale Readiness Score](/scale-readiness-score) can show you exactly where the structural gaps are in your business.
+If you want to see exactly where the structural gaps are, [book a call](/contact) — I find them in your own numbers.

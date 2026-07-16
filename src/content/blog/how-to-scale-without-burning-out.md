@@ -62,4 +62,4 @@ The founders who scale sustainably aren't the ones who work the most hours. They
 
 That's what scaling actually looks like.
 
-[The Scale Readiness Score](/scale-readiness-score) can help you see where your business stands across the 6 areas that matter most for sustainable growth.
+If you want to know what's actually capping your growth, [book a call](/contact) — the first one's free.

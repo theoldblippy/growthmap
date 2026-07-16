@@ -68,4 +68,4 @@ Don't try to implement everything at once. Start with three things:
 
 Run that for 90 days. You'll be surprised how much changes.
 
-If you want to see how ready your business is for this kind of structure, [the Scale Readiness Score](/scale-readiness-score) breaks it down across 6 dimensions.
+If you want help building this kind of structure, [book a call](/contact) — we'll start with what's actually capping you.

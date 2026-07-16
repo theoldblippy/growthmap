@@ -94,4 +94,4 @@ If you're not sure you need a full-time operations person, or if you need senior
 
 There's no shame in getting help figuring this out. The important thing is recognizing that your business needs operational leadership and taking a step toward solving it.
 
-[The Scale Readiness Score](/scale-readiness-score) can help you figure out whether you need a full-time hire, a fractional operator, or just better systems.
+Not sure whether you need a full-time hire, a fractional operator, or just better systems? [Book a call](/contact) and I'll give you a straight answer.

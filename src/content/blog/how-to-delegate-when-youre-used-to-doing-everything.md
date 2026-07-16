@@ -88,4 +88,4 @@ Your business grows. Because it's no longer limited by how many hours you person
 
 That's the whole point.
 
-If you're not sure where to start, [the Scale Readiness Score](/scale-readiness-score) will show you which areas of your business are most dependent on you.
+If you're not sure where to start, [book a call](/contact) — I'll show you where the business is most dependent on you.

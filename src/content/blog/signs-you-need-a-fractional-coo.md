@@ -54,4 +54,4 @@ If three or more of these resonate, you don't necessarily need to hire a full-ti
 
 The goal isn't to add another person to manage. It's to build the operating system that makes management unnecessary for most decisions.
 
-If you want to see where you stand, [the Scale Readiness Score](/scale-readiness-score) scores your business across the 6 areas that matter most.
+If you want a straight read on where you stand, [book a call](/contact). The first one's free.

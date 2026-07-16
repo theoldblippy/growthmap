@@ -72,4 +72,4 @@ The best founders I work with spend their time on three things: setting directio
 
 If your business can't run for a week without you, that's not a badge of honor. It's a structural problem. And it's one you can fix.
 
-[The Growth Audit](/growth-audit.pdf) is a quick way to see where your business stands across the areas that matter most.
+[the Scale Readiness Score](/scale-readiness-score) is a quick way to see where your business stands across the areas that matter most.

@@ -93,4 +93,4 @@ After 4-6 weeks of running a tight cadence, you'll notice:
 
 It's not magic. It's structure. And for most growing businesses, it's the highest-leverage system you can install.
 
-If you're not sure where to start, [the Growth Audit](/growth-audit.pdf) will help you figure out which systems your business needs first.
+If you're not sure where to start, [the Scale Readiness Score](/scale-readiness-score) will help you figure out which systems your business needs first.

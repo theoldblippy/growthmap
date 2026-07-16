@@ -60,4 +60,4 @@ Ask them: "What does week one look like?" If they can't give you a clear answer,
 
 A fractional COO gives growing businesses the operational leadership they need without the overhead they can't afford. If your business is doing $1M-$10M and you're stuck in the weeds of day-to-day operations, it might be the highest-leverage hire you can make.
 
-If you're curious whether this model fits your business, [the Growth Audit](/growth-audit.pdf) is a good place to start.
+If you're curious whether this model fits your business, [the Scale Readiness Score](/scale-readiness-score) is a good place to start.

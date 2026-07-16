@@ -46,4 +46,4 @@ This is exactly what the Growth Map Diagnostic is designed to uncover in 30-60 m
 
 If your business feels stuck, it's probably not a growth problem. It's a clarity problem. And clarity problems are very solvable.
 
-[The Growth Audit](/growth-audit.pdf) is a good starting point if you want to see where the gaps are.
+[the Scale Readiness Score](/scale-readiness-score) is a good starting point if you want to see where the gaps are.

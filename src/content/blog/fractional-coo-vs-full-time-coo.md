@@ -56,4 +56,4 @@ Ask yourself three questions:
 
 Most founders I talk to land on fractional. Not because it's cheaper (though it is), but because they need someone who can move fast and has done this before.
 
-If you're weighing the options, [the Growth Audit](/growth-audit.pdf) can help you figure out what level of operational support makes sense right now.
+If you're weighing the options, [the Scale Readiness Score](/scale-readiness-score) can help you figure out what level of operational support makes sense right now.

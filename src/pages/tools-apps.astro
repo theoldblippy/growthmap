@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const bookUrl = 'https://calendar.notion.so/meet/cameronearloliver/qc3y04oud';
+
+const builds = [
+  {
+    tag: 'Private equity',
+    title: 'An autonomous deal-sourcing engine',
+    body: "For a lower-middle-market fund: a working system that finds acquisition targets, researches each one, scores it against the fund's thesis, and flags roll-up combinations, so partners spend their time deciding, not digging. Five coordinated agents and a scoring model with hard disqualifiers, running on a schedule for a few dollars a month.",
+    line: "I don't just advise on AI. I ship the machine.",
+  },
+  {
+    tag: 'Owner-led services',
+    title: 'An intake-to-match pipeline',
+    body: "For a founder-led services company: I went into the actual codebase, wired up live data, and turned an intake call into a matched provider with drafted outreach and a human approving each step. Along the way I found and fixed a real safety bug, failed background checks were being read as passed.",
+    line: 'I get into the code, find the bug that matters, and ship.',
+  },
+  {
+    tag: 'Operating cadence',
+    title: 'An AI chief-of-staff fleet',
+    body: 'Scheduled agents that run the recurring operating work of a company: a weekly leadership briefing that tracks commitments and blind spots, a meeting-to-follow-up processor, and a scorecard audit that flags stale or dishonest status reporting. I run my own week on these.',
+    line: 'The machine runs the cadence, so leaders get to decide.',
+  },
+];
+---
+
+<Layout
+  title="Tools & Apps | Growth Map"
+  description="Real software Cameron Oliver has built for owner-led businesses and funds: an autonomous deal-sourcing engine, an intake-to-match pipeline, and an AI chief-of-staff fleet."
+  canonicalPath="/tools-apps"
+>
+  <section class="border-b border-hairline px-6 py-16 md:py-20">
+    <div class="mx-auto max-w-[1100px]">
+      <p class="doc-label text-ink">Tools &amp; apps</p>
+      <h1 class="font-display mt-7 text-4xl leading-tight text-ink md:text-5xl">
+        When the fix needs software, I <em>build it.</em>
+      </h1>
+      <p class="mt-5 max-w-[62ch] text-lg leading-relaxed text-fern">
+        Most operators can tell you what to do. I build the thing that does it. Real, running software, not slideware. A few I've shipped:
+      </p>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        {builds.map((b) => (
+          <div class="rounded-[14px] border border-hairline bg-white/50 p-8">
+            <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-moss">{b.tag}</p>
+            <h2 class="font-display mt-3 text-2xl leading-snug text-ink">{b.title}</h2>
+            <p class="mt-3 leading-relaxed text-fern">{b.body}</p>
+            <p class="mt-4 border-t border-dashed border-hairline pt-4 text-[15px] font-semibold italic text-ink">{b.line}</p>
+          </div>
+        ))}
+      </div>
+      <p class="mt-6 text-[13px] text-fern">Client names withheld until each gives the OK. Happy to walk through any of these live.</p>
+    </div>
+  </section>
+
+  <section class="px-6 py-16 md:py-20">
+    <div class="mx-auto max-w-[640px] text-center">
+      <h2 class="font-display text-3xl leading-tight text-ink md:text-[36px]">
+        Got something that should be automated?
+      </h2>
+      <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="mt-7 inline-block rounded-full border border-ink bg-ink px-8 py-4 text-[15px] font-semibold text-parchment transition-opacity hover:opacity-90">
+        Book a call
+      </a>
+      <p class="mt-3.5 text-sm text-fern">First call's free. 30 minutes.</p>
+    </div>
+  </section>
+</Layout>

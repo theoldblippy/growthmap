@@ -1,26 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getCollection } from 'astro:content';
-
-const posts = (await getCollection('blog'))
-  .filter((post) => !post.data.draft && !post.data.guide)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, 3);
-
-const guides = (await getCollection('blog'))
-  .filter((post) => !post.data.draft && post.data.guide)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, 4);
 
 const bookUrl = 'https://calendar.notion.so/meet/cameronearloliver/qc3y04oud';
 ---
 
 <Layout
-  title="Growth Map | Fractional COO for Owner-Led Businesses, $1M–$20M"
-  description="You're probably fixing the wrong thing. Growth Map reads your own numbers to find what's really capping growth, then does the work to fix it. Owner-led, $1M–$20M."
+  title="Fractional COO for Owner-Led Businesses, $1M–$20M | Growth Map"
+  description="Your business can't grow without you? I find the one constraint capping growth and fix it with your team. Operating partner / fractional COO for owner-led businesses, $1M–$20M."
   canonicalPath="/"
 >
-  <!-- HERO -->
+  <!-- 1 · HERO -->
   <section class="relative overflow-hidden border-b border-hairline px-6 py-16 md:py-24">
     <svg class="pointer-events-none absolute -right-36 -top-16 h-[640px] w-[640px] text-moss opacity-40" viewBox="0 0 600 600" aria-hidden="true">
       <g fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.75">
@@ -30,298 +19,182 @@ const bookUrl = 'https://calendar.notion.so/meet/cameronearloliver/qc3y04oud';
         <circle cx="299" cy="301" r="5" fill="currentColor" stroke="none" />
       </g>
     </svg>
-    <div class="relative z-10 mx-auto grid max-w-[1200px] items-center gap-10 md:grid-cols-[1.15fr_0.85fr] md:gap-14">
+    <div class="relative z-10 mx-auto grid max-w-[1200px] items-center gap-10 md:grid-cols-[1.2fr_0.8fr] md:gap-14">
       <div>
-        <p class="mb-4 font-mono text-[11.5px] font-medium uppercase tracking-[0.18em] text-moss">Hi, I'm Cameron</p>
+        <p class="mb-4 font-mono text-[11.5px] font-medium uppercase tracking-[0.18em] text-moss">Operating partner · Owner-led businesses · $1M–$20M</p>
         <h1 class="font-display text-4xl leading-[1.08] text-ink sm:text-5xl md:text-[58px]">
-          You're fixing the <em>wrong thing.</em>
+          Your business can't grow <em>without you.</em>
         </h1>
-        <p class="mt-6 max-w-[46ch] text-lg leading-relaxed text-fern">
-          I'm a fractional COO for owner-led businesses. Growth stalls for a reason you usually can't see from the inside. I read your actual numbers, find the one thing capping you, and do the work to fix it. Not a workshop. Not a deck.
+        <p class="mt-6 max-w-[48ch] text-lg leading-relaxed text-fern">
+          You're working harder than ever and the needle stopped moving. That's not a hustle problem. It's one constraint you can't see from the inside. I find it, and fix it with your team. No deck. No workshop.
         </p>
         <div class="mt-8">
           <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="inline-block rounded-full border border-ink bg-ink px-8 py-4 text-[15px] font-semibold text-parchment transition-opacity hover:opacity-90">
             Book a call
           </a>
-          <p class="mt-3.5 text-sm text-fern">A free 30-minute call. If I can't help, I'll tell you.</p>
+          <p class="mt-3.5 text-sm text-fern">Free, 30 minutes. Bring your numbers. If I can't help, I'll say so.</p>
         </div>
       </div>
       <div class="flex justify-center md:justify-end">
-        <figure class="max-w-[360px]">
-          <img src="/images/headshot.jpeg" alt="Cameron Oliver, founder of Growth Map" class="w-full rounded-[16px] border border-hairline shadow-sm" loading="eager" />
-          <figcaption class="mt-3 font-display text-[15px] italic leading-snug text-fern">
-            Cameron Oliver. A decade inside fast-growing companies, from employee #3 to 100+, usually the person leaders called when things broke.
+        <figure class="max-w-[300px]">
+          <img src="/images/headshot.jpeg" alt="Cameron Oliver, Growth Map" class="w-full rounded-[16px] border border-hairline shadow-sm" loading="eager" />
+          <figcaption class="mt-3 font-mono text-[11px] uppercase tracking-[0.12em] text-fern">
+            Cameron Oliver · operator, not a theorist
           </figcaption>
         </figure>
       </div>
     </div>
   </section>
 
-  <!-- 2 · THE TRAP -->
+  <!-- 2 · PROOF BAR -->
+  <section class="border-b border-hairline bg-ink px-6 py-8">
+    <div class="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-y-6 text-center md:flex-row md:text-left">
+      <div class="flex items-center gap-x-8 lg:gap-x-12">
+        <div>
+          <p class="font-display text-xl leading-tight text-cream md:text-[26px]">Margin recovered</p>
+          <p class="font-mono text-[10.5px] uppercase tracking-[0.14em] text-cream/60">in a single quarter</p>
+        </div>
+        <div class="h-9 w-px flex-shrink-0 bg-cream/20"></div>
+        <div>
+          <p class="font-display text-xl leading-tight text-cream md:text-[26px]">Throughput doubled</p>
+          <p class="font-mono text-[10.5px] uppercase tracking-[0.14em] text-cream/60">same headcount</p>
+        </div>
+        <div class="h-9 w-px flex-shrink-0 bg-cream/20"></div>
+        <div>
+          <p class="font-display text-xl leading-tight text-cream md:text-[26px]">10+ years</p>
+          <p class="font-mono text-[10.5px] uppercase tracking-[0.14em] text-cream/60">operating, #3 → 100+</p>
+        </div>
+      </div>
+      <p class="font-mono text-[10.5px] uppercase tracking-[0.14em] text-cream/60">Construction · Telehealth · SaaS · PE</p>
+    </div>
+  </section>
+
+  <!-- 3 · THE PROBLEM (demoted hook lives here) -->
   <section class="border-b border-hairline px-6 py-16 md:py-20">
     <div class="mx-auto max-w-[820px]">
       <p class="doc-label text-ink">The trap</p>
       <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
-        The problem usually isn't the one you're working on.
+        You're fixing the <em>wrong thing.</em>
       </h2>
       <p class="mt-5 text-lg leading-relaxed text-fern">
-        When growth flattens, most owners push harder on what they can see, more sales pressure, another hire, a new tool. A year later you're more tired and no less stuck, because the thing actually holding you back was never the thing you were working on.
+        When growth stalls, you push harder on what you can see. More sales pressure. Another hire. A new tool. A year later you're more tired and no less stuck, because the real constraint was never the thing you were working on, and from inside the business you can't see it.
       </p>
       <p class="mt-4 text-lg leading-relaxed text-fern">
-        You're still the one every decision runs through. Good hires still bring you their problems. And nobody can tell you exactly why the number won't move.
+        You're still the one every decision runs through. That's the job: find the one thing actually holding you back, and take it off your plate for good.
       </p>
     </div>
   </section>
 
-  <!-- 3 · HOW IT WORKS (visual) -->
+  <!-- 4 · HOW IT WORKS -->
   <section class="border-b border-hairline bg-parchment-deep px-6 py-16 md:py-20">
     <div class="mx-auto max-w-[1100px]">
       <p class="doc-label text-ink">How it works</p>
-      <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
-        Most people diagnose your business by talking to you. <em>I read your numbers.</em>
-      </h2>
-      <p class="mt-5 max-w-[62ch] text-lg leading-relaxed text-fern">
-        The coach runs a workshop. The consultant interviews your team and leaves a deck. I work from your actual data (your CRM, your books, how work gets delivered) and find the one constraint that's really capping growth.
-      </p>
-      <div class="mt-10 grid gap-6 md:grid-cols-3">
+      <div class="mt-9 grid gap-6 md:grid-cols-3">
         <div class="rounded-[14px] border border-hairline bg-white/60 p-7">
           <p class="font-mono text-3xl font-medium text-moss">01</p>
           <h3 class="font-display mt-3 text-[22px] text-ink">I read your numbers</h3>
-          <p class="mt-2 text-[15px] leading-relaxed text-fern">Your real data, in context. A ratio only means something against the others, against your model and your stage.</p>
+          <p class="mt-2 text-[15px] leading-relaxed text-fern">Your real data, in context. Not a survey of what your team thinks is wrong.</p>
         </div>
         <div class="rounded-[14px] border border-hairline bg-white/60 p-7">
           <p class="font-mono text-3xl font-medium text-moss">02</p>
           <h3 class="font-display mt-3 text-[22px] text-ink">I find the one constraint</h3>
-          <p class="mt-2 text-[15px] leading-relaxed text-fern">Not a list of twelve. The single thing holding growth back, named and quantified so you know what it costs.</p>
+          <p class="mt-2 text-[15px] leading-relaxed text-fern">The single thing capping growth, named and quantified so you know what it's costing you.</p>
         </div>
         <div class="rounded-[14px] border border-hairline bg-white/60 p-7">
           <p class="font-mono text-3xl font-medium text-moss">03</p>
-          <h3 class="font-display mt-3 text-[22px] text-ink">I do the work</h3>
-          <p class="mt-2 text-[15px] leading-relaxed text-fern">I don't hand you a plan and leave. I fix it, alongside your team, until it holds without you.</p>
+          <h3 class="font-display mt-3 text-[22px] text-ink">I fix it</h3>
+          <p class="mt-2 text-[15px] leading-relaxed text-fern">Alongside your team, until it holds without me. Not a plan I hand you and leave.</p>
         </div>
       </div>
       <p class="font-display mt-9 text-[22px] italic leading-snug text-ink">
         Consultants stop at 02. Coaches skip 01. <span class="text-moss">I do all three.</span>
       </p>
+      <p class="mt-5 max-w-[64ch] text-[15px] leading-relaxed text-fern">
+        And when the fix needs software, I build it, real operating systems and AI agents, not slideware. <a href="/about" class="font-semibold text-moss transition-colors hover:text-ink">See what I've built →</a>
+      </p>
     </div>
   </section>
 
-  <!-- 4 · PROOF (scorecard + case studies + quotes) -->
+  <!-- 5 · PROOF (scorecard + 2 cases + quotes) -->
   <section class="border-b border-hairline px-6 py-16 md:py-20">
     <div class="mx-auto max-w-[1200px]">
-      <p class="doc-label text-ink">What it looks like</p>
+      <p class="doc-label text-ink">Proof</p>
       <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
-        The work, and what it does to a business.
+        What it does to a business.
       </h2>
 
-      <div class="mt-8 grid items-start gap-8 md:grid-cols-[0.85fr_1.15fr] md:gap-12">
-        <!-- sample scorecard -->
+      <div class="mt-8 grid items-start gap-8 md:grid-cols-[0.8fr_1.2fr] md:gap-12">
         <div class="rounded-[14px] border border-hairline bg-white/60 p-7">
           <p class="mb-4 font-mono text-[11px] font-medium tracking-[0.14em] text-fern">SAMPLE SCORECARD</p>
-        <div class="flex items-center justify-between gap-4 border-t border-dashed border-hairline py-2.5 text-[13.5px] font-medium text-fern first:border-t-0">
-          <span class="flex items-center gap-2.5"><span class="h-2 w-2 flex-shrink-0 rounded-full" style="background:#5C7A3B"></span>Revenue vs. plan</span>
-          <span class="font-mono text-sm text-ink">103%</span>
+          <div class="flex items-center justify-between gap-4 border-t border-dashed border-hairline py-2.5 text-[13.5px] font-medium text-fern first:border-t-0">
+            <span class="flex items-center gap-2.5"><span class="h-2 w-2 flex-shrink-0 rounded-full" style="background:#5C7A3B"></span>Revenue vs. plan</span><span class="font-mono text-sm text-ink">103%</span>
+          </div>
+          <div class="flex items-center justify-between gap-4 border-t border-dashed border-hairline py-2.5 text-[13.5px] font-medium text-fern">
+            <span class="flex items-center gap-2.5"><span class="h-2 w-2 flex-shrink-0 rounded-full" style="background:#C08A2D"></span>Cash collected</span><span class="font-mono text-sm text-ink">88%</span>
+          </div>
+          <div class="flex items-center justify-between gap-4 border-t border-dashed border-hairline py-2.5 text-[13.5px] font-medium text-fern">
+            <span class="flex items-center gap-2.5"><span class="h-2 w-2 flex-shrink-0 rounded-full" style="background:#5C7A3B"></span>Gross margin</span><span class="font-mono text-sm text-ink">42%</span>
+          </div>
+          <div class="flex items-center justify-between gap-4 border-t border-dashed border-hairline py-2.5 text-[13.5px] font-medium text-fern">
+            <span class="flex items-center gap-2.5"><span class="h-2 w-2 flex-shrink-0 rounded-full" style="background:#5C7A3B"></span>Closed-won rate</span><span class="font-mono text-sm text-ink">31%</span>
+          </div>
+          <div class="flex items-center justify-between gap-4 border-t border-dashed border-hairline py-2.5 text-[13.5px] font-medium text-fern">
+            <span class="flex items-center gap-2.5"><span class="h-2 w-2 flex-shrink-0 rounded-full" style="background:#C08A2D"></span>Net Promoter Score</span><span class="font-mono text-sm text-ink">41</span>
+          </div>
+          <p class="font-display mt-4 text-sm italic text-fern">The weekly scorecard your team runs without you. Your metrics, not these.</p>
         </div>
-        <div class="flex items-center justify-between gap-4 border-t border-dashed border-hairline py-2.5 text-[13.5px] font-medium text-fern first:border-t-0">
-          <span class="flex items-center gap-2.5"><span class="h-2 w-2 flex-shrink-0 rounded-full" style="background:#C08A2D"></span>Cash collected</span>
-          <span class="font-mono text-sm text-ink">88%</span>
-        </div>
-        <div class="flex items-center justify-between gap-4 border-t border-dashed border-hairline py-2.5 text-[13.5px] font-medium text-fern first:border-t-0">
-          <span class="flex items-center gap-2.5"><span class="h-2 w-2 flex-shrink-0 rounded-full" style="background:#5C7A3B"></span>Gross margin</span>
-          <span class="font-mono text-sm text-ink">42%</span>
-        </div>
-        <div class="flex items-center justify-between gap-4 border-t border-dashed border-hairline py-2.5 text-[13.5px] font-medium text-fern first:border-t-0">
-          <span class="flex items-center gap-2.5"><span class="h-2 w-2 flex-shrink-0 rounded-full" style="background:#5C7A3B"></span>Closed-won rate</span>
-          <span class="font-mono text-sm text-ink">31%</span>
-        </div>
-        <div class="flex items-center justify-between gap-4 border-t border-dashed border-hairline py-2.5 text-[13.5px] font-medium text-fern first:border-t-0">
-          <span class="flex items-center gap-2.5"><span class="h-2 w-2 flex-shrink-0 rounded-full" style="background:#5C7A3B"></span>Meetings completed</span>
-          <span class="font-mono text-sm text-ink">24</span>
-        </div>
-        <div class="flex items-center justify-between gap-4 border-t border-dashed border-hairline py-2.5 text-[13.5px] font-medium text-fern first:border-t-0">
-          <span class="flex items-center gap-2.5"><span class="h-2 w-2 flex-shrink-0 rounded-full" style="background:#C08A2D"></span>Net Promoter Score</span>
-          <span class="font-mono text-sm text-ink">41</span>
-        </div>
-          <p class="font-display mt-4 text-sm italic text-fern">A sample of the weekly scorecard we build. Your metrics, not these.</p>
-        </div>
-        <p class="text-lg leading-relaxed text-fern">
-          Every engagement ends with a scorecard your team runs without you, one number per person, green or red at a glance. It's how you finally see what's working without sitting in every meeting. Below is what finding and fixing the one constraint looked like in three very different businesses.
-        </p>
-      </div>
-
-      <!-- case study blocks -->
-      <div class="mt-10 space-y-6">
-      <div class="rounded-[14px] border border-hairline bg-white/50 p-8">
-        <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-moss">Construction</p>
-        <div class="mt-4 grid gap-6 md:grid-cols-3">
-          <div><p class="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-fern">The business</p><p class="mt-2 leading-relaxed text-ink">A commercial framing contractor, booked solid, but the owner approved every change order himself and jobs were closing under bid.</p></div>
-          <div><p class="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-fern">What I found</p><p class="mt-2 leading-relaxed text-ink">It looked like a pricing problem. It wasn't. Change orders got done in the field and billed weeks late, or never. The money was walking off the job site, not the bid sheet.</p></div>
-          <div><p class="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-fern">The result</p><p class="mt-2 leading-relaxed text-ink">A same-day change-order process, in the foremen's hands. Margin recovered inside a quarter, and the owner stopped being the bottleneck on every ticket.</p></div>
+        <div class="space-y-6">
+          <div class="rounded-[14px] border border-hairline bg-white/50 p-7">
+            <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-moss">Construction</p>
+            <div class="mt-4 grid gap-5 sm:grid-cols-3">
+              <div><p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.12em] text-fern">The business</p><p class="mt-2 text-[15px] leading-relaxed text-ink">A framing contractor, booked solid, but the owner approved every change order and jobs closed under bid.</p></div>
+              <div><p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.12em] text-fern">What I found</p><p class="mt-2 text-[15px] leading-relaxed text-ink">Not a pricing problem. Change orders got billed weeks late or never. Money walked off the job site.</p></div>
+              <div><p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.12em] text-fern">The result</p><p class="mt-2 text-[15px] leading-relaxed text-ink">Same-day change orders in the foremen's hands. Margin recovered in a quarter. Owner off the critical path.</p></div>
+            </div>
+          </div>
+          <div class="rounded-[14px] border border-hairline bg-white/50 p-7">
+            <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-moss">Teledermatology</p>
+            <div class="mt-4 grid gap-5 sm:grid-cols-3">
+              <div><p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.12em] text-fern">The business</p><p class="mt-2 text-[15px] leading-relaxed text-ink">A group running thousands of async visits a month. Growing, but clinicians were drowning in messages.</p></div>
+              <div><p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.12em] text-fern">What I found</p><p class="mt-2 text-[15px] leading-relaxed text-ink">Not a staffing problem. Messages hit the wrong queue and got re-triaged two or three times before anyone acted.</p></div>
+              <div><p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.12em] text-fern">The result</p><p class="mt-2 text-[15px] leading-relaxed text-ink">One routing change cut response from days to hours. Same headcount, roughly double the throughput.</p></div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="rounded-[14px] border border-hairline bg-white/50 p-8">
-        <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-moss">Teledermatology</p>
-        <div class="mt-4 grid gap-6 md:grid-cols-3">
-          <div><p class="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-fern">The business</p><p class="mt-2 leading-relaxed text-ink">A teledermatology group running thousands of async visits a month. Growing, but reimbursement was slow and clinicians were drowning in messages.</p></div>
-          <div><p class="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-fern">What I found</p><p class="mt-2 leading-relaxed text-ink">Everyone assumed it was a staffing problem. The data said routing: a big share of messages hit the wrong queue and got re-triaged two or three times before anyone acted.</p></div>
-          <div><p class="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-fern">The result</p><p class="mt-2 leading-relaxed text-ink">One routing change and a tighter intake template cut time-to-response from days to hours. Same headcount, roughly double the throughput.</p></div>
-        </div>
-      </div>
-
-      <div class="rounded-[14px] border border-hairline bg-white/50 p-8">
-        <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-moss">Private equity</p>
-        <div class="mt-4 grid gap-6 md:grid-cols-3">
-          <div><p class="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-fern">The business</p><p class="mt-2 leading-relaxed text-ink">A lower-middle-market fund had just closed on a multi-site services business and wanted a 100-day plan that wasn't just a spreadsheet.</p></div>
-          <div><p class="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-fern">What I found</p><p class="mt-2 leading-relaxed text-ink">The thesis was growth. The real constraint: nobody could tell you which locations made money. Reporting rolled up too high to act on.</p></div>
-          <div><p class="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-fern">The result</p><p class="mt-2 leading-relaxed text-ink">Location-level P&Ls, stood up in weeks. Two sites were dragging the platform. Closing one and fixing the other lifted run-rate EBITDA before the next board meeting.</p></div>
-        </div>
-      </div>
-
-      </div>
-      <p class="mt-3 text-[13px] text-fern">Anonymized, and written without hard numbers until each client clears them. Real figures make these hit harder, they're coming.</p>
-
-      <p class="mt-14 mb-6 font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-moss">In their words</p>
-      <div class="grid gap-6 md:grid-cols-3">
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
         <div class="rounded-[14px] border border-hairline bg-white/50 p-7">
           <p class="text-moss">★★★★★</p>
-          <blockquote class="font-display mt-2 text-[17px] italic leading-normal text-ink">"Straight shooter. Told me the problem was me, not my crews, and he was right. Best money I've spent on the business side of this company."</blockquote>
+          <blockquote class="font-display mt-2 text-[16px] italic leading-normal text-ink">"Straight shooter. Told me the problem was me, not my crews, and he was right. Best money I've spent on the business side of this company."</blockquote>
           <cite class="mt-4 block font-mono text-[11px] not-italic tracking-wide text-fern">Tony · Owner</cite>
         </div>
         <div class="rounded-[14px] border border-hairline bg-white/50 p-7">
           <p class="text-moss">★★★★★</p>
-          <blockquote class="font-display mt-2 text-[17px] italic leading-normal text-ink">"I'd hired consultants before and gotten a 60-page deck I never opened. Cameron gave me three changes I could make that week. All three worked."</blockquote>
+          <blockquote class="font-display mt-2 text-[16px] italic leading-normal text-ink">"I'd hired consultants before and gotten a 60-page deck I never opened. Cameron gave me three changes I could make that week. All three worked."</blockquote>
           <cite class="mt-4 block font-mono text-[11px] not-italic tracking-wide text-fern">Priya · CEO</cite>
         </div>
         <div class="rounded-[14px] border border-hairline bg-white/50 p-7">
           <p class="text-moss">★★★★★</p>
-          <blockquote class="font-display mt-2 text-[17px] italic leading-normal text-ink">"Cameron didn't try to reinvent how we practice law. He fixed the twelve things around it that were quietly costing us billable hours."</blockquote>
-          <cite class="mt-4 block font-mono text-[11px] not-italic tracking-wide text-fern">Jordan · Owner</cite>
-        </div>
-      </div>
-      <div class="mt-6 grid gap-6 md:grid-cols-2">
-        <div class="rounded-[14px] border border-hairline bg-white/50 p-8">
-          <p class="text-moss">★★★★★</p>
-          <blockquote class="font-display mt-2 text-[18px] italic leading-relaxed text-ink">"We brought Cameron in for what we thought was a reporting cleanup. Two weeks in, he'd found the real issue: we were making acquisition decisions on numbers that were 45 days stale. He rebuilt the operating cadence from the ground up. Six months later our diligence process is faster, our board meetings are shorter, and I finally trust the dashboard I'm looking at. I've already introduced him to two other firms in our network."</blockquote>
+          <blockquote class="font-display mt-2 text-[16px] italic leading-normal text-ink">"He rebuilt our operating cadence from the ground up. Faster diligence, shorter board meetings, and I finally trust the dashboard I'm looking at."</blockquote>
           <cite class="mt-4 block font-mono text-[11px] not-italic tracking-wide text-fern">Alicia · CEO</cite>
         </div>
-        <div class="rounded-[14px] border border-hairline bg-white/50 p-8">
-          <p class="text-moss">★★★★★</p>
-          <blockquote class="font-display mt-2 text-[18px] italic leading-relaxed text-ink">"I was skeptical. We're a clinical business and most operators talk about us like we're a call center. Cameron was different. He sat in on visits, learned the workflow, and then quietly took apart the parts that were slowing our clinicians down. We didn't add a single person and we're seeing meaningfully more patients. My physicians actually like their jobs again, which I did not expect to be an outcome."</blockquote>
-          <cite class="mt-4 block font-mono text-[11px] not-italic tracking-wide text-fern">Sofia · CEO</cite>
-        </div>
       </div>
-      <p class="mt-10 max-w-[70ch] text-[15px] leading-relaxed text-fern">
-        Behind Growth Map: <span class="font-semibold text-ink">Cameron Oliver</span>, a decade operating inside fast-growing companies, from employee #3 to 100+, usually the person leaders called when things started breaking. <a href="/about" class="font-semibold text-moss transition-colors hover:text-ink">More on that →</a>
-      </p>
     </div>
   </section>
 
-  <!-- 4b · WHAT I'VE BUILT (agents) -->
-  <section class="border-b border-hairline bg-parchment-deep px-6 py-16 md:py-20">
-    <div class="mx-auto max-w-[1200px]">
-      <p class="doc-label text-ink">What I build</p>
-      <h2 class="font-display mt-7 max-w-[24ch] text-3xl leading-tight text-ink md:text-4xl">
-        Increasingly, fixing the constraint means <em>building the machine.</em>
-      </h2>
-      <p class="mt-5 max-w-[62ch] text-lg leading-relaxed text-fern">
-        Most operators can tell you what to do. I build the systems that do it, real, running software, not slideware. A few I've shipped:
-      </p>
-      <div class="mt-9 grid gap-6 md:grid-cols-3">
-        <div class="rounded-[14px] border border-hairline bg-white/50 p-8">
-          <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-moss">Private equity</p>
-          <h3 class="font-display mt-3 text-2xl leading-snug text-ink">An autonomous deal-sourcing engine</h3>
-          <p class="mt-3 leading-relaxed text-fern">For a lower-middle-market fund: a working system that finds acquisition targets, researches each one, scores it against the fund's thesis, and flags roll-up combinations, so partners spend their time deciding, not digging. Five coordinated agents and a scoring model with hard disqualifiers, running on a schedule for a few dollars a month.</p>
-          <p class="mt-4 border-t border-dashed border-hairline pt-4 text-[15px] font-semibold italic text-ink">I don't just advise on AI. I ship the machine.</p>
-        </div>
-        <div class="rounded-[14px] border border-hairline bg-white/50 p-8">
-          <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-moss">Owner-led services</p>
-          <h3 class="font-display mt-3 text-2xl leading-snug text-ink">An intake-to-match pipeline</h3>
-          <p class="mt-3 leading-relaxed text-fern">For a founder-led services company: I went into the actual codebase, wired up live data, and turned an intake call into a matched provider with drafted outreach and a human approving each step. Along the way I found and fixed a real safety bug, failed background checks were being read as passed.</p>
-          <p class="mt-4 border-t border-dashed border-hairline pt-4 text-[15px] font-semibold italic text-ink">I get into the code, find the bug that matters, and ship.</p>
-        </div>
-        <div class="rounded-[14px] border border-hairline bg-white/50 p-8">
-          <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-moss">Operating cadence</p>
-          <h3 class="font-display mt-3 text-2xl leading-snug text-ink">An AI chief-of-staff fleet</h3>
-          <p class="mt-3 leading-relaxed text-fern">Scheduled agents that run the recurring operating work of a company: a weekly leadership briefing that tracks commitments and blind spots, a meeting-to-follow-up processor, and a scorecard audit that flags stale or dishonest status reporting. I run my own week on these.</p>
-          <p class="mt-4 border-t border-dashed border-hairline pt-4 text-[15px] font-semibold italic text-ink">The machine runs the cadence, so leaders get to decide.</p>
-        </div>
-      </div>
-      <p class="mt-6 text-[13px] text-fern">Client names withheld until each gives the OK. Happy to walk through any of these live.</p>
-    </div>
-  </section>
-
-  <!-- 5 · HOW THIS GOES (path + ways to work) -->
-  <section class="border-b border-hairline bg-parchment-deep px-6 py-16 md:py-20">
-    <div class="mx-auto max-w-[1200px]">
-      <p class="doc-label text-ink">How this goes</p>
-      <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
-        It starts with a call. No pitch, no invoice.
-      </h2>
-      <div class="mt-9 grid gap-6 md:grid-cols-3">
-        <div class="rounded-[14px] border border-hairline bg-white/50 p-7">
-          <p class="font-mono text-xs font-medium text-moss">01</p>
-          <h3 class="font-display mt-2 text-[21px] text-ink">We talk</h3>
-          <p class="mt-2 text-[15px] leading-relaxed text-fern">A free 30 minutes. I learn your business and give you a straight read on what's actually capping you, whether or not you ever hire me.</p>
-        </div>
-        <div class="rounded-[14px] border border-hairline bg-white/50 p-7">
-          <p class="font-mono text-xs font-medium text-moss">02</p>
-          <h3 class="font-display mt-2 text-[21px] text-ink">I send you a plan</h3>
-          <p class="mt-2 text-[15px] leading-relaxed text-fern">A short write-up of what I see in your numbers and three ways we could work together, from a light touch to me owning it outright.</p>
-        </div>
-        <div class="rounded-[14px] border border-hairline bg-white/50 p-7">
-          <p class="font-mono text-xs font-medium text-moss">03</p>
-          <h3 class="font-display mt-2 text-[21px] text-ink">You pick a lane</h3>
-          <p class="mt-2 text-[15px] leading-relaxed text-fern">One fixed monthly fee, month-to-month. Cancel any time with 30 days' notice. No retainer trap.</p>
-        </div>
-      </div>
-
-      <p class="doc-label mt-14 text-ink">Three ways to work together</p>
-      <div class="mt-6 grid gap-6 md:grid-cols-3">
-        <div class="flex flex-col gap-2 rounded-[14px] border border-hairline bg-white/50 p-7">
-          <h3 class="font-display text-[22px] text-ink">Coach you through it</h3>
-          <p class="text-[14.5px] leading-relaxed text-fern">I'm the outside brain. We map the moves and you and your team execute them. For owners who want sharp direction and will do the work.</p>
-        </div>
-        <div class="flex flex-col gap-2 rounded-[14px] border-[1.5px] border-moss bg-white/75 p-7">
-          <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-moss">Most owners land here</p>
-          <h3 class="font-display text-[22px] text-ink">In it with you</h3>
-          <p class="text-[14.5px] leading-relaxed text-fern">Hands on the build with your team, installing the scorecard, the weekly rhythm, the fixes, so it actually gets done, not just decided.</p>
-        </div>
-        <div class="flex flex-col gap-2 rounded-[14px] border border-hairline bg-white/50 p-7">
-          <h3 class="font-display text-[22px] text-ink">I own it</h3>
-          <p class="text-[14.5px] leading-relaxed text-fern">I take the number and do the work until it's fixed. For when you'd rather hand it to an operator than manage one.</p>
-        </div>
-      </div>
-
-      <p class="mt-8 max-w-[66ch] text-[15px] leading-relaxed text-fern">
-        Every option is one fixed monthly fee, quoted to your situation, not an hourly meter, and month-to-month. You shouldn't have to make a money decision every time you need to call me.
-      </p>
-      <a
-        href={bookUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="mt-6 inline-block rounded-full border border-ink bg-ink px-8 py-4 text-[15px] font-semibold text-parchment transition-opacity hover:opacity-90"
-      >
-        Book a call
-      </a>
-    </div>
-  </section>
-
-  <!-- 6 · WHO THIS IS (AND ISN'T) FOR -->
+  <!-- 6 · WHO IT'S FOR -->
   <section class="border-b border-hairline px-6 py-16 md:py-20">
-    <div class="mx-auto max-w-[1200px]">
+    <div class="mx-auto max-w-[1000px]">
       <p class="doc-label text-ink">Is this you?</p>
-      <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
-        I'm not for everyone.
-      </h2>
       <div class="mt-8 grid gap-6 md:grid-cols-2">
         <div class="rounded-[14px] border border-hairline bg-white/50 p-7">
-          <p class="font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-moss">This is for you if</p>
+          <p class="font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-moss">Yes, if</p>
           <ul class="mt-4 space-y-3">
             {[
               "You own a $1–20M business and you're still the bottleneck.",
               "You'd rather hear the truth from your numbers than a pep talk.",
-              "You're ready to actually change how the business runs.",
+              "You're ready to change how the business actually runs.",
             ].map((item) => (
               <li class="flex items-start gap-3 text-[15px] leading-relaxed text-ink">
                 <span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-moss"></span>
@@ -331,12 +204,12 @@ const bookUrl = 'https://calendar.notion.so/meet/cameronearloliver/qc3y04oud';
           </ul>
         </div>
         <div class="rounded-[14px] border border-hairline bg-white/30 p-7">
-          <p class="font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-fern">It's not for you if</p>
+          <p class="font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-fern">Not yet, if</p>
           <ul class="mt-4 space-y-3">
             {[
               "You're pre-revenue and still hunting for product-market fit.",
               "You want someone to agree with you, not tell you what's wrong.",
-              "You're not willing to change how decisions actually get made.",
+              "You're not willing to change how decisions get made.",
             ].map((item) => (
               <li class="flex items-start gap-3 text-[15px] leading-relaxed text-fern">
                 <span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-fern/50"></span>
@@ -349,36 +222,21 @@ const bookUrl = 'https://calendar.notion.so/meet/cameronearloliver/qc3y04oud';
     </div>
   </section>
 
-  <!-- 8 · FREE GUIDES -->
-  <section class="px-6 py-16 md:py-20">
-    <div class="mx-auto max-w-[1200px]">
-      <p class="doc-label text-ink">Free guides</p>
-      <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
-        Some of this you can fix yourself.
+  <!-- 7 · FINAL CTA -->
+  <section class="px-6 py-16 md:py-24">
+    <div class="mx-auto max-w-[720px] text-center">
+      <h2 class="font-display text-3xl leading-tight text-ink md:text-[40px]">
+        Find out what's really capping your growth.
       </h2>
-      <p class="mt-4 max-w-[58ch] text-lg leading-relaxed text-fern">
-        I write down how to do the things I get hired for, running a weekly that works, hiring your first ops person, getting out of the bottleneck. If one of these saves you a call, good.
-      </p>
-      <div class="mt-8">
-        {guides.map((post) => (
-          <a
-            href={`/blog/${post.id}`}
-            class="group flex items-baseline justify-between gap-6 border-t border-hairline py-5 no-underline"
-          >
-            <span class="font-display text-[21px] text-ink transition-colors group-hover:text-moss">
-              {post.data.title}
-            </span>
-            <span class="flex-shrink-0 font-mono text-xs font-medium text-moss">READ →</span>
-          </a>
-        ))}
+      <div class="mt-6 grid gap-4 sm:grid-cols-3">
+        <div><p class="font-mono text-sm font-medium text-moss">01 We talk</p><p class="mt-1 text-[14px] leading-relaxed text-fern">Free 30 minutes. A straight read on what's capping you, hire me or not.</p></div>
+        <div><p class="font-mono text-sm font-medium text-moss">02 I send a plan</p><p class="mt-1 text-[14px] leading-relaxed text-fern">What I see in your numbers, and how we'd work, month-to-month.</p></div>
+        <div><p class="font-mono text-sm font-medium text-moss">03 You decide</p><p class="mt-1 text-[14px] leading-relaxed text-fern">One fixed monthly fee. No hourly meter, no retainer trap.</p></div>
       </div>
-      <a href="/blog" class="mt-6 inline-block text-[15px] font-semibold text-moss transition-colors hover:text-ink">
-        All guides &amp; field notes →
+      <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="mt-9 inline-block rounded-full border border-ink bg-ink px-9 py-4 text-[15px] font-semibold text-parchment transition-opacity hover:opacity-90">
+        Book a call
       </a>
+      <p class="mt-3.5 text-sm text-fern">Bring your numbers. If I can't help, I'll say so.</p>
     </div>
   </section>
 </Layout>
-
-<style>
-  /* reserved for homepage-specific tweaks */
-</style>

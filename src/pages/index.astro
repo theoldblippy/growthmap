@@ -3,6 +3,13 @@ import Layout from '../layouts/Layout.astro';
 
 const bookUrl = 'https://calendar.notion.so/meet/cameronearloliver/qc3y04oud';
 
+const record = [
+  { before: '$12M', after: '$20M', label: 'General construction' },
+  { before: '120 days', after: '45 days', label: 'Software onboarding' },
+  { before: '40%', after: '85%', label: 'Capacity utilization' },
+  { before: '15', after: '100', label: 'Scaled through a Series A' },
+];
+
 const scorecard = [
   { name: 'Revenue vs. plan', weeks: ['r','y','y','g','g','g'], now: '103%' },
   { name: 'Cash collected', weeks: ['y','y','g','g','y','y'], now: '88%' },
@@ -11,12 +18,16 @@ const scorecard = [
 ];
 const cell = { g: '#5C7A3B', y: '#C08A2D', r: '#B0402F' };
 
-const flywheel = ['Map it out', 'Fix the one that matters', 'Business jumps', 'Find the next'];
+const steps = [
+  { n: '01', title: 'We map your buyer', body: 'How you acquire customers, what you do to serve them, and how you keep them coming back. We walk the whole path.' },
+  { n: '02', title: 'We see what it takes to deliver', body: 'What each part needs to run, and what good actually looks like in the numbers, not a guess.' },
+  { n: '03', title: 'We focus your time where it counts', body: 'Grow revenue, deliver it faster, or take the stress off, with the right people and process in place.' },
+];
 ---
 
 <Layout
-  title="Growth Map | An operator who fixes what's holding your business back"
-  description="You don't need more. You need to fix what you've got. I get into owner-led businesses ($1M–$20M), find the thing actually holding growth back, and fix it with you. Book a free call."
+  title="Growth Map | You're fixing the wrong thing"
+  description="When growth stalls, it's almost never where you think. I'm an operator who gets in the trenches with owner-led businesses and fixes what's actually holding them back. Book a free call."
   canonicalPath="/"
 >
   <!-- 1 · HERO -->
@@ -34,14 +45,14 @@ const flywheel = ['Map it out', 'Fix the one that matters', 'Business jumps', 'F
         <h1 class="font-display text-5xl leading-[1.04] text-ink sm:text-6xl md:text-[64px]">
           You're fixing the <em>wrong thing.</em>
         </h1>
-        <p class="mt-6 max-w-[48ch] text-lg leading-relaxed text-fern">
-          Let's find the one or two things actually holding your business back from growth.
+        <p class="mt-6 max-w-[50ch] text-lg leading-relaxed text-fern">
+          When growth stalls, everything feels chaotic and you're not sure of your next move. I get in the trenches with you, and we fix what's actually holding you back.
         </p>
         <div class="mt-8">
           <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="inline-block rounded-full border border-ink bg-ink px-8 py-4 text-[15px] font-semibold text-parchment transition-opacity hover:opacity-90">
             Book a call
           </a>
-          <p class="mt-3.5 text-sm text-fern">Free 30-minute call. No pitch.</p>
+          <p class="mt-3.5 max-w-[46ch] text-sm text-fern">A free 30-minute call, no pitch. I'll tell you what I'd fix, and you can run with it, with me or on your own.</p>
         </div>
       </div>
       <div class="flex justify-center md:justify-end">
@@ -52,59 +63,68 @@ const flywheel = ['Map it out', 'Fix the one that matters', 'Business jumps', 'F
     </div>
   </section>
 
-  <!-- 2 · RESULTS BAND -->
-  <section class="relative overflow-hidden border-b border-hairline bg-ink px-6 py-9">
-    <svg class="pointer-events-none absolute -right-20 top-1/2 h-[360px] w-[360px] -translate-y-1/2 text-moss opacity-30" viewBox="0 0 600 600" aria-hidden="true">
-      <g fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.9">
-        <path d="M300,80 C420,70 520,160 530,280 C540,400 460,520 330,530 C200,540 80,460 75,320 C70,180 180,90 300,80 Z" />
-        <path d="M300,150 C388,142 462,196 470,286 C478,376 416,462 320,470 C224,478 140,420 136,312 C132,204 216,158 300,150 Z" />
-        <circle cx="300" cy="301" r="6" fill="currentColor" stroke="none" />
-      </g>
-    </svg>
-    <div class="relative z-10 mx-auto grid max-w-[1200px] grid-cols-2 gap-x-8 gap-y-6 md:grid-cols-4">
-      <div>
-        <p class="font-display text-lg leading-tight text-cream md:text-[21px]">2&times; growth</p>
-        <p class="mt-1 font-mono text-[10px] uppercase tracking-[0.14em] text-moss">same headcount</p>
+  <!-- 2 · TRACK RECORD BAND -->
+  <section class="relative overflow-hidden border-b border-hairline bg-ink px-6 py-10">
+    <div class="relative z-10 mx-auto max-w-[1200px]">
+      <p class="mb-6 font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-cream/55">What I've done</p>
+      <div class="grid grid-cols-2 gap-x-8 gap-y-7 md:grid-cols-4">
+        {record.map((r) => (
+          <div>
+            <p class="font-display text-xl leading-none text-cream md:text-[26px]">
+              {r.before} <span class="text-moss">&rarr;</span> {r.after}
+            </p>
+            <p class="mt-2 font-mono text-[10px] uppercase tracking-[0.14em] text-cream/55">{r.label}</p>
+          </div>
+        ))}
       </div>
-      <div>
-        <p class="font-display text-lg leading-tight text-cream md:text-[21px]">Days &rarr; hours</p>
-        <p class="mt-1 font-mono text-[10px] uppercase tracking-[0.14em] text-moss">Telehealth</p>
+    </div>
+  </section>
+
+  <!-- 3 · THE TWO THINGS -->
+  <section class="border-b border-hairline px-6 py-16 md:py-24">
+    <div class="mx-auto max-w-[1000px]">
+      <h2 class="font-display text-3xl leading-tight text-ink md:text-[40px]">
+        No matter your industry, product, or service, every business does <em>two things.</em>
+      </h2>
+      <div class="mt-10 grid items-stretch gap-5 md:grid-cols-[1fr_auto_1fr]">
+        <div class="rounded-[16px] border border-hairline bg-white/60 p-8">
+          <p class="font-display text-5xl leading-none text-moss">1</p>
+          <h3 class="font-display mt-4 text-2xl text-ink">Acquire customers</h3>
+          <p class="mt-2 leading-relaxed text-fern">You have to get people to buy.</p>
+        </div>
+        <div class="flex items-center justify-center">
+          <span class="font-mono text-sm text-fern">then</span>
+        </div>
+        <div class="rounded-[16px] border border-hairline bg-white/60 p-8">
+          <p class="font-display text-5xl leading-none text-moss">2</p>
+          <h3 class="font-display mt-4 text-2xl text-ink">Serve those customers</h3>
+          <p class="mt-2 leading-relaxed text-fern">You have to deliver, and keep them coming back.</p>
+        </div>
       </div>
-      <div>
-        <p class="font-display text-lg leading-tight text-cream md:text-[21px]">EBITDA up</p>
-        <p class="mt-1 font-mono text-[10px] uppercase tracking-[0.14em] text-moss">Private equity</p>
-      </div>
-      <div>
-        <p class="font-display text-lg leading-tight text-cream md:text-[21px]">Billable hours won back</p>
-        <p class="mt-1 font-mono text-[10px] uppercase tracking-[0.14em] text-moss">Law firm</p>
-      </div>
+      <p class="mt-9 max-w-[70ch] text-lg leading-relaxed text-fern">
+        When you're tired, frustrated, and not sure why you're getting the results you are, the answer is always back in those two things. That's where I start.
+      </p>
     </div>
   </section>
 
   <!-- 4 · HOW IT WORKS -->
   <section class="border-b border-hairline bg-parchment-deep px-6 py-16 md:py-20">
     <div class="mx-auto max-w-[1100px]">
-      <p class="doc-label text-ink">How it works</p>
-      <div class="mt-9 grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-center md:gap-12">
-        <div class="space-y-6">
-          <div>
-            <p class="font-mono text-2xl font-medium text-moss">01</p>
-            <h3 class="font-display mt-1 text-[22px] text-ink">I map it out</h3>
-            <p class="mt-1.5 text-[15px] leading-relaxed text-fern">Everything going on in the business. What's working, what's wasting your time, what to stop.</p>
-          </div>
-          <div>
-            <p class="font-mono text-2xl font-medium text-moss">02</p>
-            <h3 class="font-display mt-1 text-[22px] text-ink">I find the one that matters</h3>
-            <p class="mt-1.5 text-[15px] leading-relaxed text-fern">The real thing holding you back. Usually not what you think. One guy didn't even know where his revenue was coming from.</p>
-          </div>
-          <div>
-            <p class="font-mono text-2xl font-medium text-moss">03</p>
-            <h3 class="font-display mt-1 text-[22px] text-ink">I fix it, with you</h3>
-            <p class="mt-1.5 text-[15px] leading-relaxed text-fern">Hands on the work, alongside your team. Whatever it actually is, we get it done, not just decided.</p>
-          </div>
+      <p class="doc-label text-ink">Where I start</p>
+      <div class="mt-9 grid gap-10 md:grid-cols-[1fr_0.9fr] md:items-center md:gap-14">
+        <div class="space-y-7">
+          {steps.map((s) => (
+            <div class="flex gap-5">
+              <p class="font-mono text-xl font-medium text-moss">{s.n}</p>
+              <div>
+                <h3 class="font-display text-[22px] leading-tight text-ink">{s.title}</h3>
+                <p class="mt-1.5 text-[15px] leading-relaxed text-fern">{s.body}</p>
+              </div>
+            </div>
+          ))}
         </div>
         <div class="rounded-[14px] border border-hairline bg-white/70 p-6">
-          <p class="mb-4 font-mono text-[10.5px] font-medium uppercase tracking-[0.14em] text-fern">I put it in plain numbers</p>
+          <p class="mb-4 font-mono text-[10.5px] font-medium uppercase tracking-[0.14em] text-fern">What good looks like</p>
           {scorecard.map((m) => (
             <div class="flex items-center justify-between gap-3 border-t border-dashed border-hairline py-2.5 first:border-t-0">
               <span class="text-[13.5px] font-medium text-ink">{m.name}</span>
@@ -114,52 +134,31 @@ const flywheel = ['Map it out', 'Fix the one that matters', 'Business jumps', 'F
               </span>
             </div>
           ))}
-          <p class="mt-4 font-mono text-[10px] uppercase tracking-[0.14em] text-fern">Sample &middot; six weeks, your metrics</p>
+          <p class="mt-4 font-mono text-[10px] uppercase tracking-[0.14em] text-fern">Sample &middot; a scorecard your team runs weekly</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 5 · FLYWHEEL -->
+  <!-- 5 · PROOF -->
   <section class="border-b border-hairline px-6 py-16 md:py-20">
-    <div class="mx-auto max-w-[1000px]">
-      <h2 class="font-display text-3xl leading-tight text-ink md:text-4xl">
-        This is how you actually scale.
-      </h2>
-      <p class="mt-4 max-w-[60ch] text-lg leading-relaxed text-fern">
-        Find the biggest thing, fix it, and the business jumps. Then we go again. One real win a quarter, and it stacks up.
-      </p>
-      <div class="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
-        {flywheel.map((step, i) => (
-          <div class="rounded-[14px] border border-hairline bg-white/50 p-5">
-            <p class="font-mono text-sm font-medium text-moss">{`0${i + 1}`}</p>
-            <p class="font-display mt-2 text-[19px] leading-snug text-ink">{step}</p>
-          </div>
-        ))}
-      </div>
-      <p class="mt-5 font-mono text-[11px] uppercase tracking-[0.16em] text-fern">&hellip; and again &rarr;</p>
-    </div>
-  </section>
-
-  <!-- 6 · PROOF -->
-  <section class="border-b border-hairline bg-parchment-deep px-6 py-16 md:py-20">
     <div class="mx-auto max-w-[1000px]">
       <p class="doc-label text-ink">What that looks like</p>
       <div class="mt-9 grid gap-6 md:grid-cols-2">
-        <div class="rounded-[14px] border border-hairline bg-white/60 p-8">
+        <div class="rounded-[14px] border border-hairline bg-white/50 p-8">
+          <p class="font-display text-xl leading-snug text-ink">
+            "If you doubled your sales tomorrow, would you be happy, or freak out?"
+          </p>
+          <p class="mt-3 leading-relaxed text-fern">
+            He was chasing more sales. He had a throughput problem, not a sales problem. We fixed how the work got delivered, and the growth followed.
+          </p>
+        </div>
+        <div class="rounded-[14px] border border-hairline bg-white/50 p-8">
           <p class="font-display text-xl leading-snug text-ink">
             He didn't know where his revenue was even coming from.
           </p>
           <p class="mt-3 leading-relaxed text-fern">
-            He was focused on all the wrong things. We changed the sales process and doubled his growth, same headcount.
-          </p>
-        </div>
-        <div class="rounded-[14px] border border-hairline bg-white/60 p-8">
-          <p class="font-display text-xl leading-snug text-ink">
-            He was sure he needed more sales.
-          </p>
-          <p class="mt-3 leading-relaxed text-fern">
-            It wasn't sales. It was conversion, and saying no to the wrong customers. Different problem, different fix.
+            Focused on all the wrong things. We changed the sales process and doubled his growth, same headcount.
           </p>
         </div>
       </div>
@@ -167,21 +166,18 @@ const flywheel = ['Map it out', 'Fix the one that matters', 'Business jumps', 'F
     </div>
   </section>
 
-  <!-- 7 · HOW IT STARTS -->
+  <!-- 6 · CLOSE -->
   <section class="px-6 py-16 md:py-24">
-    <div class="mx-auto max-w-[720px] text-center">
+    <div class="mx-auto max-w-[680px] text-center">
       <h2 class="font-display text-3xl leading-tight text-ink md:text-[40px]">
         Let's talk.
       </h2>
-      <div class="mt-8 grid gap-4 text-left sm:grid-cols-3">
-        <div><p class="font-mono text-sm font-medium text-moss">01</p><p class="mt-1 text-[14.5px] leading-relaxed text-fern">We talk. You tell me what's going on.</p></div>
-        <div><p class="font-mono text-sm font-medium text-moss">02</p><p class="mt-1 text-[14.5px] leading-relaxed text-fern">I tell you the first thing I'd fix.</p></div>
-        <div><p class="font-mono text-sm font-medium text-moss">03</p><p class="mt-1 text-[14.5px] leading-relaxed text-fern">You decide: with me, without me, or someone else.</p></div>
-      </div>
-      <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="mt-9 inline-block rounded-full border border-ink bg-ink px-9 py-4 text-[15px] font-semibold text-parchment transition-opacity hover:opacity-90">
+      <p class="mx-auto mt-5 max-w-[46ch] text-lg leading-relaxed text-fern">
+        First call's free. You'll get my honest read on the biggest thing I'd fix, whether we end up working together or not.
+      </p>
+      <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="mt-8 inline-block rounded-full border border-ink bg-ink px-9 py-4 text-[15px] font-semibold text-parchment transition-opacity hover:opacity-90">
         Book a call
       </a>
-      <p class="mt-3.5 text-sm text-fern">No pitch. If I can't help, I'll tell you who can.</p>
     </div>
   </section>
 </Layout>

@@ -2,6 +2,16 @@
 import Layout from '../layouts/Layout.astro';
 
 const bookUrl = 'https://calendar.notion.so/meet/cameronearloliver/qc3y04oud';
+
+const scorecard = [
+  { name: 'Revenue vs. plan', weeks: ['r','y','y','g','g','g'], now: '103%' },
+  { name: 'Cash collected', weeks: ['y','y','g','g','y','y'], now: '88%' },
+  { name: 'Gross margin', weeks: ['y','g','g','g','g','g'], now: '42%' },
+  { name: 'Closed-won rate', weeks: ['r','r','y','y','g','g'], now: '31%' },
+  { name: 'Meetings completed', weeks: ['g','y','g','g','g','g'], now: '24' },
+  { name: 'Net Promoter Score', weeks: ['y','y','g','g','y','g'], now: '41' },
+];
+const cell = { g: '#5C7A3B', y: '#C08A2D', r: '#B0402F' };
 ---
 
 <Layout
@@ -43,9 +53,45 @@ const bookUrl = 'https://calendar.notion.so/meet/cameronearloliver/qc3y04oud';
     </div>
   </section>
 
-  <!-- 1b · PROOF BAND -->
-  <section class="relative overflow-hidden border-b border-hairline bg-ink px-6 py-10 md:py-11">
-    <svg class="pointer-events-none absolute -right-20 top-1/2 h-[380px] w-[380px] -translate-y-1/2 text-moss opacity-30" viewBox="0 0 600 600" aria-hidden="true">
+  <!-- 1a · SCORECARD -->
+  <section class="border-b border-hairline bg-parchment-deep px-6 py-14 md:py-16">
+    <div class="mx-auto max-w-[980px]">
+      <div class="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+        <p class="doc-label text-ink">The scorecard we build</p>
+        <p class="pb-2.5 font-mono text-[10.5px] uppercase tracking-[0.14em] text-fern">Sample &middot; your metrics, your colors</p>
+      </div>
+      <p class="mt-6 max-w-[62ch] text-lg leading-relaxed text-fern">
+        Every engagement ends with a weekly scorecard your team runs without you. One glance shows what's working and what's slipping, week over week.
+      </p>
+      <div class="mt-8 overflow-x-auto rounded-[14px] border border-hairline bg-white/70 p-6 md:p-8">
+        <table class="w-full min-w-[520px] border-collapse text-left">
+          <thead>
+            <tr>
+              <th class="pb-3 font-mono text-[10px] font-medium uppercase tracking-[0.14em] text-fern">Metric</th>
+              <th class="pb-3 text-center font-mono text-[10px] font-medium uppercase tracking-[0.14em] text-fern" colspan="6">Last 6 weeks &rarr;</th>
+              <th class="pb-3 text-right font-mono text-[10px] font-medium uppercase tracking-[0.14em] text-fern">Now</th>
+            </tr>
+          </thead>
+          <tbody>
+            {scorecard.map((m) => (
+              <tr class="border-t border-dashed border-hairline">
+                <td class="py-3 pr-5 text-[14px] font-medium text-ink">{m.name}</td>
+                {m.weeks.map((w) => (
+                  <td class="px-1.5 py-3"><span class="mx-auto block h-4 w-4 rounded-[3px]" style={`background:${cell[w]}`}></span></td>
+                ))}
+                <td class="py-3 pl-5 text-right font-mono text-[13px] text-ink">{m.now}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <a href="/testimonials" class="mt-6 inline-block font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-moss transition-colors hover:text-ink">Read client stories &rarr;</a>
+    </div>
+  </section>
+
+  <!-- 1b · RESULTS BAND -->
+  <section class="relative overflow-hidden border-b border-hairline bg-ink px-6 py-9">
+    <svg class="pointer-events-none absolute -right-20 top-1/2 h-[360px] w-[360px] -translate-y-1/2 text-moss opacity-30" viewBox="0 0 600 600" aria-hidden="true">
       <g fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.9">
         <path d="M300,80 C420,70 520,160 530,280 C540,400 460,520 330,530 C200,540 80,460 75,320 C70,180 180,90 300,80 Z" />
         <path d="M300,150 C388,142 462,196 470,286 C478,376 416,462 320,470 C224,478 140,420 136,312 C132,204 216,158 300,150 Z" />
@@ -53,24 +99,23 @@ const bookUrl = 'https://calendar.notion.so/meet/cameronearloliver/qc3y04oud';
         <circle cx="300" cy="301" r="6" fill="currentColor" stroke="none" />
       </g>
     </svg>
-    <div class="relative z-10 mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-y-7 text-center md:flex-row md:text-left">
-      <div class="flex items-center gap-x-8 lg:gap-x-14">
-        <div>
-          <p class="font-display text-xl leading-tight text-cream md:text-[27px]">Margin recovered</p>
-          <p class="mt-1 font-mono text-[10.5px] uppercase tracking-[0.14em] text-moss">in a single quarter</p>
-        </div>
-        <div class="h-10 w-px flex-shrink-0 bg-cream/20"></div>
-        <div>
-          <p class="font-display text-xl leading-tight text-cream md:text-[27px]">Throughput doubled</p>
-          <p class="mt-1 font-mono text-[10.5px] uppercase tracking-[0.14em] text-moss">same headcount</p>
-        </div>
-        <div class="h-10 w-px flex-shrink-0 bg-cream/20"></div>
-        <div>
-          <p class="font-display text-xl leading-tight text-cream md:text-[27px]">10+ years</p>
-          <p class="mt-1 font-mono text-[10.5px] uppercase tracking-[0.14em] text-moss">operating, #3 &rarr; 100+</p>
-        </div>
+    <div class="relative z-10 mx-auto grid max-w-[1200px] grid-cols-2 gap-x-8 gap-y-6 md:grid-cols-4">
+      <div>
+        <p class="font-display text-lg leading-tight text-cream md:text-[21px]">Margin recovered</p>
+        <p class="mt-1 font-mono text-[10px] uppercase tracking-[0.14em] text-moss">Construction</p>
       </div>
-      <p class="font-mono text-[10.5px] uppercase tracking-[0.14em] text-cream/55">Construction · Telehealth · SaaS · PE</p>
+      <div>
+        <p class="font-display text-lg leading-tight text-cream md:text-[21px]">Days &rarr; hours</p>
+        <p class="mt-1 font-mono text-[10px] uppercase tracking-[0.14em] text-moss">Teledermatology</p>
+      </div>
+      <div>
+        <p class="font-display text-lg leading-tight text-cream md:text-[21px]">EBITDA lifted</p>
+        <p class="mt-1 font-mono text-[10px] uppercase tracking-[0.14em] text-moss">Private equity</p>
+      </div>
+      <div>
+        <p class="font-display text-lg leading-tight text-cream md:text-[21px]">Hours won back</p>
+        <p class="mt-1 font-mono text-[10px] uppercase tracking-[0.14em] text-moss">Law firm</p>
+      </div>
     </div>
   </section>
 
@@ -120,85 +165,6 @@ const bookUrl = 'https://calendar.notion.so/meet/cameronearloliver/qc3y04oud';
       <p class="font-display mt-9 text-[22px] italic leading-snug text-ink">
         Consultants stop at 02. Coaches skip 01. <span class="text-moss">I do all three.</span>
       </p>
-    </div>
-  </section>
-
-  <!-- 4 · PROOF (scorecard + case studies + quotes) -->
-  <section class="border-b border-hairline px-6 py-16 md:py-20">
-    <div class="mx-auto max-w-[1200px]">
-      <p class="doc-label text-ink">What it looks like</p>
-      <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
-        The work, and what it does to a business.
-      </h2>
-
-      <div class="mt-8 grid items-start gap-8 md:grid-cols-[0.85fr_1.15fr] md:gap-12">
-        <!-- sample scorecard -->
-        <div class="rounded-[14px] border border-hairline bg-white/60 p-7">
-          <p class="mb-4 font-mono text-[11px] font-medium tracking-[0.14em] text-fern">SAMPLE SCORECARD</p>
-        <div class="flex items-center justify-between gap-4 border-t border-dashed border-hairline py-2.5 text-[13.5px] font-medium text-fern first:border-t-0">
-          <span class="flex items-center gap-2.5"><span class="h-2 w-2 flex-shrink-0 rounded-full" style="background:#5C7A3B"></span>Revenue vs. plan</span>
-          <span class="font-mono text-sm text-ink">103%</span>
-        </div>
-        <div class="flex items-center justify-between gap-4 border-t border-dashed border-hairline py-2.5 text-[13.5px] font-medium text-fern first:border-t-0">
-          <span class="flex items-center gap-2.5"><span class="h-2 w-2 flex-shrink-0 rounded-full" style="background:#C08A2D"></span>Cash collected</span>
-          <span class="font-mono text-sm text-ink">88%</span>
-        </div>
-        <div class="flex items-center justify-between gap-4 border-t border-dashed border-hairline py-2.5 text-[13.5px] font-medium text-fern first:border-t-0">
-          <span class="flex items-center gap-2.5"><span class="h-2 w-2 flex-shrink-0 rounded-full" style="background:#5C7A3B"></span>Gross margin</span>
-          <span class="font-mono text-sm text-ink">42%</span>
-        </div>
-        <div class="flex items-center justify-between gap-4 border-t border-dashed border-hairline py-2.5 text-[13.5px] font-medium text-fern first:border-t-0">
-          <span class="flex items-center gap-2.5"><span class="h-2 w-2 flex-shrink-0 rounded-full" style="background:#5C7A3B"></span>Closed-won rate</span>
-          <span class="font-mono text-sm text-ink">31%</span>
-        </div>
-        <div class="flex items-center justify-between gap-4 border-t border-dashed border-hairline py-2.5 text-[13.5px] font-medium text-fern first:border-t-0">
-          <span class="flex items-center gap-2.5"><span class="h-2 w-2 flex-shrink-0 rounded-full" style="background:#5C7A3B"></span>Meetings completed</span>
-          <span class="font-mono text-sm text-ink">24</span>
-        </div>
-        <div class="flex items-center justify-between gap-4 border-t border-dashed border-hairline py-2.5 text-[13.5px] font-medium text-fern first:border-t-0">
-          <span class="flex items-center gap-2.5"><span class="h-2 w-2 flex-shrink-0 rounded-full" style="background:#C08A2D"></span>Net Promoter Score</span>
-          <span class="font-mono text-sm text-ink">41</span>
-        </div>
-          <p class="font-display mt-4 text-sm italic text-fern">A sample of the weekly scorecard we build. Your metrics, not these.</p>
-        </div>
-        <p class="text-lg leading-relaxed text-fern">
-          Every engagement ends with a scorecard your team runs without you, one number per person, green or red at a glance. It's how you finally see what's working without sitting in every meeting. Below is what finding and fixing the one constraint looked like in three very different businesses.
-        </p>
-      </div>
-
-      <!-- case study blocks -->
-      <div class="mt-10 space-y-6">
-      <div class="rounded-[14px] border border-hairline bg-white/50 p-8">
-        <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-moss">Construction</p>
-        <div class="mt-4 grid gap-6 md:grid-cols-3">
-          <div><p class="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-fern">The business</p><p class="mt-2 leading-relaxed text-ink">A commercial framing contractor, booked solid, but the owner approved every change order himself and jobs were closing under bid.</p></div>
-          <div><p class="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-fern">What I found</p><p class="mt-2 leading-relaxed text-ink">It looked like a pricing problem. It wasn't. Change orders got done in the field and billed weeks late, or never. The money was walking off the job site, not the bid sheet.</p></div>
-          <div><p class="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-fern">The result</p><p class="mt-2 leading-relaxed text-ink">A same-day change-order process, in the foremen's hands. Margin recovered inside a quarter, and the owner stopped being the bottleneck on every ticket.</p></div>
-        </div>
-      </div>
-
-      <div class="rounded-[14px] border border-hairline bg-white/50 p-8">
-        <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-moss">Teledermatology</p>
-        <div class="mt-4 grid gap-6 md:grid-cols-3">
-          <div><p class="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-fern">The business</p><p class="mt-2 leading-relaxed text-ink">A teledermatology group running thousands of async visits a month. Growing, but reimbursement was slow and clinicians were drowning in messages.</p></div>
-          <div><p class="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-fern">What I found</p><p class="mt-2 leading-relaxed text-ink">Everyone assumed it was a staffing problem. The data said routing: a big share of messages hit the wrong queue and got re-triaged two or three times before anyone acted.</p></div>
-          <div><p class="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-fern">The result</p><p class="mt-2 leading-relaxed text-ink">One routing change and a tighter intake template cut time-to-response from days to hours. Same headcount, roughly double the throughput.</p></div>
-        </div>
-      </div>
-
-      <div class="rounded-[14px] border border-hairline bg-white/50 p-8">
-        <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-moss">Private equity</p>
-        <div class="mt-4 grid gap-6 md:grid-cols-3">
-          <div><p class="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-fern">The business</p><p class="mt-2 leading-relaxed text-ink">A lower-middle-market fund had just closed on a multi-site services business and wanted a 100-day plan that wasn't just a spreadsheet.</p></div>
-          <div><p class="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-fern">What I found</p><p class="mt-2 leading-relaxed text-ink">The thesis was growth. The real constraint: nobody could tell you which locations made money. Reporting rolled up too high to act on.</p></div>
-          <div><p class="font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-fern">The result</p><p class="mt-2 leading-relaxed text-ink">Location-level P&Ls, stood up in weeks. Two sites were dragging the platform. Closing one and fixing the other lifted run-rate EBITDA before the next board meeting.</p></div>
-        </div>
-      </div>
-
-      </div>
-      <p class="mt-3 text-[13px] text-fern">Anonymized, and written without hard numbers until each client clears them. Real figures make these hit harder, they're coming.</p>
-
-      <a href="/testimonials" class="mt-12 inline-block font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-moss transition-colors hover:text-ink">Read client stories →</a>
     </div>
   </section>
 

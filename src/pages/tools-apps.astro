@@ -1,5 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import FigQuoteBuilder from '../components/figures/FigQuoteBuilder.astro';
+import FigDealFlow from '../components/figures/FigDealFlow.astro';
+import FigRaise from '../components/figures/FigRaise.astro';
+import FigChaseBot from '../components/figures/FigChaseBot.astro';
+import FigMatch from '../components/figures/FigMatch.astro';
+import FigFleet from '../components/figures/FigFleet.astro';
 
 const bookUrl = 'https://calendar.notion.so/meet/cameronearloliver/qc3y04oud';
 
@@ -7,22 +13,38 @@ const builds = [
   {
     tag: 'Construction',
     title: 'A quote builder',
-    body: "Quoting a job took about 10 hours: somebody digging through old bids with a calculator, every single time. We built a quote builder that gets it done in about an hour. Same quality, a day of somebody's week back.",
+    body: "Quoting a job took about 10 hours: somebody digging through old bids with a calculator, every single time. We built a quote builder that gets it done in about an hour.",
+    gave: 'Gave back about 9 hours per quote',
   },
   {
     tag: 'Private equity',
     title: 'A deal-sourcing engine',
-    body: "A fund wanted more deal flow without hiring analysts. The system finds targets, researches each one, scores it against their thesis, and flags roll-ups. It runs on a schedule for a few dollars a month, so the partners spend their time deciding, not digging.",
+    body: "A fund wanted more deal flow without hiring analysts. The system finds targets, researches each one, scores it against their thesis, and flags roll-ups, all on a schedule while everybody sleeps.",
+    gave: 'Analyst-level research for a few dollars a month',
+  },
+  {
+    tag: 'Fundraising',
+    title: 'A fundraise ops suite',
+    body: "Running a raise is a second full-time job. These agents prep every investor call, turn meeting notes into follow-ups and CRM updates, and keep the contact list fresh, all before Monday morning.",
+    gave: 'About 10 hours a week back',
+  },
+  {
+    tag: 'Education services',
+    title: 'A timesheet chase-bot',
+    body: "Their ops lead spent her week chasing tutors to confirm lessons. Now a bot posts who's behind every Thursday and nudges them automatically.",
+    gave: 'Found $12K of unbilled work on day one',
   },
   {
     tag: 'Owner-led services',
     title: 'An intake-to-match pipeline',
     body: "They were matching clients to providers by hand. Now an intake call turns into a matched provider with a human giving the final OK. Found and fixed a nasty background-check bug while I was in there.",
+    gave: 'Nobody matches by hand anymore',
   },
   {
     tag: 'Operating cadence',
     title: 'A chief-of-staff agent fleet',
-    body: "Agents that run my own week: a Friday briefing that tracks commitments and blind spots, meeting follow-ups that draft themselves, and a Monday audit that flags stale scorecard updates. I eat my own cooking.",
+    body: "Agents that run my own week: a Friday briefing that tracks commitments and blind spots, meeting follow-ups that draft themselves, and a Monday audit that flags stale scorecard updates.",
+    gave: 'I eat my own cooking',
   },
 ];
 ---
@@ -39,17 +61,22 @@ const builds = [
         You can just <em>build the thing</em> now.
       </h1>
       <p class="mt-5 max-w-[62ch] text-lg leading-relaxed text-fern">
-        It used to be an operator could only tell you what was broken. Now a lot of it can just get fixed, in days, not quarters. Some of what I've built:
+        It used to be an operator could only tell you what was broken. Now you can just fix it. Some of what I've built:
       </p>
 
       <div class="mt-10 grid gap-6 md:grid-cols-2">
-        {builds.map((b) => (
+        {builds.map((b, i) => {
+          const Fig = [FigQuoteBuilder, FigDealFlow, FigRaise, FigChaseBot, FigMatch, FigFleet][i];
+          return (
           <div class="rounded-[14px] border border-hairline bg-white/50 p-8">
+            <div class="mb-5 rounded-[10px] border border-hairline bg-white/70 p-2"><Fig /></div>
             <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-moss">{b.tag}</p>
             <h2 class="font-display mt-3 text-2xl leading-snug text-ink">{b.title}</h2>
             <p class="mt-3 leading-relaxed text-fern">{b.body}</p>
+            <p class="mt-4 border-t border-dashed border-hairline pt-3.5 font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-moss">{b.gave}</p>
           </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   </section>

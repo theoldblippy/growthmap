@@ -1,0 +1,40 @@
+<svg viewBox="0 0 440 300" width="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Quarterly loop: map, fix, grows, next">
+  <defs>
+    <marker id="gm4-ink" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M2 1.5 L7.5 5 L2 8.5" fill="none" stroke="#2B331F" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="gm4-moss" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M2 1.5 L7.5 5 L2 8.5" fill="none" stroke="#5C7A3B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- corner label + dashed rule -->
+  <text x="36" y="34" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="9.5" letter-spacing="0.14em" fill="#59614A">FIG. 04 &#183; THE CADENCE</text>
+  <line x1="204" y1="30.5" x2="404" y2="30.5" stroke="rgba(43,51,31,0.15)" stroke-width="1" stroke-dasharray="3 4"/>
+
+  <!-- concentric inner ring (brand motif) -->
+  <circle cx="220" cy="152" r="56" fill="none" stroke="rgba(43,51,31,0.15)" stroke-width="1" stroke-dasharray="3 4"/>
+
+  <!-- arcs, clockwise -->
+  <path d="M 238.9 76.3 A 78 78 0 0 1 295.7 133.1" fill="none" stroke="#2B331F" stroke-width="1.25" marker-end="url(#gm4-ink)"/>
+  <path d="M 295.7 170.9 A 78 78 0 0 1 238.9 227.7" fill="none" stroke="#2B331F" stroke-width="1.25" marker-end="url(#gm4-ink)"/>
+  <path d="M 201.1 227.7 A 78 78 0 0 1 144.3 170.9" fill="none" stroke="#2B331F" stroke-width="1.25" marker-end="url(#gm4-ink)"/>
+  <!-- the returning arc is dashed moss: the loop begins again -->
+  <path d="M 144.3 133.1 A 78 78 0 0 1 201.1 76.3" fill="none" stroke="#5C7A3B" stroke-width="1.25" stroke-dasharray="5 4" marker-end="url(#gm4-moss)"/>
+
+  <!-- station dots -->
+  <circle cx="220" cy="74" r="5" fill="#5C7A3B"/>
+  <circle cx="298" cy="152" r="5" fill="#FAF8F0" stroke="#2B331F" stroke-width="1.25"/>
+  <circle cx="220" cy="230" r="5" fill="#FAF8F0" stroke="#2B331F" stroke-width="1.25"/>
+  <circle cx="142" cy="152" r="5" fill="#FAF8F0" stroke="#2B331F" stroke-width="1.25"/>
+
+  <!-- station labels -->
+  <text x="220" y="58" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" letter-spacing="0.14em" fill="#5C7A3B">MAP</text>
+  <text x="314" y="156" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" letter-spacing="0.14em" fill="#2B331F">FIX</text>
+  <text x="220" y="252" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" letter-spacing="0.14em" fill="#2B331F">GROWS</text>
+  <text x="126" y="156" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="10" letter-spacing="0.14em" fill="#2B331F">NEXT</text>
+
+  <!-- center -->
+  <text x="220" y="148" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="9.5" letter-spacing="0.14em" fill="#59614A">EVERY</text>
+  <text x="220" y="163" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, Menlo, monospace" font-size="9.5" letter-spacing="0.14em" fill="#59614A">QUARTER</text>
+</svg>

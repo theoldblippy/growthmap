@@ -1,5 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import FigMap from '../components/figures/FigMap.astro';
+import FigScorecard from '../components/figures/FigScorecard.astro';
+import FigBottleneck from '../components/figures/FigBottleneck.astro';
+import FigLoop from '../components/figures/FigLoop.astro';
 
 const bookUrl = 'https://calendar.notion.so/meet/cameronearloliver/qc3y04oud';
 
@@ -10,13 +14,6 @@ const record = [
   { before: '50%', after: '65%', label: 'Provider utilization, on smarter scheduling' },
 ];
 
-const scorecard = [
-  { name: 'Revenue vs. plan', weeks: ['r','y','y','g','g','g'], now: '103%' },
-  { name: 'Cash collected', weeks: ['y','y','g','g','y','y'], now: '88%' },
-  { name: 'Gross margin', weeks: ['y','g','g','g','g','g'], now: '42%' },
-  { name: 'Closed-won rate', weeks: ['r','r','y','y','g','g'], now: '31%' },
-];
-const cell = { g: '#5C7A3B', y: '#C08A2D', r: '#B0402F' };
 
 const steps = [
   { n: '01', title: 'I map how you make money', body: "Every way you get a customer, and everything you do to keep them. Just this alone opens your eyes to the opportunities you're wasting." },
@@ -114,34 +111,26 @@ const steps = [
       <p class="doc-label text-ink">Where I start</p>
       <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">It all starts with the map.</h2>
       <p class="mt-3 max-w-[54ch] text-lg leading-relaxed text-fern">Understanding how your business actually makes money.</p>
-      <div class="mt-10 grid gap-10 md:grid-cols-[1fr_0.9fr] md:items-start md:gap-14">
-        <div class="space-y-7">
-          {steps.map((s) => (
-            <div class="flex gap-5">
-              <p class="font-mono text-xl font-medium text-moss">{s.n}</p>
-              <div>
-                <h3 class="font-display text-[22px] leading-tight text-ink">{s.title}</h3>
-                <p class="mt-1.5 text-[15px] leading-relaxed text-fern">{s.body}</p>
+      <div class="mt-10 space-y-10">
+        {steps.map((st, i) => {
+          const Fig = [FigMap, FigScorecard, FigBottleneck, FigLoop][i];
+          return (
+            <div class:list={["grid items-center gap-6 md:gap-12 md:grid-cols-2", i % 2 === 1 && "md:[&>*:first-child]:order-2"]}>
+              <div class="flex gap-5">
+                <p class="font-mono text-xl font-medium text-moss">{st.n}</p>
+                <div>
+                  <h3 class="font-display text-[22px] leading-tight text-ink">{st.title}</h3>
+                  <p class="mt-1.5 text-[15px] leading-relaxed text-fern">{st.body}</p>
+                </div>
+              </div>
+              <div class="rounded-[14px] border border-hairline bg-white/60 p-4">
+                <Fig />
               </div>
             </div>
-          ))}
-        </div>
-        <div class="rounded-[14px] border border-hairline bg-white/70 p-6">
-          <p class="mb-4 font-mono text-[10.5px] font-medium uppercase tracking-[0.14em] text-fern">What good looks like</p>
-          {scorecard.map((m) => (
-            <div class="flex items-center justify-between gap-3 border-t border-dashed border-hairline py-2.5 first:border-t-0">
-              <span class="text-[13.5px] font-medium text-ink">{m.name}</span>
-              <span class="flex items-center gap-1.5">
-                {m.weeks.map((w) => (<span class="h-3.5 w-3.5 rounded-[3px]" style={`background:${cell[w]}`}></span>))}
-                <span class="ml-2 w-10 text-right font-mono text-[13px] text-ink">{m.now}</span>
-              </span>
-            </div>
-          ))}
-          <p class="mt-4 font-mono text-[10px] uppercase tracking-[0.14em] text-fern">Sample &middot; a scorecard your team runs weekly</p>
-        </div>
+          );
+        })}
       </div>
-    </div>
-  </section>
+    </section>
 
   <!-- 5 · PROOF -->
   <section class="border-b border-hairline px-6 py-16 md:py-20">

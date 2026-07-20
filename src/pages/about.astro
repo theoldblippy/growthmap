@@ -1,24 +1,30 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const bookUrl = 'https://calendar.notion.so/meet/cameronearloliver/qc3y04oud';
+
+const record = [
+  { before: '$12M', after: '$20M', label: 'Construction revenue, on a rebuilt sales process' },
+  { before: '120', after: '45 days', label: 'Onboarding time, unlocking $250K in new revenue' },
+  { before: '40%', after: '85%', label: 'Utilization on underused contracts' },
+  { before: '50%', after: '65%', label: 'Provider utilization, on smarter scheduling' },
+];
 ---
 
 <Layout
-  title="About Cameron Oliver | Fractional COO & Growth Consultant"
-  description="Cameron Oliver is a fractional COO and business operations consultant who helps founders build systems that make growth predictable without burning out."
+  title="About Cameron Oliver | Growth Map"
+  description="Cameron Oliver is an operator, not a theorist. A decade inside fast-growing companies, from employee #3 to 100+, usually the person leaders called when things broke."
   canonicalPath="/about"
 >
   <!-- HERO / INTRO -->
   <section class="border-b border-hairline px-6 py-16 md:py-24">
     <div class="mx-auto flex max-w-[1200px] flex-col items-center gap-12 md:flex-row md:gap-16">
       <div class="flex-1">
-        <p class="mb-5 font-mono text-[11.5px] font-medium uppercase tracking-[0.18em] text-moss">
-          The Operator
-        </p>
         <h1 class="font-display text-4xl leading-[1.1] text-ink sm:text-5xl md:text-[48px]">
           I'm an operator, <em>not a theorist.</em>
         </h1>
         <p class="mt-6 max-w-[54ch] text-lg leading-relaxed text-fern">
-          I've spent a decade inside fast-growing startups, from employee #3 to 100+, usually as the person leaders call when things start breaking.
+          A decade inside fast-growing companies, from employee #3 to 100+, usually the person leaders called when things started breaking.
         </p>
       </div>
       <div class="flex-shrink-0">
@@ -35,10 +41,13 @@ import Layout from '../layouts/Layout.astro';
   <!-- STORY -->
   <section class="border-b border-hairline bg-parchment-deep px-6 py-16 md:py-20">
     <div class="mx-auto max-w-[800px]">
-      <p class="doc-label text-ink"><b>1.0</b>The Pattern</p>
+      <p class="doc-label text-ink">How I got here</p>
       <div class="mt-8 space-y-6 text-lg leading-relaxed text-ink">
         <p>
-          A decade in the trenches, and the same pattern kept showing up:
+          I started in project management and grew into operations. Along the way I learned to build what's called an operating model. It's basically a project plan, but for a business: how you get customers, what it takes to serve them, and the rhythm that keeps it all running.
+        </p>
+        <p>
+          I love operations and making the thing work, mainly because I hate waste. And after a decade of it, the same pattern kept showing up everywhere I looked:
         </p>
 
         <div>
@@ -46,7 +55,7 @@ import Layout from '../layouts/Layout.astro';
             'Founders making every decision themselves because nobody else had the context.',
             'Teams working hard but not on the same thing.',
             'Revenue unpredictable because nobody understood how the business actually created value.',
-            'Bad hires, unclear priorities, and founders carrying the anxiety of the entire company on their shoulders.',
+            'Owners carrying the anxiety of the entire company on their shoulders.',
           ].map((item) => (
             <div class="flex items-baseline gap-3.5 border-b border-dashed border-hairline py-3 text-[16px] font-medium text-ink">
               <span class="cbx">X</span>
@@ -56,39 +65,41 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <p>
-          Every one of those companies thought it had a revenue problem. Every one of them actually had an operating problem wearing a revenue costume. Growth Map exists to make that diagnosis, and then fix it.
+          Every one of those companies thought it had a revenue problem. Almost every one had an operating problem wearing a revenue costume. Growth Map exists to find that problem, and then fix it with you.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- WHY ME -->
-  <section class="px-6 py-16 md:py-20">
-    <div class="mx-auto max-w-[800px]">
-      <p class="doc-label text-ink"><b>2.0</b>Objections, Handled</p>
-      <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
-        Why work with me instead of&hellip;
-      </h2>
-      <div class="mt-9 space-y-6">
-        <div class="rounded-[14px] border border-hairline bg-white/50 p-7">
-          <h3 class="font-display text-xl text-ink">"&hellip;hiring a full-time COO?"</h3>
-          <p class="mt-2.5 leading-relaxed text-fern">
-            A good full-time COO costs $200K–$400K+ and takes months to ramp up. Most owner-led companies between $1M and $50M don't need a full-time executive. They need someone who's done this before, can build the system fast, and transfer ownership to their existing team.
-          </p>
-        </div>
-        <div class="rounded-[14px] border border-hairline bg-white/50 p-7">
-          <h3 class="font-display text-xl text-ink">"&hellip;reading a business book or taking a course?"</h3>
-          <p class="mt-2.5 leading-relaxed text-fern">
-            Books give you frameworks. I give you implementation. The gap between knowing what to do and actually doing it inside a messy, real business is where I live. I've built operating systems inside fast-growing companies, not in a classroom.
-          </p>
-        </div>
-        <div class="rounded-[14px] border border-hairline bg-white/50 p-7">
-          <h3 class="font-display text-xl text-ink">"&hellip;using a big consulting firm?"</h3>
-          <p class="mt-2.5 leading-relaxed text-fern">
-            Big firms send you junior analysts who produce slide decks. I do the work myself, in the trenches with your team. You get a senior operator, not a presentation.
-          </p>
-        </div>
+  <!-- TRACK RECORD -->
+  <section class="border-b border-hairline bg-ink px-6 py-10">
+    <div class="mx-auto max-w-[1200px]">
+      <p class="mb-6 font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-cream/55">What I've done</p>
+      <div class="grid grid-cols-2 gap-x-8 gap-y-8 md:grid-cols-4">
+        {record.map((r) => (
+          <div>
+            <p class="font-display text-xl leading-none text-cream md:text-[26px]">
+              {r.before} <span class="text-moss">&rarr;</span> {r.after}
+            </p>
+            <p class="mt-2 max-w-[26ch] text-[12.5px] leading-snug text-cream/70">{r.label}</p>
+          </div>
+        ))}
       </div>
+    </div>
+  </section>
+
+  <!-- CLOSE -->
+  <section class="px-6 py-16 md:py-20">
+    <div class="mx-auto max-w-[640px] text-center">
+      <h2 class="font-display text-3xl leading-tight text-ink md:text-[36px]">
+        Let's talk.
+      </h2>
+      <p class="mx-auto mt-4 max-w-[46ch] text-lg leading-relaxed text-fern">
+        The first call's free. I'll learn what's going on and give you my honest read on where to focus next, whether or not I'm the one who helps.
+      </p>
+      <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="mt-7 inline-block rounded-full border border-ink bg-ink px-8 py-4 text-[15px] font-semibold text-parchment transition-opacity hover:opacity-90">
+        Book a call
+      </a>
     </div>
   </section>
 </Layout>

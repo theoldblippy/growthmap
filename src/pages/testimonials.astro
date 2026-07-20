@@ -3,85 +3,119 @@ import Layout from '../layouts/Layout.astro';
 
 const bookUrl = 'https://calendar.notion.so/meet/cameronearloliver/qc3y04oud';
 
-const shorts = [
+const cases = [
   {
-    quote: "Straight shooter. Told me the problem was me, not my crews, and he was right. Best money I've spent on the business side of this company.",
-    name: 'Tony', title: 'Owner', type: 'Construction company',
+    tag: 'Construction',
+    hook: 'Booked solid, and stuck.',
+    story: "A general contractor with all the work he could handle and margins that wouldn't budge. Everybody wanted to talk about getting more sales. The problem was the sales process itself, how work got quoted and closed. We rebuilt it with his team.",
+    before: '$12M', after: '$20M', label: 'revenue, same crews, same market',
+    found: 'The one thing: the sales process',
   },
   {
-    quote: "I'd hired consultants before and gotten a 60-page deck I never opened. Cameron gave me three changes I could make that week. All three worked.",
-    name: 'Priya', title: 'CEO', type: 'Telehealth company',
+    tag: 'Software',
+    hook: 'Onboarding was eating the pipeline.',
+    story: "New clients took four months to go live, and deals stalled waiting on it. We mapped the whole implementation and cut everything that didn't actually move a client forward.",
+    before: '120', after: '45 days', label: 'to go live, unlocking $250K in new revenue',
+    found: 'The one thing: implementation',
   },
   {
-    quote: "Cameron didn't try to reinvent how we practice law. He fixed the twelve things around it that were quietly costing us billable hours.",
-    name: 'Jordan', title: 'Owner', type: 'Law firm',
+    tag: 'Services',
+    hook: 'They kept winning work they never fully delivered.',
+    story: "They'd won the contracts, then served maybe half of what was in them. Nobody had ever counted how much was going unused. We counted, then built the delivery plan around it.",
+    before: '40%', after: '85%', label: 'contract utilization',
+    found: 'The one thing: work nobody was tracking',
+  },
+  {
+    tag: 'Healthcare',
+    hook: 'A full waitlist and idle providers.',
+    story: "Providers were booked heavy in the wrong places and idle everywhere else, while patients sat on a waitlist. We rebuilt the schedule. Same team.",
+    before: '50%', after: '65%', label: 'provider utilization',
+    found: 'The one thing: the schedule',
   },
 ];
 
-const narratives = [
+const quotes = [
   {
-    quote: "We brought Cameron in for what we thought was a reporting cleanup. Two weeks in, he'd found the real issue: we were making acquisition decisions on numbers that were 45 days stale. He rebuilt the operating cadence from the ground up. Six months later our diligence process is faster, our board meetings are shorter, and I finally trust the dashboard I'm looking at. I've already introduced him to two other firms in our network.",
-    name: 'Alicia', title: 'CEO', type: 'Private equity firm',
+    quote: "Straight shooter. Told me the problem was me, not my crews, and he was right. Best money I've spent on the business side of this company.",
+    who: 'Tony · Owner · Construction company',
   },
   {
-    quote: "I was skeptical. We're a clinical business and most operators talk about us like we're a call center. Cameron was different. He sat in on visits, learned the workflow, and then quietly took apart the parts that were slowing our clinicians down. We didn't add a single person and we're seeing meaningfully more patients. My physicians actually like their jobs again, which I did not expect to be an outcome.",
-    name: 'Sofia', title: 'CEO', type: 'Teledermatology group',
+    quote: "I'd hired consultants before and gotten a 60-page deck I never opened. Cameron gave me three changes I could make that week. All three worked.",
+    who: 'Priya · CEO · Telehealth company',
+  },
+  {
+    quote: "Cameron didn't try to reinvent how we practice law. He fixed the twelve things around it that were quietly costing us billable hours.",
+    who: 'Jordan · Owner · Law firm',
+  },
+  {
+    quote: "We brought Cameron in for what we thought was a reporting cleanup. Two weeks in, he'd found the real issue: we were making acquisition decisions on numbers that were 45 days stale. He rebuilt the operating cadence from the ground up. Six months later our diligence process is faster, our board meetings are shorter, and I finally trust the dashboard I'm looking at.",
+    who: 'Alicia · CEO · Private equity firm',
+  },
+  {
+    quote: "I was skeptical. We're a clinical business and most operators talk about us like we're a call center. Cameron was different. He sat in on visits, learned the workflow, and then quietly took apart the parts that were slowing our clinicians down. We didn't add a single person and we're seeing meaningfully more patients.",
+    who: 'Sofia · CEO · Teledermatology group',
   },
 ];
 ---
 
 <Layout
   title="Results | Growth Map"
-  description="What owners and operators say about working with Cameron Oliver: construction, telehealth, private equity, and more."
+  description="What owners say about working with Cameron Oliver, and what changed in their businesses. Real engagements with real numbers, from construction to healthcare."
   canonicalPath="/testimonials"
 >
-  <section class="border-b border-hairline px-6 py-16 md:py-20">
-    <div class="mx-auto max-w-[1100px]">
+  <!-- HEADER -->
+  <section class="border-b border-hairline px-6 pt-16 pb-10 md:pt-20">
+    <div class="mx-auto max-w-[1000px]">
       <p class="doc-label text-ink">Results</p>
       <h1 class="font-display mt-7 text-4xl leading-tight text-ink md:text-5xl">
-        In their words.
+        What changed in their businesses.
       </h1>
-      <p class="mt-5 max-w-[60ch] text-lg leading-relaxed text-fern">
-        A few of the owners and operators I've worked with, across very different businesses.
-      </p>
+    </div>
+  </section>
 
-      <div class="mt-10 grid gap-6 md:grid-cols-2">
-        <div class="rounded-[14px] border border-hairline bg-white/50 p-8">
-          <p class="font-display text-xl leading-snug text-ink">"If you doubled your sales tomorrow, would you be happy, or freak out?"</p>
-          <p class="mt-3 leading-relaxed text-fern">He was chasing more sales, but when I asked him that, he got sick to his stomach. He had a throughput problem, not a sales problem. We fixed how the work got delivered, and the growth followed.</p>
-        </div>
-        <div class="rounded-[14px] border border-hairline bg-white/50 p-8">
-          <p class="font-display text-xl leading-snug text-ink">She didn't know where her revenue was even coming from.</p>
-          <p class="mt-3 leading-relaxed text-fern">Focused on all the wrong customers, and couldn't say where to find the right ones. We rebuilt the sales process and doubled her growth rate, with no added spend.</p>
-        </div>
-      </div>
-
-      <div class="mt-6 grid gap-6 md:grid-cols-3">
-        {shorts.map((t) => (
-          <div class="rounded-[14px] border border-hairline bg-white/50 p-7">
-            <p class="text-moss">★★★★★</p>
-            <blockquote class="font-display mt-2 text-[17px] italic leading-normal text-ink">"{t.quote}"</blockquote>
-            <cite class="mt-4 block font-mono text-[11px] not-italic leading-relaxed tracking-wide text-fern">
-              {t.name} · {t.title}<br />{t.type}
-            </cite>
+  <!-- CASES -->
+  <section class="border-b border-hairline px-6 py-14 md:py-16">
+    <div class="mx-auto max-w-[1000px]">
+      
+      {cases.map((c, i) => (
+        <div class:list={["grid gap-6 border-b border-dashed border-hairline py-12 last:border-b-0 md:grid-cols-[1fr_auto] md:items-center md:gap-14", i % 2 === 1 && "md:[&>*:first-child]:order-2"]}>
+          <div>
+            <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-moss"><span class="mr-3 text-fern/60">0{i + 1}</span>{c.tag}</p>
+            <h2 class="font-display mt-3 text-2xl leading-snug text-ink md:text-[28px]">{c.hook}</h2>
+            <p class="mt-3 max-w-[58ch] leading-relaxed text-fern">{c.story}</p>
+            <p class="mt-4 font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-moss">{c.found}</p>
           </div>
-        ))}
+          <div class:list={[i % 2 === 1 ? "md:text-left" : "md:text-right"]}>
+            <p class="font-display text-4xl leading-none text-ink md:text-[52px]">
+              {c.before} <span class="text-moss">&rarr;</span> {c.after}
+            </p>
+            <p class:list={["mt-2.5 max-w-[24ch] text-[13px] leading-snug text-fern", i % 2 === 0 && "md:ml-auto"]}>{c.label}</p>
+          </div>
+        </div>
+      ))}
+      <div class="pb-10 pt-2 text-center">
+        <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="inline-block rounded-full border border-ink bg-ink px-8 py-4 text-[15px] font-semibold text-parchment transition-opacity hover:opacity-90">Book a call</a>
+        <p class="mt-3 text-sm text-fern">A free 30-minute call.</p>
       </div>
+    </div>
+  </section>
 
-      <div class="mt-6 grid gap-6 md:grid-cols-2">
-        {narratives.map((t) => (
-          <div class="rounded-[14px] border border-hairline bg-white/50 p-8">
-            <p class="text-moss">★★★★★</p>
-            <blockquote class="font-display mt-2 text-[18px] italic leading-relaxed text-ink">"{t.quote}"</blockquote>
-            <cite class="mt-4 block font-mono text-[11px] not-italic leading-relaxed tracking-wide text-fern">
-              {t.name} · {t.title}<br />{t.type}
-            </cite>
+  <!-- QUOTES -->
+  <section class="border-b border-hairline bg-ink px-6 py-16 md:py-20">
+    <div class="mx-auto max-w-[1000px]">
+      <p class="font-mono text-[12.5px] font-medium uppercase tracking-[0.18em] text-moss">What owners say about working with me</p>
+      <div class="mt-12 space-y-12">
+        {quotes.map((q) => (
+          <div class="border-l-2 border-moss pl-6 md:pl-9">
+            <blockquote class="font-display max-w-[62ch] text-[19px] italic leading-relaxed text-cream md:text-[21px]">"{q.quote}"</blockquote>
+            <p class="mt-3 font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-cream/60">{q.who}</p>
           </div>
         ))}
       </div>
     </div>
   </section>
 
+  <!-- CLOSE -->
   <section class="px-6 py-16 md:py-20">
     <div class="mx-auto max-w-[640px] text-center">
       <h2 class="font-display text-3xl leading-tight text-ink md:text-[36px]">

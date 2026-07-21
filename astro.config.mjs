@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://growthmap.consulting',
+  site: 'https://www.growthmap.consulting',
   integrations: [sitemap()],
   server: {
     port: parseInt(process.env.PORT || '4321'),

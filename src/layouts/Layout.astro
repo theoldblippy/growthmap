@@ -10,7 +10,7 @@ interface Props {
 }
 
 const { title, description, canonicalPath = '' } = Astro.props;
-const canonicalURL = `https://growthmap.consulting${canonicalPath}`;
+const canonicalURL = `https://www.growthmap.consulting${canonicalPath}`;
 ---
 
 <!doctype html>
@@ -35,7 +35,7 @@ const canonicalURL = `https://growthmap.consulting${canonicalPath}`;
     <!-- Open Graph / LinkedIn -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="https://growthmap.consulting/images/og-image.png" />
+    <meta property="og:image" content="https://www.growthmap.consulting/images/og-image.png" />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -51,14 +51,14 @@ const canonicalURL = `https://growthmap.consulting${canonicalPath}`;
       "@type": "ProfessionalService",
       "name": "Growth Map",
       "description": "Fractional COO for founders and owner-operators at $1M–$20M. Growth Map gets in the trenches with owner-led businesses, finds what's actually holding growth back, and fixes it: one map, one scorecard, a weekly rhythm.",
-      "url": "https://growthmap.consulting",
-      "logo": "https://growthmap.consulting/images/logo.png",
-      "image": "https://growthmap.consulting/images/og-image.png",
+      "url": "https://www.growthmap.consulting",
+      "logo": "https://www.growthmap.consulting/images/logo.png",
+      "image": "https://www.growthmap.consulting/images/og-image.png",
       "founder": {
         "@type": "Person",
         "name": "Cameron Oliver",
         "jobTitle": "Fractional COO",
-        "url": "https://growthmap.consulting/about",
+        "url": "https://www.growthmap.consulting/about",
         "sameAs": ["https://www.linkedin.com/in/cameronearloliver/"]
       },
       "serviceType": ["Fractional COO", "Business Operations Consulting", "Growth Strategy", "Business Diagnostics"],

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://growthmap.consulting/sitemap-index.xml
+Sitemap: https://www.growthmap.consulting/sitemap-index.xml

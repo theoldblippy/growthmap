@@ -12,11 +12,11 @@ The answer depends on your stage, your budget, and what you actually need right 
 
 ## The Cost Difference
 
-A full-time COO at a company doing $2M-$10M in revenue typically costs $180K-$300K in salary, plus benefits, equity, and the time it takes to recruit. That's a major commitment.
+A full-time COO at a company doing $2M-$20M in revenue typically costs $180K-$300K in salary, plus benefits, equity, and the time it takes to recruit. That's a major commitment.
 
 A fractional COO typically costs $3K-$10K per month depending on scope and hours. You get senior-level operational leadership at roughly 10-20% of the full-time cost.
 
-For most businesses under $10M, the math isn't even close.
+For most businesses under $20M, the math isn't even close.
 
 ## When a Fractional COO Makes Sense
 
@@ -32,7 +32,7 @@ For most businesses under $10M, the math isn't even close.
 
 **Your operations require daily hands-on management.** If you're running a manufacturing operation, a logistics company, or any business where operations are the product, you likely need someone full-time.
 
-**You're past $10M and growing fast.** At this stage, the complexity of operations typically requires dedicated full-time leadership. The systems are built, and now they need constant refinement and management.
+**You're past $20M with a full executive team.** At that scale, operations usually deserve someone in the seat every day. The systems are built, and now they need constant refinement and management.
 
 **You need someone to run the company day-to-day.** If the founder wants to step back from operations entirely and focus on vision, fundraising, or a new venture, a full-time COO is the right call.
 

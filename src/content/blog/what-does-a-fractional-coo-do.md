@@ -26,9 +26,9 @@ The day-to-day looks different for every business, but the core responsibilities
 
 **Fix what's broken in operations.** Hiring bottlenecks, unclear roles, processes that exist in someone's head but nowhere else. A fractional COO identifies these problems and builds solutions that stick.
 
-**Coach the team.** Not in a hand-holding way. In a "here's what good looks like, here's how we measure it, here's how we improve" way. The goal is to make the team more capable, not more dependent.
+**Coach the team.** The style is "here's what good looks like, here's how we measure it, here's how we improve." The goal is to make the team more capable, and hand-holding does the opposite.
 
-**Free up the founder.** The biggest unlock for most businesses is getting the founder out of the day-to-day. A fractional COO takes on operational leadership so the founder can focus on growth, relationships, and the work only they can do.
+**Free up the founder.** The biggest win for most businesses is getting the founder out of the day-to-day. A fractional COO takes on operational leadership so the founder can focus on growth, relationships, and the work only they can do.
 
 ## Who Needs a Fractional COO?
 
@@ -52,12 +52,12 @@ The difference matters. Advice without execution doesn't change anything.
 
 ## What to Look For
 
-The best fractional COOs have actually run operations before. They've managed teams, built processes, and made hard decisions with real consequences. Look for someone who has operated, not just consulted.
+The best fractional COOs have actually run operations before. They've managed teams, built processes, and made hard decisions with real consequences. Look for someone who has actually operated. Consulting alone doesn't build that muscle.
 
 Ask them: "What does week one look like?" If they can't give you a clear answer, keep looking.
 
 ## The Bottom Line
 
-A fractional COO gives growing businesses the operational leadership they need without the overhead they can't afford. If your business is doing $1M-$10M and you're stuck in the weeds of day-to-day operations, it might be the highest-leverage hire you can make.
+A fractional COO gives growing businesses the operational leadership they need without the overhead they can't afford. If your business is doing $1M to $20M and you're stuck in the weeds of day-to-day operations, it might be the best hire you can make.
 
-If you're curious whether this model fits your business, [book a call](/contact) and we'll figure it out.
+If you're curious whether this model fits your business, [book a call](/contact). The first call's free. I'll give you my honest read on where to focus next.

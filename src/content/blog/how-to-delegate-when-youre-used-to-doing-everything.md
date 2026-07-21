@@ -1,6 +1,6 @@
 ---
 title: "How to Delegate When You're Used to Doing Everything"
-description: "Delegation isn't just handing off tasks. Here's how to actually let go and build a team that owns outcomes without you hovering."
+description: "Delegation is a learnable skill. Here's how to actually let go and build a team that owns outcomes without you hovering."
 date: 2026-03-25
 draft: false
 guide: true
@@ -20,7 +20,7 @@ Let's be honest about the real reasons founders struggle with delegation:
 
 **It takes longer to teach than to just do it yourself.** True in the short term. A disaster in the long term. Every task you refuse to teach is a task you've committed to doing forever.
 
-**You've been burned before.** You handed something off, it wasn't done right, and you had to redo it. So you stopped delegating. That's understandable. But the problem probably wasn't the person. It was how you delegated.
+**You've been burned before.** You handed something off, it wasn't done right, and you had to redo it. So you stopped delegating. That's understandable. But the real problem was probably how you delegated, and that part is fixable.
 
 **You feel guilty.** Some founders feel like they should be doing the hard work. That stepping back means being lazy. It doesn't. It means being strategic about where you add the most value.
 
@@ -28,7 +28,7 @@ Let's be honest about the real reasons founders struggle with delegation:
 
 This is where most founders go wrong. They delegate tasks. "Send this email." "Update this spreadsheet." "Call this client." That keeps the team dependent on you for the next instruction. You're still the brain. They're just the hands.
 
-Real delegation means transferring ownership of an outcome. Not "send the proposal by Friday" but "you own the client relationship from proposal through close. Here's how we measure success. Come to me if you hit a wall, but the decisions in between are yours."
+Real delegation means transferring ownership of an outcome. "Send the proposal by Friday" is a task. Ownership sounds like this: "You own the client relationship from proposal through close. Here's how we measure success. Come to me if you hit a wall, but the decisions in between are yours."
 
 That's a completely different thing. And it requires you to let go of how the work gets done and focus only on whether the outcome was achieved.
 
@@ -52,7 +52,7 @@ Put everything into three buckets:
 
 Don't start by delegating the thing you care most about. Start with the stuff in bucket three. Get those off your plate first. Build your delegation muscle with lower-stakes tasks before you tackle the big ones.
 
-### Step 4: Delegate the outcome, not the steps
+### Step 4: Delegate the outcome
 
 When you hand something off, be clear about three things:
 
@@ -78,7 +78,7 @@ Most of the time, it's the second one. Good people underperform in bad systems. 
 
 Once you start delegating properly, a few things happen:
 
-Your calendar opens up. Not because you're doing less. Because you're doing different, higher-leverage work.
+Your calendar opens up, and you fill it with different, higher-value work.
 
 Your team gets better. People rise to the level of responsibility you give them. When you treat them like task-completers, they act like task-completers. When you treat them like owners, they start thinking like owners.
 
@@ -88,4 +88,4 @@ Your business grows. Because it's no longer limited by how many hours you person
 
 That's the whole point.
 
-If you're not sure where to start, [book a call](/contact) — I'll show you where the business is most dependent on you.
+If you're not sure where to start, [book a call](/contact). I'll show you where the business is most dependent on you.

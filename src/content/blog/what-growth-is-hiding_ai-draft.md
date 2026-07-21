@@ -1,6 +1,6 @@
 ---
 title: "What Growth Is Hiding From You"
-description: "When the numbers are climbing, every operating sin gets covered up. The best time to audit your business is when it's working, not when it's on fire."
+description: "When the numbers are climbing, every operating sin gets covered up. The best time to audit your business is while it's still working."
 date: 2026-06-15
 draft: true
 ---

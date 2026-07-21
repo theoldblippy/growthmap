@@ -17,7 +17,7 @@ Here's the pattern I keep seeing, in my own company and in the businesses I work
 
 The math is brutal and it doesn't care about your intentions. Put eleven things on the board this quarter and you're going to knock out two or three. That's it. The other eight don't get done well, they get done halfway, which is often worse than not starting them, because now you've spent money and attention and you have nothing that moves the top-line number to show for it.
 
-So the discipline isn't "work harder on all eleven." It's picking the two or three that actually move the car, and being honest that the rest are trim.
+So the discipline is picking the two or three that actually move the car, and being honest that the rest are trim.
 
 ## Finding the parts that move the car
 
@@ -25,7 +25,7 @@ The useful question is embarrassingly simple. Look at everything you're working 
 
 Most of the list won't survive that question. The report nobody reads. The feature three customers asked for. The process improvement that saves an hour a week for a team of four. All fine things. None of them move the car. When you cross off everything that fails the test, what's left standing is your constraint, the one part of the machine that, if it got better, would drag everything else forward with it.
 
-For a lot of companies that constraint lives in a place they don't want to look. In sales, for example, the reflex is always to ask for more at the top of the funnel. More leads, a better deck, a bigger list. But if you pull your lost deals and count how many you actually lost to a competitor, the number is usually tiny. The rest died on their own. The deal stalled, the buyer went quiet, and everyone looked up-funnel for a fix. Pouring more leads into that machine just buys you more expensive ways to lose in the same spot. The leads were never the constraint. The messy middle was.
+For a lot of companies that constraint lives in a place they don't want to look. In sales, for example, the reflex is always to ask for more at the top of the funnel. More leads, a better deck, a bigger list. But if you pull your lost deals and count how many you actually lost to a competitor, the number is usually tiny. The rest died on their own. The deal stalled, the buyer went quiet, and everyone looked up-funnel for a fix. Pouring more leads into that machine just buys you more expensive ways to lose in the same spot. The constraint was the messy middle the whole time.
 
 You can't save your way to success by trimming the small stuff, either. Cutting the cup holders feels productive and changes nothing. The work is finding the four thousand parts that move the car and pouring everything into those.
 
@@ -39,7 +39,7 @@ At some point the honest thing to say is that you're going to look back in two m
 
 ## What this looks like as a system
 
-Predictable growth isn't a personality trait or a burst of hustle. It's a system, and the system is mostly about restraint:
+Predictable growth is a system, and the system is mostly about restraint:
 
 Name the one number that matters this quarter. Cross off anything that wouldn't move it if you doubled it. Protect what's left like it's the only thing on the calendar, because functionally it is. And when a decision is made, write it down, who was in the room, what was decided, what it means in practice, so it stops getting relitigated every Monday.
 

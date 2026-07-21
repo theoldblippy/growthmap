@@ -32,23 +32,23 @@ The most common mistake is hiring an operations person before you know what you 
 
 ### Bias toward action
 
-Operations people need to get things done, not just plan things. Look for someone who has a track record of implementing, not just analyzing. Ask them to describe a process they built or improved. If they can't give you specifics, keep looking.
+Operations people need to get things done. Look for someone with a track record of implementing. Ask them to describe a process they built or improved. If they can't give you specifics, keep looking.
 
 ### Systems thinking
 
-The best operations people don't just fix problems. They build systems that prevent problems. When you describe a challenge, listen for whether they think in terms of one-time fixes or repeatable solutions.
+The best operations people build systems that prevent problems instead of fixing the same problem over and over. When you describe a challenge, listen for whether they think in terms of one-time fixes or repeatable solutions.
 
 ### Comfortable with ambiguity
 
-If your business is under $10M, the operations role is going to be messy. There won't be clean processes or a well-defined scope. The person needs to be comfortable figuring things out as they go, not waiting for someone to hand them a playbook.
+If your business is under $10M, the operations role is going to be messy. There won't be clean processes or a well-defined scope. The person needs to be comfortable figuring things out as they go. Nobody is going to hand them a playbook.
 
 ### Strong communication
 
 Operations is a cross-functional role. This person will work with sales, finance, customer success, and you. They need to communicate clearly, push back when needed, and build trust across the team.
 
-### Not just an admin
+### More than an admin
 
-This is the biggest hiring mistake I see. The business needs operational leadership, and they hire an executive assistant or office manager. Those roles are valuable, but they're not the same thing. An operations person should be thinking about how the business runs, not just keeping your calendar organized.
+This is the biggest hiring mistake I see. The business needs operational leadership, and they hire an executive assistant or office manager. Those roles are valuable, but they're a different job. An operations person thinks about how the business runs.
 
 ## The Role Should Start Narrow
 
@@ -84,7 +84,7 @@ Before they start:
 - **Write down their top 3 priorities for the first 90 days.** Be specific.
 - **Define their authority.** What can they decide on their own? What needs your input?
 - **Give them access.** Financials, client data, team context. They can't run operations if they can't see the business.
-- **Set a weekly check-in.** Not to micromanage. To align, remove blockers, and provide context they don't have yet.
+- **Set a weekly check-in.** The point is to align, remove blockers, and provide context they don't have yet.
 
 After 90 days, you should both know whether this is working. If it is, expand their scope. If it isn't, figure out why before making changes.
 

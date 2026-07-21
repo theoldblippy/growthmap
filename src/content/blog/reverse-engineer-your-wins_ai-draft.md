@@ -25,7 +25,7 @@ Here's the thing nobody tells you about post-mortems. Losses are high-variance. 
 
 Wins are the opposite. A repeatable win, by definition, repeats. If you can find the three or four conditions that show up every time you close, you've found the thing you can actually manufacture. You can build a motion around it. You can staff to it. You can tell a rep exactly what a good deal looks like before they waste a month on a bad one.
 
-Studying losses tells you what to avoid. Studying wins tells you what to build. Only one of those two things compounds.
+Studying losses tells you what to avoid. Studying wins tells you what to build, and building is the part that compounds.
 
 ## What a win actually looks like
 
@@ -35,7 +35,7 @@ Take your last ten or twenty clean wins. Not the flukes, not the ones that close
 
 You are looking for the conditions that keep showing up. When you find them, write the sentence out loud: "When these things are true, we win almost every time. When one of them is missing, we usually don't."
 
-Now you have something you can hand to another human being. That last part matters more than it sounds. A win that lives in your best rep's gut belongs to the rep, not the company. When that person leaves, the win leaves with them. A win you've written down in enough detail that a new hire could recognize it is an asset the business owns.
+Now you have something you can hand to another human being. That last part matters more than it sounds. A win that lives in your best rep's gut belongs to the rep. When that person leaves, the win leaves with them. A win you've written down in enough detail that a new hire could recognize it is an asset the business owns.
 
 This is the whole game, honestly. The difference between a company that grows on purpose and one that grows by luck is whether it can describe its own wins well enough to repeat them.
 
@@ -49,4 +49,4 @@ Most teams never build it because building it requires admitting you don't alrea
 
 Take your wins apart instead. Find the pattern. Write it down so plainly that a stranger could spot it. Then go build more of it, on purpose, and watch the one number that tells you it's working.
 
-The teams that do this stop hoping for good quarters. They start manufacturing them.
+The teams that do this stop hoping for good quarters and start manufacturing them.

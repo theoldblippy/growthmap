@@ -6,9 +6,9 @@ draft: false
 guide: true
 ---
 
-There's a version of scaling that nobody talks about. Revenue goes up. Headcount goes up. Hours go up. Stress goes up. And at some point, the founder hits a wall. Not because the business failed. Because the business succeeded in a way that became unsustainable.
+There's a version of scaling that nobody talks about. Revenue goes up. Headcount goes up. Hours go up. Stress goes up. And at some point, the founder hits a wall. The business didn't fail. It succeeded in a way that became unsustainable.
 
-If you're growing but feel worse every quarter, that's not a motivation problem. It's a structural one.
+If you're growing but feel worse every quarter, that's a structural problem, and no amount of motivation fixes it.
 
 ## The Grind Trap
 
@@ -36,7 +36,7 @@ This alone eliminates 60-70% of the ad-hoc interruptions that eat your day. When
 
 Make a list of everything you do in a week. Then circle the things that genuinely require the founder. Strategy. Key relationships. Major financial decisions. Culture.
 
-Everything else? Someone else should own it. Not as a task you delegated, but as a domain they're responsible for. There's a big difference between "send the proposal" and "you own client delivery from close through renewal."
+Everything else? Someone else should own it. A whole domain they're responsible for. There's a big difference between "send the proposal" and "you own client delivery from close through renewal."
 
 ### Create decision-making guardrails
 
@@ -54,12 +54,12 @@ If you're in meetings all day, you're not leading. Block time for strategic work
 
 ## The Mindset Shift
 
-Scaling without burning out requires accepting something uncomfortable: your job has to change. The work that got you to $1M is not the work that gets you to $5M. And the work that gets you to $5M is not the work that gets you to $20M.
+Scaling without burning out requires accepting something uncomfortable: your job has to change. The work that got you to $1M won't get you to $5M. And the $5M playbook won't get you to $20M.
 
-At every stage, the founder's role needs to evolve from doing to building. From executing to designing the system that executes. That's not lazy. That's leadership.
+At every stage, the founder's role evolves from doing the work to designing the system that does the work. That's the job.
 
-The founders who scale sustainably aren't the ones who work the most hours. They're the ones who build businesses that don't need them in every conversation, every decision, and every fire drill.
+The founders who scale sustainably build businesses that don't need them in every conversation, every decision, and every fire drill. Hours worked has very little to do with it.
 
 That's what scaling actually looks like.
 
-If you want to know what's actually capping your growth, [book a call](/contact) — the first one's free.
+If you want to see where this is breaking down in your own business, [book a call](/contact). The first call's free. I'll give you my honest read on where to focus next.

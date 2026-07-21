@@ -9,7 +9,7 @@ This is one of the most confusing stages of building a business. Revenue is goin
 
 But it doesn't feel great. It feels harder. More chaotic. More stressful. Like you're running faster on a treadmill that someone keeps tilting upward.
 
-If that's where you are, you're not doing anything wrong. You've just hit a stage where the way you've been running things stops working. And the fix isn't working harder. It's working differently.
+If that's where you are, you're not doing anything wrong. You've just hit a stage where the way you've been running things stops working. And the fix is working differently. Working harder is what got you here.
 
 ## The Revenue Growth Trap
 
@@ -25,7 +25,7 @@ The founder feels this first. Because the founder is usually the one absorbing a
 
 When you were small, you made every decision because you were the most qualified person in the room. That was efficient. At your current size, it's a bottleneck. If your team can't move without your input, the business can only grow as fast as your personal bandwidth allows. That's a hard ceiling.
 
-The fix isn't hiring more people. It's creating frameworks that let existing people make good decisions without you. Clear priorities, defined authority, and documented processes for the stuff that repeats.
+The fix is creating frameworks that let your existing people make good decisions without you. Clear priorities, defined authority, and documented processes for the stuff that repeats.
 
 ### 2. Your team doesn't have shared context
 
@@ -35,9 +35,9 @@ The fix is a simple operating rhythm. A weekly meeting where the leadership team
 
 ### 3. You're running on founder energy instead of systems
 
-The business works because you work. If you took two weeks off, things would start falling apart. That's not a sustainable growth model. That's a job with high revenue.
+The business works because you work. If you took two weeks off, things would start falling apart. That's a job with high revenue, and it doesn't scale.
 
-The fix is building systems that capture what you know and how you think, so the team can operate without you being in every conversation. Documented processes. Onboarding playbooks. Decision trees for common situations. None of this is sexy. All of it is essential.
+The fix is building systems that capture what you know and how you think, so the team can operate without you being in every conversation. Documented processes. Onboarding playbooks. Decision trees for common situations. It's boring work, and it's essential.
 
 ## The Paradox of Growth
 
@@ -49,10 +49,10 @@ The businesses that break through this stage are the ones where the founder deci
 
 ## What "Easier" Actually Looks Like
 
-It doesn't mean less work. It means different work. Work that energizes you instead of draining you. Strategic decisions instead of operational firefighting. Coaching your team instead of doing their job for them. Planning for next quarter instead of surviving this week.
+"Easier" means different work, and often the same amount of it. Strategic decisions instead of operational firefighting. Coaching your team instead of doing their job for them. Planning for next quarter instead of surviving this week.
 
 When the systems are in place, growth starts to feel like momentum instead of chaos. Revenue goes up and the business can actually absorb it. Clients get served well without you personally checking everything. Your team knows what to do and has the authority to do it.
 
 That's what scaling is supposed to feel like. And it's completely achievable. But it requires a deliberate decision to stop operating the way you've always operated and build something that can run without you in the middle of everything.
 
-If you want to see exactly where the structural gaps are, [book a call](/contact) — I find them in your own numbers.
+If you want to see exactly where the structural gaps are, [book a call](/contact). I find them in your own numbers.

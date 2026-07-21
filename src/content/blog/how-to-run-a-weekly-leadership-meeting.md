@@ -18,7 +18,7 @@ Here's how to run one that actually works.
 
 Pick a day and time. Tuesday or Wednesday mornings tend to work best. Early enough in the week to course-correct, late enough that people have data from the prior week.
 
-Block 90 minutes. Not 30, not 60. You need enough time to actually solve problems, not just list them.
+Block 90 minutes. Not 30, not 60. You need enough time to actually solve problems instead of just listing them.
 
 Same day, same time, every single week. No exceptions. The consistency is what makes it work. If your meeting moves around the calendar, people stop preparing and it loses all momentum.
 
@@ -46,7 +46,7 @@ Last week's to-dos. Each one is either done or not done. If it's not done, it ei
 **Issues (60 minutes)**
 This is the main event. Everything you flagged in the scorecard, priority review, and to-do sections lands here, plus anything else the team needs to solve.
 
-Start by listing all issues. Then prioritize — pick the top three. For each one: name the real problem (not the symptom), discuss options, and decide on a clear next step with an owner and a deadline. Then move to the next issue.
+Start by listing all issues. Then prioritize: pick the top three. For each one: name the real problem (not the symptom), discuss options, and decide on a clear next step with an owner and a deadline. Then move to the next issue.
 
 The discipline is to solve the issue completely before moving on. No parking lots, no "let's take that offline" for everything uncomfortable. If it's important enough to be in the top three, it's important enough to resolve right now.
 

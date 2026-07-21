@@ -18,7 +18,7 @@ This is the most common problem I see. And it's also the most fixable.
 
 ## 2. You Can't Take a Week Off
 
-Not because you don't want to. Because things fall apart when you step away. If your business can't run for five days without you, it's not a business yet. It's a job that you own.
+You want to. But things fall apart when you step away. If your business can't run for five days without you, what you own is a job.
 
 A fractional COO builds the systems that let the business operate without you being in every conversation.
 
@@ -30,7 +30,7 @@ Effort without alignment is just motion.
 
 ## 4. You've Tried Hiring Your Way Out of the Problem
 
-You brought on a new salesperson. An ops manager. Maybe a VA or two. But the problems didn't go away. They just shifted. That's because the issue isn't headcount. It's structure. More people without a clear operating system just means more confusion at a higher cost.
+You brought on a new salesperson. An ops manager. Maybe a VA or two. But the problems didn't go away. They just shifted. That's because the issue is structure, and headcount can't fix structure. More people without a clear operating system just means more confusion at a higher cost.
 
 ## 5. Your Weekly Meetings Feel Pointless
 
@@ -52,6 +52,6 @@ That instinct is usually right.
 
 If three or more of these resonate, you don't necessarily need to hire a full-time COO at $250K+. A fractional COO can step in, build the systems your business needs, and get your team aligned without the full-time overhead.
 
-The goal isn't to add another person to manage. It's to build the operating system that makes management unnecessary for most decisions.
+The goal is to build the operating system that makes management unnecessary for most decisions, without handing you another person to manage.
 
-If you want a straight read on where you stand, [book a call](/contact). The first one's free.
+If you want a straight read on where you stand, [book a call](/contact). The first call's free. I'll give you my honest read on where to focus next.

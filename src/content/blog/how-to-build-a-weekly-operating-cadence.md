@@ -35,7 +35,7 @@ That's it. It's not complicated. But most businesses don't have one, and the dif
 
 ### Step 1: Define Your Scorecard
 
-Pick 5-8 numbers that tell you whether the business is healthy. These should be leading indicators, not just lagging ones. Revenue is lagging. Pipeline, outreach volume, conversion rates, and client satisfaction scores are leading.
+Pick 5-8 numbers that tell you whether the business is healthy. Lean toward leading indicators. Revenue is lagging. Pipeline, outreach volume, conversion rates, and client satisfaction scores are leading.
 
 Each number should have an owner. One person who is responsible for knowing why it went up or down this week.
 
@@ -91,6 +91,6 @@ After 4-6 weeks of running a tight cadence, you'll notice:
 - Decisions happen faster because the context is shared
 - Monday morning feels focused instead of chaotic
 
-It's not magic. It's structure. And for most growing businesses, it's the highest-leverage system you can install.
+It's structure doing the work. And for most growing businesses, it's the system with the biggest payoff.
 
-If you're not sure where to start, [book a call](/contact) — I'll tell you which system to fix first.
+If you're not sure where to start, [book a call](/contact). I'll tell you which system to fix first.

@@ -20,11 +20,11 @@ For most businesses under $10M, the math isn't even close.
 
 ## When a Fractional COO Makes Sense
 
-**You need systems built, not managed full-time.** If your business doesn't have an operating cadence, a scorecard, clear ownership structures, or a weekly rhythm, you need someone to build that. Once it's built, it doesn't require a full-time executive to maintain.
+**You need systems built.** If your business doesn't have an operating cadence, a scorecard, clear ownership structures, or a weekly rhythm, you need someone to build that. Once it's built, it doesn't require a full-time executive to maintain.
 
 **You can't justify the salary yet.** If you're doing $1M-$5M in revenue, a $250K hire might eat 10-25% of your top line. A fractional COO at $5K-$8K/month is a rounding error by comparison.
 
-**You need an experienced operator, not a first-timer.** Full-time COO hires at smaller companies are often people stepping into the role for the first time. A fractional COO has typically done this across multiple companies. You get pattern recognition that a first-time COO doesn't have.
+**You need someone who's done this before.** Full-time COO hires at smaller companies are often people stepping into the role for the first time. A fractional COO has typically done this across multiple companies. You get pattern recognition that a first-time COO doesn't have.
 
 **You need results fast.** A full-time hire takes 2-3 months to recruit and another 3-6 months to ramp. A fractional COO can start diagnosing problems in week one and implementing changes by week two.
 
@@ -54,6 +54,6 @@ Ask yourself three questions:
 2. **Can I afford $200K+ right now without it being a bet-the-company decision?** If not, fractional.
 3. **Do I need results this month or can I wait 6 months?** This month = fractional. Can wait = recruit full-time.
 
-Most founders I talk to land on fractional. Not because it's cheaper (though it is), but because they need someone who can move fast and has done this before.
+Most founders I talk to land on fractional. The price helps, but the real draw is getting someone who can move fast and has done this before.
 
-If you're weighing the options, [book a call](/contact) — I'll help you figure out what level of support actually makes sense right now.
+If you're weighing the options, [book a call](/contact). The first call's free. I'll give you my honest read on where to focus next.

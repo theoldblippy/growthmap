@@ -11,7 +11,7 @@ Real number. Seven thousand dollars. Customers whose cards declined weeks ago, a
 
 Nobody's fault. Nobody's fix. The system worked exactly the way we built it. That's the part that stings.
 
-## The pattern, not the dollar amount
+## The pattern behind the dollar amount
 
 The dollars don't bother me. We'll claw most of it back. What I keep chewing on is the pattern.
 

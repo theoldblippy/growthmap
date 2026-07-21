@@ -27,21 +27,21 @@ Before I let a team put an agent on a process, I make them answer four questions
 
 **Does this work when a careful human does it slowly?** If a sharp person following the steps by hand still produces a bad result, the steps are wrong. Speed won't save you.
 
-**Can you draw it on one page without arguing about the boxes?** If the team can't agree on what the process even is, you don't have a process. You have a habit that varies by whoever is doing it that day. An agent needs a real map, not a vibe.
+**Can you draw it on one page without arguing about the boxes?** If the team can't agree on what the process even is, you don't have a process. You have a habit that varies by whoever is doing it that day. An agent needs a real map. A vibe won't cut it.
 
 **Do you already measure whether it's working?** If there's no number that tells you the process is healthy, you won't know whether the agent made things better or just made them faster. You'll be flying blind at twice the speed.
 
 **Would you be proud to show a customer exactly how it runs today?** If the honest answer is no, automating it just means more customers experience the version you're embarrassed by.
 
-None of these questions are about AI. They're about whether the thing you want to automate is actually a system yet.
+Notice that all four questions are about whether the thing you want to automate is actually a system yet. The AI part comes later.
 
 ## This is a systems conversation wearing an AI costume
 
-At Growth Map the whole thesis is that predictable growth comes from systems, not heroics. A business that can grow without the founder in every decision is one where the important work is written down, measured, and sound enough that a new hire can pick it up and run it.
+At Growth Map the whole thesis is that predictable growth comes from systems, and heroics don't scale. A business that can grow without the founder in every decision is one where the important work is written down, measured, and sound enough that a new hire can pick it up and run it.
 
 AI raises the stakes on that thesis. It doesn't change it. An agent is just the fastest new hire you'll ever onboard, and it will follow your process exactly as written, flaws and all. Companies with strong systems are about to pull away from everyone else, because they have something worth multiplying. Companies running on heroics and duct tape are about to find out how quickly a multiplier exposes a weak foundation.
 
-The good news is the work is the same work it always was. Map how the value actually gets created. Assign one clear owner to each outcome. Measure the leading indicators, not just the lagging revenue number. Build the process until it holds up on a page. That was the right work before AI showed up. AI just made it urgent.
+The good news is the work is the same work it always was. Map how the value actually gets created. Assign one clear owner to each outcome. Measure the leading indicators instead of just the lagging revenue number. Build the process until it holds up on a page. That was the right work before AI showed up. AI just made it urgent.
 
 ## Where to start this week
 
@@ -55,4 +55,4 @@ If it fails, you just learned something more valuable than any tool would have g
 
 Fix the thing first. That order never changes.
 
-If you want a clear-eyed read on which of your processes are ready to multiply and which ones would just break faster, that's exactly what the Growth Map Diagnostic is built to find. [Book a call](/contact) and we'll look at it together.
+If you want to know which of your processes are ready to multiply and which ones would just break faster, that's exactly what the Growth Map Diagnostic is built to find. [Book a call](/contact). The first call's free. I'll give you my honest read on where to focus next.

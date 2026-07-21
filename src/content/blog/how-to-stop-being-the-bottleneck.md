@@ -16,7 +16,7 @@ It usually starts with good intentions. You made the decisions because you were 
 
 That worked when you had 3 people. It breaks at 10. And it's impossible at 25.
 
-The problem isn't that you're a control freak. The problem is that the business grew but the decision-making structure didn't grow with it.
+You're probably not a control freak. The business grew and the decision-making structure didn't grow with it.
 
 ## The Cost of Being the Bottleneck
 
@@ -48,7 +48,7 @@ Your team doesn't need you to make every decision. They need a framework for mak
 
 Write it down. Share it. And then actually let people use it.
 
-### 3. Assign Ownership, Not Tasks
+### 3. Assign Ownership Instead of Tasks
 
 There's a difference between delegating a task and assigning ownership of an outcome. Tasks keep people dependent on you for the next instruction. Ownership means someone is responsible for a result and has the authority to figure out how to get there.
 
@@ -58,7 +58,7 @@ Instead of "send the client proposal by Friday," try "you own the client relatio
 
 A weekly rhythm of planning, reviewing, and adjusting replaces the ad-hoc interruptions that keep you in the weeds. When the team has a predictable forum to surface issues, make decisions, and track progress, they stop coming to you for every small thing.
 
-This is the single highest-leverage change most businesses can make.
+This is the single most valuable change most businesses can make.
 
 ### 5. Accept Imperfection
 
@@ -66,10 +66,10 @@ This is the hard one. Your team won't do things exactly the way you would. That'
 
 ## The Goal Isn't to Disappear
 
-Getting out of the bottleneck doesn't mean stepping away entirely. It means being strategic about where you spend your time. You should be working on the business, not in it for every small decision.
+Getting out of the bottleneck means being strategic about where you spend your time. You still show up every day. You just work on the business instead of in it for every small decision.
 
 The best founders I work with spend their time on three things: setting direction, building the team, and removing obstacles. Everything else is owned by someone with the context and authority to handle it.
 
-If your business can't run for a week without you, that's not a badge of honor. It's a structural problem. And it's one you can fix.
+If your business can't run for a week without you, that's a structural problem. And it's one you can fix.
 
-If you want to see exactly where you've become the bottleneck, [book a call](/contact) — it starts with your numbers.
+If you want to see exactly where you've become the bottleneck, [book a call](/contact). It starts with your numbers.

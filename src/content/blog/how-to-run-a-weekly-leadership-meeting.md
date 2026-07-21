@@ -10,13 +10,13 @@ Most leadership meetings fall into one of two categories: they either don't happ
 
 Neither one helps you run the business.
 
-A good weekly leadership meeting is the single highest-leverage habit a growing company can build. It's where problems get caught early, decisions get made, and your team stays aligned without needing you in every Slack thread and side conversation throughout the week.
+A good weekly leadership meeting is the single best habit a growing company can build. It's where problems get caught early, decisions get made, and your team stays aligned without needing you in every Slack thread and side conversation throughout the week.
 
 Here's how to run one that actually works.
 
 ## The Format: 90 Minutes, Same Time Every Week
 
-Pick a day and time. Tuesday or Wednesday mornings tend to work best — early enough in the week to course-correct, late enough that people have data from the prior week.
+Pick a day and time. Tuesday or Wednesday mornings tend to work best. Early enough in the week to course-correct, late enough that people have data from the prior week.
 
 Block 90 minutes. Not 30, not 60. You need enough time to actually solve problems, not just list them.
 
@@ -30,7 +30,7 @@ Here's the structure I use with every client. It's simple, and the time boxes ma
 Go around the room. Each person shares one personal win and one professional win from the past week. This sounds soft but it does two things: it gets everyone talking immediately (so the quiet people don't stay silent the whole meeting), and it builds the kind of trust that makes hard conversations possible later in the agenda.
 
 **Scorecard Review (5 minutes)**
-Review your 5-15 weekly metrics. Not monthly, not quarterly — weekly. Each number is either on track or off track. Don't discuss why yet. Just flag the misses. You'll deal with them in the issues section.
+Review your 5-15 weekly metrics. Not monthly, not quarterly. Weekly. Each number is either on track or off track. Don't discuss why yet. Just flag the misses. You'll deal with them in the issues section.
 
 If you don't have a weekly scorecard yet, start with these: revenue (or pipeline), cash balance, customer satisfaction signal, and one or two leading indicators for your business. You can build from there.
 
@@ -38,7 +38,7 @@ If you don't have a weekly scorecard yet, start with these: revenue (or pipeline
 Go through your quarterly priorities. Each one gets a quick status: on track, off track, or at risk. Again, don't solve anything here. Just surface what's behind.
 
 **Headlines (5 minutes)**
-Quick hits. Any news the team needs to know — customer wins, customer complaints, employee changes, industry news, things you heard this week that the team should be aware of. No discussion, just awareness.
+Quick hits. Any news the team needs to know: customer wins, customer complaints, employee changes, industry news, things you heard this week that the team should be aware of. No discussion, just awareness.
 
 **To-Do Review (5 minutes)**
 Last week's to-dos. Each one is either done or not done. If it's not done, it either rolls to next week or becomes an issue. This is your accountability mechanism. When people know their to-dos will be reviewed publicly every week, completion rates go up fast.
@@ -53,7 +53,7 @@ The discipline is to solve the issue completely before moving on. No parking lot
 You won't get through every issue every week. That's fine. The top three get solved, the rest roll to next week. Over time, your issues list shrinks because you're actually resolving things instead of letting them pile up.
 
 **Wrap-Up (5 minutes)**
-Recap the to-dos that came out of this meeting. Each one has an owner and a deadline (almost always "by next meeting"). Then go around the room and rate the meeting 1-10. If you're consistently below 8, something about the format isn't working — ask what.
+Recap the to-dos that came out of this meeting. Each one has an owner and a deadline (almost always "by next meeting"). Then go around the room and rate the meeting 1-10. If you're consistently below 8, something about the format isn't working. Ask what.
 
 Finally, decide if there are any messages that need to cascade to the rest of the company. Your team shouldn't leave this meeting with information that their direct reports need but won't get.
 
@@ -83,4 +83,4 @@ After about four weeks of running this format consistently, three things happen:
 
 You don't need software. You don't need a consultant. You don't need to read a book first. Pick a day, block 90 minutes, send the agenda to your team, and run the meeting.
 
-If you want help installing a meeting rhythm that fits your team — along with the scorecard, priorities, and accountability structure that makes it stick — [book a free 30-minute call](https://calendar.notion.so/meet/cameronearloliver/qc3y04oud). We'll talk through what makes sense for where you are.
+If you want help installing a meeting rhythm that fits your team, along with the scorecard, priorities, and accountability structure that makes it stick, [book a 30-minute call](https://calendar.notion.so/meet/cameronearloliver/qc3y04oud). The first call's free. I'll give you my honest read on where to focus next.

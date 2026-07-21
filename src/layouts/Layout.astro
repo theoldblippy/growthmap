@@ -73,6 +73,15 @@ const canonicalURL = `https://growthmap.consulting${canonicalPath}`;
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-FCS68414CY');
+      document.addEventListener('click', function (e) {
+        var a = e.target && e.target.closest ? e.target.closest('a[href*="calendar.notion.so"]') : null;
+        if (a) {
+          gtag('event', 'book_call_click', {
+            page_path: location.pathname,
+            link_text: (a.textContent || '').trim().slice(0, 40),
+          });
+        }
+      });
     </script>
   </head>
   <body class="bg-parchment antialiased">

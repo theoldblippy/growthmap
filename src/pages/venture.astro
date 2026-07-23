@@ -1,0 +1,152 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FigMap from '../components/figures/FigMap.astro';
+import FigScorecard from '../components/figures/FigScorecard.astro';
+
+const bookUrl = 'https://calendar.notion.so/meet/cameronearloliver/qc3y04oud';
+
+const steps = [
+  { n: '01', title: 'I map how the company makes money', body: "Every way it wins a customer, and everything it does to keep them. At this stage it shows you where the real growth is, and where the team is spread too thin." },
+  { n: '02', title: 'We see what it takes to deliver', body: 'What the product and the team actually need to keep up as it grows, and where things break if you scale them as-is.' },
+  { n: '03', title: 'We find the one thing to focus on first', body: "The move that matters most right now, so the round goes into the thing that actually grows the company, not ten things at once." },
+  { n: '04', title: 'We keep it running', body: 'A simple rhythm across go-to-market, product, and people, so the whole thing stays pointed the same way.' },
+];
+---
+
+<Layout
+  title="For Venture Capital | Growth Map"
+  description="You backed a great idea. Getting it to scale is an execution problem: aligning go-to-market, product, and people, and being intentional about where the round goes. I get in the trenches with founders and build that. Book a call."
+  canonicalPath="/venture"
+>
+  <!-- HERO -->
+  <section class="border-b border-hairline px-6 py-16 md:py-24">
+    <div class="mx-auto max-w-[900px]">
+      <p class="font-mono text-[11.5px] font-medium uppercase tracking-[0.18em] text-moss">For venture capital</p>
+      <h1 class="font-display mt-6 text-4xl leading-[1.06] text-ink sm:text-5xl md:text-[56px]">
+        You backed a great idea. Now it has to <em>scale.</em>
+      </h1>
+      <p class="mt-6 max-w-[58ch] text-lg leading-relaxed text-fern">
+        The founders have something real. The hard part now is execution: getting go-to-market, product, and people pulling the same direction, and being intentional about where the round goes and what it earns back. I get in the trenches with them and build that.
+      </p>
+      <div class="mt-8">
+        <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="inline-block rounded-full border border-ink bg-ink px-8 py-4 text-[15px] font-semibold text-parchment transition-opacity hover:opacity-90">
+          Book a call
+        </a>
+        <p class="mt-3.5 text-sm text-fern">Tell me about the company. A free 30-minute call.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE TWO THINGS -->
+  <section class="border-b border-hairline px-6 py-16 md:py-24">
+    <div class="mx-auto max-w-[1000px]">
+      <h2 class="font-display text-3xl leading-tight text-ink md:text-[40px]">
+        No matter the idea, every business does <em>two things.</em>
+      </h2>
+      <div class="mt-10 grid items-stretch gap-5 md:grid-cols-[1fr_auto_1fr]">
+        <div class="rounded-[16px] border border-hairline bg-white/60 p-8">
+          <p class="font-display text-5xl leading-none text-moss">1</p>
+          <h3 class="font-display mt-4 text-2xl text-ink">Get customers</h3>
+          <p class="mt-2 leading-relaxed text-fern">It has to find and win people who buy.</p>
+        </div>
+        <div class="flex items-center justify-center">
+          <span class="font-mono text-sm text-fern">then</span>
+        </div>
+        <div class="rounded-[16px] border border-hairline bg-white/60 p-8">
+          <p class="font-display text-5xl leading-none text-moss">2</p>
+          <h3 class="font-display mt-4 text-2xl text-ink">Serve those customers</h3>
+          <p class="mt-2 leading-relaxed text-fern">It has to deliver, and keep them coming back.</p>
+        </div>
+      </div>
+      <p class="mt-9 max-w-[70ch] text-lg leading-relaxed text-fern">
+        Early on it's tempting to chase everything at once. The growth comes from knowing which of these two to pour the round into right now, and being honest about what you're getting back.
+      </p>
+    </div>
+  </section>
+
+  <!-- THE MAP -->
+  <section class="border-b border-hairline bg-parchment-deep px-6 py-16 md:py-20">
+    <div class="mx-auto max-w-[1100px]">
+      <p class="doc-label text-ink">Where I start</p>
+      <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">It all starts with the map.</h2>
+      <p class="mt-3 max-w-[54ch] text-lg leading-relaxed text-fern">Understanding how the company actually makes money, before pouring fuel on it.</p>
+      <div class="mt-10 space-y-10">
+        {steps.map((st, i) => {
+          const Fig = [FigMap, null, FigScorecard, null][i];
+          return (
+            <div class:list={["grid items-center gap-6 md:gap-12 md:grid-cols-2", i % 2 === 1 && "md:[&>*:first-child]:order-2"]}>
+              <div class="flex gap-5">
+                <p class="font-mono text-xl font-medium text-moss">{st.n}</p>
+                <div>
+                  <h3 class="font-display text-[22px] leading-tight text-ink">{st.title}</h3>
+                  <p class="mt-1.5 text-[15px] leading-relaxed text-fern">{st.body}</p>
+                </div>
+              </div>
+              {Fig && (
+                <div class="rounded-[14px] border border-hairline bg-white/60 p-4">
+                  <Fig />
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- ALIGNMENT -->
+  <section class="border-b border-hairline px-6 py-16 md:py-20">
+    <div class="mx-auto max-w-[900px]">
+      <p class="doc-label text-ink">What I actually do</p>
+      <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
+        Get go-to-market, product, and people pointed the same way.
+      </h2>
+      <p class="mt-6 max-w-[64ch] text-lg leading-relaxed text-fern">
+        Most of the drag at this stage isn't the idea. It's the three of them pulling in slightly different directions, so effort leaks out the sides. I get everyone aiming at the same number, and help the founders be deliberate about where their time and the round go, and what each one is supposed to return.
+      </p>
+    </div>
+  </section>
+
+  <!-- HOW I WORK -->
+  <section class="border-b border-hairline px-6 py-16 md:py-20">
+    <div class="mx-auto max-w-[900px]">
+      <p class="doc-label text-ink">How I work</p>
+      <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
+        I don't come in to take over.
+      </h2>
+      <p class="mt-6 max-w-[64ch] text-lg leading-relaxed text-fern">
+        The fastest way to break an early company is to send someone in who announces they're in charge. I don't do that. I earn the team's trust, work through the founders and the people already there, and the founder stays the founder. When it's running on its own, I hand it back and step out.
+      </p>
+    </div>
+  </section>
+
+  <!-- AI -->
+  <section class="border-b border-hairline px-6 py-16 md:py-20">
+    <div class="mx-auto max-w-[900px]">
+      <p class="doc-label text-ink">One more thing</p>
+      <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
+        I build the tools, too.
+      </h2>
+      <p class="mt-6 max-w-[64ch] text-lg leading-relaxed text-fern">
+        A lot of the leverage at this stage comes from taking repetitive work off a small team, so they do more without burning the round on headcount. I build those tools myself. It's an accelerant on a company that already has the fundamentals right, not a substitute for getting them right first.
+      </p>
+    </div>
+  </section>
+
+  <!-- CLOSE -->
+  <section class="px-6 py-16 md:py-20">
+    <div class="mx-auto max-w-[900px]">
+      <p class="doc-label text-ink">Fit</p>
+      <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
+        Let's be straight about it.
+      </h2>
+      <p class="mt-6 max-w-[62ch] text-lg leading-relaxed text-fern">
+        This works when the founders actually want the help and there's a real number to move. If it's not a fit, I'll tell you on the first call, and we don't waste each other's time.
+      </p>
+      <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="mt-8 inline-block rounded-full border border-ink bg-ink px-8 py-4 text-[15px] font-semibold text-parchment transition-opacity hover:opacity-90">
+        Book a call
+      </a>
+      <p class="mt-3.5 text-sm text-fern">A free 30-minute call.</p>
+    </div>
+  </section>
+</Layout>

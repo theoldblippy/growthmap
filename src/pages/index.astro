@@ -21,6 +21,24 @@ const steps = [
   { n: '03', title: 'We find the one thing to fix first', body: 'The bottleneck that keeps rearing its head until we eliminate it. I help you knock it out, then we go find the next one.' },
   { n: '04', title: 'We keep it running', body: 'We build a simple rhythm, so keeping it all together becomes a lot more manageable.' },
 ];
+
+const getQ = [
+  "When I stop selling, the sales stop.",
+  "Our close rate keeps slipping and I can't tell you why.",
+  "Leads come in, then just seem to disappear.",
+];
+const serveQ = [
+  "The team can't run the work without me watching it.",
+  "We win the customer, then the wheels come off in delivery.",
+  "Everything that makes this place work is in my head, not a system.",
+];
+const biggerQ = [
+  "I need to hire, but is it a salesperson or an operator?",
+  "I've got capital to put to work and don't know where it actually moves the needle.",
+  "Is it time for a second location, or would that just multiply the chaos?",
+  "I hit the revenue number, so why is there no cash in the bank?",
+  "I couldn't take a two-week vacation without the whole thing wobbling.",
+];
 ---
 
 <Layout
@@ -99,8 +117,31 @@ const steps = [
           <p class="mt-2 leading-relaxed text-fern">You have to deliver, and keep them coming back.</p>
         </div>
       </div>
+      <div class="mt-6 rounded-[16px] border border-hairline bg-parchment-deep p-8 md:p-10">
+        <p class="doc-label text-ink">Sound familiar?</p>
+        <div class="mt-7 grid gap-8 md:grid-cols-3">
+          <div>
+            <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.14em] text-moss">Getting customers</p>
+            <ul class="mt-3.5 space-y-3">
+              {getQ.map((q) => (<li class="text-[15px] italic leading-snug text-ink">"{q}"</li>))}
+            </ul>
+          </div>
+          <div class="md:border-l md:border-dashed md:border-hairline md:pl-8">
+            <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.14em] text-moss">Serving customers</p>
+            <ul class="mt-3.5 space-y-3">
+              {serveQ.map((q) => (<li class="text-[15px] italic leading-snug text-ink">"{q}"</li>))}
+            </ul>
+          </div>
+          <div class="md:border-l md:border-dashed md:border-hairline md:pl-8">
+            <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.14em] text-moss">The bigger calls</p>
+            <ul class="mt-3.5 space-y-3">
+              {biggerQ.map((q) => (<li class="text-[15px] italic leading-snug text-ink">"{q}"</li>))}
+            </ul>
+          </div>
+        </div>
+      </div>
       <p class="mt-9 max-w-[70ch] text-lg leading-relaxed text-fern">
-        When you're tired, frustrated, and not sure why you're getting the results you are, the answer is always in those two things.
+        Every one of these traces back to one of those two things. That's where we start.
       </p>
     </div>
   </section>

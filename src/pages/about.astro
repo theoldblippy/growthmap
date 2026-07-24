@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import FigLine from '../components/figures/FigLine.astro';
 
 const bookUrl = 'https://calendar.notion.so/meet/cameronearloliver/qc3y04oud';
 
@@ -92,23 +93,18 @@ const record = [
   <section class="px-6 py-16 md:py-20">
     <div class="mx-auto max-w-[800px]">
       <p class="doc-label text-ink">Where this goes</p>
-      <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
-        What it looks like when it's working.
+      <h2 class="font-display mt-7 text-3xl leading-[1.14] text-ink md:text-[40px]">
+        You don't run a factory. But your business <em>works like one.</em>
       </h2>
-      <div class="mt-7 space-y-5 text-lg leading-relaxed text-ink">
-        <p>
-          I think almost any business can get to where it runs like a well-run line. Not cold, not rigid. The opposite of that.
-        </p>
-        <p>
-          When the work is mapped and the numbers are out in the open, everyone knows their job and the number they own. Everyone can see how a stranger becomes a lead, then a customer, then someone who keeps coming back. You can tell when it's time to add capacity, and which gauge is in the red before it costs you.
-        </p>
-        <p>
-          That's what finally takes the weight off the owner. The system carries the ambiguity, so the people don't have to. They get to do the part only people can do: the judgment, the relationships, the calls that need a human in the room. Everything else just runs.
-        </p>
-        <p>
-          Most owners have never seen their business work that way. That's the version I want to build with you.
-        </p>
+      <p class="mt-6 max-w-[60ch] text-lg leading-relaxed text-fern">
+        Whatever you sell, it's the same line. You just put your own words on the stations.
+      </p>
+      <div class="mt-9 overflow-x-auto rounded-[14px] border border-hairline bg-white/60 p-5 md:p-7">
+        <div class="min-w-[660px]"><FigLine /></div>
       </div>
+      <p class="mt-8 max-w-[62ch] text-lg leading-relaxed text-ink">
+        Each station is a question you should be able to answer yes to. The one you can't is where the money leaks, and it's where we start.
+      </p>
     </div>
   </section>
 

@@ -1,0 +1,172 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const record = [
+  { before: '$12M', after: '$20M', label: 'Construction revenue, on a rebuilt sales process' },
+  { before: '120', after: '45 days', label: 'Onboarding time, unlocking $250K in new revenue' },
+  { before: '40%', after: '85%', label: 'Utilization on underused contracts' },
+  { before: '50%', after: '65%', label: 'Provider utilization, on smarter scheduling' },
+];
+---
+
+<Layout
+  title="What's the one thing holding your business back? | Growth Map"
+  description="A free, 6-question check for owner-led businesses. Rate your business honestly and see the one thing to fix first, in plain English. No email required."
+  canonicalPath="/scorecard"
+>
+  <section class="px-6 pt-14 pb-4 md:pt-20">
+    <div id="scorecard" class="mx-auto max-w-[760px]">
+      <h1>What's the one thing holding your business back?</h1>
+      <p class="sub">Answer these six honestly and I'll point you at the one I'd fix first, and tell you why. It's usually where the money is quietly leaking.</p>
+      <div id="questions"></div>
+      <div class="ctarow">
+        <button id="reveal" disabled>Show me the one thing</button>
+        <p id="progress">0 of 6 answered</p>
+      </div>
+      <div id="result" hidden></div>
+    </div>
+  </section>
+
+  <!-- WHO'S ASKING -->
+  <section class="border-t border-hairline bg-parchment-deep px-6 py-14 md:py-16">
+    <div class="mx-auto max-w-[900px]">
+      <p class="doc-label text-ink">Who's asking</p>
+      <p class="mt-5 max-w-[62ch] text-lg leading-relaxed text-fern">
+        I'm Cameron Oliver. I get in the trenches with owner-led businesses and fix what's actually holding them back. A few of the numbers I've helped move:
+      </p>
+      <div class="mt-9 grid grid-cols-2 gap-x-8 gap-y-8 md:grid-cols-4">
+        {record.map((r) => (
+          <div>
+            <p class="font-display text-xl leading-none text-ink md:text-[26px]">
+              {r.before} <span class="text-moss">&rarr;</span> {r.after}
+            </p>
+            <p class="mt-2 max-w-[26ch] text-[12.5px] leading-snug text-fern">{r.label}</p>
+          </div>
+        ))}
+      </div>
+      <a href="/testimonials" class="mt-9 inline-block font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-moss transition-colors hover:text-ink">See the results &rarr;</a>
+    </div>
+  </section>
+</Layout>
+
+<style is:global>
+  #scorecard h1 { font-family: 'Castoro', Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 31px; line-height: 1.12; color: #2B331F; margin: 0 0 14px; }
+  @media (min-width: 768px) { #scorecard h1 { font-size: 40px; } }
+  #scorecard .sub { color: #59614A; font-size: 17px; line-height: 1.55; max-width: 56ch; margin: 0 0 30px; }
+  #scorecard .q { border-bottom: 1px dashed rgba(43,51,31,0.15); padding: 20px 0; display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  #scorecard .q:first-of-type { border-top: 1px dashed rgba(43,51,31,0.15); }
+  #scorecard .qnum { font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 12px; color: #5C7A3B; letter-spacing: .1em; flex: 0 0 24px; }
+  #scorecard .qtext { flex: 1; min-width: 220px; font-size: 16.5px; line-height: 1.4; color: #2B331F; }
+  #scorecard .opts { display: flex; gap: 7px; flex: 0 0 auto; }
+  #scorecard .opts button { border: 1px solid rgba(43,51,31,0.15); background: transparent; border-radius: 8px; padding: 8px 14px; font-family: inherit; font-size: 13px; font-weight: 600; color: #59614A; cursor: pointer; transition: all .15s; }
+  #scorecard .opts button:hover { border-color: #2B331F; color: #2B331F; }
+  #scorecard .opts button.sel[data-v="g"] { background: #5C7A3B; border-color: #5C7A3B; color: #fff; }
+  #scorecard .opts button.sel[data-v="y"] { background: #C08A2D; border-color: #C08A2D; color: #fff; }
+  #scorecard .opts button.sel[data-v="r"] { background: #B0402F; border-color: #B0402F; color: #fff; }
+  #scorecard .ctarow { margin-top: 30px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+  #scorecard #reveal { border: none; background: #2B331F; color: #F5F0E1; font-family: inherit; font-size: 15px; font-weight: 600; padding: 15px 34px; border-radius: 999px; cursor: pointer; transition: opacity .2s; }
+  #scorecard #reveal:disabled { opacity: .35; cursor: not-allowed; }
+  #scorecard #reveal:not(:disabled):hover { opacity: .9; }
+  #scorecard #progress { font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: .1em; color: #59614A; }
+  #scorecard #result { margin-top: 44px; border-top: 1px solid rgba(43,51,31,0.15); padding-top: 38px; }
+  #scorecard #result[hidden] { display: none; }
+  #scorecard .rlabel { font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: #59614A; margin: 0 0 12px; }
+  #scorecard .bars { display: flex; gap: 5px; margin: 0 0 30px; }
+  #scorecard .bar { flex: 1; height: 8px; border-radius: 4px; }
+  #scorecard .bar.flag { outline: 2px solid #2B331F; outline-offset: 2px; }
+  #scorecard #result h2 { font-family: 'Castoro', Georgia, serif; font-weight: 400; font-size: 27px; line-height: 1.15; color: #2B331F; margin: 0 0 16px; }
+  #scorecard #result h2 em { font-style: italic; color: #5C7A3B; }
+  #scorecard #result .diag { color: #2B331F; font-size: 18px; line-height: 1.6; margin: 0 0 14px; }
+  #scorecard #result .also { color: #2B331F; font-size: 15px; line-height: 1.55; margin: 0 0 14px; }
+  #scorecard #result .frame { color: #59614A; font-size: 16px; line-height: 1.6; margin: 0 0 28px; }
+  #scorecard .tally { font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 12px; color: #59614A; margin: 0 0 24px; }
+  #scorecard .book { display: inline-block; background: #2B331F; color: #F5F0E1; text-decoration: none; font-weight: 600; font-size: 15px; padding: 15px 32px; border-radius: 999px; transition: opacity .2s; }
+  #scorecard .book:hover { opacity: .9; }
+  #scorecard .bookline { color: #59614A; font-size: 14px; line-height: 1.5; margin: 12px 0 0; max-width: 54ch; }
+  #scorecard .howlink { display: inline-block; margin-top: 18px; font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: #5C7A3B; text-decoration: none; }
+  #scorecard .howlink:hover { color: #2B331F; }
+</style>
+
+<script>
+  const BOOK = "https://calendar.notion.so/meet/cameronearloliver/qc3y04oud";
+  const S = [
+    { q: "Do enough of the right people know you exist?", label: "getting found",
+      d: "Not enough of the right people know you're there, so everything else is starving for leads. The fix usually isn't “more marketing.” It's getting clear on exactly who you're for and showing up where they already are." },
+    { q: "Are you winning good-fit customers, or taking whatever comes in?", label: "who you go after",
+      d: "You're spending time and money on people who were never going to buy, or who become a headache once they do. Get pickier at the top and everything after it gets easier and more profitable." },
+    { q: "Do you close a healthy share of the leads you chase?", label: "closing the work",
+      d: "You get in front of people but don't close enough of them. It's rarely the product. It's usually the offer, the follow-up, or a sales process that quietly drops people." },
+    { q: "Do new customers get off to a smooth start?", label: "the start",
+      d: "You win them, then the start is rocky. A bad kickoff turns into a hard job, a blown timeline, and a customer who was set up to be unhappy before you even began." },
+    { q: "Does the work get done well when you step away?", label: "how the work gets done",
+      d: "The work runs through you, and it wobbles the second you step away. This is the one that keeps you stuck in the business instead of running it." },
+    { q: "Do customers stick around and send you more?", label: "keeping customers",
+      d: "You fight to win customers and then lose them out the back door. Keeping the ones you have is the cheapest growth there is, and right now it's leaking." }
+  ];
+  const COL = { g: "#5C7A3B", y: "#C08A2D", r: "#B0402F" };
+  const ans = new Array(6).fill(null);
+  const box = document.getElementById("questions");
+
+  const joinLabels = (a) => a.length === 1 ? a[0] : a.slice(0, -1).join(", ") + " and " + a.slice(-1);
+
+  S.forEach((s, i) => {
+    const row = document.createElement("div");
+    row.className = "q";
+    row.innerHTML = `<span class="qnum">0${i + 1}</span>
+      <span class="qtext">${s.q}</span>
+      <span class="opts"><button data-v="g">Solid</button><button data-v="y">Shaky</button><button data-v="r">Broken</button></span>`;
+    box.appendChild(row);
+    row.querySelectorAll(".opts button").forEach((b) => {
+      b.addEventListener("click", () => {
+        ans[i] = b.dataset.v;
+        row.querySelectorAll(".opts button").forEach((x) => x.classList.remove("sel"));
+        b.classList.add("sel");
+        const done = ans.filter(Boolean).length;
+        document.getElementById("progress").textContent = done + " of 6 answered";
+        document.getElementById("reveal").disabled = done < 6;
+      });
+    });
+  });
+
+  document.getElementById("reveal").addEventListener("click", () => {
+    let idx = ans.findIndex((a) => a === "r");
+    if (idx < 0) idx = ans.findIndex((a) => a === "y");
+    const allGreen = idx < 0;
+    const reds = ans.filter((a) => a === "r").length, ylw = ans.filter((a) => a === "y").length;
+    const bars = ans.map((a, i) => {
+      const flag = (i === idx && !allGreen) ? " flag" : "";
+      return `<div class="bar${flag}" style="background:${COL[a]}"></div>`;
+    }).join("");
+
+    let head, diag, also = "", frame;
+    if (allGreen) {
+      head = `Nothing's obviously <em>broken.</em>`;
+      diag = "That's rare, and worth protecting. When nothing's clearly leaking, the game isn't fixing a break. It's holding what works as you grow and spotting the next ceiling before it finds you.";
+      frame = "The businesses that stay this clean are the ones that check the numbers every week without fail. That's the habit most owners let slip once things feel fine.";
+    } else {
+      head = `The one I'd fix first: <em>${S[idx].label}.</em>`;
+      diag = S[idx].d;
+      const others = ans.map((a, i) => (a === "r" && i !== idx) ? S[i].label : null).filter(Boolean);
+      if (others.length) also = `You also flagged <strong>${joinLabels(others)}</strong>. Real problems, but this one comes first, because the rest lean on it.`;
+      frame = "Everything after it is only as strong as this, so this is where the money is. Fix it first and the rest of it gets easier, not harder.";
+    }
+    const tally = allGreen ? "" : `You called ${reds} of these broken and ${ylw} shaky.`;
+
+    document.getElementById("result").innerHTML =
+      `<p class="rlabel">How you rated yourself</p>
+       <div class="bars">${bars}</div>
+       <h2>${head}</h2>
+       <p class="diag">${diag}</p>
+       ${also ? `<p class="also">${also}</p>` : ""}
+       ${tally ? `<p class="tally">${tally}</p>` : ""}
+       <p class="frame">${frame}</p>
+       <a class="book" href="${BOOK}" target="_blank" rel="noopener noreferrer">Book a call</a>
+       <p class="bookline">That's the quick read. The honest version needs your actual numbers, and that's the call. Free, thirty minutes, no pitch. I'll tell you what I'd fix, and you can run with it.</p>
+       <a class="howlink" href="/about">See how I work &rarr;</a>`;
+    document.getElementById("result").hidden = false;
+    if (typeof (window as any).gtag === "function") {
+      (window as any).gtag("event", "scorecard_complete", { constraint: allGreen ? "all_solid" : S[idx].label });
+    }
+    document.getElementById("result").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+</script>

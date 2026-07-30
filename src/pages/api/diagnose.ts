@@ -138,12 +138,13 @@ ${JSON.stringify(base)}`;
   }
 }
 
-function logLead(ctx: any, result: Base) {
-  // Fire-and-forget lead capture to Cameron's Formspree inbox.
+async function logLead(ctx: any, result: Base) {
+  // Lead capture to Cameron's Formspree inbox. Awaited so no promise dangles
+  // past the function response (a known cause of serverless invocation failures).
   // Skip empty or obviously-test emails so real leads stay clean.
   if (!ctx.email || /example\.(com|org|net)$/i.test(ctx.email)) return;
   try {
-    fetch('https://formspree.io/f/xkoqqldw', {
+    await fetch('https://formspree.io/f/xkoqqldw', {
       method: 'POST',
       headers: { 'content-type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({
@@ -156,7 +157,7 @@ function logLead(ctx: any, result: Base) {
         constraint: ctx.constraintLabel,
         verdict: result.verdict,
       }),
-    }).catch(() => {});
+    });
   } catch {}
 }
 
@@ -222,7 +223,7 @@ export async function POST({ request }: { request: Request }) {
       } catch {}
     }
 
-    try { logLead(ctx, result); } catch {}
+    try { await logLead(ctx, result); } catch {}
 
     return jsonResponse(idx, ratings, result, personalized);
   } catch {

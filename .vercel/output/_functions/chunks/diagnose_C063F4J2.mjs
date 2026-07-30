@@ -127,10 +127,10 @@ ${JSON.stringify(base)}`;
     return null;
   }
 }
-function logLead(ctx, result) {
+async function logLead(ctx, result) {
   if (!ctx.email || /example\.(com|org|net)$/i.test(ctx.email)) return;
   try {
-    fetch("https://formspree.io/f/xkoqqldw", {
+    await fetch("https://formspree.io/f/xkoqqldw", {
       method: "POST",
       headers: { "content-type": "application/json", Accept: "application/json" },
       body: JSON.stringify({
@@ -143,7 +143,6 @@ function logLead(ctx, result) {
         constraint: ctx.constraintLabel,
         verdict: result.verdict
       })
-    }).catch(() => {
     });
   } catch {
   }
@@ -212,7 +211,7 @@ async function POST({ request }) {
       }
     }
     try {
-      logLead(ctx, result);
+      await logLead(ctx, result);
     } catch {
     }
     return jsonResponse(idx, ratings, result, personalized);

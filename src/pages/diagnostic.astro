@@ -214,19 +214,6 @@ const stations = [
 
   function val(id) { return document.getElementById(id).value.trim(); }
 
-  async function tryServer(payload) {
-    try {
-      const ctrl = new AbortController();
-      const t = setTimeout(() => ctrl.abort(), 12000);
-      const res = await fetch('/api/diagnose', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(payload), signal: ctrl.signal });
-      clearTimeout(t);
-      if (!res.ok) return null;
-      const d = await res.json();
-      if (d && d.verdict && Array.isArray(d.fixes)) return d;
-      return null;
-    } catch (e) { return null; }
-  }
-
   function logLead(p) {
     if (!p.email || /example\.(com|org|net)$/i.test(p.email)) return;
     try {
@@ -268,7 +255,8 @@ const stations = [
     document.getElementById('loading').removeAttribute('hidden');
     const payload = { business: val('business'), revenue: val('revenue'), team: val('team'), frustration: val('frustration'), email: val('email'), ratings: ans };
     logLead(payload);
-    const data = (await tryServer(payload)) || computeLocal();
+    await new Promise((r) => setTimeout(r, 800));
+    const data = computeLocal();
     document.getElementById('loading').setAttribute('hidden', '');
     render(data);
   });

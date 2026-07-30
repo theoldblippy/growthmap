@@ -160,34 +160,21 @@ function logLead(ctx: any, result: Base) {
   } catch {}
 }
 
-export async function POST({ request }: { request: Request }) {
-  let body: any = {};
-  try { body = await request.json(); } catch {}
-  const ratings: string[] = Array.isArray(body.ratings) ? body.ratings.slice(0, 6) : [];
-  const idx = pickConstraint(ratings);
-  const base = idx < 0 ? ALL_GREEN : BASE[idx];
-  const constraintLabel = idx < 0 ? 'none (all solid)' : STATIONS[idx].short;
+function getApiKey(): string {
+  try {
+    // @ts-ignore - import.meta.env available in Astro runtime
+    const im = (import.meta as any)?.env?.ANTHROPIC_API_KEY;
+    if (im) return im;
+  } catch {}
+  try {
+    if (typeof process !== 'undefined' && process.env && process.env.ANTHROPIC_API_KEY) {
+      return process.env.ANTHROPIC_API_KEY;
+    }
+  } catch {}
+  return '';
+}
 
-  const ctx = {
-    business: (body.business || '').toString().slice(0, 400),
-    revenue: (body.revenue || '').toString().slice(0, 40),
-    team: (body.team || '').toString().slice(0, 40),
-    frustration: (body.frustration || '').toString().slice(0, 800),
-    vacation: (body.vacation || '').toString().slice(0, 400),
-    email: (body.email || '').toString().slice(0, 200),
-    constraintLabel,
-  };
-
-  const apiKey = process.env.ANTHROPIC_API_KEY;
-  let result = base;
-  let personalized = false;
-  if (apiKey) {
-    const p = await personalize(base, ctx, apiKey);
-    if (p) { result = p; personalized = true; }
-  }
-
-  logLead(ctx, result);
-
+function jsonResponse(idx: number, ratings: string[], result: Base, personalized: boolean) {
   return new Response(
     JSON.stringify({
       constraintIndex: idx,
@@ -200,4 +187,45 @@ export async function POST({ request }: { request: Request }) {
     }),
     { status: 200, headers: { 'content-type': 'application/json' } }
   );
+}
+
+export async function POST({ request }: { request: Request }) {
+  // Everything is wrapped so the endpoint can never 500 — worst case it
+  // returns the deterministic report.
+  let idx = -1;
+  let ratings: string[] = [];
+  let result: Base = ALL_GREEN;
+  try {
+    let body: any = {};
+    try { body = await request.json(); } catch {}
+    ratings = Array.isArray(body.ratings) ? body.ratings.slice(0, 6) : [];
+    idx = pickConstraint(ratings);
+    result = idx < 0 ? ALL_GREEN : (BASE[idx] || ALL_GREEN);
+    const constraintLabel = idx < 0 ? 'none (all solid)' : STATIONS[idx].short;
+
+    const ctx = {
+      business: (body.business || '').toString().slice(0, 400),
+      revenue: (body.revenue || '').toString().slice(0, 40),
+      team: (body.team || '').toString().slice(0, 40),
+      frustration: (body.frustration || '').toString().slice(0, 800),
+      vacation: (body.vacation || '').toString().slice(0, 400),
+      email: (body.email || '').toString().slice(0, 200),
+      constraintLabel,
+    };
+
+    let personalized = false;
+    const apiKey = getApiKey();
+    if (apiKey) {
+      try {
+        const p = await personalize(result, ctx, apiKey);
+        if (p) { result = p; personalized = true; }
+      } catch {}
+    }
+
+    try { logLead(ctx, result); } catch {}
+
+    return jsonResponse(idx, ratings, result, personalized);
+  } catch {
+    return jsonResponse(idx, ratings, result, false);
+  }
 }

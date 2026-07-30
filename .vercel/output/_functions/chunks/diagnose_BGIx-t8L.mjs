@@ -1,3 +1,4 @@
+const __vite_import_meta_env__ = {"ASSETS_PREFIX": undefined, "BASE_URL": "/", "DEV": false, "MODE": "production", "PROD": true, "SITE": "https://www.growthmap.consulting", "SSR": true};
 const prerender = false;
 const STATIONS = [
   { label: "Get noticed", short: "getting found", engine: "get" },
@@ -147,36 +148,21 @@ function logLead(ctx, result) {
   } catch {
   }
 }
-async function POST({ request }) {
-  let body = {};
+function getApiKey() {
   try {
-    body = await request.json();
+    const im = __vite_import_meta_env__?.ANTHROPIC_API_KEY;
+    if (im) return im;
   } catch {
   }
-  const ratings = Array.isArray(body.ratings) ? body.ratings.slice(0, 6) : [];
-  const idx = pickConstraint(ratings);
-  const base = idx < 0 ? ALL_GREEN : BASE[idx];
-  const constraintLabel = idx < 0 ? "none (all solid)" : STATIONS[idx].short;
-  const ctx = {
-    business: (body.business || "").toString().slice(0, 400),
-    revenue: (body.revenue || "").toString().slice(0, 40),
-    team: (body.team || "").toString().slice(0, 40),
-    frustration: (body.frustration || "").toString().slice(0, 800),
-    vacation: (body.vacation || "").toString().slice(0, 400),
-    email: (body.email || "").toString().slice(0, 200),
-    constraintLabel
-  };
-  const apiKey = process.env.ANTHROPIC_API_KEY;
-  let result = base;
-  let personalized = false;
-  if (apiKey) {
-    const p = await personalize(base, ctx, apiKey);
-    if (p) {
-      result = p;
-      personalized = true;
+  try {
+    if (typeof process !== "undefined" && process.env && process.env.ANTHROPIC_API_KEY) {
+      return process.env.ANTHROPIC_API_KEY;
     }
+  } catch {
   }
-  logLead(ctx, result);
+  return "";
+}
+function jsonResponse(idx, ratings, result, personalized) {
   return new Response(
     JSON.stringify({
       constraintIndex: idx,
@@ -189,6 +175,50 @@ async function POST({ request }) {
     }),
     { status: 200, headers: { "content-type": "application/json" } }
   );
+}
+async function POST({ request }) {
+  let idx = -1;
+  let ratings = [];
+  let result = ALL_GREEN;
+  try {
+    let body = {};
+    try {
+      body = await request.json();
+    } catch {
+    }
+    ratings = Array.isArray(body.ratings) ? body.ratings.slice(0, 6) : [];
+    idx = pickConstraint(ratings);
+    result = idx < 0 ? ALL_GREEN : BASE[idx] || ALL_GREEN;
+    const constraintLabel = idx < 0 ? "none (all solid)" : STATIONS[idx].short;
+    const ctx = {
+      business: (body.business || "").toString().slice(0, 400),
+      revenue: (body.revenue || "").toString().slice(0, 40),
+      team: (body.team || "").toString().slice(0, 40),
+      frustration: (body.frustration || "").toString().slice(0, 800),
+      vacation: (body.vacation || "").toString().slice(0, 400),
+      email: (body.email || "").toString().slice(0, 200),
+      constraintLabel
+    };
+    let personalized = false;
+    const apiKey = getApiKey();
+    if (apiKey) {
+      try {
+        const p = await personalize(result, ctx, apiKey);
+        if (p) {
+          result = p;
+          personalized = true;
+        }
+      } catch {
+      }
+    }
+    try {
+      logLead(ctx, result);
+    } catch {
+    }
+    return jsonResponse(idx, ratings, result, personalized);
+  } catch {
+    return jsonResponse(idx, ratings, result, false);
+  }
 }
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({

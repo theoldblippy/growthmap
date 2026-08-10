@@ -47,6 +47,51 @@ const builds = [
     gave: 'I eat my own cooking',
   },
 ];
+
+const more = [
+  {
+    tag: 'Data & integrations',
+    title: 'A system-to-system sync',
+    body: "Their records lived in two systems that never talked, so somebody kept retyping everything by hand. I built a sync that mirrors them every night, with a safety gate on every write. It caught three real data bugs the first time through.",
+    gave: 'Two systems that never agreed, now in sync',
+  },
+  {
+    tag: 'Executive ops',
+    title: 'A scorecard and an audit agent',
+    body: "A leadership team was running on gut and a messy spreadsheet. I built them a scorecard down to one number per owner, plus an agent that checks it every Monday and flags whatever nobody updated.",
+    gave: "Nothing important gets forgotten",
+  },
+  {
+    tag: 'Lead tools',
+    title: 'The diagnostic on this site',
+    body: "Most people who land on a site like this look around and leave. I built the diagnostic on this page so they can answer a few questions, get the one thing to fix first, and land in my inbox so I can follow up.",
+    gave: 'A quiet visitor becomes a lead',
+  },
+  {
+    tag: 'Finance',
+    title: 'An assumption-driven forecast',
+    body: "A team was arguing over a forecast nobody trusted, because the assumptions were buried three tabs deep. I built a model that puts every assumption out in the open, so you change one number and the whole picture moves with it.",
+    gave: 'Everyone finally trusts the number',
+  },
+  {
+    tag: 'Productivity',
+    title: 'A personal operating system',
+    body: "I practice what I sell. My own week runs on agents I built: a morning setup, a Friday review, a monthly reset, all tied back to my goals.",
+    gave: 'I run my own week on it',
+  },
+  {
+    tag: 'Consulting IP',
+    title: 'A library of method-skills',
+    body: "Good work shouldn't start from a blank page every time. I've built up thirty-odd repeatable moves I use with clients: the discovery brief, the five-whys, the metric map. So the same rigor shows up on every engagement.",
+    gave: 'Every client gets the real method',
+  },
+  {
+    tag: 'Web & small business',
+    title: 'A ground-up site rebuild',
+    body: "A dumpster-rental company needed a real website, not a slow template. I rebuilt it from the ground up, fast and clean and easy for Google and the AI crawlers to read, and kept every URL so nothing broke the day we flipped it.",
+    gave: 'Live, and faster than what it replaced',
+  },
+];
 ---
 
 <Layout
@@ -61,7 +106,7 @@ const builds = [
         You can just <em>build the thing</em> now.
       </h1>
       <p class="mt-5 max-w-[62ch] text-lg leading-relaxed text-fern">
-        It used to be an operator could only tell you what was broken. Now you can just fix it. Some of what I've built:
+        It used to be an operator could only tell you what was broken. Now you can just fix it. Across construction, private equity, healthcare, and education, here is some of what I've built:
       </p>
 
       <div class="mt-10 grid gap-6 md:grid-cols-2">
@@ -77,6 +122,38 @@ const builds = [
           </div>
           );
         })}
+      </div>
+    </div>
+  </section>
+
+  <section id="more-of-the-range" class="px-6 py-16 md:py-20">
+    <div class="mx-auto max-w-[1100px]">
+      <p class="doc-label text-ink">More of the range</p>
+      <p class="mt-5 max-w-[62ch] text-lg leading-relaxed text-fern">
+        Smaller builds, same idea: see the problem, build the fix. A few more, from data plumbing to a forecast model to the way I run my own week.
+      </p>
+
+      <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {more.map((b) => (
+          <div class="flex flex-col rounded-[14px] border border-hairline bg-white/50 p-6">
+            <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-moss">{b.tag}</p>
+            <h2 class="font-display mt-2.5 text-xl leading-snug text-ink">{b.title}</h2>
+            <p class="mt-2.5 flex-1 text-[15px] leading-relaxed text-fern">{b.body}</p>
+            <p class="mt-4 border-t border-dashed border-hairline pt-3 font-mono text-[10.5px] font-medium uppercase tracking-[0.12em] text-moss">{b.gave}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-12 rounded-[14px] border border-hairline bg-white/50 p-8 text-center">
+        <p class="mx-auto max-w-[54ch] text-lg leading-relaxed text-ink">
+          If you can name the thing eating your week, there is a good chance it can be built away.
+        </p>
+        <a
+          href={bookUrl}
+          class="mt-6 inline-block rounded-[10px] bg-moss px-6 py-3 font-mono text-[12px] font-medium uppercase tracking-[0.12em] text-white transition hover:opacity-90"
+        >
+          Book a call
+        </a>
       </div>
     </div>
   </section>

@@ -32,6 +32,19 @@ const serveQ = [
   "We win the customer, then the wheels come off in delivery.",
   "Everything that makes this place work is in my head, not a system.",
 ];
+const ways = [
+  {
+    tag: 'Two weeks',
+    title: 'The two-week fix',
+    body: "You probably already know what your biggest bottleneck is. It's the thing you'd go fix first if you ever got a spare month, and you haven't had a spare month in two years. Tell me what it is and I'll come work it with you for two weeks. We find where it's actually breaking, and I build the fix while I'm still there. Whatever we build, you keep.",
+  },
+  {
+    tag: 'Until we find them',
+    title: 'Five hours back',
+    body: "Some weeks it's all a little broken and none of it is the emergency. That usually means too much of the business is running through you. So we look at where your week actually goes, find the work the business should be handling without you, and I build the thing that takes it off your plate. I'll stay with it until you have five hours back.",
+  },
+];
+
 const biggerQ = [
   "I need to hire, but is it a salesperson or an operator?",
   "I've got capital to put to work and don't know where it actually moves the needle.",
@@ -171,7 +184,36 @@ const biggerQ = [
           );
         })}
       </div>
-    </section>
+    </div>
+  </section>
+
+  <!-- 4b · SMALLER WAYS TO START -->
+  <section class="border-b border-hairline px-6 py-16 md:py-20">
+    <div class="mx-auto max-w-[1000px]">
+      <p class="doc-label text-ink">Ways to work together</p>
+      <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">You don't have to start with all of it.</h2>
+      <p class="mt-3 max-w-[58ch] text-lg leading-relaxed text-fern">
+        Most of my work is ongoing. If you want something smaller and more specific to start, here are two.
+      </p>
+      <div class="mt-10 grid gap-6 md:grid-cols-2">
+        {ways.map((w) => (
+          <div class="flex flex-col rounded-[16px] border border-hairline bg-white/60 p-8">
+            <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-moss">{w.tag}</p>
+            <h3 class="font-display mt-3 text-2xl leading-snug text-ink">{w.title}</h3>
+            <p class="mt-3 flex-1 leading-relaxed text-fern">{w.body}</p>
+            <a
+              href={bookUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-6 inline-block font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-moss transition-colors hover:text-ink"
+            >
+              Book a call &rarr;
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
   <!-- 5 · PROOF -->
   <section class="border-b border-hairline px-6 py-16 md:py-20">

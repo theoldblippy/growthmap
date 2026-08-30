@@ -2,93 +2,85 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  /* Field Brief palette */
-  --color-parchment: #F5F0E1;      /* page ground */
-  --color-parchment-deep: #ECE6D0; /* alternating sections */
-  --color-ink: #2B331F;            /* olive-black — headings, dark sections */
-  --color-fern: #59614A;           /* body copy */
-  --color-moss: #5C7A3B;           /* the single accent */
-  --color-rust: #B0402F;           /* semantic only: watch-state deltas */
-  --color-cream: #F0EDDE;          /* text on dark sections */
-  --color-hairline: rgba(43, 51, 31, 0.15);
+  /* ---- Ground: white, not tinted. This is the whole point. ---- */
+  --color-parchment: #FFFFFF;       /* page ground (legacy name kept so old pages inherit) */
+  --color-parchment-deep: #F7F7F5;  /* soft alternating band */
 
-  /* Legacy token names remapped so unported pages inherit the new world */
-  --color-navy: #2B331F;
-  --color-bright-blue: #5C7A3B;
-  --color-deep-accent: #2B331F;
-  --color-light-gray: #ECE6D0;
-  --color-dark-text: #2B331F;
-  --color-mid-gray: #59614A;
+  /* ---- Greens ---- */
+  --color-forest: #14261A;          /* full-bleed dark slabs */
+  --color-ink: #14261A;             /* headings (legacy name) */
+  --color-moss: #26773F;            /* primary accent: buttons, links, on white */
+  --color-sprout: #3FAE68;          /* bright accent: on dark only */
 
-  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Castoro", Georgia, serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  /* ---- Neutrals: grey, not olive ---- */
+  --color-fern: #4A4A4A;            /* body copy (legacy name) */
+  --color-muted: #6E6E6E;           /* captions, notes */
+  --color-cream: #FFFFFF;           /* text on dark slabs */
+  --color-hairline: rgba(20, 38, 26, 0.12);
+
+  /* ---- Hand-made accents ---- */
+  --color-marker: #FFD84D;          /* highlighter */
+  --color-rust: #B0402F;            /* emphasis only */
+
+  /* legacy remaps so unported pages don't break */
+  --color-navy: #14261A;
+  --color-bright-blue: #26773F;
+  --color-deep-accent: #14261A;
+  --color-light-gray: #F7F7F5;
+  --color-dark-text: #14261A;
+  --color-mid-gray: #4A4A4A;
+
+  /* ---- Type ----
+     --font-sans is the Galano slot. Swap the first family for
+     "Galano Grotesque" once the Adobe Fonts project is live. */
+  --font-sans: "Jost", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Lora", Georgia, serif;
+  --font-mono: "Jost", ui-sans-serif, sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--font-sans);
-  color: var(--color-ink);
+  color: var(--color-fern);
   background: var(--color-parchment);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Serif display headings */
+/* Serif display headings — heavy, like both reference sites */
 .font-display {
   font-family: var(--font-serif);
-  font-weight: 400;
-  letter-spacing: -0.015em;
+  font-weight: 700;
+  letter-spacing: -0.018em;
+  color: var(--color-forest);
 }
 .font-display em {
-  font-style: italic;
-  color: var(--color-moss);
+  font-style: normal;
+  background: linear-gradient(transparent 62%, rgba(255, 216, 77, 0.55) 62%);
+  padding: 0 0.06em;
 }
 
-/* Mono document labels — "1.0 THE SITUATION" */
+/* Marker highlight, usable anywhere */
+.mark {
+  background: linear-gradient(transparent 62%, rgba(255, 216, 77, 0.55) 62%);
+  padding: 0 0.06em;
+}
+
+/* Old mono doc-label neutralised: no mono, no tracking, no uppercase.
+   Kept as a class so unported pages degrade gracefully. */
 .doc-label {
-  font-family: var(--font-mono);
-  font-weight: 500;
-  font-size: 12.5px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  border-bottom: 1px solid var(--color-hairline);
-  padding-bottom: 10px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--color-muted);
+  border-bottom: none;
+  padding-bottom: 0;
 }
-.doc-label b {
-  color: var(--color-moss);
-  font-weight: 500;
-  margin-right: 12px;
-}
+.doc-label b { color: var(--color-moss); }
 
-/* Rotated stamp */
-.stamp {
-  display: inline-block;
-  font-family: var(--font-mono);
-  font-weight: 500;
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  color: var(--color-moss);
-  border: 2px solid var(--color-moss);
-  border-radius: 3px;
-  padding: 7px 12px;
-  transform: rotate(-3.5deg);
-  opacity: 0.9;
-}
-
-/* Checked box for signal lists */
-.cbx {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  font-weight: 500;
-  color: var(--color-moss);
-  border: 1.5px solid var(--color-ink);
-  width: 17px;
-  height: 17px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transform: translateY(2px);
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }

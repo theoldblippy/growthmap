@@ -19,9 +19,9 @@ const steps = [
   canonicalPath="/investors"
 >
   <!-- HERO -->
-  <section class="border-b border-hairline px-6 py-16 md:py-24">
+  <section class="px-6 py-20 md:py-28">
     <div class="mx-auto max-w-[900px]">
-      <p class="font-mono text-[11.5px] font-medium uppercase tracking-[0.18em] text-moss">For private equity</p>
+      <p class="text-[14.5px] font-semibold text-moss">For private equity</p>
       <h1 class="font-display mt-6 text-4xl leading-[1.06] text-ink sm:text-5xl md:text-[56px]">
         One of your companies is <em>behind plan.</em>
       </h1>
@@ -38,21 +38,21 @@ const steps = [
   </section>
 
   <!-- THE TWO THINGS -->
-  <section class="border-b border-hairline px-6 py-16 md:py-24">
+  <section class="bg-parchment-deep px-6 py-20 md:py-28">
     <div class="mx-auto max-w-[1000px]">
       <h2 class="font-display text-3xl leading-tight text-ink md:text-[40px]">
         No matter the industry, every business does <em>two things.</em>
       </h2>
       <div class="mt-10 grid items-stretch gap-5 md:grid-cols-[1fr_auto_1fr]">
-        <div class="rounded-[16px] border border-hairline bg-white/60 p-8">
+        <div class="rounded-[18px] bg-white shadow-[0_2px_10px_rgba(20,38,26,.07)] p-8">
           <p class="font-display text-5xl leading-none text-moss">1</p>
           <h3 class="font-display mt-4 text-2xl text-ink">Get customers</h3>
           <p class="mt-2 leading-relaxed text-fern">It has to find and win people who buy.</p>
         </div>
         <div class="flex items-center justify-center">
-          <span class="font-mono text-sm text-fern">then</span>
+          <span class="text-[15px] text-muted">then</span>
         </div>
-        <div class="rounded-[16px] border border-hairline bg-white/60 p-8">
+        <div class="rounded-[18px] bg-white shadow-[0_2px_10px_rgba(20,38,26,.07)] p-8">
           <p class="font-display text-5xl leading-none text-moss">2</p>
           <h3 class="font-display mt-4 text-2xl text-ink">Serve those customers</h3>
           <p class="mt-2 leading-relaxed text-fern">It has to deliver, and keep them coming back.</p>
@@ -65,9 +65,9 @@ const steps = [
   </section>
 
   <!-- THE MAP -->
-  <section class="border-b border-hairline bg-parchment-deep px-6 py-16 md:py-20">
+  <section class="px-6 py-20 md:py-28">
     <div class="mx-auto max-w-[1100px]">
-      <p class="doc-label text-ink">Where I start</p>
+      <p class="text-[15px] font-semibold text-muted">Where I start</p>
       <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">It all starts with the map.</h2>
       <p class="mt-3 max-w-[54ch] text-lg leading-relaxed text-fern">Understanding how the company actually makes money, before touching anything.</p>
       <div class="mt-10 space-y-10">
@@ -76,14 +76,14 @@ const steps = [
           return (
             <div class:list={["grid items-center gap-6 md:gap-12 md:grid-cols-2", i % 2 === 1 && "md:[&>*:first-child]:order-2"]}>
               <div class="flex gap-5">
-                <p class="font-mono text-xl font-medium text-moss">{st.n}</p>
+                <p class="font-display text-[17px] text-moss">{st.n}</p>
                 <div>
                   <h3 class="font-display text-[22px] leading-tight text-ink">{st.title}</h3>
                   <p class="mt-1.5 text-[15px] leading-relaxed text-fern">{st.body}</p>
                 </div>
               </div>
               {Fig && (
-                <div class="rounded-[14px] border border-hairline bg-white/60 p-4">
+                <div class="rounded-[18px] bg-white shadow-[0_2px_10px_rgba(20,38,26,.07)] p-4">
                   <Fig />
                 </div>
               )}
@@ -95,9 +95,9 @@ const steps = [
   </section>
 
   <!-- HOW I WORK -->
-  <section class="border-b border-hairline px-6 py-16 md:py-20">
+  <section class="bg-parchment-deep px-6 py-20 md:py-28">
     <div class="mx-auto max-w-[900px]">
-      <p class="doc-label text-ink">How I work</p>
+      <p class="text-[15px] font-semibold text-muted">How I work</p>
       <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
         I don't come in to take over.
       </h2>
@@ -108,9 +108,9 @@ const steps = [
   </section>
 
   <!-- AI -->
-  <section class="border-b border-hairline px-6 py-16 md:py-20">
+  <section class="px-6 py-20 md:py-28">
     <div class="mx-auto max-w-[900px]">
-      <p class="doc-label text-ink">One more thing</p>
+      <p class="text-[15px] font-semibold text-muted">One more thing</p>
       <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
         I build the tools, too.
       </h2>
@@ -121,9 +121,9 @@ const steps = [
   </section>
 
   <!-- CLOSE -->
-  <section class="px-6 py-16 md:py-20">
+  <section class="bg-parchment-deep px-6 py-20 md:py-28">
     <div class="mx-auto max-w-[900px]">
-      <p class="doc-label text-ink">Fit</p>
+      <p class="text-[15px] font-semibold text-muted">Fit</p>
       <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">
         Let's be straight about it.
       </h2>

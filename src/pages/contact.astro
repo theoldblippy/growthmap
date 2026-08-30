@@ -43,7 +43,7 @@ const faqSchema = {
   <!-- HEADER -->
   <section class="px-6 pt-16 pb-10 md:pt-24">
     <div class="mx-auto max-w-[800px] text-center">
-      <p class="mb-5 font-mono text-[11.5px] font-medium uppercase tracking-[0.18em] text-moss">
+      <p class="mb-5 text-[14.5px] font-semibold text-moss">
         Get in Touch
       </p>
       <h1 class="font-display text-4xl leading-[1.1] text-ink sm:text-5xl md:text-[48px]">
@@ -73,7 +73,7 @@ const faqSchema = {
   <!-- FAQ -->
   <section class="border-t border-hairline px-6 py-16 md:py-20">
     <div class="mx-auto max-w-[720px]">
-      <p class="doc-label text-ink">Before you book</p>
+      <p class="text-[15px] font-semibold text-muted">Before you book</p>
       <div class="mt-8">
         {faqs.map((f) => (
           <div class="border-t border-dashed border-hairline py-6 first:border-t-0 first:pt-0">
@@ -104,37 +104,37 @@ const faqSchema = {
         <input type="text" name="_gotcha" style="display:none" />
 
         <div>
-          <label for="name" class="block font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-fern">Full Name</label>
+          <label for="name" class="block text-[14px] font-semibold text-muted">Full Name</label>
           <input
             type="text"
             name="name"
             id="name"
             required
-            class="mt-2 w-full rounded-lg border border-hairline bg-white/60 px-4 py-3 text-ink transition-colors placeholder:text-fern/60 focus:border-moss focus:outline-none focus:ring-1 focus:ring-moss"
+            class="mt-2 w-full rounded-lg bg-white shadow-[0_2px_10px_rgba(20,38,26,.07)] px-4 py-3 text-ink transition-colors placeholder:text-fern/60 focus:border-moss focus:outline-none focus:ring-1 focus:ring-moss"
             placeholder="Your name"
           />
         </div>
 
         <div>
-          <label for="email" class="block font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-fern">Email</label>
+          <label for="email" class="block text-[14px] font-semibold text-muted">Email</label>
           <input
             type="email"
             name="email"
             id="email"
             required
-            class="mt-2 w-full rounded-lg border border-hairline bg-white/60 px-4 py-3 text-ink transition-colors placeholder:text-fern/60 focus:border-moss focus:outline-none focus:ring-1 focus:ring-moss"
+            class="mt-2 w-full rounded-lg bg-white shadow-[0_2px_10px_rgba(20,38,26,.07)] px-4 py-3 text-ink transition-colors placeholder:text-fern/60 focus:border-moss focus:outline-none focus:ring-1 focus:ring-moss"
             placeholder="you@example.com"
           />
         </div>
 
         <div>
-          <label for="message" class="block font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-fern">Message</label>
+          <label for="message" class="block text-[14px] font-semibold text-muted">Message</label>
           <textarea
             name="message"
             id="message"
             required
             rows="5"
-            class="mt-2 w-full rounded-lg border border-hairline bg-white/60 px-4 py-3 text-ink transition-colors placeholder:text-fern/60 focus:border-moss focus:outline-none focus:ring-1 focus:ring-moss"
+            class="mt-2 w-full rounded-lg bg-white shadow-[0_2px_10px_rgba(20,38,26,.07)] px-4 py-3 text-ink transition-colors placeholder:text-fern/60 focus:border-moss focus:outline-none focus:ring-1 focus:ring-moss"
             placeholder="Tell me about your business and what you're working on..."
           ></textarea>
         </div>
@@ -167,7 +167,7 @@ const faqSchema = {
       <div class="mt-6 flex justify-center">
         <a
           href="/blog"
-          class="inline-block rounded-full border border-hairline bg-white/35 px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-ink"
+          class="inline-block rounded-full bg-white shadow-[0_2px_10px_rgba(20,38,26,.07)] px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-ink"
         >
           Read the field notes
         </a>

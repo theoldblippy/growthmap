@@ -7,14 +7,6 @@ import FigLoop from '../components/figures/FigLoop.astro';
 
 const bookUrl = 'https://calendar.notion.so/meet/cameronearloliver/qc3y04oud';
 
-const record = [
-  { before: '$12M', after: '$20M', label: 'Construction revenue, on a rebuilt sales process' },
-  { before: '120', after: '45 days', label: 'Onboarding time, unlocking $250K in new revenue' },
-  { before: '40%', after: '85%', label: 'Utilization on underused contracts' },
-  { before: '50%', after: '65%', label: 'Provider utilization, on smarter scheduling' },
-];
-
-
 const steps = [
   { n: '01', title: 'I map how you make money', body: "Every way you get a customer, and everything you do to keep them. Just this alone opens your eyes to the opportunities you're wasting." },
   { n: '02', title: 'We see what it takes to deliver', body: 'What each part actually needs to run: people, technology, resources.' },
@@ -32,30 +24,37 @@ const serveQ = [
   "We win the customer, then the wheels come off in delivery.",
   "Everything that makes this place work is in my head, not a system.",
 ];
-const ways = [
-  {
-    tag: 'Until we find them',
-    title: 'Five hours back',
-    body: "Some weeks it's all a little broken and none of it is the emergency. That usually means too much of the business is running through you. We look at where your week actually goes, find the work the business should be handling without you, and I build the thing that takes it off your plate. I'll stay with it until you have five hours back.",
-  },
-  {
-    tag: 'Two weeks',
-    title: 'One bottleneck, fixed',
-    body: "You probably already know what your biggest one is. It's the thing you'd go fix first if you ever got a spare month, and you haven't had a spare month in two years. Tell me what it is and I'll come work it with you for two weeks. We find where it's actually breaking, and I build the fix while I'm still there. Whatever we build, you keep.",
-  },
-  {
-    tag: 'Ongoing',
-    title: 'The whole thing',
-    body: "Everything above, in order. We map how the business makes money, find the bottleneck that keeps coming back, knock it out, then go find the next one. Then we put a rhythm in place your team can hold on their own. It's the deepest version of this, and it's where most of my clients end up.",
-  },
-];
-
 const biggerQ = [
   "I need to hire, but is it a salesperson or an operator?",
   "I've got capital to put to work and don't know where it actually moves the needle.",
   "Is it time for a second location, or would that just multiply the chaos?",
   "I hit the revenue number, so why is there no cash in the bank?",
   "I couldn't take a two-week vacation without the whole thing wobbling.",
+];
+
+const ways = [
+  { tag: 'Until we find them', title: 'Five hours back', body: "Some weeks it's all a little broken and none of it is the emergency. That usually means too much of the business is running through you. We look at where your week actually goes, find the work the business should be handling without you, and I build the thing that takes it off your plate. I'll stay with it until you have five hours back." },
+  { tag: 'Two weeks', title: 'One bottleneck, fixed', body: "You probably already know what your biggest one is. It's the thing you'd go fix first if you ever got a spare month, and you haven't had a spare month in two years. Tell me what it is and I'll come work it with you for two weeks. We find where it's actually breaking, and I build the fix while I'm still there. Whatever we build, you keep." },
+  { tag: 'Ongoing', title: 'The whole thing', body: "Everything above, in order. We map how the business makes money, find the bottleneck that keeps coming back, knock it out, then go find the next one. Then we put a rhythm in place your team can hold on their own. It's the deepest version of this, and it's where most of my clients end up." },
+];
+
+const fitYes = [
+  "You own the place, so you can actually make the call.",
+  "You want the thing fixed, not documented.",
+  "You're willing to hear what I actually think.",
+];
+const fitNo = [
+  "You want a strategy deck and a recommendation.",
+  "You want someone to tell you you're already right.",
+  "You need a full-time executive, not a part-time operator.",
+];
+
+const faqs = [
+  { q: "What's a fractional COO?", a: "An operator who runs alongside you part-time instead of joining full-time. I get into the business, find what's really holding growth back, and fix it with your team, without the cost of a full-time exec." },
+  { q: "Who do you work with?", a: "Owner-led businesses, roughly $1M to $20M in revenue, across construction, professional services, healthcare, software, and agencies. If you've become the bottleneck and growth has gotten chaotic, that's my wheelhouse." },
+  { q: "What happens on the call?", a: "Thirty minutes, no pitch. You tell me where it's stuck, I tell you what I'd fix first. You can run with that yourself, or we can talk about doing it together." },
+  { q: "What does it cost?", a: "It depends on the problem and how involved you want me. Engagements are month to month, scoped to what actually needs fixing. We figure out whether it's a fit before anyone talks money." },
+  { q: "Do you work remotely?", a: "Yes. I work remotely with owners across the US, and get on-site when the work calls for it." },
 ];
 ---
 
@@ -64,127 +63,215 @@ const biggerQ = [
   description="When growth stalls, it's almost never where you think. I'm an operator who gets in the trenches with owner-led businesses and fixes what's actually holding them back. Book a free call."
   canonicalPath="/"
 >
-  <!-- 1 · HERO -->
-  <section class="relative overflow-hidden border-b border-hairline px-6 py-16 md:py-24">
-    <svg class="pointer-events-none absolute -right-36 -top-16 h-[620px] w-[620px] text-moss opacity-35" viewBox="0 0 600 600" aria-hidden="true">
-      <g fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.75">
-        <path d="M300,80 C420,70 520,160 530,280 C540,400 460,520 330,530 C200,540 80,460 75,320 C70,180 180,90 300,80 Z" />
-        <path d="M300,150 C388,142 462,196 470,286 C478,376 416,462 320,470 C224,478 140,420 136,312 C132,204 216,158 300,150 Z" />
-        <path d="M300,215 C352,210 398,248 403,300 C408,352 372,404 316,409 C260,414 210,378 207,318 C204,258 248,220 300,215 Z" />
-        <circle cx="300" cy="301" r="6" fill="currentColor" stroke="none" />
-      </g>
-    </svg>
-    <div class="relative z-10 mx-auto grid max-w-[1200px] items-center gap-10 md:grid-cols-[1.15fr_0.85fr] md:gap-14">
-      <div>
-        <h1 class="font-display text-5xl leading-[1.04] text-ink sm:text-6xl md:text-[64px]">
-          You're fixing the <em>wrong thing.</em>
-        </h1>
-        <p class="mt-6 max-w-[50ch] text-lg leading-relaxed text-fern">
-          When growth stalls, everything feels chaotic and you're not sure of your next move. I get in the trenches with you, diagnose the problem, and we fix what's holding you back.
-        </p>
-        <div class="mt-8">
-          <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="inline-block rounded-full border border-ink bg-ink px-8 py-4 text-[15px] font-semibold text-parchment transition-opacity hover:opacity-90">
-            Book a call
-          </a>
-          <p class="mt-3.5 max-w-[46ch] text-sm text-fern">A free 30-minute call.</p>
+  <!-- 2 · HERO -->
+  <section class="px-6 pb-20 pt-20 md:pb-28 md:pt-28">
+    <div class="mx-auto max-w-[820px] text-center">
+      <h1 class="font-display text-[42px] leading-[1.08] sm:text-[54px] md:text-[62px]">
+        You're fixing the <em class="whitespace-nowrap">wrong thing</em>.
+      </h1>
+      <p class="mx-auto mt-7 max-w-[58ch] text-[18px] leading-[1.65] text-fern md:text-[19px]">
+        When growth stalls, everything feels chaotic and you're not sure of your next move. I get in the trenches with you, diagnose the problem, and we fix what's holding you back.
+      </p>
+      <div class="mt-9 flex flex-wrap justify-center gap-3.5">
+        <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="rounded-full bg-moss px-8 py-4 text-[15px] font-semibold text-white transition-opacity hover:opacity-90">Book a call</a>
+        <a href="/diagnostic" class="rounded-full border-[1.5px] border-forest bg-white px-8 py-4 text-[15px] font-semibold text-forest transition-colors hover:bg-forest hover:text-white">Take the diagnostic</a>
+      </div>
+      <p class="mt-4 text-[14px] text-muted">A free 30-minute call.</p>
+    </div>
+  </section>
+
+  <!-- 3 · THE PROBLEM -->
+  <section class="bg-parchment-deep px-6 py-20 md:py-28">
+    <div class="mx-auto max-w-[1060px]">
+      <h2 class="font-display mx-auto max-w-[20ch] text-center text-[34px] leading-[1.15] md:text-[42px]">
+        Every business does two things.
+      </h2>
+      <div class="mx-auto mt-12 grid max-w-[860px] items-stretch gap-5 md:grid-cols-[1fr_auto_1fr]">
+        <div class="rounded-[18px] bg-white p-9 text-center shadow-[0_2px_10px_rgba(20,38,26,.06)]">
+          <p class="font-display text-[44px] leading-none text-moss">1</p>
+          <h3 class="font-display mt-4 text-[23px]">Get customers</h3>
+          <p class="mt-2.5 text-[16px] leading-relaxed text-fern">You have to find and get people to buy.</p>
+        </div>
+        <div class="flex items-center justify-center"><span class="text-[15px] text-muted">then</span></div>
+        <div class="rounded-[18px] bg-white p-9 text-center shadow-[0_2px_10px_rgba(20,38,26,.06)]">
+          <p class="font-display text-[44px] leading-none text-moss">2</p>
+          <h3 class="font-display mt-4 text-[23px]">Serve those customers</h3>
+          <p class="mt-2.5 text-[16px] leading-relaxed text-fern">You have to deliver, and keep them coming back.</p>
         </div>
       </div>
-      <div class="flex justify-center md:justify-end">
-        <figure class="max-w-[340px]">
-          <img src="/images/headshot.jpeg" alt="Cameron Oliver" class="w-full rounded-[16px] border border-hairline shadow-sm" loading="eager" />
-        </figure>
+
+      <p class="mt-16 text-center text-[20px] font-semibold text-forest">Sound familiar?</p>
+      <div class="mt-8 grid gap-10 md:grid-cols-3">
+        <div>
+          <p class="text-[15px] font-semibold text-moss">Getting customers</p>
+          <ul class="mt-4 space-y-3.5">
+            {getQ.map((q) => (<li class="text-[16px] leading-snug text-forest">&ldquo;{q}&rdquo;</li>))}
+          </ul>
+        </div>
+        <div>
+          <p class="text-[15px] font-semibold text-moss">Serving customers</p>
+          <ul class="mt-4 space-y-3.5">
+            {serveQ.map((q) => (<li class="text-[16px] leading-snug text-forest">&ldquo;{q}&rdquo;</li>))}
+          </ul>
+        </div>
+        <div>
+          <p class="text-[15px] font-semibold text-moss">The bigger calls</p>
+          <ul class="mt-4 space-y-3.5">
+            {biggerQ.map((q) => (<li class="text-[16px] leading-snug text-forest">&ldquo;{q}&rdquo;</li>))}
+          </ul>
+        </div>
+      </div>
+      <p class="mx-auto mt-12 max-w-[62ch] text-center text-[18px] leading-relaxed text-fern">
+        Every one of these traces back to one of those two things. That's where we start.
+      </p>
+    </div>
+  </section>
+
+  <!-- 4 · THE TURN -->
+  <section class="px-6 py-20 md:py-28">
+    <div class="mx-auto max-w-[680px] text-center">
+      <h2 class="font-display text-[34px] leading-[1.15] md:text-[42px]">When it's working, you can <em>feel it</em>.</h2>
+      <p class="mt-7 text-[18px] leading-[1.7] text-fern">
+        The chaos settles down. Your team stops waiting on you to unblock them. You get to look a quarter ahead instead of at today. That's the whole point of this, and it's a lot closer than it feels right now.
+      </p>
+    </div>
+  </section>
+
+  <!-- 5 · WHO I AM -->
+  <section class="bg-parchment-deep px-6 py-20 md:py-24">
+    <div class="mx-auto grid max-w-[940px] items-center gap-12 md:grid-cols-[300px_1fr]">
+      <div class="mx-auto w-full max-w-[300px]">
+        <img src="/images/sneakers.jpg" alt="Cameron Oliver" class="w-full rounded-[20px] shadow-[0_4px_20px_rgba(20,38,26,.12)]" loading="lazy" />
+      </div>
+      <div>
+        <h2 class="font-display text-[32px] leading-[1.15] md:text-[38px]">Hi, I'm Cameron.</h2>
+        <p class="mt-6 text-[18px] leading-[1.7] text-fern">
+          I've spent my career operating inside owner-led businesses. These days I run operations at a health tech company, and I work with a handful of owners on the side, mostly on the stuff that quietly caps growth.
+        </p>
+        <p class="mt-4 text-[18px] leading-[1.7] text-fern">
+          More often than not I end up building the fix rather than writing a report about it.
+        </p>
+        <a href="/about" class="mt-6 inline-block text-[16px] font-semibold text-moss underline decoration-2 underline-offset-4 hover:text-forest">More about how I work &rarr;</a>
       </div>
     </div>
   </section>
 
-  <!-- 2 · TRACK RECORD BAND -->
-  <section class="relative overflow-hidden border-b border-hairline bg-ink px-6 py-10">
-    <div class="relative z-10 mx-auto max-w-[1200px]">
-      <p class="mb-6 font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-cream/55">What I've done</p>
-      <div class="grid grid-cols-2 gap-x-8 gap-y-8 md:grid-cols-4">
-        {record.map((r) => (
-          <div>
-            <p class="font-display text-xl leading-none text-cream md:text-[26px]">
-              {r.before} <span class="text-moss">&rarr;</span> {r.after}
-            </p>
-            <p class="mt-2 max-w-[26ch] text-[12.5px] leading-snug text-cream/70">{r.label}</p>
+  <!-- 6 · PROOF -->
+  <section class="px-6 py-20 md:py-28">
+    <div class="mx-auto max-w-[1000px]">
+      <h2 class="font-display mx-auto max-w-[22ch] text-center text-[34px] leading-[1.15] md:text-[40px]">What that looks like in practice.</h2>
+      <div class="mt-12 grid gap-6 md:grid-cols-2">
+        <div class="rounded-[18px] bg-white p-9 shadow-[0_2px_10px_rgba(20,38,26,.07)]">
+          <p class="font-display text-[21px] leading-snug">&ldquo;If you doubled your sales tomorrow, would you be happy, or freak out?&rdquo;</p>
+          <p class="mt-4 text-[16.5px] leading-relaxed text-fern">He was chasing more sales, but when I asked him that, he got sick to his stomach. He had a throughput problem, not a sales problem. We fixed how the work got delivered, and the growth followed.</p>
+        </div>
+        <div class="rounded-[18px] bg-white p-9 shadow-[0_2px_10px_rgba(20,38,26,.07)]">
+          <p class="font-display text-[21px] leading-snug">She didn't know where her revenue was even coming from.</p>
+          <p class="mt-4 text-[16.5px] leading-relaxed text-fern">Focused on all the wrong customers, and couldn't say where to find the right ones. We rebuilt the sales process and doubled her growth rate, with no added spend.</p>
+        </div>
+      </div>
+      <p class="mt-9 text-center">
+        <a href="/results" class="text-[16px] font-semibold text-moss underline decoration-2 underline-offset-4 hover:text-forest">See more results &rarr;</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- 7 · WAYS TO WORK -->
+  <section class="bg-parchment-deep px-6 py-20 md:py-28">
+    <div class="mx-auto max-w-[1100px]">
+      <h2 class="font-display mx-auto max-w-[18ch] text-center text-[34px] leading-[1.15] md:text-[42px]">Three ways to do this.</h2>
+      <p class="mx-auto mt-6 max-w-[54ch] text-center text-[18px] leading-relaxed text-fern">
+        Same work in all three. The difference is how much of it, and for how long.
+      </p>
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+        {ways.map((w) => (
+          <div class="flex flex-col rounded-[18px] bg-white p-8 shadow-[0_2px_10px_rgba(20,38,26,.07)]">
+            <p class="text-[14px] font-semibold text-moss">{w.tag}</p>
+            <h3 class="font-display mt-2.5 text-[24px] leading-snug">{w.title}</h3>
+            <p class="mt-3.5 flex-1 text-[16px] leading-relaxed text-fern">{w.body}</p>
+            <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="mt-6 text-[15px] font-semibold text-moss underline decoration-2 underline-offset-4 hover:text-forest">Book a call &rarr;</a>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- 3 · THE TWO THINGS -->
-  <section class="border-b border-hairline px-6 py-16 md:py-24">
-    <div class="mx-auto max-w-[1000px]">
-      <h2 class="font-display text-3xl leading-tight text-ink md:text-[40px]">
-        No matter your industry, product, or service, every business does <em>two things.</em>
-      </h2>
-      <div class="mt-10 grid items-stretch gap-5 md:grid-cols-[1fr_auto_1fr]">
-        <div class="rounded-[16px] border border-hairline bg-white/60 p-8">
-          <p class="font-display text-5xl leading-none text-moss">1</p>
-          <h3 class="font-display mt-4 text-2xl text-ink">Get customers</h3>
-          <p class="mt-2 leading-relaxed text-fern">You have to find and get people to buy.</p>
+  <!-- 8 · FIT -->
+  <section class="px-6 py-20 md:py-28">
+    <div class="mx-auto max-w-[900px]">
+      <h2 class="font-display mx-auto max-w-[20ch] text-center text-[34px] leading-[1.15] md:text-[40px]">This is probably a fit if&hellip;</h2>
+      <div class="mt-12 grid gap-10 md:grid-cols-2">
+        <div class="rounded-[18px] bg-white p-9 shadow-[0_2px_10px_rgba(20,38,26,.07)]">
+          <p class="text-[15px] font-semibold text-moss">Worth a conversation</p>
+          <ul class="mt-5 space-y-4">
+            {fitYes.map((f) => (
+              <li class="flex gap-3 text-[16.5px] leading-snug text-forest">
+                <span class="mt-0.5 shrink-0 font-semibold text-moss">&#10003;</span><span>{f}</span>
+              </li>
+            ))}
+          </ul>
         </div>
-        <div class="flex items-center justify-center">
-          <span class="font-mono text-sm text-fern">then</span>
-        </div>
-        <div class="rounded-[16px] border border-hairline bg-white/60 p-8">
-          <p class="font-display text-5xl leading-none text-moss">2</p>
-          <h3 class="font-display mt-4 text-2xl text-ink">Serve those customers</h3>
-          <p class="mt-2 leading-relaxed text-fern">You have to deliver, and keep them coming back.</p>
-        </div>
-      </div>
-      <div class="mt-6 rounded-[16px] border border-hairline bg-parchment-deep p-8 md:p-10">
-        <p class="doc-label text-ink">Sound familiar?</p>
-        <div class="mt-7 grid gap-8 md:grid-cols-3">
-          <div>
-            <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.14em] text-moss">Getting customers</p>
-            <ul class="mt-3.5 space-y-3">
-              {getQ.map((q) => (<li class="text-[15px] italic leading-snug text-ink">"{q}"</li>))}
-            </ul>
-          </div>
-          <div class="md:border-l md:border-dashed md:border-hairline md:pl-8">
-            <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.14em] text-moss">Serving customers</p>
-            <ul class="mt-3.5 space-y-3">
-              {serveQ.map((q) => (<li class="text-[15px] italic leading-snug text-ink">"{q}"</li>))}
-            </ul>
-          </div>
-          <div class="md:border-l md:border-dashed md:border-hairline md:pl-8">
-            <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.14em] text-moss">The bigger calls</p>
-            <ul class="mt-3.5 space-y-3">
-              {biggerQ.map((q) => (<li class="text-[15px] italic leading-snug text-ink">"{q}"</li>))}
-            </ul>
-          </div>
+        <div class="rounded-[18px] bg-white p-9 shadow-[0_2px_10px_rgba(20,38,26,.07)]">
+          <p class="text-[15px] font-semibold text-rust">Probably not me</p>
+          <ul class="mt-5 space-y-4">
+            {fitNo.map((f) => (
+              <li class="flex gap-3 text-[16.5px] leading-snug text-forest">
+                <span class="mt-0.5 shrink-0 font-semibold text-rust">&times;</span><span>{f}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
-      <p class="mt-9 max-w-[70ch] text-lg leading-relaxed text-fern">
-        Every one of these traces back to one of those two things. That's where we start.
-      </p>
     </div>
   </section>
 
-  <!-- 4 · HOW IT WORKS -->
-  <section class="border-b border-hairline bg-parchment-deep px-6 py-16 md:py-20">
-    <div class="mx-auto max-w-[1100px]">
-      <p class="doc-label text-ink">Where I start</p>
-      <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">It all starts with the map.</h2>
-      <p class="mt-3 max-w-[54ch] text-lg leading-relaxed text-fern">Understanding how your business actually makes money.</p>
-      <div class="mt-10 space-y-10">
+  <!-- 9 · SLAB CTA -->
+  <section class="bg-forest px-6 py-20 md:py-24">
+    <div class="mx-auto max-w-[680px] text-center">
+      <h2 class="font-display text-[32px] leading-[1.15] text-white md:text-[40px]">Want to know what I'd fix first?</h2>
+      <p class="mx-auto mt-6 max-w-[52ch] text-[18px] leading-relaxed text-white/75">
+        Thirty minutes, no pitch. You tell me where it's stuck, I tell you what I'd go after. You can run with that yourself if you want.
+      </p>
+      <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="mt-9 inline-block rounded-full bg-sprout px-9 py-4 text-[15px] font-semibold text-forest transition-opacity hover:opacity-90">Book a call</a>
+    </div>
+  </section>
+
+  <!-- 9b · THE WHITEBOARD -->
+  <section class="px-6 py-20 md:py-28">
+    <div class="mx-auto grid max-w-[1040px] items-center gap-12 md:grid-cols-[1fr_420px]">
+      <div>
+        <h2 class="font-display text-[32px] leading-[1.15] md:text-[38px]">This is what it actually looks like.</h2>
+        <p class="mt-7 text-[18px] leading-[1.7] text-fern">
+          No deck, no framework, no binder on a shelf. We get in a room and draw how your business really works: how a customer shows up, what happens next, where it stalls, and who is waiting on whom.
+        </p>
+        <p class="mt-4 text-[18px] leading-[1.7] text-fern">
+          By the end you can see the whole thing on one board. Usually the bottleneck is obvious the moment it's drawn, and it's rarely where anyone expected.
+        </p>
+      </div>
+      <div>
+        <img src="/images/whiteboard.jpg" alt="A whiteboard mapping how customers happen and how they get served, with bottlenecks and metrics marked" class="w-full rounded-[18px] shadow-[0_4px_24px_rgba(20,38,26,.16)]" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 · HOW IT WORKS -->
+  <section class="px-6 py-20 md:py-28">
+    <div class="mx-auto max-w-[1060px]">
+      <h2 class="font-display mx-auto max-w-[20ch] text-center text-[34px] leading-[1.15] md:text-[42px]">It all starts with the map.</h2>
+      <p class="mx-auto mt-6 max-w-[52ch] text-center text-[18px] leading-relaxed text-fern">
+        Understanding how your business actually makes money.
+      </p>
+      <div class="mt-16 space-y-20">
         {steps.map((st, i) => {
           const Fig = [FigMap, FigScorecard, FigBottleneck, FigLoop][i];
           return (
-            <div class:list={["grid items-center gap-6 md:gap-12 md:grid-cols-2", i % 2 === 1 && "md:[&>*:first-child]:order-2"]}>
-              <div class="flex gap-5">
-                <p class="font-mono text-xl font-medium text-moss">{st.n}</p>
-                <div>
-                  <h3 class="font-display text-[22px] leading-tight text-ink">{st.title}</h3>
-                  <p class="mt-1.5 text-[15px] leading-relaxed text-fern">{st.body}</p>
-                </div>
+            <div class:list={["grid items-center gap-8 md:gap-14 md:grid-cols-2", i % 2 === 1 && "md:[&>*:first-child]:order-2"]}>
+              <div>
+                <p class="font-display text-[17px] text-moss">{st.n}</p>
+                <h3 class="font-display mt-2 text-[26px] leading-tight md:text-[30px]">{st.title}</h3>
+                <p class="mt-3.5 text-[17px] leading-relaxed text-fern">{st.body}</p>
               </div>
-              <div class="rounded-[14px] border border-hairline bg-white/60 p-4">
-                <Fig />
-              </div>
+              <div><Fig /></div>
             </div>
           );
         })}
@@ -192,58 +279,43 @@ const biggerQ = [
     </div>
   </section>
 
-  <!-- 4b · SMALLER WAYS TO START -->
-  <section class="border-b border-hairline px-6 py-16 md:py-20">
-    <div class="mx-auto max-w-[1100px]">
-      <p class="doc-label text-ink">Working together</p>
-      <h2 class="font-display mt-7 text-3xl leading-tight text-ink md:text-4xl">Three ways to do this.</h2>
-      <p class="mt-3 max-w-[58ch] text-lg leading-relaxed text-fern">
-        Same work in all three. The difference is how much of it, and for how long.
+  <!-- 11 · THINGS I'VE BUILT -->
+  <section class="bg-parchment-deep px-6 py-20 md:py-24">
+    <div class="mx-auto max-w-[680px] text-center">
+      <h2 class="font-display text-[32px] leading-[1.15] md:text-[40px]">I usually end up building something.</h2>
+      <p class="mt-7 text-[18px] leading-[1.7] text-fern">
+        A quote builder that took quoting from ten hours to about one. A deal-sourcing engine that researches targets while everyone sleeps. A bot that chases down the timesheets nobody wants to chase. If you can name the thing eating your week, there's a good chance it can be built away.
       </p>
-      <div class="mt-10 grid gap-6 md:grid-cols-3">
-        {ways.map((w) => (
-          <div class="flex flex-col rounded-[16px] border border-hairline bg-white/60 p-8">
-            <p class="font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-moss">{w.tag}</p>
-            <h3 class="font-display mt-3 text-2xl leading-snug text-ink">{w.title}</h3>
-            <p class="mt-3 flex-1 leading-relaxed text-fern">{w.body}</p>
-            <a
-              href={bookUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="mt-6 inline-block font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-moss transition-colors hover:text-ink"
-            >
-              Book a call &rarr;
-            </a>
-          </div>
+      <a href="/results" class="mt-7 inline-block text-[16px] font-semibold text-moss underline decoration-2 underline-offset-4 hover:text-forest">See what I've built &rarr;</a>
+    </div>
+  </section>
+
+  <!-- 12 · FAQ -->
+  <section class="px-6 py-20 md:py-28">
+    <div class="mx-auto max-w-[760px]">
+      <h2 class="font-display text-center text-[34px] leading-[1.15] md:text-[40px]">Questions you might have.</h2>
+      <div class="mt-12 divide-y divide-hairline border-y border-hairline">
+        {faqs.map((f) => (
+          <details class="group py-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-[18px] font-semibold text-forest">
+              {f.q}
+              <span class="shrink-0 text-[22px] leading-none text-moss transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="mt-3.5 text-[16.5px] leading-relaxed text-fern">{f.a}</p>
+          </details>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- 5 · PROOF -->
-  <section class="border-b border-hairline px-6 py-16 md:py-20">
-    <div class="mx-auto max-w-[1000px]">
-      <p class="doc-label text-ink">What that looks like</p>
-      <div class="mt-9 grid gap-6 md:grid-cols-2">
-        <div class="rounded-[14px] border border-hairline bg-white/50 p-8">
-          <p class="font-display text-xl leading-snug text-ink">
-            "If you doubled your sales tomorrow, would you be happy, or freak out?"
-          </p>
-          <p class="mt-3 leading-relaxed text-fern">
-            He was chasing more sales, but when I asked him that, he got sick to his stomach. He had a throughput problem, not a sales problem. We fixed how the work got delivered, and the growth followed.
-          </p>
-        </div>
-        <div class="rounded-[14px] border border-hairline bg-white/50 p-8">
-          <p class="font-display text-xl leading-snug text-ink">
-            She didn't know where her revenue was even coming from.
-          </p>
-          <p class="mt-3 leading-relaxed text-fern">
-            Focused on all the wrong customers, and couldn't say where to find the right ones. We rebuilt the sales process and doubled her growth rate, with no added spend.
-          </p>
-        </div>
-      </div>
-      <a href="/testimonials" class="mt-8 inline-block font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-moss transition-colors hover:text-ink">More results &rarr;</a>
+  <!-- 13 · FINAL CTA -->
+  <section class="border-t border-hairline px-6 py-20 md:py-28">
+    <div class="mx-auto max-w-[640px] text-center">
+      <h2 class="font-display text-[34px] leading-[1.15] md:text-[44px]">Let's find the <em>one thing</em>.</h2>
+      <p class="mt-6 text-[18px] leading-relaxed text-fern">
+        Tell me where it's stuck and I'll tell you what I'd fix first.
+      </p>
+      <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="mt-8 inline-block rounded-full bg-moss px-9 py-4 text-[15px] font-semibold text-white transition-opacity hover:opacity-90">Book a call</a>
     </div>
   </section>
-
 </Layout>

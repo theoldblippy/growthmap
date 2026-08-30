@@ -1,0 +1,261 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FigQuoteBuilder from '../components/figures/FigQuoteBuilder.astro';
+import FigDealFlow from '../components/figures/FigDealFlow.astro';
+import FigRaise from '../components/figures/FigRaise.astro';
+import FigChaseBot from '../components/figures/FigChaseBot.astro';
+import FigMatch from '../components/figures/FigMatch.astro';
+import FigFleet from '../components/figures/FigFleet.astro';
+
+const bookUrl = 'https://calendar.notion.so/meet/cameronearloliver/qc3y04oud';
+
+const cases = [
+  {
+    tag: 'Construction',
+    hook: 'Booked solid, and stuck.',
+    story: "A general contractor with all the work he could handle and margins that wouldn't budge. Everybody wanted to talk about getting more sales. The problem was the sales process itself, how work got quoted and closed. We rebuilt it with his team.",
+    before: '$12M', after: '$20M', label: 'revenue, same crews, same market',
+    found: 'The one thing: the sales process',
+  },
+  {
+    tag: 'Software',
+    hook: 'Onboarding was eating the pipeline.',
+    story: "New clients took four months to go live, and deals stalled waiting on it. We mapped the whole implementation and cut everything that didn't actually move a client forward.",
+    before: '120', after: '45 days', label: 'to go live, unlocking $250K in new revenue',
+    found: 'The one thing: implementation',
+  },
+  {
+    tag: 'Services',
+    hook: 'They kept winning work they never fully delivered.',
+    story: "They'd won the contracts, then served maybe half of what was in them. Nobody had ever counted how much was going unused. We counted, then built the delivery plan around it.",
+    before: '40%', after: '85%', label: 'contract utilization',
+    found: 'The one thing: work nobody was tracking',
+  },
+  {
+    tag: 'Healthcare',
+    hook: 'A full waitlist and idle providers.',
+    story: "Providers were booked heavy in the wrong places and idle everywhere else, while patients sat on a waitlist. We rebuilt the schedule. Same team.",
+    before: '50%', after: '65%', label: 'provider utilization',
+    found: 'The one thing: the schedule',
+  },
+];
+
+const quotes = [
+  {
+    quote: "Straight shooter. Told me the problem was me, not my crews, and he was right. Best money I've spent on the business side of this company.",
+    who: 'Tony · Owner · Construction company',
+  },
+  {
+    quote: "I'd hired consultants before and gotten a 60-page deck I never opened. Cameron gave me three changes I could make that week. All three worked.",
+    who: 'Priya · CEO · Telehealth company',
+  },
+  {
+    quote: "Cameron didn't try to reinvent how we practice law. He fixed the twelve things around it that were quietly costing us billable hours.",
+    who: 'Jordan · Owner · Law firm',
+  },
+  {
+    quote: "We brought Cameron in for what we thought was a reporting cleanup. Two weeks in, he'd found the real issue: we were making acquisition decisions on numbers that were 45 days stale. He rebuilt the operating cadence from the ground up. Six months later our diligence process is faster, our board meetings are shorter, and I finally trust the dashboard I'm looking at.",
+    who: 'Alicia · CEO · Private equity firm',
+  },
+  {
+    quote: "I was skeptical. We're a clinical business and most operators talk about us like we're a call center. Cameron was different. He sat in on visits, learned the workflow, and then quietly took apart the parts that were slowing our clinicians down. We didn't add a single person and we're seeing meaningfully more patients.",
+    who: 'Sofia · CEO · Teledermatology group',
+  },
+];
+
+const builds = [
+  {
+    tag: 'Construction',
+    title: 'A quote builder',
+    body: "Quoting a job took about 10 hours: somebody digging through old bids with a calculator, every single time. We built a quote builder that gets it done in about an hour.",
+    gave: 'Gave back about 9 hours per quote',
+  },
+  {
+    tag: 'Private equity',
+    title: 'A deal-sourcing engine',
+    body: "A fund wanted more deal flow without hiring analysts. The system finds targets, researches each one, scores it against their thesis, and flags roll-ups, all on a schedule while everybody sleeps.",
+    gave: 'Analyst-level research for a few dollars a month',
+  },
+  {
+    tag: 'Fundraising',
+    title: 'A fundraise ops suite',
+    body: "Running a raise is a second full-time job. These agents prep every investor call, turn meeting notes into follow-ups and CRM updates, and keep the contact list fresh, all before Monday morning.",
+    gave: 'About 10 hours a week back',
+  },
+  {
+    tag: 'Education services',
+    title: 'A timesheet chase-bot',
+    body: "Their ops lead spent her week chasing tutors to confirm lessons. Now a bot posts who's behind every Thursday and nudges them automatically.",
+    gave: 'Found $12K of unbilled work on day one',
+  },
+  {
+    tag: 'Owner-led services',
+    title: 'An intake-to-match pipeline',
+    body: "They were matching clients to providers by hand. Now an intake call turns into a matched provider with a human giving the final OK. Found and fixed a nasty background-check bug while I was in there.",
+    gave: 'Nobody matches by hand anymore',
+  },
+  {
+    tag: 'Operating cadence',
+    title: 'A chief-of-staff agent fleet',
+    body: "Agents that run my own week: a Friday briefing that tracks commitments and blind spots, meeting follow-ups that draft themselves, and a Monday audit that flags stale scorecard updates.",
+    gave: 'I eat my own cooking',
+  },
+];
+
+const more = [
+  {
+    tag: 'Data & integrations',
+    title: 'A system-to-system sync',
+    body: "Their records lived in two systems that never talked, so somebody kept retyping everything by hand. I built a sync that mirrors them every night, with a safety gate on every write. It caught three real data bugs the first time through.",
+    gave: 'Two systems that never agreed, now in sync',
+  },
+  {
+    tag: 'Executive ops',
+    title: 'A scorecard and an audit agent',
+    body: "A leadership team was running on gut and a messy spreadsheet. I built them a scorecard down to one number per owner, plus an agent that checks it every Monday and flags whatever nobody updated.",
+    gave: "Nothing important gets forgotten",
+  },
+  {
+    tag: 'Lead tools',
+    title: 'The diagnostic on this site',
+    body: "Most people who land on a site like this look around and leave. I built the diagnostic on this page so they can answer a few questions, get the one thing to fix first, and land in my inbox so I can follow up.",
+    gave: 'A quiet visitor becomes a lead',
+  },
+  {
+    tag: 'Finance',
+    title: 'An assumption-driven forecast',
+    body: "A team was arguing over a forecast nobody trusted, because the assumptions were buried three tabs deep. I built a model that puts every assumption out in the open, so you change one number and the whole picture moves with it.",
+    gave: 'Everyone finally trusts the number',
+  },
+  {
+    tag: 'Productivity',
+    title: 'A personal operating system',
+    body: "I practice what I sell. My own week runs on agents I built: a morning setup, a Friday review, a monthly reset, all tied back to my goals.",
+    gave: 'I run my own week on it',
+  },
+  {
+    tag: 'Consulting IP',
+    title: 'A library of method-skills',
+    body: "Good work shouldn't start from a blank page every time. I've built up thirty-odd repeatable moves I use with clients: the discovery brief, the five-whys, the metric map. So the same rigor shows up on every engagement.",
+    gave: 'Every client gets the real method',
+  },
+  {
+    tag: 'Web & small business',
+    title: 'A ground-up site rebuild',
+    body: "A dumpster-rental company needed a real website, not a slow template. I rebuilt it from the ground up, fast and clean and easy for Google and the AI crawlers to read, and kept every URL so nothing broke the day we flipped it.",
+    gave: 'Live, and faster than what it replaced',
+  },
+];
+---
+
+<Layout
+  title="Results & what I've built | Growth Map"
+  description="Four businesses, four different bottlenecks, and what changed once we found the right one. Plus the tools and agents I've built for owners along the way."
+  canonicalPath="/results"
+>
+  <!-- HERO -->
+  <section class="px-6 pb-16 pt-20 md:pb-20 md:pt-28">
+    <div class="mx-auto max-w-[800px] text-center">
+      <h1 class="font-display text-[38px] leading-[1.1] sm:text-[48px] md:text-[56px]">
+        Here's what happened once we found <em class="whitespace-nowrap">the one thing</em>.
+      </h1>
+      <p class="mx-auto mt-7 max-w-[58ch] text-[18px] leading-[1.65] text-fern">
+        Four businesses, four completely different bottlenecks. None of them were where the owner thought they were.
+      </p>
+    </div>
+  </section>
+
+  <!-- CASE STUDIES -->
+  <section class="px-6 pb-8">
+    <div class="mx-auto max-w-[1000px] space-y-6">
+      {cases.map((c) => (
+        <article class="grid gap-8 rounded-[20px] bg-parchment-deep p-9 md:grid-cols-[1fr_260px] md:items-center md:p-12">
+          <div>
+            <p class="text-[14px] font-semibold text-moss">{c.tag}</p>
+            <h2 class="font-display mt-2.5 text-[26px] leading-snug md:text-[30px]">{c.hook}</h2>
+            <p class="mt-4 text-[17px] leading-relaxed text-fern">{c.story}</p>
+            <p class="mt-5 inline-block rounded-full bg-white px-4 py-1.5 text-[14px] font-semibold text-forest">{c.found}</p>
+          </div>
+          <div class="rounded-[18px] bg-white p-7 text-center">
+            <p class="font-display text-[15px] text-muted">{c.before}</p>
+            <p class="font-display my-1 text-[26px] leading-none text-moss">&darr;</p>
+            <p class="font-display text-[38px] leading-none text-forest">{c.after}</p>
+            <p class="mt-3 text-[14px] leading-snug text-muted">{c.label}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- QUOTES -->
+  <section class="px-6 py-20 md:py-28">
+    <div class="mx-auto max-w-[1000px]">
+      <h2 class="font-display mx-auto max-w-[20ch] text-center text-[32px] leading-[1.15] md:text-[40px]">What they said afterwards.</h2>
+      <div class="mt-12 grid gap-6 md:grid-cols-2">
+        {quotes.map((q) => (
+          <blockquote class="rounded-[18px] bg-white p-8 shadow-[0_2px_10px_rgba(20,38,26,.07)]">
+            <p class="text-[17px] leading-relaxed text-forest">&ldquo;{q.quote}&rdquo;</p>
+            <footer class="mt-5 text-[14.5px] font-semibold text-moss">{q.who}</footer>
+          </blockquote>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- BUILT: FLAGSHIP -->
+  <section class="bg-parchment-deep px-6 py-20 md:py-28">
+    <div class="mx-auto max-w-[1100px]">
+      <h2 class="font-display mx-auto max-w-[22ch] text-center text-[32px] leading-[1.15] md:text-[42px]">
+        Usually I end up <em>building</em> something.
+      </h2>
+      <p class="mx-auto mt-6 max-w-[60ch] text-center text-[18px] leading-relaxed text-fern">
+        It used to be that an operator could only tell you what was broken. Now you can just go fix it. Some of what I've built for owners:
+      </p>
+      <div class="mt-12 grid gap-6 md:grid-cols-2">
+        {builds.map((b, i) => {
+          const Fig = [FigQuoteBuilder, FigDealFlow, FigRaise, FigChaseBot, FigMatch, FigFleet][i];
+          return (
+            <div class="rounded-[18px] bg-white p-8 shadow-[0_2px_10px_rgba(20,38,26,.07)]">
+              <div class="mb-6 rounded-[12px] bg-parchment-deep p-3"><Fig /></div>
+              <p class="text-[14px] font-semibold text-moss">{b.tag}</p>
+              <h3 class="font-display mt-2.5 text-[24px] leading-snug">{b.title}</h3>
+              <p class="mt-3 text-[16.5px] leading-relaxed text-fern">{b.body}</p>
+              <p class="mt-5 border-t border-hairline pt-4 text-[14.5px] font-semibold text-moss">{b.gave}</p>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- BUILT: MORE -->
+  <section class="px-6 py-20 md:py-28">
+    <div class="mx-auto max-w-[1100px]">
+      <h2 class="font-display mx-auto max-w-[20ch] text-center text-[32px] leading-[1.15] md:text-[40px]">And a few smaller ones.</h2>
+      <p class="mx-auto mt-6 max-w-[58ch] text-center text-[18px] leading-relaxed text-fern">
+        Same idea every time. See the problem, build the fix.
+      </p>
+      <div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {more.map((b) => (
+          <div class="flex flex-col rounded-[18px] bg-parchment-deep p-7">
+            <p class="text-[13.5px] font-semibold text-moss">{b.tag}</p>
+            <h3 class="font-display mt-2 text-[21px] leading-snug">{b.title}</h3>
+            <p class="mt-2.5 flex-1 text-[15.5px] leading-relaxed text-fern">{b.body}</p>
+            <p class="mt-5 border-t border-hairline pt-3.5 text-[14px] font-semibold text-moss">{b.gave}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-forest px-6 py-20 md:py-24">
+    <div class="mx-auto max-w-[660px] text-center">
+      <h2 class="font-display text-[32px] leading-[1.15] text-white md:text-[40px]">What would yours be?</h2>
+      <p class="mx-auto mt-6 max-w-[50ch] text-[18px] leading-relaxed text-white/75">
+        Tell me where it's stuck and I'll tell you what I'd go after first. Thirty minutes, no pitch.
+      </p>
+      <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="mt-9 inline-block rounded-full bg-sprout px-9 py-4 text-[15px] font-semibold text-forest transition-opacity hover:opacity-90">Book a call</a>
+    </div>
+  </section>
+</Layout>

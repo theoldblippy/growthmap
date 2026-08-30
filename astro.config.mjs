@@ -11,6 +11,7 @@ export default defineConfig({
   redirects: {
     '/testimonials': '/results',
     '/tools-apps': '/results',
+    '/scorecard': '/diagnostic',
   },
   server: {
     port: parseInt(process.env.PORT || '4321'),

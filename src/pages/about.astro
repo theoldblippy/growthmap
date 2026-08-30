@@ -4,108 +4,95 @@ import FigLine from '../components/figures/FigLine.astro';
 
 const bookUrl = 'https://calendar.notion.so/meet/cameronearloliver/qc3y04oud';
 
-const record = [
-  { before: '$12M', after: '$20M', label: 'Construction revenue, on a rebuilt sales process' },
-  { before: '120', after: '45 days', label: 'Onboarding time, unlocking $250K in new revenue' },
-  { before: '40%', after: '85%', label: 'Utilization on underused contracts' },
-  { before: '50%', after: '65%', label: 'Provider utilization, on smarter scheduling' },
+const patterns = [
+  'Founders making every decision themselves because nobody else had the context.',
+  'Teams working hard but not on the same thing.',
+  'Revenue unpredictable because nobody understood how the business actually created value.',
+  'Owners carrying the anxiety of the entire company on their shoulders.',
 ];
 ---
 
 <Layout
   title="About Cameron Oliver | Growth Map"
-  description="Cameron Oliver is an operator, not a theorist. A decade inside fast-growing companies, from employee #3 to 100+, usually the person leaders called when things broke."
+  description="Cameron Oliver is an operator, not a theorist. A decade inside fast-growing companies, from employee #3 to 100+, usually the person leaders called when things started breaking."
   canonicalPath="/about"
 >
-  <!-- HERO / INTRO -->
-  <section class="border-b border-hairline px-6 py-16 md:py-24">
-    <div class="mx-auto flex max-w-[1200px] flex-col items-center gap-12 md:flex-row md:gap-16">
-      <div class="flex-1">
-        <h1 class="font-display text-4xl leading-[1.1] text-ink sm:text-5xl md:text-[48px]">
-          I'm an operator, <em>not a theorist.</em>
-        </h1>
-        <p class="mt-6 max-w-[54ch] text-lg leading-relaxed text-fern">
-          A decade inside fast-growing companies, from employee #3 to 100+, usually the person leaders called when things started breaking.
-        </p>
-      </div>
-      <div class="flex-shrink-0">
-        <img
-          src="/images/about-photo.jpeg"
-          alt="Cameron Oliver"
-          class="w-72 rounded-[14px] border border-hairline md:w-96"
-          loading="eager"
-        />
-      </div>
+  <!-- HERO -->
+  <section class="px-6 pb-16 pt-20 md:pb-20 md:pt-28">
+    <div class="mx-auto max-w-[760px] text-center">
+      <h1 class="font-display text-[38px] leading-[1.1] sm:text-[46px] md:text-[54px]">
+        I'm an operator, <em class="whitespace-nowrap">not a theorist</em>.
+      </h1>
+      <p class="mx-auto mt-7 max-w-[52ch] text-[18px] leading-[1.65] text-fern">
+        A decade inside fast-growing companies, from employee #3 to 100+, usually the person leaders called when things started breaking.
+      </p>
+    </div>
+    <div class="mx-auto mt-12 max-w-[760px]">
+      <img src="/images/about-photo.jpeg" alt="Cameron Oliver" class="w-full rounded-[20px] shadow-[0_4px_24px_rgba(20,38,26,.14)]" loading="eager" />
     </div>
   </section>
 
-  <!-- STORY -->
-  <section class="border-b border-hairline bg-parchment-deep px-6 py-16 md:py-20">
-    <div class="mx-auto max-w-[800px]">
-      <p class="doc-label text-ink">How I got here</p>
-      <div class="mt-8 space-y-6 text-lg leading-relaxed text-ink">
-        <p>
-          I started in project management and grew into operations. Along the way I learned to build what's called an operating model. It's basically a project plan, but for a business: how you get customers, what it takes to serve them, and the rhythm that keeps it all running.
-        </p>
-        <p>
-          I love operations and making the thing work, mainly because I hate waste. And after a decade of it, the same pattern kept showing up everywhere I looked:
-        </p>
-
-        <div>
-          {[
-            'Founders making every decision themselves because nobody else had the context.',
-            'Teams working hard but not on the same thing.',
-            'Revenue unpredictable because nobody understood how the business actually created value.',
-            'Owners carrying the anxiety of the entire company on their shoulders.',
-          ].map((item) => (
-            <div class="flex items-baseline gap-3.5 border-b border-dashed border-hairline py-3 text-[16px] font-medium text-ink">
-              <span class="cbx">X</span>
-              {item}
-            </div>
-          ))}
-        </div>
-
-        <p>
-          Every one of those companies thought it had a revenue problem. Almost every one had an operating problem wearing a revenue costume. Growth Map exists to find that problem, and then fix it with you.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- TRACK RECORD -->
-  <section class="border-b border-hairline bg-ink px-6 py-10">
-    <div class="mx-auto max-w-[1200px]">
-      <p class="mb-6 font-mono text-[10.5px] font-medium uppercase tracking-[0.16em] text-cream/55">What I've done</p>
-      <div class="grid grid-cols-2 gap-x-8 gap-y-8 md:grid-cols-4">
-        {record.map((r) => (
-          <div>
-            <p class="font-display text-xl leading-none text-cream md:text-[26px]">
-              {r.before} <span class="text-moss">&rarr;</span> {r.after}
-            </p>
-            <p class="mt-2 max-w-[26ch] text-[12.5px] leading-snug text-cream/70">{r.label}</p>
-          </div>
+  <!-- HOW I GOT HERE -->
+  <section class="bg-parchment-deep px-6 py-20 md:py-28">
+    <div class="mx-auto max-w-[720px]">
+      <h2 class="font-display text-[32px] leading-[1.15] md:text-[38px]">How I got here.</h2>
+      <p class="mt-7 text-[18px] leading-[1.7] text-fern">
+        I started in project management and grew into operations. Along the way I learned to build what's called an operating model. It's basically a project plan, but for a business: how you get customers, what it takes to serve them, and the rhythm that keeps it all running.
+      </p>
+      <p class="mt-5 text-[18px] leading-[1.7] text-fern">
+        I love operations and making the thing work, mainly because I hate waste. And after a decade of it, the same pattern kept showing up everywhere I looked.
+      </p>
+      <ul class="mt-9 space-y-4">
+        {patterns.map((p) => (
+          <li class="flex gap-3.5 rounded-[14px] bg-white p-5 text-[16.5px] leading-snug text-forest">
+            <span class="mt-0.5 shrink-0 font-semibold text-rust">&times;</span><span>{p}</span>
+          </li>
         ))}
-      </div>
+      </ul>
+    </div>
+  </section>
+
+  <!-- THE LINE -->
+  <section class="bg-forest px-6 py-20 md:py-24">
+    <div class="mx-auto max-w-[760px] text-center">
+      <p class="font-display text-[28px] leading-[1.3] text-white md:text-[34px]">
+        Every one of those companies thought it had a revenue problem. Almost every one had an operating problem wearing a revenue costume.
+      </p>
+      <p class="mt-7 text-[18px] leading-relaxed text-white/75">
+        Growth Map exists to find that problem, and then fix it with you.
+      </p>
     </div>
   </section>
 
   <!-- WHERE THIS GOES -->
-  <section class="px-6 py-16 md:py-20">
-    <div class="mx-auto max-w-[800px]">
-      <p class="doc-label text-ink">Where this goes</p>
-      <h2 class="font-display mt-7 text-3xl leading-[1.14] text-ink md:text-[40px]">
-        You don't run a factory. But your business <em>works like one.</em>
+  <section class="px-6 py-20 md:py-28">
+    <div class="mx-auto max-w-[1000px]">
+      <h2 class="font-display mx-auto max-w-[22ch] text-center text-[32px] leading-[1.15] md:text-[40px]">
+        You don't run a factory. But your business works <em>like one</em>.
       </h2>
-      <p class="mt-6 max-w-[60ch] text-lg leading-relaxed text-fern">
+      <p class="mx-auto mt-7 max-w-[58ch] text-center text-[18px] leading-relaxed text-fern">
         Whatever you sell, it's the same line. You just put your own words on the stations.
       </p>
-      <div class="mt-9 overflow-x-auto rounded-[14px] border border-hairline bg-white/60 p-5 md:p-7">
-        <div class="min-w-[660px]"><FigLine /></div>
+      <div class="mt-12 overflow-x-auto rounded-[18px] bg-parchment-deep p-6 md:p-10">
+        <div class="min-w-[620px]"><FigLine /></div>
       </div>
-      <p class="mt-8 max-w-[62ch] text-lg leading-relaxed text-ink">
+      <p class="mx-auto mt-9 max-w-[58ch] text-center text-[18px] leading-relaxed text-fern">
         Each station is a question you should be able to answer yes to. The one you can't is where the money leaks, and it's where we start.
       </p>
     </div>
   </section>
 
+  <!-- CTA -->
+  <section class="bg-parchment-deep px-6 py-20 md:py-24">
+    <div class="mx-auto max-w-[640px] text-center">
+      <h2 class="font-display text-[32px] leading-[1.15] md:text-[40px]">Which station is yours?</h2>
+      <p class="mt-6 text-[18px] leading-relaxed text-fern">
+        Tell me where it's stuck and I'll tell you what I'd go after first.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3.5">
+        <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="rounded-full bg-moss px-8 py-4 text-[15px] font-semibold text-white transition-opacity hover:opacity-90">Book a call</a>
+        <a href="/results" class="rounded-full border-[1.5px] border-forest bg-white px-8 py-4 text-[15px] font-semibold text-forest transition-colors hover:bg-forest hover:text-white">See the results</a>
+      </div>
+    </div>
+  </section>
 </Layout>

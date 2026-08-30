@@ -8,6 +8,10 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://www.growthmap.consulting',
   integrations: [sitemap()],
+  redirects: {
+    '/testimonials': '/results',
+    '/tools-apps': '/results',
+  },
   server: {
     port: parseInt(process.env.PORT || '4321'),
     host: true,

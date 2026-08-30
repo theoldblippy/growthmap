@@ -57,6 +57,11 @@ body {
 }
 .font-display em {
   font-style: normal;
+  color: var(--color-moss);
+}
+/* the highlighter is deliberate: hero headlines only, once per page */
+.font-display em.mark {
+  color: inherit;
   background: linear-gradient(transparent 62%, rgba(255, 216, 77, 0.55) 62%);
   padding: 0 0.06em;
 }

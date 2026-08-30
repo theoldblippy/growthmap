@@ -25,12 +25,12 @@ const { Content } = await render(post);
     <div class="mx-auto max-w-[700px]">
       <a
         href="/blog"
-        class="font-mono text-xs font-medium uppercase tracking-[0.18em] text-moss transition-colors hover:text-ink"
+        class="text-[15px] font-semibold text-moss underline decoration-2 underline-offset-4 transition-colors hover:text-forest"
       >
         &larr; {post.data.guide ? 'Guides' : 'Field Notes'}
       </a>
 
-      <time class="mt-8 block font-mono text-xs font-medium uppercase tracking-[0.14em] text-fern">
+      <time class="mt-8 block text-[14px] font-semibold text-muted">
         {post.data.date.toLocaleDateString('en-US', {
           year: 'numeric',
           month: 'long',

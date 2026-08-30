@@ -99,7 +99,7 @@ const stations = [
 
   <section class="border-t border-hairline bg-parchment-deep px-6 py-14 md:py-16">
     <div class="mx-auto max-w-[900px]">
-      <p class="doc-label text-ink">Who's asking</p>
+      <p class="text-[15px] font-semibold text-muted">Who's asking</p>
       <p class="mt-5 max-w-[62ch] text-lg leading-relaxed text-fern">
         I'm Cameron Oliver. I get in the trenches with owner-led businesses and fix what's actually holding them back. A few of the numbers I've helped move:
       </p>
@@ -113,62 +113,62 @@ const stations = [
           </div>
         ))}
       </div>
-      <a href="/results" class="mt-9 inline-block font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-moss transition-colors hover:text-ink">See the results &rarr;</a>
+      <a href="/results" class="mt-9 inline-block text-[15px] font-semibold text-moss underline decoration-2 underline-offset-4 transition-colors hover:text-forest">See the results &rarr;</a>
     </div>
   </section>
 </Layout>
 
 <style is:global>
-  #diagnostic h1 { font-family: 'Castoro', Georgia, serif; font-weight: 400; font-size: 31px; line-height: 1.12; color: #2B331F; margin: 0 0 14px; }
+  #diagnostic h1 { font-family: 'Lora', Georgia, serif; font-weight: 700; font-size: 31px; line-height: 1.12; color: #14261A; margin: 0 0 14px; }
   @media (min-width: 768px) { #diagnostic h1 { font-size: 40px; } }
-  #diagnostic .sub { color: #59614A; font-size: 17px; line-height: 1.55; max-width: 60ch; margin: 0 0 34px; }
+  #diagnostic .sub { color: #6E6E6E; font-size: 17px; line-height: 1.55; max-width: 60ch; margin: 0 0 34px; }
   #diagnostic .field { margin: 0 0 18px; }
   #diagnostic .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   @media (max-width: 560px) { #diagnostic .row { grid-template-columns: 1fr; } }
-  #diagnostic label { display: block; font-size: 14px; font-weight: 600; color: #2B331F; margin: 0 0 7px; }
+  #diagnostic label { display: block; font-size: 14px; font-weight: 600; color: #14261A; margin: 0 0 7px; }
   #diagnostic input, #diagnostic select, #diagnostic textarea {
-    width: 100%; box-sizing: border-box; border: 1px solid rgba(43,51,31,0.2); border-radius: 10px;
-    background: #FAF8F0; padding: 11px 13px; font-family: inherit; font-size: 15px; color: #2B331F; }
+    width: 100%; box-sizing: border-box; border: 1px solid rgba(20,38,26,0.2); border-radius: 10px;
+    background: #FFFFFF; padding: 11px 13px; font-family: inherit; font-size: 15px; color: #14261A; }
   #diagnostic textarea { resize: vertical; }
-  #diagnostic input:focus, #diagnostic select:focus, #diagnostic textarea:focus { outline: none; border-color: #5C7A3B; }
-  #diagnostic .qlabel { font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #5C7A3B; margin: 26px 0 6px; }
-  #diagnostic .q { border-bottom: 1px dashed rgba(43,51,31,0.15); padding: 16px 0; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
-  #diagnostic .q:first-of-type { border-top: 1px dashed rgba(43,51,31,0.15); }
-  #diagnostic .qnum { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #5C7A3B; letter-spacing: .1em; flex: 0 0 24px; }
-  #diagnostic .qtext { flex: 1; min-width: 200px; font-size: 15.5px; line-height: 1.4; color: #2B331F; }
+  #diagnostic input:focus, #diagnostic select:focus, #diagnostic textarea:focus { outline: none; border-color: #26773F; }
+  #diagnostic .qlabel { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 600; color: #26773F; margin: 26px 0 6px; }
+  #diagnostic .q { border-bottom: 1px dashed rgba(20,38,26,0.15); padding: 16px 0; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  #diagnostic .q:first-of-type { border-top: 1px dashed rgba(20,38,26,0.15); }
+  #diagnostic .qnum { font-family: 'Jost', sans-serif; font-size: 12px; color: #26773F; flex: 0 0 24px; }
+  #diagnostic .qtext { flex: 1; min-width: 200px; font-size: 15.5px; line-height: 1.4; color: #14261A; }
   #diagnostic .opts { display: flex; gap: 6px; }
-  #diagnostic .opts button { border: 1px solid rgba(43,51,31,0.15); background: transparent; border-radius: 8px; padding: 7px 13px; font-family: inherit; font-size: 13px; font-weight: 600; color: #59614A; cursor: pointer; transition: all .15s; }
-  #diagnostic .opts button:hover { border-color: #2B331F; color: #2B331F; }
-  #diagnostic .opts button.sel[data-v="g"] { background: #5C7A3B; border-color: #5C7A3B; color: #fff; }
+  #diagnostic .opts button { border: 1px solid rgba(20,38,26,0.15); background: transparent; border-radius: 8px; padding: 7px 13px; font-family: inherit; font-size: 13px; font-weight: 600; color: #6E6E6E; cursor: pointer; transition: all .15s; }
+  #diagnostic .opts button:hover { border-color: #14261A; color: #14261A; }
+  #diagnostic .opts button.sel[data-v="g"] { background: #26773F; border-color: #26773F; color: #fff; }
   #diagnostic .opts button.sel[data-v="y"] { background: #C08A2D; border-color: #C08A2D; color: #fff; }
   #diagnostic .opts button.sel[data-v="r"] { background: #B0402F; border-color: #B0402F; color: #fff; }
   #diagnostic .ctarow { margin-top: 26px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
-  #diagnostic #run { border: none; background: #2B331F; color: #F5F0E1; font-family: inherit; font-size: 15px; font-weight: 600; padding: 15px 34px; border-radius: 999px; cursor: pointer; transition: opacity .2s; }
+  #diagnostic #run { border: none; background: #14261A; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 600; padding: 15px 34px; border-radius: 999px; cursor: pointer; transition: opacity .2s; }
   #diagnostic #run:disabled { opacity: .35; cursor: not-allowed; }
   #diagnostic #run:not(:disabled):hover { opacity: .9; }
-  #diagnostic #progress { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: .08em; color: #59614A; }
+  #diagnostic #progress { font-family: 'Jost', sans-serif; font-size: 11px; color: #6E6E6E; }
   #diagnostic #loading[hidden], #diagnostic #result[hidden] { display: none; }
   #diagnostic #loading { margin-top: 30px; }
-  #diagnostic .loadingline { font-family: 'Castoro', Georgia, serif; font-size: 20px; color: #2B331F; margin: 6px 0 0; }
-  #diagnostic .rlabel { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: #59614A; margin: 0 0 12px; }
-  #diagnostic #result { margin-top: 40px; border-top: 1px solid rgba(43,51,31,0.15); padding-top: 36px; }
+  #diagnostic .loadingline { font-family: 'Lora', Georgia, serif; font-size: 20px; color: #14261A; margin: 6px 0 0; }
+  #diagnostic .rlabel { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 600; color: #6E6E6E; margin: 0 0 12px; }
+  #diagnostic #result { margin-top: 40px; border-top: 1px solid rgba(20,38,26,0.15); padding-top: 36px; }
   #diagnostic .bars { display: flex; gap: 5px; margin: 0 0 8px; }
   #diagnostic .bar { flex: 1; height: 8px; border-radius: 4px; }
-  #diagnostic .bar.flag { outline: 2px solid #2B331F; outline-offset: 2px; }
+  #diagnostic .bar.flag { outline: 2px solid #14261A; outline-offset: 2px; }
   #diagnostic .barlabels { display: flex; gap: 5px; margin: 0 0 28px; }
-  #diagnostic .barlabels span { flex: 1; font-family: 'IBM Plex Mono', monospace; font-size: 8px; letter-spacing: .03em; color: #59614A; text-align: center; text-transform: uppercase; }
-  #diagnostic #result h2 { font-family: 'Castoro', Georgia, serif; font-weight: 400; font-size: 27px; line-height: 1.15; color: #2B331F; margin: 0 0 16px; }
-  #diagnostic .read { color: #2B331F; font-size: 18px; line-height: 1.6; margin: 0 0 24px; }
-  #diagnostic .fixhead { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: #5C7A3B; margin: 0 0 4px; }
-  #diagnostic .fix { border-top: 1px dashed rgba(43,51,31,0.15); padding: 16px 0; }
-  #diagnostic .fix .move { font-family: 'Castoro', Georgia, serif; font-size: 18px; color: #2B331F; margin: 0 0 4px; }
-  #diagnostic .fix .why { color: #59614A; font-size: 15px; line-height: 1.55; margin: 0; }
+  #diagnostic .barlabels span { flex: 1; font-family: 'Jost', sans-serif; font-size: 8px; color: #6E6E6E; text-align: center; }
+  #diagnostic #result h2 { font-family: 'Lora', Georgia, serif; font-weight: 700; font-size: 27px; line-height: 1.15; color: #14261A; margin: 0 0 16px; }
+  #diagnostic .read { color: #14261A; font-size: 18px; line-height: 1.6; margin: 0 0 24px; }
+  #diagnostic .fixhead { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 600; color: #26773F; margin: 0 0 4px; }
+  #diagnostic .fix { border-top: 1px dashed rgba(20,38,26,0.15); padding: 16px 0; }
+  #diagnostic .fix .move { font-family: 'Lora', Georgia, serif; font-size: 18px; color: #14261A; margin: 0 0 4px; }
+  #diagnostic .fix .why { color: #6E6E6E; font-size: 15px; line-height: 1.55; margin: 0; }
   #diagnostic .close { margin-top: 28px; }
-  #diagnostic .close .book { display: inline-block; background: #2B331F; color: #F5F0E1; text-decoration: none; font-weight: 600; font-size: 15px; padding: 15px 32px; border-radius: 999px; transition: opacity .2s; }
+  #diagnostic .close .book { display: inline-block; background: #14261A; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px; padding: 15px 32px; border-radius: 999px; transition: opacity .2s; }
   #diagnostic .close .book:hover { opacity: .9; }
-  #diagnostic .close .bookline { color: #59614A; font-size: 14px; line-height: 1.5; margin: 14px 0 0; max-width: 54ch; }
-  #diagnostic .howlink { display: inline-block; margin-top: 18px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: #5C7A3B; text-decoration: none; }
-  #diagnostic .howlink:hover { color: #2B331F; }
+  #diagnostic .close .bookline { color: #6E6E6E; font-size: 14px; line-height: 1.5; margin: 14px 0 0; max-width: 54ch; }
+  #diagnostic .howlink { display: inline-block; margin-top: 18px; font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 600; color: #26773F; text-decoration: none; }
+  #diagnostic .howlink:hover { color: #14261A; }
 </style>
 
 <script>
@@ -224,7 +224,7 @@ const stations = [
   function render(data) {
     const idx = data.constraintIndex;
     const bars = ans.map((a, i) => {
-      const col = a === 'g' ? '#5C7A3B' : a === 'y' ? '#C08A2D' : '#B0402F';
+      const col = a === 'g' ? '#26773F' : a === 'y' ? '#C08A2D' : '#B0402F';
       const flag = (i === idx && idx >= 0) ? ' flag' : '';
       return '<div class="bar' + flag + '" style="background:' + col + '"></div>';
     }).join('');

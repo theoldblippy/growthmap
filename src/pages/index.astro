@@ -32,30 +32,6 @@ const biggerQ = [
   "I couldn't take a two-week vacation without the whole thing wobbling.",
 ];
 
-const beats = [
-  {
-    lead: 'We talk first.',
-    body: "Half an hour, no pitch. You tell me what's driving you nuts, I tell you where I'd start looking. If I don't think I can help, I'll say so on the call and you've lost half an hour.",
-  },
-  {
-    lead: 'Then I come in with you.',
-    body: "I'm not the guy who hands you a report and disappears. I parachute in, get my hands in it, and we work out together what's really going on.",
-  },
-  {
-    lead: 'We pick two or three things and go fix them.',
-    body: "Not the whole list. The ones that change the number at the bottom.",
-    extra: "What that turns out to be depends on what we find. Sometimes it's the sales process. Sometimes it's OKRs and getting everybody pointed the same way, or a financial model, or automations nobody's built yet, or me just standing in as your COO for a while.",
-  },
-  {
-    lead: 'I only take a few clients at a time.',
-    body: "On purpose. It's the only way you get me instead of a version of me. It also means I'll pass on work I don't think I can actually move.",
-  },
-  {
-    lead: "And I won't quote you anything until we've talked.",
-    body: "Once I know what the problem is, the price comes off what fixing it is worth to you. You'll have the number before we start, and if I think you'd be wasting your money I'll tell you that too.",
-  },
-];
-
 const fitYes = [
   "You own the place, so you can actually make the call.",
   "You want the thing fixed, not documented.",
@@ -183,57 +159,78 @@ const faqs = [
 
   <!-- 7 · WHAT WORKING TOGETHER LOOKS LIKE -->
   <section class="bg-parchment-deep px-6 py-20 md:py-28">
-    <div class="mx-auto max-w-[700px]">
+    <div class="mx-auto max-w-[760px]">
       <h2 class="font-display text-[32px] leading-[1.15] md:text-[40px]">
         What working with me <em>looks like</em>.
       </h2>
 
-      <div class="mt-12 space-y-10">
-        {beats.map((b) => (
-          <div>
-            <p class="font-display text-[21px] leading-snug md:text-[23px]">{b.lead}</p>
-            <p class="mt-3 text-[17.5px] leading-[1.7] text-fern">{b.body}</p>
-            {b.extra && <p class="mt-3.5 text-[17.5px] leading-[1.7] text-fern">{b.extra}</p>}
+      <div class="mt-14 space-y-12">
+
+        <div class="flex gap-6">
+          <div class="shrink-0 text-moss">
+            <svg viewBox="0 0 44 44" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 12h30v18H19l-8 6v-6H7z" />
+              <path d="M15 19h14M15 24h9" />
+            </svg>
           </div>
-        ))}
+          <div>
+            <p class="text-[14px] font-semibold text-moss">Step one</p>
+            <h3 class="font-display mt-1 text-[23px] leading-snug md:text-[25px]">The straight-answer call</h3>
+            <p class="mt-3 text-[17.5px] leading-[1.7] text-fern">
+              Half an hour, no pitch. You tell me what's driving you nuts, I tell you where I'd start looking. If I don't think I can help, I'll say so on the call and you've lost half an hour.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-6">
+          <div class="shrink-0 text-moss">
+            <svg viewBox="0 0 44 44" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 20a18 18 0 0 1 36 0" />
+              <path d="M4 20c4 3 8 3 12 0M16 20c4 3 8 3 12 0M28 20c4 3 8 3 12 0" />
+              <path d="M9 21l11 9M35 21l-11 9" />
+              <rect x="18" y="30" width="8" height="8" rx="2" />
+            </svg>
+          </div>
+          <div>
+            <p class="text-[14px] font-semibold text-moss">Step two</p>
+            <h3 class="font-display mt-1 text-[23px] leading-snug md:text-[25px]">I parachute in</h3>
+            <p class="mt-3 text-[17.5px] leading-[1.7] text-fern">
+              I'm not the guy who hands you a report and disappears. I get in there with you, hands in it, until we both know what's really going on.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-6">
+          <div class="shrink-0 text-moss">
+            <svg viewBox="0 0 44 44" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="22" r="6" />
+              <circle cx="22" cy="22" r="6" fill="currentColor" stroke="none" />
+              <circle cx="33" cy="22" r="6" fill="currentColor" stroke="none" />
+            </svg>
+          </div>
+          <div>
+            <p class="text-[14px] font-semibold text-moss">Step three</p>
+            <h3 class="font-display mt-1 text-[23px] leading-snug md:text-[25px]">We pick two or three things and go fix them</h3>
+            <p class="mt-3 text-[17.5px] leading-[1.7] text-fern">
+              Not the whole list. The ones that change the number at the bottom.
+            </p>
+            <p class="mt-3.5 text-[17.5px] leading-[1.7] text-fern">
+              What that turns out to be depends on what we find. Sometimes it's the sales process. Sometimes it's OKRs and getting everybody pointed the same way, or a financial model, or automations nobody's built yet, or me just standing in as your COO for a while.
+            </p>
+          </div>
+        </div>
+
       </div>
 
-      <a
-        href={bookUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="mt-12 inline-block rounded-full bg-moss px-8 py-4 text-[15px] font-semibold text-white transition-opacity hover:opacity-90"
-      >
-        Let's talk it through
-      </a>
-    </div>
-  </section>
-
-  <!-- 8 · FIT -->
-  <section class="px-6 py-20 md:py-28">
-    <div class="mx-auto max-w-[900px]">
-      <h2 class="font-display mx-auto max-w-[20ch] text-center text-[34px] leading-[1.15] md:text-[40px]">This is probably a fit if&hellip;</h2>
-      <div class="mt-12 grid gap-10 md:grid-cols-2">
-        <div class="rounded-[18px] bg-white p-9 shadow-[0_2px_10px_rgba(20,38,26,.07)]">
-          <p class="text-[15px] font-semibold text-moss">Worth a conversation</p>
-          <ul class="mt-5 space-y-4">
-            {fitYes.map((f) => (
-              <li class="flex gap-3 text-[16.5px] leading-snug text-forest">
-                <span class="mt-0.5 shrink-0 font-semibold text-moss">&#10003;</span><span>{f}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div class="rounded-[18px] bg-white p-9 shadow-[0_2px_10px_rgba(20,38,26,.07)]">
-          <p class="text-[15px] font-semibold text-rust">Probably not me</p>
-          <ul class="mt-5 space-y-4">
-            {fitNo.map((f) => (
-              <li class="flex gap-3 text-[16.5px] leading-snug text-forest">
-                <span class="mt-0.5 shrink-0 font-semibold text-rust">&times;</span><span>{f}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+      <div class="mt-14 rounded-[20px] border-2 border-moss/25 bg-white p-8 md:p-10">
+        <p class="font-display text-[21px] leading-snug md:text-[23px]">Two other things worth knowing.</p>
+        <p class="mt-4 text-[17.5px] leading-[1.7] text-fern">
+          <b class="font-semibold text-forest">I only take a few clients at a time.</b> On purpose. It's the only way you get me instead of a version of me, and it means I'll pass on work I don't think I can actually move.
+        </p>
+        <p class="mt-4 text-[17.5px] leading-[1.7] text-fern">
+          <b class="font-semibold text-forest">I won't quote you anything until we've talked.</b> Once I know what the problem is, the price comes off what fixing it is worth to you. You'll have the number before we start, and if I think you'd be wasting your money I'll tell you that too.
+        </p>
+        <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="mt-7 inline-block rounded-full bg-moss px-8 py-4 text-[15px] font-semibold text-white transition-opacity hover:opacity-90">Let's talk it through</a>
       </div>
     </div>
   </section>
@@ -292,17 +289,6 @@ const faqs = [
     </div>
   </section>
 
-  <!-- 11 · THINGS I'VE BUILT -->
-  <section class="bg-parchment-deep px-6 py-20 md:py-24">
-    <div class="mx-auto max-w-[680px] text-center">
-      <h2 class="font-display text-[32px] leading-[1.15] md:text-[40px]">I usually end up building something.</h2>
-      <p class="mt-7 text-[18px] leading-[1.7] text-fern">
-        A quote builder that took quoting from ten hours to about one. A deal-sourcing engine that researches targets while everyone sleeps. A bot that chases down the timesheets nobody wants to chase. If you can name the thing eating your week, there's a good chance it can be built away.
-      </p>
-      <a href="/results" class="mt-7 inline-block text-[16px] font-semibold text-moss underline decoration-2 underline-offset-4 hover:text-forest">See what I've built &rarr;</a>
-    </div>
-  </section>
-
   <!-- 12 · FAQ -->
   <section class="px-6 py-20 md:py-28">
     <div class="mx-auto max-w-[760px]">
@@ -321,16 +307,19 @@ const faqs = [
     </div>
   </section>
 
-  <!-- 12b · PROOF, COMPACT -->
-  <section class="bg-parchment-deep px-6 py-16 md:py-20">
+  <!-- 12b · PROOF + GO LOOK -->
+  <section class="bg-parchment-deep px-6 py-20 md:py-24">
     <div class="mx-auto max-w-[820px] text-center">
-      <p class="font-display text-[24px] leading-[1.4] md:text-[28px]">
+      <p class="font-display text-[26px] leading-[1.35] md:text-[30px]">
         &ldquo;If you doubled your sales tomorrow, would you be happy, or freak out?&rdquo;
       </p>
-      <p class="mx-auto mt-5 max-w-[62ch] text-[17px] leading-relaxed text-fern">
+      <p class="mx-auto mt-6 max-w-[62ch] text-[17.5px] leading-[1.7] text-fern">
         He was chasing more sales, but when I asked him that he got sick to his stomach. He had a throughput problem, not a sales problem. We fixed how the work got delivered and the growth followed.
       </p>
-      <a href="/results" class="mt-7 inline-block text-[16px] font-semibold text-moss underline decoration-2 underline-offset-4 hover:text-forest">See the rest of the results &rarr;</a>
+      <p class="mx-auto mt-4 max-w-[62ch] text-[17.5px] leading-[1.7] text-fern">
+        There are a few more like that, along with the tools and software I've built for people, over on the results page.
+      </p>
+      <a href="/results" class="mt-8 inline-block rounded-full border-[1.5px] border-forest bg-white px-8 py-4 text-[15px] font-semibold text-forest transition-colors hover:bg-forest hover:text-white">See the results and what I've built</a>
     </div>
   </section>
 

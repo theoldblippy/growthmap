@@ -1,19 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-const bookUrl = 'https://calendar.notion.so/meet/cameronearloliver/qc3y04oud';
-
-const patterns = [
-  'Founders making every decision themselves because nobody else had the context.',
-  'Teams working hard but not on the same thing.',
-  'Revenue unpredictable because nobody understood how the business actually created value.',
-  'Owners carrying the anxiety of the entire company on their shoulders.',
-];
 ---
 
 <Layout
   title="About Cameron Oliver | Growth Map"
-  description="Cameron Oliver is an operator, not a theorist. A decade inside fast-growing companies, from employee #3 to 100+, usually the person leaders called when things started breaking."
+  description="Cameron Oliver is an operator, not a theorist. A decade inside high-growth startups and Fortune 500s, from employee number three to employee number twenty thousand."
   canonicalPath="/about"
 >
   <!-- HERO -->
@@ -22,12 +13,12 @@ const patterns = [
       <h1 class="font-display text-[38px] leading-[1.1] sm:text-[46px] md:text-[54px]">
         I'm an operator, <em class="mark whitespace-nowrap">not a theorist</em>.
       </h1>
-      <p class="mx-auto mt-7 max-w-[52ch] text-[18px] leading-[1.65] text-fern">
-        A decade inside fast-growing companies, from employee #3 to 100+, usually the person leaders called when things started breaking.
+      <p class="mx-auto mt-7 max-w-[54ch] text-[18px] leading-[1.65] text-fern">
+        A decade inside high-growth startups and Fortune 500s, usually the person leaders called when things started breaking.
       </p>
     </div>
     <div class="mx-auto mt-12 max-w-[760px]">
-      <img src="/images/family.jpg" alt="Cameron Oliver" class="w-full rounded-[20px] shadow-[0_4px_24px_rgba(20,38,26,.14)]" loading="eager" />
+      <img src="/images/family.jpg" alt="Cameron Oliver with his wife and three children" class="aspect-[3/2] w-full rounded-[20px] object-cover shadow-[0_4px_24px_rgba(20,38,26,.14)]" loading="eager" />
     </div>
   </section>
 
@@ -35,59 +26,36 @@ const patterns = [
   <section class="bg-parchment-deep px-6 py-20 md:py-28">
     <div class="mx-auto max-w-[720px]">
       <h2 class="font-display text-[32px] leading-[1.15] md:text-[38px]">How I got here.</h2>
+
       <p class="mt-7 text-[18px] leading-[1.7] text-fern">
         I started in project management and grew into operations. Along the way I learned to build what's called an operating model. It's basically a project plan, but for a business: how you get customers, what it takes to serve them, and the rhythm that keeps it all running.
       </p>
+
       <p class="mt-5 text-[18px] leading-[1.7] text-fern">
-        I love operations and making the thing work, mainly because I hate waste. And after a decade of it, the same pattern kept showing up everywhere I looked.
+        I've done that at both ends of the scale. <span class="font-semibold text-forest">Employee number three, and employee number twenty thousand.</span> A Fortune 500 shows you what excellence looks like when there's a whole department standing behind it. A startup teaches you how to get to the same place with almost none of that. Most owner-led businesses need a bit of both, and they usually only get offered one.
       </p>
-      <img src="/images/office.jpg" alt="Cameron playing foosball with his team at the office" class="mt-9 w-full rounded-[18px] shadow-[0_4px_20px_rgba(20,38,26,.12)]" loading="lazy" />
-      <ul class="mt-9 space-y-4">
-        {patterns.map((p) => (
-          <li class="flex gap-3.5 rounded-[18px] bg-white p-5 text-[16.5px] leading-snug text-forest">
-            <span class="mt-0.5 shrink-0 font-semibold text-rust">&times;</span><span>{p}</span>
-          </li>
-        ))}
-      </ul>
+
+      <img src="/images/office.jpg" alt="Cameron playing foosball with his team at the office" class="mt-10 aspect-[16/10] w-full rounded-[18px] object-cover shadow-[0_4px_20px_rgba(20,38,26,.12)]" loading="lazy" />
+
+      <p class="mt-10 text-[18px] leading-[1.7] text-fern">
+        I love operations and making the thing work, mainly because I hate waste. And after a decade of it the same pattern kept turning up. Founders making every call themselves because nobody else had the context. Teams working hard on different things. Revenue nobody could predict, because nobody understood how the business actually created value. And the owner carrying the whole thing on their shoulders.
+      </p>
+
+      <p class="mt-6 text-[18px] leading-[1.7] text-fern">
+        Every one of those companies thought it had a revenue problem. Almost every one had an <span class="font-semibold text-forest">operating problem wearing a revenue costume</span>. That's what Growth Map is for.
+      </p>
     </div>
   </section>
 
   <!-- OUTSIDE OF WORK -->
   <section class="px-6 py-20 md:py-24">
-    <div class="mx-auto max-w-[680px]">
-      <h2 class="font-display text-[30px] leading-[1.15] md:text-[34px]">When I'm not doing that.</h2>
-      <p class="mt-7 text-[18px] leading-[1.7] text-fern">
-        I'm usually outnumbered by three kids under four, which is its own kind of operations problem and the one I'm worst at. Otherwise I'm trying a new recipe, or three hours deep into a U2 rabbit hole nobody asked me to go down.
+    <div class="mx-auto max-w-[760px]">
+      <p class="text-[18px] leading-[1.7] text-fern">
+        Outside of it, I'm outnumbered by three kids under four, which is its own kind of operations problem and the one I'm worst at. Otherwise I'm cooking something new, or three hours into a U2 rabbit hole nobody asked me to go down.
       </p>
-      <div class="mt-10 grid gap-5 sm:grid-cols-2">
-        <img src="/images/working-dad.jpg" alt="Cameron working on a laptop outside with his daughter asleep against his chest" class="w-full rounded-[18px] shadow-[0_4px_20px_rgba(20,38,26,.12)]" loading="lazy" />
-        <img src="/images/coaching.jpg" alt="Cameron coaching his son's t-ball team" class="w-full rounded-[18px] shadow-[0_4px_20px_rgba(20,38,26,.12)]" loading="lazy" />
-      </div>
-    </div>
-  </section>
-
-  <!-- THE LINE -->
-  <section class="bg-forest px-6 py-20 md:py-24">
-    <div class="mx-auto max-w-[760px] text-center">
-      <p class="font-display text-[28px] leading-[1.3] text-white md:text-[34px]">
-        Every one of those companies thought it had a revenue problem. Almost every one had an operating problem wearing a revenue costume.
-      </p>
-      <p class="mt-7 text-[18px] leading-relaxed text-white/75">
-        Growth Map exists to find that problem, and then fix it with you.
-      </p>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="bg-parchment-deep px-6 py-20 md:py-24">
-    <div class="mx-auto max-w-[640px] text-center">
-      <h2 class="font-display text-[32px] leading-[1.15] md:text-[40px]">Which station is yours?</h2>
-      <p class="mt-6 text-[18px] leading-relaxed text-fern">
-        Tell me where it's stuck and I'll tell you what I'd go after first.
-      </p>
-      <div class="mt-8 flex flex-wrap justify-center gap-3.5">
-        <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="rounded-full bg-moss px-8 py-4 text-[15px] font-semibold text-white transition-opacity hover:opacity-90">Book a call</a>
-        <a href="/results" class="rounded-full border-[1.5px] border-forest bg-white px-8 py-4 text-[15px] font-semibold text-forest transition-colors hover:bg-forest hover:text-white">See the results</a>
+      <div class="mt-9 grid gap-5 sm:grid-cols-2">
+        <img src="/images/working-dad.jpg" alt="Cameron working on a laptop outside with his daughter asleep against his chest" class="aspect-[4/5] w-full rounded-[18px] object-cover shadow-[0_4px_20px_rgba(20,38,26,.12)]" loading="lazy" />
+        <img src="/images/coaching.jpg" alt="Cameron coaching his son's t-ball team" class="aspect-[4/5] w-full rounded-[18px] object-cover shadow-[0_4px_20px_rgba(20,38,26,.12)]" loading="lazy" />
       </div>
     </div>
   </section>

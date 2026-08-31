@@ -48,43 +48,45 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Serif display headings — heavy, like both reference sites */
-.font-display {
-  font-family: var(--font-serif);
-  font-weight: 700;
-  letter-spacing: -0.018em;
-  color: var(--color-forest);
-}
-.font-display em {
-  font-style: normal;
-  color: var(--color-moss);
-}
-/* the highlighter is deliberate: hero headlines only, once per page */
-.font-display em.mark {
-  color: inherit;
-  background: linear-gradient(transparent 62%, rgba(255, 216, 77, 0.55) 62%);
-  padding: 0 0.06em;
-}
+@layer base {
+  /* Serif display headings — heavy, like both reference sites */
+  .font-display {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    letter-spacing: -0.018em;
+    color: var(--color-forest);
+  }
+  .font-display em {
+    font-style: normal;
+    color: var(--color-moss);
+  }
+  /* the highlighter is deliberate: hero headlines only, once per page */
+  .font-display em.mark {
+    color: inherit;
+    background: linear-gradient(transparent 62%, rgba(255, 216, 77, 0.55) 62%);
+    padding: 0 0.06em;
+  }
 
-/* Marker highlight, usable anywhere */
-.mark {
-  background: linear-gradient(transparent 62%, rgba(255, 216, 77, 0.55) 62%);
-  padding: 0 0.06em;
-}
+  /* Marker highlight, usable anywhere */
+  .mark {
+    background: linear-gradient(transparent 62%, rgba(255, 216, 77, 0.55) 62%);
+    padding: 0 0.06em;
+  }
 
-/* Old mono doc-label neutralised: no mono, no tracking, no uppercase.
-   Kept as a class so unported pages degrade gracefully. */
-.doc-label {
-  font-family: var(--font-sans);
-  font-weight: 600;
-  font-size: 15px;
-  letter-spacing: 0;
-  text-transform: none;
-  color: var(--color-muted);
-  border-bottom: none;
-  padding-bottom: 0;
+  /* Old mono doc-label neutralised: no mono, no tracking, no uppercase.
+     Kept as a class so unported pages degrade gracefully. */
+  .doc-label {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--color-muted);
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .doc-label b { color: var(--color-moss); }
 }
-.doc-label b { color: var(--color-moss); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

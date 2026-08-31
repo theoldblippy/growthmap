@@ -42,24 +42,37 @@ const cases = [
 
 const quotes = [
   {
-    quote: "Straight shooter. Told me the problem was me, not my crews, and he was right. Best money I've spent on the business side of this company.",
-    who: 'Tony · Owner · Construction company',
+    quote: "Cameron got deep into our data and market and helped us get much more focused on where we should actually be spending our sales and marketing effort. He helped us turn that into a repeatable go-to-market motion, and within three months we generated 20 hospital opportunities representing $3.5M in qualified pipeline.",
+    quote2: "One thing I've always appreciated about Cameron is that he'll tell you the hard things you need to hear, not just what you want to hear. That's why I've continued to value him as an advisor and now as a friend.",
+    who: 'Sanjay Subramanian',
+    role: 'Founder, Omnicure',
+    href: 'https://omnicuremd.com/',
+    logo: '/images/logos/omnicure.png',
+    logoH: 'h-7 md:h-8',
   },
   {
-    quote: "I'd hired consultants before and gotten a 60-page deck I never opened. Cameron gave me three changes I could make that week. All three worked.",
-    who: 'Priya · CEO · Telehealth company',
+    quote: "Working with Cameron, we increased utilization, patients in seats, from 55% to 80% without adding any additional headcount. I was shocked by how quickly he was able to diagnose where we were getting stuck and then partner with us to fix it. That's why we've kept him involved: he continues to find opportunities to make the business run better.",
+    who: 'Dr. Bryce Colt',
+    role: 'Owner, Restoration Chiropractic',
+    href: 'https://restorationowasso.com/',
+    logo: '/images/logos/restoration.png',
+    logoH: 'h-12 md:h-14',
   },
   {
-    quote: "Cameron didn't try to reinvent how we practice law. He fixed the twelve things around it that were quietly costing us billable hours.",
-    who: 'Jordan · Owner · Law firm',
+    quote: "Cameron provided an immense amount of clarity on improvement strategies we desperately needed. My favorite part is it wasn't off the shelf. He really understood my current stage, our budget, and what the future of our market looks like.",
+    who: 'Tommy Oliver',
+    role: 'Owner and President, Griswold Home Care Tulsa',
+    href: 'https://www.griswoldcare.com/tulsa/',
+    logo: '/images/logos/griswold.svg',
+    logoH: 'h-7 md:h-8',
   },
   {
-    quote: "We brought Cameron in for what we thought was a reporting cleanup. Two weeks in, he'd found the real issue: we were making acquisition decisions on numbers that were 45 days stale. He rebuilt the operating cadence from the ground up. Six months later our diligence process is faster, our board meetings are shorter, and I finally trust the dashboard I'm looking at.",
-    who: 'Alicia · CEO · Private equity firm',
-  },
-  {
-    quote: "I was skeptical. We're a clinical business and most operators talk about us like we're a call center. Cameron was different. He sat in on visits, learned the workflow, and then quietly took apart the parts that were slowing our clinicians down. We didn't add a single person and we're seeing meaningfully more patients.",
-    who: 'Sofia · CEO · Teledermatology group',
+    quote: "Cameron is a sorcerer. He has a knack for finding the most important thing the business can work on and helping align the team around delivering towards it.",
+    who: 'Dani Marques',
+    role: 'CEO, SkinCheck Health',
+    href: 'https://www.skincheck.health/us',
+    logo: '/images/logos/skincheck.png',
+    logoH: 'h-8 md:h-9',
   },
 ];
 
@@ -190,13 +203,25 @@ const more = [
   <!-- QUOTES -->
   <section class="px-6 py-20 md:py-28">
     <div class="mx-auto max-w-[1000px]">
-      <h2 class="font-display mx-auto max-w-[20ch] text-center text-[32px] leading-[1.15] md:text-[40px]">What they said afterwards.</h2>
-      <div class="mt-12 grid gap-6 md:grid-cols-2">
+      <h2 class="font-display mx-auto max-w-[20ch] text-center text-[32px] leading-[1.15] md:text-[40px]">
+        What they said <em>afterwards</em>.
+      </h2>
+      <div class="mt-14 space-y-6">
         {quotes.map((q) => (
-          <blockquote class="rounded-[18px] bg-white p-8 shadow-[0_2px_10px_rgba(20,38,26,.07)]">
-            <p class="text-[17px] leading-relaxed text-forest">&ldquo;{q.quote}&rdquo;</p>
-            <footer class="mt-5 text-[14.5px] font-semibold text-moss">{q.who}</footer>
-          </blockquote>
+          <figure class="rounded-[20px] bg-white p-9 shadow-[0_2px_10px_rgba(20,38,26,.07)] md:p-11">
+            <img src={q.logo} alt={q.role.split(', ')[1] || q.role} class:list={["w-auto", q.logoH]} loading="lazy" />
+            <blockquote class="mt-7">
+              <p class="text-[18px] leading-[1.7] text-forest">&ldquo;{q.quote}&rdquo;</p>
+              {q.quote2 && <p class="mt-4 text-[18px] leading-[1.7] text-forest">&ldquo;{q.quote2}&rdquo;</p>}
+            </blockquote>
+            <figcaption class="mt-7 border-t border-hairline pt-5">
+              <p class="text-[16px] font-semibold text-forest">{q.who}</p>
+              <p class="mt-0.5 text-[15px] text-fern">
+                {q.role.split(', ')[0]},{' '}
+                <a href={q.href} target="_blank" rel="noopener noreferrer" class="font-medium text-moss underline decoration-2 underline-offset-4 hover:text-forest">{q.role.split(', ').slice(1).join(', ')}</a>
+              </p>
+            </figcaption>
+          </figure>
         ))}
       </div>
     </div>

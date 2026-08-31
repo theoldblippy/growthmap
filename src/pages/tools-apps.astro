@@ -6,7 +6,6 @@ import FigChaseBot from '../components/figures/FigChaseBot.astro';
 import FigMatch from '../components/figures/FigMatch.astro';
 import FigFleet from '../components/figures/FigFleet.astro';
 
-const bookUrl = 'https://calendar.notion.so/meet/cameronearloliver/qc3y04oud';
 
 const builds = [
   {
@@ -99,7 +98,7 @@ const more = [
         Often the fix turns out to be <em class="mark">software</em>.
       </h1>
       <p class="mx-auto mt-7 max-w-[60ch] text-[18px] leading-[1.65] text-fern">
-        It used to be that an operator could only tell you what was broken. Now you can go build the thing that fixes it. Some of what I've built for owners, and a few I built for myself.
+        It used to be that an operator could only tell you what was broken. Now you can go build the thing that fixes it. Some of what I've built for owners, and a few I built for myself. If you can name the thing eating your week, there's a decent chance it can be built away.
       </p>
     </div>
   </section>
@@ -144,17 +143,4 @@ const more = [
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="px-6 py-20 md:py-24">
-    <div class="mx-auto max-w-[640px] text-center">
-      <h2 class="font-display text-[30px] leading-[1.15] md:text-[38px]">What's eating your week?</h2>
-      <p class="mt-6 text-[18px] leading-relaxed text-fern">
-        If you can name the thing, there's a decent chance it can be built away.
-      </p>
-      <div class="mt-8 flex flex-wrap justify-center gap-3.5">
-        <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="rounded-full bg-moss px-8 py-4 text-[15px] font-semibold text-white transition-opacity hover:opacity-90">Book a call</a>
-        <a href="/results" class="rounded-full border-[1.5px] border-forest bg-white px-8 py-4 text-[15px] font-semibold text-forest transition-colors hover:bg-forest hover:text-white">See the results</a>
-      </div>
-    </div>
-  </section>
 </Layout>

@@ -14,13 +14,12 @@ const guides = published.filter((post) => post.data.guide);
   description="Practical insights on fractional COO leadership, business operations, and growth strategy for founders and owner-operators scaling from $1M to $20M."
   canonicalPath="/blog"
 >
-  <section class="border-b border-hairline px-6 py-16 md:py-24">
-    <div class="mx-auto max-w-[800px]">
-      <p class="text-[15px] font-semibold text-muted">Field Notes</p>
-      <h1 class="font-display mt-7 text-4xl leading-[1.1] text-ink sm:text-5xl md:text-[48px]">
-        I write about this work.
+  <section class="px-6 pb-14 pt-20 md:pb-16 md:pt-28">
+    <div class="mx-auto max-w-[760px] text-center">
+      <h1 class="font-display text-[38px] leading-[1.1] sm:text-[46px] md:text-[54px]">
+        I write about <em class="mark">this work</em>.
       </h1>
-      <p class="mt-4 max-w-[54ch] text-lg leading-relaxed text-fern">
+      <p class="mx-auto mt-7 max-w-[56ch] text-[18px] leading-[1.65] text-fern">
         Essays on growth, operations, and building a business that runs without you. Plus a shelf of evergreen guides.
       </p>
     </div>
@@ -54,7 +53,7 @@ const guides = published.filter((post) => post.data.guide);
         </a>
       ))}
 
-      <p class="text-[15px] font-semibold text-muted mt-16 text-ink">Guides</p>
+      <p class="mt-16 text-[15px] font-semibold text-muted">Guides</p>
       <p class="mt-4 text-[15px] leading-relaxed text-fern">
         Evergreen how-tos and explainers. Useful, searchable, less personal than the essays above.
       </p>
@@ -74,21 +73,15 @@ const guides = published.filter((post) => post.data.guide);
     </div>
   </section>
 
-  <!-- Tools cross-link -->
-  <section class="px-6 pb-16">
-    <div class="mx-auto max-w-[800px] rounded-[18px] bg-white shadow-[0_2px_10px_rgba(20,38,26,.07)] p-8 text-center">
-      <h2 class="font-display text-2xl text-ink">Want to know what's actually capping your growth?</h2>
-      <p class="mt-2 leading-relaxed text-fern">Book a call. Thirty minutes, no pitch, and you'll leave with a straight answer.</p>
-      <div class="mt-6 flex justify-center">
-        <a
-          href="https://calendar.notion.so/meet/cameronearloliver/qc3y04oud"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-block rounded-full border border-ink bg-ink px-7 py-3 text-sm font-semibold text-parchment transition-opacity hover:opacity-90"
-        >
-          Book a call
-        </a>
-      </div>
+  <!-- NEXT STEP -->
+  <section class="px-6 pb-20 md:pb-24">
+    <div class="mx-auto max-w-[760px] rounded-[20px] border-2 border-moss/25 bg-white p-8 md:p-10">
+      <h2 class="font-display text-[24px] leading-snug md:text-[27px]">Wondering which of these is your problem?</h2>
+      <p class="mt-4 text-[17px] leading-[1.7] text-fern">
+        The diagnostic runs your business through the same read I'd do on a call and hands you the one thing to fix first. Two minutes, free, and you don't have to talk to me to get it.
+      </p>
+      <a href="/diagnostic" class="mt-6 inline-block rounded-full bg-moss px-7 py-3.5 text-[15px] font-semibold text-white transition-opacity hover:opacity-90">Take the diagnostic</a>
     </div>
   </section>
+
 </Layout>

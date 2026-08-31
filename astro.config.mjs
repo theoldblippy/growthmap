@@ -10,7 +10,6 @@ export default defineConfig({
   integrations: [sitemap()],
   redirects: {
     '/testimonials': '/results',
-    '/tools-apps': '/results',
     '/scorecard': '/diagnostic',
   },
   server: {

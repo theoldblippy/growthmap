@@ -1,0 +1,160 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FigDealFlow from '../components/figures/FigDealFlow.astro';
+import FigRaise from '../components/figures/FigRaise.astro';
+import FigChaseBot from '../components/figures/FigChaseBot.astro';
+import FigMatch from '../components/figures/FigMatch.astro';
+import FigFleet from '../components/figures/FigFleet.astro';
+
+const bookUrl = 'https://calendar.notion.so/meet/cameronearloliver/qc3y04oud';
+
+const builds = [
+  {
+    tag: 'Private equity',
+    title: 'A deal-sourcing engine',
+    body: "A fund wanted more deal flow without hiring analysts. The system finds targets, researches each one, scores it against their thesis, and flags roll-ups, all on a schedule while everybody sleeps.",
+    gave: 'Analyst-level research for a few dollars a month',
+  },
+  {
+    tag: 'Fundraising',
+    title: 'A fundraise ops suite',
+    body: "Running a raise is a second full-time job. These agents prep every investor call, turn meeting notes into follow-ups and CRM updates, and keep the contact list fresh, all before Monday morning.",
+    gave: 'About 10 hours a week back',
+  },
+  {
+    tag: 'Education services',
+    title: 'A timesheet chase-bot',
+    body: "Their ops lead spent her week chasing tutors to confirm lessons. Now a bot posts who's behind every Thursday and nudges them automatically.",
+    gave: 'Found $12K of unbilled work on day one',
+  },
+  {
+    tag: 'Owner-led services',
+    title: 'An intake-to-match pipeline',
+    body: "They were matching clients to providers by hand. Now an intake call turns into a matched provider with a human giving the final OK. Found and fixed a nasty background-check bug while I was in there.",
+    gave: 'Nobody matches by hand anymore',
+  },
+  {
+    tag: 'Operating cadence',
+    title: 'A chief-of-staff agent fleet',
+    body: "Agents that run my own week: a Friday briefing that tracks commitments and blind spots, meeting follow-ups that draft themselves, and a Monday audit that flags stale scorecard updates.",
+    gave: 'I eat my own cooking',
+  },
+];
+
+const more = [
+  {
+    tag: 'Data & integrations',
+    title: 'A system-to-system sync',
+    body: "Their records lived in two systems that never talked, so somebody kept retyping everything by hand. I built a sync that mirrors them every night, with a safety gate on every write. It caught three real data bugs the first time through.",
+    gave: 'Two systems that never agreed, now in sync',
+  },
+  {
+    tag: 'Executive ops',
+    title: 'A scorecard and an audit agent',
+    body: "A leadership team was running on gut and a messy spreadsheet. I built them a scorecard down to one number per owner, plus an agent that checks it every Monday and flags whatever nobody updated.",
+    gave: "Nothing important gets forgotten",
+  },
+  {
+    tag: 'Lead tools',
+    title: 'The diagnostic on this site',
+    body: "Most people who land on a site like this look around and leave. I built the diagnostic on this page so they can answer a few questions, get the one thing to fix first, and land in my inbox so I can follow up.",
+    gave: 'A quiet visitor becomes a lead',
+  },
+  {
+    tag: 'Finance',
+    title: 'An assumption-driven forecast',
+    body: "A team was arguing over a forecast nobody trusted, because the assumptions were buried three tabs deep. I built a model that puts every assumption out in the open, so you change one number and the whole picture moves with it.",
+    gave: 'Everyone finally trusts the number',
+  },
+  {
+    tag: 'Productivity',
+    title: 'A personal operating system',
+    body: "I practice what I sell. My own week runs on agents I built: a morning setup, a Friday review, a monthly reset, all tied back to my goals.",
+    gave: 'I run my own week on it',
+  },
+  {
+    tag: 'Consulting IP',
+    title: 'A library of method-skills',
+    body: "Good work shouldn't start from a blank page every time. I've built up thirty-odd repeatable moves I use with clients: the discovery brief, the five-whys, the metric map. So the same rigor shows up on every engagement.",
+    gave: 'Every client gets the real method',
+  },
+  {
+    tag: 'Web & small business',
+    title: 'A ground-up site rebuild',
+    body: "A dumpster-rental company needed a real website, not a slow template. I rebuilt it from the ground up, fast and clean and easy for Google and the AI crawlers to read, and kept every URL so nothing broke the day we flipped it.",
+    gave: 'Live, and faster than what it replaced',
+  },
+];
+---
+
+<Layout
+  title="Tools & apps I've built | Growth Map"
+  description="Software, automations and internal tools built for owner-led businesses: a deal-sourcing engine, a timesheet chase-bot, an intake-to-match pipeline, forecast models and more."
+  canonicalPath="/tools-apps"
+>
+  <!-- HERO -->
+  <section class="px-6 pb-16 pt-20 md:pb-20 md:pt-28">
+    <div class="mx-auto max-w-[800px] text-center">
+      <h1 class="font-display text-[38px] leading-[1.1] sm:text-[46px] md:text-[54px]">
+        Often the fix turns out to be <em class="mark">software</em>.
+      </h1>
+      <p class="mx-auto mt-7 max-w-[60ch] text-[18px] leading-[1.65] text-fern">
+        It used to be that an operator could only tell you what was broken. Now you can go build the thing that fixes it. Some of what I've built for owners, and a few I built for myself.
+      </p>
+    </div>
+  </section>
+
+  <!-- FLAGSHIP -->
+  <section class="px-6 pb-16">
+    <div class="mx-auto max-w-[1100px]">
+      <div class="grid gap-6 md:grid-cols-2">
+        {builds.map((b, i) => {
+          const Fig = [FigDealFlow, FigRaise, FigChaseBot, FigMatch, FigFleet][i];
+          return (
+            <div class="rounded-[18px] bg-white p-8 shadow-[0_2px_10px_rgba(20,38,26,.07)]">
+              <div class="mb-6 rounded-[12px] bg-parchment-deep p-3"><Fig /></div>
+              <p class="text-[14px] font-semibold text-moss">{b.tag}</p>
+              <h2 class="font-display mt-2.5 text-[24px] leading-snug">{b.title}</h2>
+              <p class="mt-3 text-[16.5px] leading-relaxed text-fern">{b.body}</p>
+              <p class="mt-5 border-t border-hairline pt-4 text-[14.5px] font-semibold text-moss">{b.gave}</p>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- SMALLER -->
+  <section class="bg-parchment-deep px-6 py-20 md:py-24">
+    <div class="mx-auto max-w-[1100px]">
+      <h2 class="font-display mx-auto max-w-[20ch] text-center text-[30px] leading-[1.15] md:text-[38px]">And a few smaller ones.</h2>
+      <p class="mx-auto mt-6 max-w-[56ch] text-center text-[17.5px] leading-relaxed text-fern">
+        Same idea every time. See the problem, build the fix.
+      </p>
+      <div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {more.map((b) => (
+          <div class="flex flex-col rounded-[18px] bg-white p-7">
+            <p class="text-[13.5px] font-semibold text-moss">{b.tag}</p>
+            <h3 class="font-display mt-2 text-[21px] leading-snug">{b.title}</h3>
+            <p class="mt-2.5 flex-1 text-[15.5px] leading-relaxed text-fern">{b.body}</p>
+            <p class="mt-5 border-t border-hairline pt-3.5 text-[14px] font-semibold text-moss">{b.gave}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="px-6 py-20 md:py-24">
+    <div class="mx-auto max-w-[640px] text-center">
+      <h2 class="font-display text-[30px] leading-[1.15] md:text-[38px]">What's eating your week?</h2>
+      <p class="mt-6 text-[18px] leading-relaxed text-fern">
+        If you can name the thing, there's a decent chance it can be built away.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3.5">
+        <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="rounded-full bg-moss px-8 py-4 text-[15px] font-semibold text-white transition-opacity hover:opacity-90">Book a call</a>
+        <a href="/results" class="rounded-full border-[1.5px] border-forest bg-white px-8 py-4 text-[15px] font-semibold text-forest transition-colors hover:bg-forest hover:text-white">See the results</a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,11 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import FigQuoteBuilder from '../components/figures/FigQuoteBuilder.astro';
-import FigDealFlow from '../components/figures/FigDealFlow.astro';
-import FigRaise from '../components/figures/FigRaise.astro';
-import FigChaseBot from '../components/figures/FigChaseBot.astro';
-import FigMatch from '../components/figures/FigMatch.astro';
-import FigFleet from '../components/figures/FigFleet.astro';
 
 const bookUrl = 'https://calendar.notion.so/meet/cameronearloliver/qc3y04oud';
 
@@ -16,6 +10,7 @@ const cases = [
     story: "A general contractor with all the work he could handle and margins that wouldn't budge. Everybody wanted to talk about getting more sales. The problem was the sales process itself, how work got quoted and closed. We rebuilt it with his team.",
     before: '$12M', after: '$20M', label: 'revenue, same crews, same market',
     found: 'The one thing: the sales process',
+    built: 'And I built them the quote builder that came out of it. Pricing a job used to take about ten hours of digging through old bids with a calculator. It takes about one now.',
     logo: '/images/logos/patriot.png', logoH: 'h-10 md:h-11',
   },
   {
@@ -67,126 +62,43 @@ const quotes = [
     logoH: 'h-8 md:h-9',
   },
 ];
-
-const builds = [
-  {
-    tag: 'Construction',
-    title: 'A quote builder',
-    body: "Quoting a job took about 10 hours: somebody digging through old bids with a calculator, every single time. We built a quote builder that gets it done in about an hour.",
-    gave: 'Gave back about 9 hours per quote',
-  },
-  {
-    tag: 'Private equity',
-    title: 'A deal-sourcing engine',
-    body: "A fund wanted more deal flow without hiring analysts. The system finds targets, researches each one, scores it against their thesis, and flags roll-ups, all on a schedule while everybody sleeps.",
-    gave: 'Analyst-level research for a few dollars a month',
-  },
-  {
-    tag: 'Fundraising',
-    title: 'A fundraise ops suite',
-    body: "Running a raise is a second full-time job. These agents prep every investor call, turn meeting notes into follow-ups and CRM updates, and keep the contact list fresh, all before Monday morning.",
-    gave: 'About 10 hours a week back',
-  },
-  {
-    tag: 'Education services',
-    title: 'A timesheet chase-bot',
-    body: "Their ops lead spent her week chasing tutors to confirm lessons. Now a bot posts who's behind every Thursday and nudges them automatically.",
-    gave: 'Found $12K of unbilled work on day one',
-  },
-  {
-    tag: 'Owner-led services',
-    title: 'An intake-to-match pipeline',
-    body: "They were matching clients to providers by hand. Now an intake call turns into a matched provider with a human giving the final OK. Found and fixed a nasty background-check bug while I was in there.",
-    gave: 'Nobody matches by hand anymore',
-  },
-  {
-    tag: 'Operating cadence',
-    title: 'A chief-of-staff agent fleet',
-    body: "Agents that run my own week: a Friday briefing that tracks commitments and blind spots, meeting follow-ups that draft themselves, and a Monday audit that flags stale scorecard updates.",
-    gave: 'I eat my own cooking',
-  },
-];
-
-const more = [
-  {
-    tag: 'Data & integrations',
-    title: 'A system-to-system sync',
-    body: "Their records lived in two systems that never talked, so somebody kept retyping everything by hand. I built a sync that mirrors them every night, with a safety gate on every write. It caught three real data bugs the first time through.",
-    gave: 'Two systems that never agreed, now in sync',
-  },
-  {
-    tag: 'Executive ops',
-    title: 'A scorecard and an audit agent',
-    body: "A leadership team was running on gut and a messy spreadsheet. I built them a scorecard down to one number per owner, plus an agent that checks it every Monday and flags whatever nobody updated.",
-    gave: "Nothing important gets forgotten",
-  },
-  {
-    tag: 'Lead tools',
-    title: 'The diagnostic on this site',
-    body: "Most people who land on a site like this look around and leave. I built the diagnostic on this page so they can answer a few questions, get the one thing to fix first, and land in my inbox so I can follow up.",
-    gave: 'A quiet visitor becomes a lead',
-  },
-  {
-    tag: 'Finance',
-    title: 'An assumption-driven forecast',
-    body: "A team was arguing over a forecast nobody trusted, because the assumptions were buried three tabs deep. I built a model that puts every assumption out in the open, so you change one number and the whole picture moves with it.",
-    gave: 'Everyone finally trusts the number',
-  },
-  {
-    tag: 'Productivity',
-    title: 'A personal operating system',
-    body: "I practice what I sell. My own week runs on agents I built: a morning setup, a Friday review, a monthly reset, all tied back to my goals.",
-    gave: 'I run my own week on it',
-  },
-  {
-    tag: 'Consulting IP',
-    title: 'A library of method-skills',
-    body: "Good work shouldn't start from a blank page every time. I've built up thirty-odd repeatable moves I use with clients: the discovery brief, the five-whys, the metric map. So the same rigor shows up on every engagement.",
-    gave: 'Every client gets the real method',
-  },
-  {
-    tag: 'Web & small business',
-    title: 'A ground-up site rebuild',
-    body: "A dumpster-rental company needed a real website, not a slow template. I rebuilt it from the ground up, fast and clean and easy for Google and the AI crawlers to read, and kept every URL so nothing broke the day we flipped it.",
-    gave: 'Live, and faster than what it replaced',
-  },
-];
 ---
 
 <Layout
-  title="Results & what I've built | Growth Map"
-  description="Four businesses, four different bottlenecks, and what changed once we found the right one. Plus the tools and agents I've built for owners along the way."
+  title="Results | Growth Map"
+  description="Seven owner-led businesses, seven different bottlenecks, and what changed once we found the right one. In their words, with the numbers attached."
   canonicalPath="/results"
 >
   <!-- HERO -->
   <section class="px-6 pb-16 pt-20 md:pb-20 md:pt-28">
     <div class="mx-auto max-w-[800px] text-center">
       <h1 class="font-display text-[38px] leading-[1.1] sm:text-[48px] md:text-[56px]">
-        Here's what happened once we found <em class="mark whitespace-nowrap">the one thing</em>.
+        Seven owners, seven different <em class="mark">bottlenecks</em>.
       </h1>
       <p class="mx-auto mt-7 max-w-[58ch] text-[18px] leading-[1.65] text-fern">
-        Four businesses, four completely different bottlenecks. None of them were where the owner thought they were.
+        None of them were where the owner thought they were. Here's what happened once we found the real one.
       </p>
     </div>
   </section>
 
   <!-- CASE STUDIES -->
-  <section class="px-6 pb-8">
+  <section class="px-6 pb-6">
     <div class="mx-auto max-w-[1000px] space-y-6">
       {cases.map((c) => (
-        <article class="grid gap-8 rounded-[20px] bg-parchment-deep p-9 md:grid-cols-[1fr_260px] md:items-center md:p-12">
+        <article class="grid gap-8 rounded-[20px] bg-parchment-deep p-9 md:grid-cols-[1fr_240px] md:items-center md:p-11">
           <div>
             <img src={c.logo} alt="" class:list={["mb-6 w-auto", c.logoH]} loading="lazy" />
             <p class="text-[14px] font-semibold text-moss">{c.tag}</p>
-            <h2 class="font-display mt-2.5 text-[26px] leading-snug md:text-[30px]">{c.hook}</h2>
-            <p class="mt-4 text-[17px] leading-relaxed text-fern">{c.story}</p>
+            <h2 class="font-display mt-2.5 text-[25px] leading-snug md:text-[28px]">{c.hook}</h2>
+            <p class="mt-4 text-[16.5px] leading-relaxed text-fern">{c.story}</p>
+            {c.built && <p class="mt-3.5 text-[16.5px] leading-relaxed text-fern">{c.built}</p>}
             <p class="mt-5 inline-block rounded-full bg-white px-4 py-1.5 text-[14px] font-semibold text-forest">{c.found}</p>
           </div>
-          <div class="rounded-[18px] bg-white p-7 text-center">
+          <div class="rounded-[16px] bg-white p-6 text-center">
             <p class="font-display text-[15px] text-muted">{c.before}</p>
-            <p class="font-display my-1 text-[26px] leading-none text-moss">&darr;</p>
-            <p class="font-display text-[38px] leading-none text-forest">{c.after}</p>
-            <p class="mt-3 text-[14px] leading-snug text-muted">{c.label}</p>
+            <p class="font-display my-1 text-[24px] leading-none text-moss">&darr;</p>
+            <p class="font-display text-[34px] leading-none text-forest">{c.after}</p>
+            <p class="mt-3 text-[13.5px] leading-snug text-muted">{c.label}</p>
           </div>
         </article>
       ))}
@@ -194,72 +106,21 @@ const more = [
   </section>
 
   <!-- QUOTES -->
-  <section class="px-6 py-20 md:py-28">
-    <div class="mx-auto max-w-[1000px]">
-      <h2 class="font-display mx-auto max-w-[20ch] text-center text-[32px] leading-[1.15] md:text-[40px]">
-        What they said <em>afterwards</em>.
-      </h2>
-      <div class="mt-12 space-y-5">
-        {quotes.map((q) => (
-          <figure class="rounded-[18px] bg-white p-7 shadow-[0_2px_10px_rgba(20,38,26,.07)] md:p-8">
-            <img src={q.logo} alt={q.role.split(', ')[1] || q.role} class:list={["w-auto", q.logoH]} loading="lazy" />
-            <blockquote class="mt-5">
-              <p class="text-[16.5px] leading-[1.65] text-forest">&ldquo;{q.quote}&rdquo;</p>
-              {q.quote2 && <p class="mt-3.5 text-[16.5px] leading-[1.65] text-forest">&ldquo;{q.quote2}&rdquo;</p>}
-            </blockquote>
-            <figcaption class="mt-6 border-t border-hairline pt-4">
-              <p class="text-[15px] font-semibold text-forest">{q.who}</p>
-              <p class="mt-0.5 text-[14.5px] text-fern">{q.role}</p>
-            </figcaption>
-          </figure>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- BUILT: FLAGSHIP -->
-  <section class="bg-parchment-deep px-6 py-20 md:py-28">
-    <div class="mx-auto max-w-[1100px]">
-      <h2 class="font-display mx-auto max-w-[22ch] text-center text-[32px] leading-[1.15] md:text-[42px]">
-        Usually I end up <em>building</em> something.
-      </h2>
-      <p class="mx-auto mt-6 max-w-[60ch] text-center text-[18px] leading-relaxed text-fern">
-        It used to be that an operator could only tell you what was broken. Now you can just go fix it. Some of what I've built for owners:
-      </p>
-      <div class="mt-12 grid gap-6 md:grid-cols-2">
-        {builds.map((b, i) => {
-          const Fig = [FigQuoteBuilder, FigDealFlow, FigRaise, FigChaseBot, FigMatch, FigFleet][i];
-          return (
-            <div class="rounded-[18px] bg-white p-8 shadow-[0_2px_10px_rgba(20,38,26,.07)]">
-              <div class="mb-6 rounded-[12px] bg-parchment-deep p-3"><Fig /></div>
-              <p class="text-[14px] font-semibold text-moss">{b.tag}</p>
-              <h3 class="font-display mt-2.5 text-[24px] leading-snug">{b.title}</h3>
-              <p class="mt-3 text-[16.5px] leading-relaxed text-fern">{b.body}</p>
-              <p class="mt-5 border-t border-hairline pt-4 text-[14.5px] font-semibold text-moss">{b.gave}</p>
-            </div>
-          );
-        })}
-      </div>
-    </div>
-  </section>
-
-  <!-- BUILT: MORE -->
-  <section class="px-6 py-20 md:py-28">
-    <div class="mx-auto max-w-[1100px]">
-      <h2 class="font-display mx-auto max-w-[20ch] text-center text-[32px] leading-[1.15] md:text-[40px]">And a few smaller ones.</h2>
-      <p class="mx-auto mt-6 max-w-[58ch] text-center text-[18px] leading-relaxed text-fern">
-        Same idea every time. See the problem, build the fix.
-      </p>
-      <div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {more.map((b) => (
-          <div class="flex flex-col rounded-[18px] bg-parchment-deep p-7">
-            <p class="text-[13.5px] font-semibold text-moss">{b.tag}</p>
-            <h3 class="font-display mt-2 text-[21px] leading-snug">{b.title}</h3>
-            <p class="mt-2.5 flex-1 text-[15.5px] leading-relaxed text-fern">{b.body}</p>
-            <p class="mt-5 border-t border-hairline pt-3.5 text-[14px] font-semibold text-moss">{b.gave}</p>
-          </div>
-        ))}
-      </div>
+  <section class="px-6 pb-20 pt-6 md:pb-28">
+    <div class="mx-auto max-w-[1000px] space-y-5">
+      {quotes.map((q) => (
+        <figure class="rounded-[18px] bg-white p-7 shadow-[0_2px_10px_rgba(20,38,26,.07)] md:p-8">
+          <img src={q.logo} alt="" class:list={["w-auto", q.logoH]} loading="lazy" />
+          <blockquote class="mt-5">
+            <p class="text-[16.5px] leading-[1.65] text-forest">&ldquo;{q.quote}&rdquo;</p>
+            {q.quote2 && <p class="mt-3.5 text-[16.5px] leading-[1.65] text-forest">&ldquo;{q.quote2}&rdquo;</p>}
+          </blockquote>
+          <figcaption class="mt-6 border-t border-hairline pt-4">
+            <p class="text-[15px] font-semibold text-forest">{q.who}</p>
+            <p class="mt-0.5 text-[14.5px] text-fern">{q.role}</p>
+          </figcaption>
+        </figure>
+      ))}
     </div>
   </section>
 
@@ -270,7 +131,10 @@ const more = [
       <p class="mx-auto mt-6 max-w-[50ch] text-[18px] leading-relaxed text-white/75">
         Tell me where it's stuck and I'll tell you what I'd go after first. Thirty minutes, no pitch.
       </p>
-      <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="mt-9 inline-block rounded-full bg-sprout px-9 py-4 text-[15px] font-semibold text-forest transition-opacity hover:opacity-90">Book a call</a>
+      <div class="mt-9 flex flex-wrap justify-center gap-3.5">
+        <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="rounded-full bg-sprout px-9 py-4 text-[15px] font-semibold text-forest transition-opacity hover:opacity-90">Book a call</a>
+        <a href="/tools-apps" class="rounded-full border-[1.5px] border-white/40 px-9 py-4 text-[15px] font-semibold text-white transition-colors hover:bg-white hover:text-forest">See what I've built</a>
+      </div>
     </div>
   </section>
 </Layout>

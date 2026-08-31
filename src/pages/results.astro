@@ -16,6 +16,7 @@ const cases = [
     story: "A general contractor with all the work he could handle and margins that wouldn't budge. Everybody wanted to talk about getting more sales. The problem was the sales process itself, how work got quoted and closed. We rebuilt it with his team.",
     before: '$12M', after: '$20M', label: 'revenue, same crews, same market',
     found: 'The one thing: the sales process',
+    logo: '/images/logos/patriot.png', logoH: 'h-10 md:h-11',
   },
   {
     tag: 'Software',
@@ -23,6 +24,7 @@ const cases = [
     story: "New clients took four months to go live, and deals stalled waiting on it. We mapped the whole implementation and cut everything that didn't actually move a client forward.",
     before: '120', after: '45 days', label: 'to go live, unlocking $250K in new revenue',
     found: 'The one thing: implementation',
+    logo: '/images/logos/medefy.svg', logoH: 'h-7 md:h-8',
   },
   {
     tag: 'Services',
@@ -30,13 +32,7 @@ const cases = [
     story: "They'd won the contracts, then served maybe half of what was in them. Nobody had ever counted how much was going unused. We counted, then built the delivery plan around it.",
     before: '40%', after: '85%', label: 'contract utilization',
     found: 'The one thing: work nobody was tracking',
-  },
-  {
-    tag: 'Healthcare',
-    hook: 'A full waitlist and idle providers.',
-    story: "Providers were booked heavy in the wrong places and idle everywhere else, while patients sat on a waitlist. We rebuilt the schedule. Same team.",
-    before: '50%', after: '65%', label: 'provider utilization',
-    found: 'The one thing: the schedule',
+    logo: '/images/logos/llamalab.png', logoH: 'h-7 md:h-8',
   },
 ];
 
@@ -44,33 +40,29 @@ const quotes = [
   {
     quote: "Cameron got deep into our data and market and helped us get much more focused on where we should actually be spending our sales and marketing effort. He helped us turn that into a repeatable go-to-market motion, and within three months we generated 20 hospital opportunities representing $3.5M in qualified pipeline.",
     quote2: "One thing I've always appreciated about Cameron is that he'll tell you the hard things you need to hear, not just what you want to hear. That's why I've continued to value him as an advisor and now as a friend.",
-    who: 'Sanjay Subramanian',
+    who: 'Sanjay S.',
     role: 'Founder, Omnicure',
-    href: 'https://omnicuremd.com/',
     logo: '/images/logos/omnicure.png',
     logoH: 'h-7 md:h-8',
   },
   {
     quote: "Working with Cameron, we increased utilization, patients in seats, from 55% to 80% without adding any additional headcount. I was shocked by how quickly he was able to diagnose where we were getting stuck and then partner with us to fix it. That's why we've kept him involved: he continues to find opportunities to make the business run better.",
-    who: 'Dr. Bryce Colt',
+    who: 'Dr. Bryce C.',
     role: 'Owner, Restoration Chiropractic',
-    href: 'https://restorationowasso.com/',
     logo: '/images/logos/restoration.png',
     logoH: 'h-12 md:h-14',
   },
   {
     quote: "Cameron provided an immense amount of clarity on improvement strategies we desperately needed. My favorite part is it wasn't off the shelf. He really understood my current stage, our budget, and what the future of our market looks like.",
-    who: 'Tommy Oliver',
+    who: 'Tommy O.',
     role: 'Owner and President, Griswold Home Care Tulsa',
-    href: 'https://www.griswoldcare.com/tulsa/',
     logo: '/images/logos/griswold.svg',
     logoH: 'h-7 md:h-8',
   },
   {
     quote: "Cameron is a sorcerer. He has a knack for finding the most important thing the business can work on and helping align the team around delivering towards it.",
-    who: 'Dani Marques',
+    who: 'Dani M.',
     role: 'CEO, SkinCheck Health',
-    href: 'https://www.skincheck.health/us',
     logo: '/images/logos/skincheck.png',
     logoH: 'h-8 md:h-9',
   },
@@ -184,6 +176,7 @@ const more = [
       {cases.map((c) => (
         <article class="grid gap-8 rounded-[20px] bg-parchment-deep p-9 md:grid-cols-[1fr_260px] md:items-center md:p-12">
           <div>
+            <img src={c.logo} alt="" class:list={["mb-6 w-auto", c.logoH]} loading="lazy" />
             <p class="text-[14px] font-semibold text-moss">{c.tag}</p>
             <h2 class="font-display mt-2.5 text-[26px] leading-snug md:text-[30px]">{c.hook}</h2>
             <p class="mt-4 text-[17px] leading-relaxed text-fern">{c.story}</p>
@@ -206,20 +199,17 @@ const more = [
       <h2 class="font-display mx-auto max-w-[20ch] text-center text-[32px] leading-[1.15] md:text-[40px]">
         What they said <em>afterwards</em>.
       </h2>
-      <div class="mt-14 space-y-6">
+      <div class="mt-12 space-y-5">
         {quotes.map((q) => (
-          <figure class="rounded-[20px] bg-white p-9 shadow-[0_2px_10px_rgba(20,38,26,.07)] md:p-11">
+          <figure class="rounded-[18px] bg-white p-7 shadow-[0_2px_10px_rgba(20,38,26,.07)] md:p-8">
             <img src={q.logo} alt={q.role.split(', ')[1] || q.role} class:list={["w-auto", q.logoH]} loading="lazy" />
-            <blockquote class="mt-7">
-              <p class="text-[18px] leading-[1.7] text-forest">&ldquo;{q.quote}&rdquo;</p>
-              {q.quote2 && <p class="mt-4 text-[18px] leading-[1.7] text-forest">&ldquo;{q.quote2}&rdquo;</p>}
+            <blockquote class="mt-5">
+              <p class="text-[16.5px] leading-[1.65] text-forest">&ldquo;{q.quote}&rdquo;</p>
+              {q.quote2 && <p class="mt-3.5 text-[16.5px] leading-[1.65] text-forest">&ldquo;{q.quote2}&rdquo;</p>}
             </blockquote>
-            <figcaption class="mt-7 border-t border-hairline pt-5">
-              <p class="text-[16px] font-semibold text-forest">{q.who}</p>
-              <p class="mt-0.5 text-[15px] text-fern">
-                {q.role.split(', ')[0]},{' '}
-                <a href={q.href} target="_blank" rel="noopener noreferrer" class="font-medium text-moss underline decoration-2 underline-offset-4 hover:text-forest">{q.role.split(', ').slice(1).join(', ')}</a>
-              </p>
+            <figcaption class="mt-6 border-t border-hairline pt-4">
+              <p class="text-[15px] font-semibold text-forest">{q.who}</p>
+              <p class="mt-0.5 text-[14.5px] text-fern">{q.role}</p>
             </figcaption>
           </figure>
         ))}

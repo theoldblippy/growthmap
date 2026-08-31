@@ -33,9 +33,22 @@ const biggerQ = [
 ];
 
 const ways = [
-  { tag: 'Until we find them', title: 'Five hours back', body: "Some weeks it's all a little broken and none of it is the emergency. That usually means too much of the business is running through you. We look at where your week actually goes, find the work the business should be handling without you, and I build the thing that takes it off your plate. I'll stay with it until you have five hours back." },
-  { tag: 'Two weeks', title: 'One bottleneck, fixed', body: "You probably already know what your biggest one is. It's the thing you'd go fix first if you ever got a spare month, and you haven't had a spare month in two years. Tell me what it is and I'll come work it with you for two weeks. We find where it's actually breaking, and I build the fix while I'm still there. Whatever we build, you keep." },
-  { tag: 'Ongoing', title: 'The whole thing', body: "Everything above, in order. We map how the business makes money, find the bottleneck that keeps coming back, knock it out, then go find the next one. Then we put a rhythm in place your team can hold on their own. It's the deepest version of this, and it's where most of my clients end up." },
+  {
+    title: 'Step into the operator seat',
+    body: "Fractional or interim COO. I take the seat, run it properly, and hand it back working. This is what I get asked for most: a construction firm, a telehealth company, a behavioral health group.",
+  },
+  {
+    title: 'Build the model underneath it',
+    body: "The operating model, the financial model, the goals and the way you'll know whether you're hitting them. The work that makes a business legible to the person running it.",
+  },
+  {
+    title: 'Fix how customers show up',
+    body: "Market messaging, the sales process, the outbound system that actually gets answered. For when the problem sits on the getting-customers side of the line.",
+  },
+  {
+    title: 'Build the software',
+    body: "When the fix is a tool, I build the tool. Automations, internal systems, the report somebody on your team rebuilds by hand every Monday.",
+  },
 ];
 
 const fitYes = [
@@ -53,7 +66,7 @@ const faqs = [
   { q: "What's a fractional COO?", a: "An operator who runs alongside you part-time instead of joining full-time. I get into the business, find what's really holding growth back, and fix it with your team, without the cost of a full-time exec." },
   { q: "Who do you work with?", a: "Owner-led businesses, roughly $1M to $20M in revenue, across construction, professional services, healthcare, software, and agencies. If you've become the bottleneck and growth has gotten chaotic, that's my wheelhouse." },
   { q: "What happens on the call?", a: "Thirty minutes, no pitch. You tell me where it's stuck, I tell you what I'd fix first. You can run with that yourself, or we can talk about doing it together." },
-  { q: "What does it cost?", a: "It depends on the problem and how involved you want me. Engagements are month to month, scoped to what actually needs fixing. We figure out whether it's a fit before anyone talks money." },
+  { q: "What does it cost?", a: "I don't price anything before I understand the problem. Once I do, the price is tied to what fixing it is worth to you rather than to hours. You'll have the number before anything starts, and I'll tell you if I don't think it's worth doing." },
   { q: "Do you work remotely?", a: "Yes. I work remotely with owners across the US, and get on-site when the work calls for it." },
 ];
 ---
@@ -165,20 +178,33 @@ const faqs = [
 
   <!-- 7 · WAYS TO WORK -->
   <section class="bg-parchment-deep px-6 py-20 md:py-28">
-    <div class="mx-auto max-w-[1100px]">
-      <h2 class="font-display mx-auto max-w-[18ch] text-center text-[34px] leading-[1.15] md:text-[42px]">Three ways to do this.</h2>
-      <p class="mx-auto mt-6 max-w-[54ch] text-center text-[18px] leading-relaxed text-fern">
-        Same work in all three. The difference is how much of it, and for how long.
+    <div class="mx-auto max-w-[1060px]">
+      <h2 class="font-display mx-auto max-w-[22ch] text-center text-[34px] leading-[1.15] md:text-[42px]">
+        What I actually get <em>hired to do</em>.
+      </h2>
+      <p class="mx-auto mt-6 max-w-[58ch] text-center text-[18px] leading-relaxed text-fern">
+        Not a menu. These are the four shapes the work has actually taken, and most engagements are some mix of them.
       </p>
-      <div class="mt-12 grid gap-6 md:grid-cols-3">
-        {ways.map((w) => (
-          <div class="flex flex-col rounded-[18px] bg-white p-8 shadow-[0_2px_10px_rgba(20,38,26,.07)]">
-            <p class="text-[14px] font-semibold text-moss">{w.tag}</p>
-            <h3 class="font-display mt-2.5 text-[24px] leading-snug">{w.title}</h3>
-            <p class="mt-3.5 flex-1 text-[16px] leading-relaxed text-fern">{w.body}</p>
-            <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="mt-6 text-[15px] font-semibold text-moss underline decoration-2 underline-offset-4 hover:text-forest">Book a call &rarr;</a>
+
+      <div class="mt-12 grid gap-5 md:grid-cols-2">
+        {ways.map((w, i) => (
+          <div class="rounded-[18px] bg-white p-8 shadow-[0_2px_10px_rgba(20,38,26,.07)]">
+            <p class="font-display text-[17px] text-moss">0{i + 1}</p>
+            <h3 class="font-display mt-2 text-[24px] leading-snug">{w.title}</h3>
+            <p class="mt-3.5 text-[16.5px] leading-relaxed text-fern">{w.body}</p>
           </div>
         ))}
+      </div>
+
+      <div class="mx-auto mt-12 max-w-[720px] rounded-[20px] border-2 border-moss/25 bg-white p-9 md:p-11">
+        <h3 class="font-display text-[26px] leading-snug md:text-[30px]">What it costs.</h3>
+        <p class="mt-5 text-[17.5px] leading-[1.7] text-fern">
+          I don't price anything before I understand the problem, because I'd only be guessing. Once I do understand it, the price is tied to what fixing it is actually worth to you, not to hours on a clock.
+        </p>
+        <p class="mt-4 text-[17.5px] leading-[1.7] text-fern">
+          Some of this pays for itself inside a month. Some of it takes longer. Either way you'll have the number before anything starts, and I'll tell you if I don't think it's worth doing.
+        </p>
+        <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="mt-7 inline-block rounded-full bg-moss px-8 py-4 text-[15px] font-semibold text-white transition-opacity hover:opacity-90">Talk it through</a>
       </div>
     </div>
   </section>

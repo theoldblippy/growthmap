@@ -16,6 +16,26 @@ const steps = [
   { n: '04', title: 'We keep it running', body: "A simple rhythm the team can hold on their own, so everyone knows their number and their job, and you can finally see what's working without standing over it." },
 ];
 
+// Two owners, one from each side of get/serve. Full set lives on /results.
+const homeQuotes = [
+  {
+    quote: "Cameron got deep into our data and market and helped us get much more focused on where we should actually be spending our sales and marketing effort. He helped us turn that into a repeatable go-to-market motion, and within three months we generated 20 hospital opportunities representing $3.5M in qualified pipeline.",
+    who: 'Sanjay S.', role: 'Founder, Omnicure',
+    logo: '/images/logos/omnicure.png', logoH: 'h-7 md:h-8',
+  },
+  {
+    quote: "Working with Cameron, we increased utilization, patients in seats, from 55% to 80% without adding any additional headcount. I was shocked by how quickly he was able to diagnose where we were getting stuck and then partner with us to fix it.",
+    who: 'Dr. Bryce C.', role: 'Owner, Restoration Chiropractic',
+    logo: '/images/logos/restoration.png', logoH: 'h-12 md:h-14',
+  },
+];
+
+const builtProof = [
+  { metric: '10 hrs → 1', body: 'What it takes a construction team to price a job, before and after the quote builder I wrote them.' },
+  { metric: '$12K', body: 'Unbilled work a timesheet bot turned up on the day it went live, and every week since.' },
+  { metric: '10 hrs/week', body: 'Back on the calendar of a founder running a raise, once the agents took over the prep and follow-ups.' },
+];
+
 const getQ = [
   "When I stop selling, the sales stop.",
   "Our close rate keeps slipping and I can't tell you why.",
@@ -141,7 +161,7 @@ const fitNo = [
           I've spent my career operating inside owner-led businesses. These days I run operations at a health tech company, and alongside that I work with a handful of owners on the stuff that quietly caps growth.
         </p>
         <p class="mt-4 text-[18px] leading-[1.7] text-fern">
-          More often than not I end up building the fix rather than writing a report about it.
+          More often than not I end up building the fix rather than writing a report about it. A lot of that is AI and automation now. The work that was eating hours out of your week starts running on its own, and you get those hours back.
         </p>
         <a href="/about" class="mt-6 inline-block text-[16px] font-semibold text-moss underline decoration-2 underline-offset-4 hover:text-forest">More about how I work &rarr;</a>
       </div>
@@ -221,6 +241,49 @@ const fitNo = [
       </div>
 
       <a href={bookUrl} target="_blank" rel="noopener noreferrer" class="mt-14 inline-block rounded-full bg-moss px-8 py-4 text-[15px] font-semibold text-white transition-opacity hover:opacity-90">Start with the half hour</a>
+    </div>
+  </section>
+
+  <!-- 7b · TWO OWNERS -->
+  <section class="px-6 py-20 md:py-24">
+    <div class="mx-auto max-w-[1000px]">
+      <div class="grid gap-6 md:grid-cols-2">
+        {homeQuotes.map((q) => (
+          <figure class="flex flex-col rounded-[18px] bg-parchment-deep p-8 md:p-9">
+            <img src={q.logo} alt="" class:list={["w-auto", q.logoH]} loading="lazy" />
+            <blockquote class="mt-6 flex-1">
+              <p class="text-[17px] leading-[1.65] text-forest">&ldquo;{q.quote}&rdquo;</p>
+            </blockquote>
+            <figcaption class="mt-6 border-t border-hairline pt-4">
+              <p class="text-[15px] font-semibold text-forest">{q.who}</p>
+              <p class="mt-0.5 text-[14.5px] text-muted">{q.role}</p>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 7c · SOMETIMES THE FIX IS SOFTWARE -->
+  <section class="bg-parchment-deep px-6 py-20 md:py-24">
+    <div class="mx-auto max-w-[940px]">
+      <h2 class="font-display text-center text-[32px] leading-[1.15] md:text-[40px]">
+        Often the fix turns out to be <em class="mark">software</em>.
+      </h2>
+      <p class="mx-auto mt-6 max-w-[58ch] text-center text-[17.5px] leading-[1.7] text-fern">
+        It used to be that an operator could only tell you what was broken. Now you can go build the thing that fixes it. I write these myself, so the work that was eating your week starts running without you standing over it.
+      </p>
+      <div class="mt-12 grid gap-5 md:grid-cols-3">
+        {builtProof.map((b) => (
+          <div class="rounded-[18px] bg-white p-7">
+            <p class="font-display text-[30px] leading-none text-moss md:text-[34px]">{b.metric}</p>
+            <p class="mt-3.5 text-[16px] leading-relaxed text-fern">{b.body}</p>
+          </div>
+        ))}
+      </div>
+      <div class="mt-11 text-center">
+        <a href="/tools-apps" class="inline-block rounded-full border-[1.5px] border-forest bg-white px-8 py-4 text-[15px] font-semibold text-forest transition-colors hover:bg-forest hover:text-white">See what I've built</a>
+      </div>
     </div>
   </section>
 
@@ -320,9 +383,9 @@ const fitNo = [
         He was chasing more sales, but when I asked him that he got sick to his stomach. He had a throughput problem, not a sales problem. We fixed how the work got delivered and the growth followed.
       </p>
       <p class="mx-auto mt-4 max-w-[62ch] text-[17.5px] leading-[1.7] text-fern">
-        There are a few more like that, along with the tools and software I've built for people, over on the results page.
+        There are a few more like that over on the results page.
       </p>
-      <a href="/results" class="mt-8 inline-block rounded-full border-[1.5px] border-forest bg-white px-8 py-4 text-[15px] font-semibold text-forest transition-colors hover:bg-forest hover:text-white">See the results and what I've built</a>
+      <a href="/results" class="mt-8 inline-block rounded-full border-[1.5px] border-forest bg-white px-8 py-4 text-[15px] font-semibold text-forest transition-colors hover:bg-forest hover:text-white">See the results</a>
     </div>
   </section>
 

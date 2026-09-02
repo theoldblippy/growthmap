@@ -19,13 +19,13 @@ const stations = [
 
 <Layout
   title="What's the one thing holding your business back? | Growth Map"
-  description="A free operating diagnostic for owner-led businesses. Answer a few honest questions and get the one thing to fix first, read the way Cameron would on a call."
+  description="A free operating diagnostic for owner-led businesses. Answer six honest questions and get the one thing to fix first. No email required, no call."
   canonicalPath="/diagnostic"
 >
   <section class="px-6 pt-14 pb-4 md:pt-20">
     <div id="diagnostic" class="mx-auto max-w-[760px]">
       <h1>What's the one thing holding your business back?</h1>
-      <p class="sub">Answer a few honest questions and I'll run your business through the same read I'd do on a call. You'll get the one thing to fix first, and why. Takes about two minutes.</p>
+      <p class="sub">Answer six honest questions and I'll run your business through the same read I'd do on a call. You'll get the one thing to fix first, and why. Takes about two minutes, and you don't have to talk to anybody to get it.</p>
 
       <div id="form">
         <div class="field">
@@ -75,10 +75,12 @@ const stations = [
         <div class="field">
           <label for="frustration">What's the most frustrating part of running it right now?</label>
           <textarea id="frustration" rows="3" maxlength="600" placeholder="A sentence or two, in your own words."></textarea>
+          <p class="hint">Optional. This one's for me, so that if we ever talk I'm not starting from zero.</p>
         </div>
         <div class="field">
-          <label for="email">Where should I send your read?</label>
+          <label for="email">Want a copy of your read?</label>
           <input id="email" type="email" placeholder="you@company.com" />
+          <p class="hint">Optional. Your answer shows up on this page whether you fill this in or not.</p>
         </div>
 
         <div class="ctarow">
@@ -125,6 +127,8 @@ const stations = [
   #diagnostic .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   @media (max-width: 560px) { #diagnostic .row { grid-template-columns: 1fr; } }
   #diagnostic label { display: block; font-size: 14px; font-weight: 600; color: #14261A; margin: 0 0 7px; }
+  #diagnostic .hint { font-family: 'Jost', sans-serif; font-size: 12.5px; line-height: 1.5; color: #6E6E6E; margin: 7px 0 0; }
+  #diagnostic .said { border-left: 2px solid rgba(38,119,63,.35); padding: 2px 0 2px 16px; margin: 0 0 26px; font-size: 16.5px; line-height: 1.6; color: #4A4A4A; }
   #diagnostic input, #diagnostic select, #diagnostic textarea {
     width: 100%; box-sizing: border-box; border: 1px solid rgba(20,38,26,0.2); border-radius: 10px;
     background: #FFFFFF; padding: 11px 13px; font-family: inherit; font-size: 15px; color: #14261A; }
@@ -175,9 +179,9 @@ const stations = [
   const FORMSPREE = "https://formspree.io/f/xkoqqldw";
   const SHORT = ["Get noticed", "Qualify", "Win the work", "Get started", "Do the work", "Keep them"];
 
-  // Deterministic engine (mirrors /api/diagnose.js) so the tool works fully
-  // even if the AI function is unavailable. The server call, when it works,
-  // just personalizes this base.
+  // The whole engine. Runs in the browser, no server call, nothing to fail.
+  // pick() takes the earliest station that's broken (or failing that, shaky),
+  // because the first constraint in the line gates everything downstream.
   const BASE = {
     0: { verdict: "The line runs fine once people find you. The problem is not enough of the right ones do.", read: "Everything downstream is starved for leads, so it can feel like a sales or delivery problem when it's really a visibility problem. More effort inside the business won't fix a top that's too narrow.", fixes: [{ move: "Get sharp on exactly who you're for.", why: "A message built for 'anyone' reaches no one, and that's why the right leads aren't showing up." }, { move: "Show up where those people already are, consistently.", why: "Sporadic, everywhere-at-once marketing is why awareness never compounds." }, { move: "Make one clear promise on the first thing they see.", why: "If a stranger can't tell what you do in five seconds, they leave before they ever become a lead." }] },
     1: { verdict: "You're winning customers, just not the right ones.", read: "Time and money are going into people who were never going to buy, or ones who become a headache once they do. That drags every number after it: close rate, margin, and your sanity.", fixes: [{ move: "Define what a good-fit customer actually looks like.", why: "Without it, everyone chases everything, and the wrong ones eat the most time." }, { move: "Add one qualifying question early in the process.", why: "Right now you find out someone's a bad fit after you've sunk hours into them." }, { move: "Get comfortable saying no.", why: "Every bad-fit yes is a good-fit customer you didn't have room for." }] },
@@ -220,7 +224,12 @@ const stations = [
     } catch (e) {}
   }
 
-  function render(data) {
+  // User-typed text goes into innerHTML below, so escape it.
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  }
+
+  function render(data, said) {
     const idx = data.constraintIndex;
     const bars = ans.map((a, i) => {
       const col = a === 'g' ? '#26773F' : a === 'y' ? '#C08A2D' : '#B0402F';
@@ -235,11 +244,12 @@ const stations = [
       '<div class="barlabels">' + labels + '</div>' +
       '<h2>' + data.verdict + '</h2>' +
       '<p class="read">' + data.read + '</p>' +
+      (said ? '<p class="rlabel">What you told me</p><p class="said">&ldquo;' + esc(said) + '&rdquo;</p>' : '') +
       '<p class="fixhead">What I\'d fix, in order</p>' +
       fixes +
       '<div class="close">' +
       '<a class="book" href="' + BOOK + '" target="_blank" rel="noopener noreferrer">Book a call</a>' +
-      '<p class="bookline">That\'s the read from a few answers. The real one is your actual numbers and 30 minutes with me. Free, no pitch. I\'ll tell you what I\'d fix, and you can run with it.</p>' +
+      '<p class="bookline">That\'s the read from six answers. The real one is your actual numbers and 30 minutes with me. Free, no pitch. I\'ll tell you what I\'d fix, and you can run with it.</p>' +
       '<a class="howlink" href="/about">See how I work &rarr;</a>' +
       '</div>';
     document.getElementById('result').removeAttribute('hidden');
@@ -257,6 +267,6 @@ const stations = [
     await new Promise((r) => setTimeout(r, 800));
     const data = computeLocal();
     document.getElementById('loading').setAttribute('hidden', '');
-    render(data);
+    render(data, payload.frustration);
   });
 </script>

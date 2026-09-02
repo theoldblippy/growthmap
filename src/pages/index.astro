@@ -17,16 +17,16 @@ const steps = [
 ];
 
 // Two owners, one from each side of get/serve. Full set lives on /results.
+// No logos here on purpose: both marks are already in the strip above, and
+// repeating them makes the strip read thinner than it is.
 const homeQuotes = [
   {
     quote: "Cameron got deep into our data and market and helped us get much more focused on where we should actually be spending our sales and marketing effort. He helped us turn that into a repeatable go-to-market motion, and within three months we generated 20 hospital opportunities representing $3.5M in qualified pipeline.",
     who: 'Sanjay S.', role: 'Founder, Omnicure',
-    logo: '/images/logos/omnicure.png', logoH: 'h-7 md:h-8',
   },
   {
     quote: "Working with Cameron, we increased utilization, patients in seats, from 55% to 80% without adding any additional headcount. I was shocked by how quickly he was able to diagnose where we were getting stuck and then partner with us to fix it.",
     who: 'Dr. Bryce C.', role: 'Owner, Restoration Chiropractic',
-    logo: '/images/logos/restoration.png', logoH: 'h-12 md:h-14',
   },
 ];
 
@@ -108,7 +108,24 @@ const fitNo = [
   <!-- 3 · THE PROBLEM -->
   <section class="bg-parchment-deep px-6 py-20 md:py-28">
     <div class="mx-auto max-w-[1000px]">
-      <h2 class="font-display mx-auto max-w-[20ch] text-center text-[34px] leading-[1.15] md:text-[42px]">
+
+      <!-- 3a · where you probably are -->
+      <div class="mx-auto max-w-[660px]">
+        <p class="text-[20px] leading-[1.7] text-forest md:text-[22px]">
+          Most people call me at about the same point.
+        </p>
+        <p class="mt-6 text-[18.5px] leading-[1.75] text-fern">
+          The business works. Revenue's up, the phone rings, the work gets out the door. But everything runs through you. You approve the quote before it goes. You know why the schedule slipped, because you're the one who went and found out.
+        </p>
+        <p class="mt-5 text-[18.5px] leading-[1.75] text-fern">
+          You've thought about taking two weeks off and quietly decided this isn't the year.
+        </p>
+        <p class="mt-5 text-[18.5px] leading-[1.75] text-fern">
+          Nobody planned it that way. It happened while you were busy running the place. And when I get in there, it almost always traces back to one of two things.
+        </p>
+      </div>
+
+      <h2 class="font-display mx-auto mt-16 max-w-[20ch] text-center text-[34px] leading-[1.15] md:mt-20 md:text-[42px]">
         Every business does <em>two things</em>.
       </h2>
 
@@ -146,6 +163,21 @@ const fitNo = [
           {biggerQ.map((q) => (<li class="text-[16.5px] leading-snug text-forest">&ldquo;{q}&rdquo;</li>))}
         </ul>
       </div>
+    </div>
+  </section>
+
+  <!-- 4 · THE GROWTH DOOR -->
+  <section class="px-6 py-20 md:py-24">
+    <div class="mx-auto max-w-[680px]">
+      <h2 class="font-display text-[30px] leading-[1.18] md:text-[36px]">
+        Not everyone who calls me is <em class="mark">stuck</em>.
+      </h2>
+      <p class="mt-6 text-[18px] leading-[1.75] text-fern">
+        Plenty of them weren't stuck at all. The business worked. They just wanted it bigger. A second location. A new market. A product that's been sitting on the shelf for two years.
+      </p>
+      <p class="mt-5 text-[18px] leading-[1.75] text-fern">
+        Same conversation. We map how you make money now, then figure out what has to hold when you double it. Growth breaks things that were fine at the old size.
+      </p>
     </div>
   </section>
 
@@ -250,9 +282,9 @@ const fitNo = [
       <div class="grid gap-6 md:grid-cols-2">
         {homeQuotes.map((q) => (
           <figure class="flex flex-col rounded-[18px] bg-parchment-deep p-8 md:p-9">
-            <img src={q.logo} alt="" class:list={["w-auto", q.logoH]} loading="lazy" />
-            <blockquote class="mt-6 flex-1">
-              <p class="text-[17px] leading-[1.65] text-forest">&ldquo;{q.quote}&rdquo;</p>
+            <p aria-hidden="true" class="font-display select-none text-[56px] leading-[0.7] text-moss/30">&ldquo;</p>
+            <blockquote class="mt-4 flex-1">
+              <p class="text-[17px] leading-[1.65] text-forest">{q.quote}</p>
             </blockquote>
             <figcaption class="mt-6 border-t border-hairline pt-4">
               <p class="text-[15px] font-semibold text-forest">{q.who}</p>
